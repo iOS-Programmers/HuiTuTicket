@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
+		C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */; };
+		C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
+		C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C60F6FC619762D7800AFC182 /* InfoPlist.strings */; };
+		C60F6FCA19762D7800AFC182 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FC919762D7800AFC182 /* main.m */; };
+		C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FCD19762D7800AFC182 /* HTAppDelegate.m */; };
+		C60F6FD019762D7800AFC182 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60F6FCF19762D7800AFC182 /* Images.xcassets */; };
+		C60F6FD719762D7900AFC182 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FD619762D7900AFC182 /* XCTest.framework */; };
+		C60F6FD819762D7900AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
+		C60F6FD919762D7900AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
+		C60F6FE119762D7900AFC182 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C60F6FDF19762D7900AFC182 /* InfoPlist.strings */; };
+		C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */; };
+		C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */; };
+		C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */; };
+		C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9419D1977967800208F20 /* HTMineViewController.m */; };
+		C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9419E1977967800208F20 /* HTMineViewController.xib */; };
+		C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941A31977A3C400208F20 /* HTMineHeaderView.m */; };
+		C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */; };
+		C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B941A81977AF4400208F20 /* mine_header_bg.png */; };
+		C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941AD1977C2AE00208F20 /* HTMessageCell.m */; };
+		C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */; };
+		C6B941B21977C35500208F20 /* message_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B941B11977C35500208F20 /* message_avatar.png */; };
+		C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5719764A1E00543D39 /* HTBaseViewController.m */; };
+		C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5B197680E100543D39 /* HTBaseNavigationController.m */; };
+		C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5F1976815900543D39 /* HTBaseTableViewController.m */; };
+		C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF63197681A300543D39 /* HTBaseTabBarController.m */; };
+		C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF7519768D6A00543D39 /* HTFoundationCommon.m */; };
+		C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF7919768E1600543D39 /* HTMultipleSectionTableViewController.m */; };
+		C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF7C197690F400543D39 /* HTMoreViewController.m */; };
+		C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BADF7D197690F400543D39 /* HTMoreViewController.xib */; };
+		C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF81197691C400543D39 /* HTMessageViewController.m */; };
+		C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BADF82197691C400543D39 /* HTMessageViewController.xib */; };
+		C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF86197691EB00543D39 /* HTOrderViewController.m */; };
+		C6BADF89197691EB00543D39 /* HTOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BADF87197691EB00543D39 /* HTOrderViewController.xib */; };
+		C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF8B1976921700543D39 /* HTHomeViewController.m */; };
+		C6BADF8E1976921700543D39 /* HTHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BADF8C1976921700543D39 /* HTHomeViewController.xib */; };
+		C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF9619775A1C00543D39 /* HTStoreManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C60F6FDA19762D7900AFC182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C60F6FB219762D7800AFC182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C60F6FB919762D7800AFC182;
+			remoteInfo = HuiTuTicket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C60F6FC119762D7800AFC182 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C60F6FC519762D7800AFC182 /* HuiTuTicket-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuiTuTicket-Info.plist"; sourceTree = "<group>"; };
+		C60F6FC719762D7800AFC182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C60F6FC919762D7800AFC182 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C60F6FCB19762D7800AFC182 /* HuiTuTicket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuiTuTicket-Prefix.pch"; sourceTree = "<group>"; };
+		C60F6FCC19762D7800AFC182 /* HTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTAppDelegate.h; sourceTree = "<group>"; };
+		C60F6FCD19762D7800AFC182 /* HTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTAppDelegate.m; sourceTree = "<group>"; };
+		C60F6FCF19762D7800AFC182 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C60F6FD519762D7900AFC182 /* HuiTuTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuiTuTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60F6FD619762D7900AFC182 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C60F6FDE19762D7900AFC182 /* HuiTuTicketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuiTuTicketTests-Info.plist"; sourceTree = "<group>"; };
+		C60F6FE019762D7900AFC182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuiTuTicketTests.m; sourceTree = "<group>"; };
+		C6B442F71978EABF00731866 /* HTFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFoundationMacro.h; sourceTree = "<group>"; };
+		C6B442F81978EAD000731866 /* HTUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUIKitMacro.h; sourceTree = "<group>"; };
+		C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreAboutUsController.h; sourceTree = "<group>"; };
+		C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMoreAboutUsController.m; sourceTree = "<group>"; };
+		C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMoreAboutUsController.xib; sourceTree = "<group>"; };
+		C6B9419C1977967800208F20 /* HTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineViewController.h; sourceTree = "<group>"; };
+		C6B9419D1977967800208F20 /* HTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineViewController.m; sourceTree = "<group>"; };
+		C6B9419E1977967800208F20 /* HTMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineViewController.xib; sourceTree = "<group>"; };
+		C6B941A21977A3C400208F20 /* HTMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineHeaderView.h; sourceTree = "<group>"; };
+		C6B941A31977A3C400208F20 /* HTMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineHeaderView.m; sourceTree = "<group>"; };
+		C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineHeaderView.xib; sourceTree = "<group>"; };
+		C6B941A81977AF4400208F20 /* mine_header_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_header_bg.png; sourceTree = "<group>"; };
+		C6B941AC1977C2AE00208F20 /* HTMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMessageCell.h; sourceTree = "<group>"; };
+		C6B941AD1977C2AE00208F20 /* HTMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMessageCell.m; sourceTree = "<group>"; };
+		C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMessageCell.xib; sourceTree = "<group>"; };
+		C6B941B11977C35500208F20 /* message_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_avatar.png; sourceTree = "<group>"; };
+		C6B941B31977D20D00208F20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C6B941B41977D20D00208F20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C6BADF5619764A1E00543D39 /* HTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseViewController.h; sourceTree = "<group>"; };
+		C6BADF5719764A1E00543D39 /* HTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseViewController.m; sourceTree = "<group>"; };
+		C6BADF5A197680E100543D39 /* HTBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseNavigationController.h; sourceTree = "<group>"; };
+		C6BADF5B197680E100543D39 /* HTBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseNavigationController.m; sourceTree = "<group>"; };
+		C6BADF5E1976815900543D39 /* HTBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseTableViewController.h; sourceTree = "<group>"; };
+		C6BADF5F1976815900543D39 /* HTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseTableViewController.m; sourceTree = "<group>"; };
+		C6BADF62197681A300543D39 /* HTBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseTabBarController.h; sourceTree = "<group>"; };
+		C6BADF63197681A300543D39 /* HTBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseTabBarController.m; sourceTree = "<group>"; };
+		C6BADF7419768D6A00543D39 /* HTFoundationCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFoundationCommon.h; sourceTree = "<group>"; };
+		C6BADF7519768D6A00543D39 /* HTFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFoundationCommon.m; sourceTree = "<group>"; };
+		C6BADF7819768E1600543D39 /* HTMultipleSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMultipleSectionTableViewController.h; sourceTree = "<group>"; };
+		C6BADF7919768E1600543D39 /* HTMultipleSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMultipleSectionTableViewController.m; sourceTree = "<group>"; };
+		C6BADF7B197690F400543D39 /* HTMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMoreViewController.h; path = HuiTuTicket/Classes/Controllers/HTMoreViewController.h; sourceTree = SOURCE_ROOT; };
+		C6BADF7C197690F400543D39 /* HTMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMoreViewController.m; path = HuiTuTicket/Classes/Controllers/HTMoreViewController.m; sourceTree = SOURCE_ROOT; };
+		C6BADF7D197690F400543D39 /* HTMoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HTMoreViewController.xib; path = HuiTuTicket/Classes/Controllers/HTMoreViewController.xib; sourceTree = SOURCE_ROOT; };
+		C6BADF80197691C400543D39 /* HTMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMessageViewController.h; sourceTree = "<group>"; };
+		C6BADF81197691C400543D39 /* HTMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMessageViewController.m; sourceTree = "<group>"; };
+		C6BADF82197691C400543D39 /* HTMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMessageViewController.xib; sourceTree = "<group>"; };
+		C6BADF85197691EB00543D39 /* HTOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderViewController.h; sourceTree = "<group>"; };
+		C6BADF86197691EB00543D39 /* HTOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderViewController.m; sourceTree = "<group>"; };
+		C6BADF87197691EB00543D39 /* HTOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderViewController.xib; sourceTree = "<group>"; };
+		C6BADF8A1976921700543D39 /* HTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeViewController.h; sourceTree = "<group>"; };
+		C6BADF8B1976921700543D39 /* HTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeViewController.m; sourceTree = "<group>"; };
+		C6BADF8C1976921700543D39 /* HTHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeViewController.xib; sourceTree = "<group>"; };
+		C6BADF941976966100543D39 /* HTMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMacro.h; sourceTree = "<group>"; };
+		C6BADF9519775A1C00543D39 /* HTStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTStoreManager.h; sourceTree = "<group>"; };
+		C6BADF9619775A1C00543D39 /* HTStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTStoreManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C60F6FB719762D7800AFC182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */,
+				C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */,
+				C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60F6FD219762D7900AFC182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60F6FD719762D7900AFC182 /* XCTest.framework in Frameworks */,
+				C60F6FD919762D7900AFC182 /* UIKit.framework in Frameworks */,
+				C60F6FD819762D7900AFC182 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C60F6FB119762D7800AFC182 = {
+			isa = PBXGroup;
+			children = (
+				C60F6FC319762D7800AFC182 /* HuiTuTicket */,
+				C60F6FDC19762D7900AFC182 /* HuiTuTicketTests */,
+				C60F6FBC19762D7800AFC182 /* Frameworks */,
+				C60F6FBB19762D7800AFC182 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C60F6FBB19762D7800AFC182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */,
+				C60F6FD519762D7900AFC182 /* HuiTuTicketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C60F6FBC19762D7800AFC182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FBD19762D7800AFC182 /* Foundation.framework */,
+				C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */,
+				C60F6FC119762D7800AFC182 /* UIKit.framework */,
+				C60F6FD619762D7900AFC182 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C60F6FC319762D7800AFC182 /* HuiTuTicket */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FEC19762E5E00AFC182 /* Classes */,
+				C60F6FED19762E6700AFC182 /* Resources */,
+				C60F6FCC19762D7800AFC182 /* HTAppDelegate.h */,
+				C60F6FCD19762D7800AFC182 /* HTAppDelegate.m */,
+				C60F6FCF19762D7800AFC182 /* Images.xcassets */,
+				C60F6FC419762D7800AFC182 /* Supporting Files */,
+			);
+			path = HuiTuTicket;
+			sourceTree = "<group>";
+		};
+		C60F6FC419762D7800AFC182 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FC519762D7800AFC182 /* HuiTuTicket-Info.plist */,
+				C60F6FC619762D7800AFC182 /* InfoPlist.strings */,
+				C60F6FC919762D7800AFC182 /* main.m */,
+				C60F6FCB19762D7800AFC182 /* HuiTuTicket-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C60F6FDC19762D7900AFC182 /* HuiTuTicketTests */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */,
+				C60F6FDD19762D7900AFC182 /* Supporting Files */,
+			);
+			path = HuiTuTicketTests;
+			sourceTree = "<group>";
+		};
+		C60F6FDD19762D7900AFC182 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C60F6FDE19762D7900AFC182 /* HuiTuTicketTests-Info.plist */,
+				C60F6FDF19762D7900AFC182 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C60F6FEC19762E5E00AFC182 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF541976493200543D39 /* Vendor */,
+				C6BADF531976491F00543D39 /* Macro */,
+				C6BADF521976491400543D39 /* Common */,
+				C6BADF511976490C00543D39 /* Categorys */,
+				C60F6FF1197630D700AFC182 /* Models */,
+				C60F6FF0197630CF00AFC182 /* Views */,
+				C60F6FEF197630C300AFC182 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C60F6FED19762E6700AFC182 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6B941A71977AF3D00208F20 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C60F6FEF197630C300AFC182 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6B9419B1977815600208F20 /* HTBaseControllers */,
+				C6BADF7319768A1E00543D39 /* Message */,
+				C6BADF72197689ED00543D39 /* Orders */,
+				C6BADF71197689AC00543D39 /* Home */,
+				C6BADF701976899000543D39 /* Mine */,
+				C6BADF6A1976896400543D39 /* More */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C60F6FF0197630CF00AFC182 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6B941AA1977C27A00208F20 /* Messages */,
+				C6B941A11977A39700208F20 /* Mine */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C60F6FF1197630D700AFC182 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF9519775A1C00543D39 /* HTStoreManager.h */,
+				C6BADF9619775A1C00543D39 /* HTStoreManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6B9419B1977815600208F20 /* HTBaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF611976816600543D39 /* HTBaseTabBarController */,
+				C6BADF5D197680FC00543D39 /* HTBaseTableViewController */,
+				C6BADF7719768DDD00543D39 /* HTMultipleSectionTableViewController */,
+				C6BADF55197649B100543D39 /* HTBaseViewController */,
+				C6BADF59197680B200543D39 /* HTBaseNavigationController */,
+			);
+			name = HTBaseControllers;
+			sourceTree = "<group>";
+		};
+		C6B941A11977A39700208F20 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C6B941A21977A3C400208F20 /* HTMineHeaderView.h */,
+				C6B941A31977A3C400208F20 /* HTMineHeaderView.m */,
+				C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		C6B941A71977AF3D00208F20 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C6B941B11977C35500208F20 /* message_avatar.png */,
+				C6B941A81977AF4400208F20 /* mine_header_bg.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C6B941AA1977C27A00208F20 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				C6B941AC1977C2AE00208F20 /* HTMessageCell.h */,
+				C6B941AD1977C2AE00208F20 /* HTMessageCell.m */,
+				C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		C6BADF511976490C00543D39 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		C6BADF521976491400543D39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF7419768D6A00543D39 /* HTFoundationCommon.h */,
+				C6BADF7519768D6A00543D39 /* HTFoundationCommon.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C6BADF531976491F00543D39 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF941976966100543D39 /* HTMacro.h */,
+				C6B442F81978EAD000731866 /* HTUIKitMacro.h */,
+				C6B442F71978EABF00731866 /* HTFoundationMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		C6BADF541976493200543D39 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		C6BADF55197649B100543D39 /* HTBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF5619764A1E00543D39 /* HTBaseViewController.h */,
+				C6BADF5719764A1E00543D39 /* HTBaseViewController.m */,
+			);
+			name = HTBaseViewController;
+			sourceTree = "<group>";
+		};
+		C6BADF59197680B200543D39 /* HTBaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF5A197680E100543D39 /* HTBaseNavigationController.h */,
+				C6BADF5B197680E100543D39 /* HTBaseNavigationController.m */,
+			);
+			name = HTBaseNavigationController;
+			sourceTree = "<group>";
+		};
+		C6BADF5D197680FC00543D39 /* HTBaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF5E1976815900543D39 /* HTBaseTableViewController.h */,
+				C6BADF5F1976815900543D39 /* HTBaseTableViewController.m */,
+			);
+			name = HTBaseTableViewController;
+			sourceTree = "<group>";
+		};
+		C6BADF611976816600543D39 /* HTBaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF62197681A300543D39 /* HTBaseTabBarController.h */,
+				C6BADF63197681A300543D39 /* HTBaseTabBarController.m */,
+			);
+			name = HTBaseTabBarController;
+			sourceTree = "<group>";
+		};
+		C6BADF6A1976896400543D39 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF7B197690F400543D39 /* HTMoreViewController.h */,
+				C6BADF7C197690F400543D39 /* HTMoreViewController.m */,
+				C6BADF7D197690F400543D39 /* HTMoreViewController.xib */,
+				C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */,
+				C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */,
+				C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		C6BADF701976899000543D39 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C6B9419C1977967800208F20 /* HTMineViewController.h */,
+				C6B9419D1977967800208F20 /* HTMineViewController.m */,
+				C6B9419E1977967800208F20 /* HTMineViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		C6BADF71197689AC00543D39 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF8A1976921700543D39 /* HTHomeViewController.h */,
+				C6BADF8B1976921700543D39 /* HTHomeViewController.m */,
+				C6BADF8C1976921700543D39 /* HTHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C6BADF72197689ED00543D39 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF85197691EB00543D39 /* HTOrderViewController.h */,
+				C6BADF86197691EB00543D39 /* HTOrderViewController.m */,
+				C6BADF87197691EB00543D39 /* HTOrderViewController.xib */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		C6BADF7319768A1E00543D39 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF80197691C400543D39 /* HTMessageViewController.h */,
+				C6BADF81197691C400543D39 /* HTMessageViewController.m */,
+				C6BADF82197691C400543D39 /* HTMessageViewController.xib */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C6BADF7719768DDD00543D39 /* HTMultipleSectionTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BADF7819768E1600543D39 /* HTMultipleSectionTableViewController.h */,
+				C6BADF7919768E1600543D39 /* HTMultipleSectionTableViewController.m */,
+			);
+			name = HTMultipleSectionTableViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C60F6FB919762D7800AFC182 /* HuiTuTicket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60F6FE619762D7900AFC182 /* Build configuration list for PBXNativeTarget "HuiTuTicket" */;
+			buildPhases = (
+				C60F6FB619762D7800AFC182 /* Sources */,
+				C60F6FB719762D7800AFC182 /* Frameworks */,
+				C60F6FB819762D7800AFC182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuiTuTicket;
+			productName = HuiTuTicket;
+			productReference = C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C60F6FD419762D7900AFC182 /* HuiTuTicketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60F6FE919762D7900AFC182 /* Build configuration list for PBXNativeTarget "HuiTuTicketTests" */;
+			buildPhases = (
+				C60F6FD119762D7900AFC182 /* Sources */,
+				C60F6FD219762D7900AFC182 /* Frameworks */,
+				C60F6FD319762D7900AFC182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C60F6FDB19762D7900AFC182 /* PBXTargetDependency */,
+			);
+			name = HuiTuTicketTests;
+			productName = HuiTuTicketTests;
+			productReference = C60F6FD519762D7900AFC182 /* HuiTuTicketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C60F6FB219762D7800AFC182 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = HuiTuTicket;
+				TargetAttributes = {
+					C60F6FD419762D7900AFC182 = {
+						TestTargetID = C60F6FB919762D7800AFC182;
+					};
+				};
+			};
+			buildConfigurationList = C60F6FB519762D7800AFC182 /* Build configuration list for PBXProject "HuiTuTicket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = C60F6FB119762D7800AFC182;
+			productRefGroup = C60F6FBB19762D7800AFC182 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C60F6FB919762D7800AFC182 /* HuiTuTicket */,
+				C60F6FD419762D7900AFC182 /* HuiTuTicketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C60F6FB819762D7800AFC182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
+				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
+				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
+				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
+				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
+				C6BADF8E1976921700543D39 /* HTHomeViewController.xib in Resources */,
+				C6BADF89197691EB00543D39 /* HTOrderViewController.xib in Resources */,
+				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
+				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
+				C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */,
+				C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */,
+				C60F6FD019762D7800AFC182 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60F6FD319762D7900AFC182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60F6FE119762D7900AFC182 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C60F6FB619762D7800AFC182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */,
+				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
+				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
+				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
+				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
+				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
+				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
+				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
+				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
+				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
+				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
+				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
+				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
+				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
+				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
+				C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */,
+				C60F6FCA19762D7800AFC182 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60F6FD119762D7900AFC182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C60F6FDB19762D7900AFC182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C60F6FB919762D7800AFC182 /* HuiTuTicket */;
+			targetProxy = C60F6FDA19762D7900AFC182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C60F6FC619762D7800AFC182 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C60F6FC719762D7800AFC182 /* en */,
+				C6B941B31977D20D00208F20 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C60F6FDF19762D7900AFC182 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C60F6FE019762D7900AFC182 /* en */,
+				C6B941B41977D20D00208F20 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C60F6FE419762D7900AFC182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C60F6FE519762D7900AFC182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C60F6FE719762D7900AFC182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
+				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C60F6FE819762D7900AFC182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
+				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C60F6FEA19762D7900AFC182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HuiTuTicket.app/HuiTuTicket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HuiTuTicketTests/HuiTuTicketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C60F6FEB19762D7900AFC182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HuiTuTicket.app/HuiTuTicket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
+				INFOPLIST_FILE = "HuiTuTicketTests/HuiTuTicketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C60F6FB519762D7800AFC182 /* Build configuration list for PBXProject "HuiTuTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60F6FE419762D7900AFC182 /* Debug */,
+				C60F6FE519762D7900AFC182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60F6FE619762D7900AFC182 /* Build configuration list for PBXNativeTarget "HuiTuTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60F6FE719762D7900AFC182 /* Debug */,
+				C60F6FE819762D7900AFC182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60F6FE919762D7900AFC182 /* Build configuration list for PBXNativeTarget "HuiTuTicketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60F6FEA19762D7900AFC182 /* Debug */,
+				C60F6FEB19762D7900AFC182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C60F6FB219762D7800AFC182 /* Project object */;
+}

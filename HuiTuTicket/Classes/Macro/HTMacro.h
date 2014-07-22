@@ -1,0 +1,20 @@
+//
+//  HTMacro.h
+//  HuiTuTicket
+//
+//  Created by Chemayi on 14-7-16.
+//  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
+//
+
+#ifndef HuiTuTicket_HTMacro_h
+#define HuiTuTicket_HTMacro_h
+
+// UIKit 框架宏定义
+#import "HTUIKitMacro.h"
+
+// Foundation 框架宏定义
+#import "HTFoundationMacro.h"
+
+#define APP_ID @"11111111"
+
+#endif
