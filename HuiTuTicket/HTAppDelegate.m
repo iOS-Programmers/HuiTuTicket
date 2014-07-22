@@ -17,8 +17,6 @@
 #import "HTMineViewController.h"
 #import "HTMoreViewController.h"
 
-//Test
-//测试一下 222222  333
 
 @implementation HTAppDelegate
 
@@ -31,26 +29,31 @@
     //Message
     HTMessageViewController *messageViewController = [[HTMessageViewController alloc] init];
     messageViewController.title = @"消息";
+    messageViewController.tabBarItem.image = [UIImage imageNamed:@"tab_message"];
     HTBaseNavigationController *messageNav = [[HTBaseNavigationController alloc] initWithRootViewController:messageViewController];
     
     //Order
     HTOrderViewController *orderViewController = [[HTOrderViewController alloc] init];
     orderViewController.title = @"订单";
+    orderViewController.tabBarItem.image = [UIImage imageNamed:@"tab_order"];
     HTBaseNavigationController *orderNav = [[HTBaseNavigationController alloc] initWithRootViewController:orderViewController];
     
     //Home
     HTHomeViewController *homeRootViewController = [[HTHomeViewController alloc] init];
     homeRootViewController.title = @"主页";
+    homeRootViewController.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
     HTBaseNavigationController *homeRootNav = [[HTBaseNavigationController alloc] initWithRootViewController:homeRootViewController];
     
     //Mine
     HTMineViewController *mineViewController = [[HTMineViewController alloc] init];
     mineViewController.title = @"我的";
+    mineViewController.tabBarItem.image = [UIImage imageNamed:@"tab_mine"];
     HTBaseNavigationController *mineNav = [[HTBaseNavigationController alloc] initWithRootViewController:mineViewController];
     
     //More
     HTMoreViewController *moreViewController = [[HTMoreViewController alloc] init];
     moreViewController.title = @"更多";
+    moreViewController.tabBarItem.image = [UIImage imageNamed:@"tab_more"];
     HTBaseNavigationController *moreNav = [[HTBaseNavigationController alloc] initWithRootViewController:moreViewController];
     
     //tabBar
