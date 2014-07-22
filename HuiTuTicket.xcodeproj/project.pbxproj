@@ -67,6 +67,8 @@
 		C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124A3197E3C0200FF4D83 /* tab_mine@2x.png */; };
 		C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124A4197E3C0200FF4D83 /* tab_more@2x.png */; };
 		C6D124AA197E3C0200FF4D83 /* tab_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124A5197E3C0200FF4D83 /* tab_order@2x.png */; };
+		C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */; };
+		C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,9 @@
 		C6D124A3197E3C0200FF4D83 /* tab_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_mine@2x.png"; sourceTree = "<group>"; };
 		C6D124A4197E3C0200FF4D83 /* tab_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_more@2x.png"; sourceTree = "<group>"; };
 		C6D124A5197E3C0200FF4D83 /* tab_order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_order@2x.png"; sourceTree = "<group>"; };
+		C6D124AB197E40B200FF4D83 /* HTMyTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMyTicketController.h; sourceTree = "<group>"; };
+		C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMyTicketController.m; sourceTree = "<group>"; };
+		C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMyTicketController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +455,9 @@
 				C6B9419C1977967800208F20 /* HTMineViewController.h */,
 				C6B9419D1977967800208F20 /* HTMineViewController.m */,
 				C6B9419E1977967800208F20 /* HTMineViewController.xib */,
+				C6D124AB197E40B200FF4D83 /* HTMyTicketController.h */,
+				C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */,
+				C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -654,6 +662,7 @@
 				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
+				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
@@ -693,6 +702,7 @@
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
+				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,

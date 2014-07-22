@@ -10,6 +10,8 @@
 #import "HTMineHeaderView.h"
 #import "HTStoreManager.h"
 
+#import "HTMyTicketController.h"
+
 @interface HTMineViewController ()
 
 @end
@@ -77,16 +79,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *viewController;
-    NSInteger row = indexPath.row;
+
     NSInteger section = indexPath.section;
     switch (section) {
-            //        case 0: {
-            //            XHMoreMyProfileDetailTableViewController *myProfileDetailTableViewController = [[XHMoreMyProfileDetailTableViewController alloc] init];
-            //            viewController = myProfileDetailTableViewController;
-            //            break;
-            //        }
+       case 0: {
+            HTMyTicketController *myTicket = [[HTMyTicketController alloc] init];
+            myTicket.hidesBottomBarWhenPushed = YES;
+            viewController = myTicket;
+            break;
+        }
+        
             
-        default:
+        default: {
+            //只有我的联票可用，其他的点击提示该功能暂未开发，尽请期待。
+        }
             break;
     }
     if (viewController) {
