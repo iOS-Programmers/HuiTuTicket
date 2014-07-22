@@ -69,6 +69,9 @@
 		C6D124AA197E3C0200FF4D83 /* tab_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124A5197E3C0200FF4D83 /* tab_order@2x.png */; };
 		C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */; };
 		C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */; };
+		C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124B1197E6AF400FF4D83 /* 37x-Checkmark.png */; };
+		C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124B2197E6AF400FF4D83 /* 37x-Checkmark@2x.png */; };
+		C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124B4197E6AF400FF4D83 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +172,10 @@
 		C6D124AB197E40B200FF4D83 /* HTMyTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMyTicketController.h; sourceTree = "<group>"; };
 		C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMyTicketController.m; sourceTree = "<group>"; };
 		C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMyTicketController.xib; sourceTree = "<group>"; };
+		C6D124B1197E6AF400FF4D83 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		C6D124B2197E6AF400FF4D83 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		C6D124B3197E6AF400FF4D83 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C6D124B4197E6AF400FF4D83 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +403,7 @@
 		C6BADF541976493200543D39 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C6D124B0197E6AF400FF4D83 /* MBProgressHUD_0.8 */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -566,6 +574,17 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		C6D124B0197E6AF400FF4D83 /* MBProgressHUD_0.8 */ = {
+			isa = PBXGroup;
+			children = (
+				C6D124B1197E6AF400FF4D83 /* 37x-Checkmark.png */,
+				C6D124B2197E6AF400FF4D83 /* 37x-Checkmark@2x.png */,
+				C6D124B3197E6AF400FF4D83 /* MBProgressHUD.h */,
+				C6D124B4197E6AF400FF4D83 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD_0.8;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -650,6 +669,7 @@
 				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C6D1249D197E3AC800FF4D83 /* my_03@2x.png in Resources */,
+				C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C6D1247F197E37E500FF4D83 /* more_aboutus@2x.png in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
@@ -662,6 +682,7 @@
 				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
+				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
@@ -704,6 +725,7 @@
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
+				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
