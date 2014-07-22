@@ -11,6 +11,9 @@
 //  测试
 #import "HTHomeViewController.h"
 
+#import "HTHomeTableViewCell.h"
+#import "HTHomeHeadView.h"
+
 @interface HTHomeViewController ()
 
 @end
@@ -43,6 +46,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CGRect rect = self.tableView.frame;
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height);
+    HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
+    self.tableView.tableHeaderView = headView;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -52,27 +60,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UITableView DataSource
+#pragma mark  -
+#pragma mark  - TableView Delegate
+- (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark -
+#pragma mark - TableView DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"cellIdentfier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        
+    static NSString *CellIdentifier = @"Cell";
+    HTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *cellNib = [[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil];
+        for (id oneObject in cellNib)
+        {
+            if ([oneObject isKindOfClass:[HTHomeTableViewCell class]])
+            {
+                cell = (HTHomeTableViewCell *)oneObject;
+            }
+        }
     }
-    cell.textLabel.text = @"主页";
-    
     return cell;
 }
 
-#pragma mark - UITableView Delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    return 70;
 }
+
 
 @end

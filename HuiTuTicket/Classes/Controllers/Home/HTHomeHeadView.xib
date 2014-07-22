@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yRm-oK-ChO">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="s24-9y-zi2">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZ4-hh-Po0">
+                    <rect key="frame" x="11" y="70" width="145" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.21568629145622253" green="0.75294125080108643" blue="0.64313727617263794" alpha="1" colorSpace="deviceRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
+                    <state key="normal" title="景区门票" image="home001.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g9c-3k-CCB">
+                    <rect key="frame" x="164" y="70" width="145" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.57254904508590698" blue="0.23921570181846619" alpha="1" colorSpace="deviceRGB"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
+                    <state key="normal" title="景区联票" image="home002.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qQ8-LW-IGd">
+                    <rect key="frame" x="11" y="133" width="145" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.31372550129890442" green="0.76470595598220825" blue="0.93333339691162109" alpha="1" colorSpace="deviceRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
+                    <state key="normal" title="联票注册" image="home003.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VP-G2-i3C">
+                    <rect key="frame" x="164" y="133" width="145" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.93725496530532837" green="0.43921571969985962" blue="0.56078433990478516" alpha="1" colorSpace="deviceRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
+                    <state key="normal" title="出游预约" image="home004.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home005.png" id="8Dp-Nz-ufk">
+                    <rect key="frame" x="125" y="192" width="195" height="34"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日特惠" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyq-sG-kAE">
+                    <rect key="frame" x="11" y="198" width="68" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="fMg-s0-eou">
+                    <rect key="frame" x="0.0" y="191" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.74901962280273438" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117653369903564" green="0.94117653369903564" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home001.png" width="24" height="25"/>
+        <image name="home002.png" width="34" height="25"/>
+        <image name="home003.png" width="24" height="25"/>
+        <image name="home004.png" width="25" height="25"/>
+        <image name="home005.png" width="195" height="34"/>
+    </resources>
+</document>
