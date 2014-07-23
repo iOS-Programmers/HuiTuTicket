@@ -10,4 +10,10 @@
 
 @interface HTHomeHeadView : UIView
 
+- (IBAction)headBtnsClicked:(UIButton *)sender;
+
+
+
+
+
 @end

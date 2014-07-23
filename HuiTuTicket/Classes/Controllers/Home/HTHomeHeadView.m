@@ -27,5 +27,36 @@
     // Drawing code
 }
 */
+# pragma mark -
+# pragma mark - Action
+- (IBAction)headBtnsClicked:(UIButton *)sender
+{
+    switch (sender.tag)
+    {
+        case 100:
+        {
+            
+        }
+            break;
+        case 101:
+        {
+            
+        }
+            break;
+        case 102:
+        {
+            
+        }
+            break;
+        case 103:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 
+}
 @end

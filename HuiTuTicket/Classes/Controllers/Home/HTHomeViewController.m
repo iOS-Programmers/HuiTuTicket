@@ -16,6 +16,11 @@
 
 @interface HTHomeViewController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
+
+
 @end
 
 @implementation HTHomeViewController

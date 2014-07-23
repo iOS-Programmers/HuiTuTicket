@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="yRm-oK-ChO">
+        <view contentMode="scaleToFill" id="yRm-oK-ChO" customClass="HTHomeHeadView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -23,6 +23,9 @@
                     <state key="normal" title="景区门票" image="home001.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="unJ-Ms-1lH"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g9c-3k-CCB">
                     <rect key="frame" x="164" y="70" width="145" height="50"/>
@@ -33,6 +36,9 @@
                     <state key="normal" title="景区联票" image="home002.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="Wga-RC-nex"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qQ8-LW-IGd">
                     <rect key="frame" x="11" y="133" width="145" height="50"/>
@@ -42,6 +48,9 @@
                     <state key="normal" title="联票注册" image="home003.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="MnI-dG-RKu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VP-G2-i3C">
                     <rect key="frame" x="164" y="133" width="145" height="50"/>
@@ -51,6 +60,9 @@
                     <state key="normal" title="出游预约" image="home004.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="OJ0-Ib-CMf"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home005.png" id="8Dp-Nz-ufk">
                     <rect key="frame" x="125" y="192" width="195" height="34"/>
