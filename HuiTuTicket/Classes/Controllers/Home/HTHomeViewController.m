@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     CGRect rect = self.tableView.frame;
-    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height);
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height - 44);
     HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
     
