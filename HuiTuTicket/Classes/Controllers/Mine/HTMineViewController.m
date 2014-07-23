@@ -96,11 +96,11 @@
         }
             break;
     }
-//    if (viewController) {
-//        [self pushNewViewController:viewController];
-//    }
-    
-    [self onLoginBtn];
+    if (viewController) {
+        [self pushNewViewController:viewController];
+    }
+
+
 }
 
 #pragma mark - Action

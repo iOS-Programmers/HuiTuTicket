@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>431C91E2-0F7A-4F50-B119-413656CC162C</string>
+	<string>20F06113-FB20-4AF4-8FCF-3C81D72AFADE</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HuiTuTicket</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>85E2416E-21D7-40A0-81EE-FBE90A34D9AC</key>
-		<string>https://github.com/jerry1230/HuiTuTicket.git</string>
+		<key>BCBAA987-0106-4404-879C-ECC96EA4FA5F</key>
+		<string>https://github.com/iOS-Programmers/HuiTuTicket.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HuiTuTicket.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>85E2416E-21D7-40A0-81EE-FBE90A34D9AC</key>
+		<key>BCBAA987-0106-4404-879C-ECC96EA4FA5F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jerry1230/HuiTuTicket.git</string>
+	<string>https://github.com/iOS-Programmers/HuiTuTicket.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>85E2416E-21D7-40A0-81EE-FBE90A34D9AC</string>
+	<string>BCBAA987-0106-4404-879C-ECC96EA4FA5F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>85E2416E-21D7-40A0-81EE-FBE90A34D9AC</string>
+			<string>BCBAA987-0106-4404-879C-ECC96EA4FA5F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HuiTuTicket</string>
 		</dict>

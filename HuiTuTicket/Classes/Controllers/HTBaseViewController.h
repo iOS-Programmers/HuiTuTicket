@@ -55,6 +55,11 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
 - (void)showError;
 
 /**
+ *  显示只带文字的HUD
+ */
+- (void)showWithText:(NSString *)text;
+
+/**
  *  隐藏在该View上的所有HUD，不管有哪些，都会全部被隐藏
  */
 - (void)hideLoading;

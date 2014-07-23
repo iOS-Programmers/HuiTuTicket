@@ -7,8 +7,11 @@
 //
 
 #import "HTBaseViewController.h"
+#import "MBProgressHUD.h"
 
-@interface HTBaseViewController ()
+@interface HTBaseViewController () <MBProgressHUDDelegate>
+
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 @property (nonatomic, copy) HTBarButtonItemActionBlock barbuttonItemAction;
 
@@ -65,6 +68,7 @@
 
 #pragma mark - Loading
 
+
 - (void)showLoading {
     [self showLoadingWithText:nil];
 }
@@ -75,17 +79,60 @@
 
 - (void)showLoadingWithText:(NSString *)text onView:(UIView *)view {
     
+    _hud = [[MBProgressHUD alloc] initWithView:view];
+    [self.view addSubview:_hud];
+    _hud.labelText = text;
+    
+    [_hud show:YES];
 }
 
 - (void)showSuccess {
-    
+    _hud = [[MBProgressHUD alloc] initWithView:self.view];
+	[self.view addSubview:_hud];
+	
+	// Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
+	_hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+	
+	// Set custom view mode
+	_hud.mode = MBProgressHUDModeCustomView;
+	
+	_hud.delegate = self;
+	_hud.labelText = @"完成";
+	
+	[_hud show:YES];
+	[_hud hide:YES afterDelay:2];
+
 }
 - (void)showError {
     
 }
 
+- (void)showWithText:(NSString *)text
+{
+    _hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+	
+	// Configure for text only and offset down
+	_hud.mode = MBProgressHUDModeText;
+	_hud.labelText = text;
+	_hud.margin = 20.f;
+	_hud.yOffset = 0.f;
+	_hud.removeFromSuperViewOnHide = YES;
+	
+	[_hud hide:YES afterDelay:2];
+}
+
 - (void)hideLoading {
-    
+    [_hud hide:YES];
+}
+
+#pragma mark -
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+	// Remove HUD from screen when the HUD was hidded
+	[self.hud removeFromSuperview];
+
+	self.hud = nil;
 }
 
 #pragma mark - Life cycle
