@@ -12,4 +12,5 @@
 
 +(HTMineHeaderView *)instanceHeaderView;
 
+- (IBAction)onLoginBtnClick:(id)sender;
 @end

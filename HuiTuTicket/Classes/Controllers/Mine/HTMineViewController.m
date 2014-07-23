@@ -11,6 +11,7 @@
 #import "HTStoreManager.h"
 
 #import "HTMyTicketController.h"
+#import "HTLoginController.h"
 
 @interface HTMineViewController ()
 
@@ -95,9 +96,22 @@
         }
             break;
     }
-    if (viewController) {
-        [self pushNewViewController:viewController];
-    }
+//    if (viewController) {
+//        [self pushNewViewController:viewController];
+//    }
+    
+    [self onLoginBtn];
+}
+
+#pragma mark - Action
+- (void)onLoginBtn
+{
+    HTLoginController *loginVC = [[HTLoginController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    
+    [self.navigationController presentViewController:nav animated:YES completion:^{
+        
+    }];
 }
 
 @end

@@ -81,6 +81,9 @@
 		C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124B1197E6AF400FF4D83 /* 37x-Checkmark.png */; };
 		C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124B2197E6AF400FF4D83 /* 37x-Checkmark@2x.png */; };
 		C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124B4197E6AF400FF4D83 /* MBProgressHUD.m */; };
+		C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124BF197F691C00FF4D83 /* HTLoginController.m */; };
+		C6D124C2197F691C00FF4D83 /* HTLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124C0197F691C00FF4D83 /* HTLoginController.xib */; };
+		C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124C5197F96B800FF4D83 /* HTLoginTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +199,11 @@
 		C6D124B2197E6AF400FF4D83 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		C6D124B3197E6AF400FF4D83 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		C6D124B4197E6AF400FF4D83 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C6D124BE197F691C00FF4D83 /* HTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLoginController.h; sourceTree = "<group>"; };
+		C6D124BF197F691C00FF4D83 /* HTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLoginController.m; sourceTree = "<group>"; };
+		C6D124C0197F691C00FF4D83 /* HTLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLoginController.xib; sourceTree = "<group>"; };
+		C6D124C4197F96B800FF4D83 /* HTLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLoginTextField.h; sourceTree = "<group>"; };
+		C6D124C5197F96B800FF4D83 /* HTLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLoginTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +327,7 @@
 		C60F6FEF197630C300AFC182 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6D124BD197F691C00FF4D83 /* Login&Register */,
 				C6B9419B1977815600208F20 /* HTBaseControllers */,
 				C6BADF7319768A1E00543D39 /* Message */,
 				C6BADF72197689ED00543D39 /* Orders */,
@@ -332,6 +341,7 @@
 		C60F6FF0197630CF00AFC182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6D124C3197F968800FF4D83 /* CustomTextField */,
 				C6B941AA1977C27A00208F20 /* Messages */,
 				C6B941A11977A39700208F20 /* Mine */,
 			);
@@ -616,6 +626,25 @@
 			path = MBProgressHUD_0.8;
 			sourceTree = "<group>";
 		};
+		C6D124BD197F691C00FF4D83 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				C6D124BE197F691C00FF4D83 /* HTLoginController.h */,
+				C6D124BF197F691C00FF4D83 /* HTLoginController.m */,
+				C6D124C0197F691C00FF4D83 /* HTLoginController.xib */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		C6D124C3197F968800FF4D83 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C6D124C4197F96B800FF4D83 /* HTLoginTextField.h */,
+				C6D124C5197F96B800FF4D83 /* HTLoginTextField.m */,
+			);
+			name = CustomTextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -707,6 +736,7 @@
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
 				C6D12491197E397500FF4D83 /* order_02@2x.png in Resources */,
+				C6D124C2197F691C00FF4D83 /* HTLoginController.xib in Resources */,
 				C6BADF8E1976921700543D39 /* HTHomeViewController.xib in Resources */,
 				C6D124AA197E3C0200FF4D83 /* tab_order@2x.png in Resources */,
 				C6BADF89197691EB00543D39 /* HTOrderViewController.xib in Resources */,
@@ -759,6 +789,8 @@
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
 				C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */,
 				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
+				C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */,
+				C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,

@@ -7,12 +7,11 @@
 //
 
 
-
-//  测试
 #import "HTHomeViewController.h"
 
 #import "HTHomeTableViewCell.h"
 #import "HTHomeHeadView.h"
+
 
 @interface HTHomeViewController ()
 
@@ -52,7 +51,7 @@
 {
     [super viewDidLoad];
     CGRect rect = self.tableView.frame;
-    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height);
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height - 44);
     HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
     
@@ -64,6 +63,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark  -
 #pragma mark  - TableView Delegate
@@ -96,8 +97,6 @@
     }
     return cell;
 }
-
-
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
