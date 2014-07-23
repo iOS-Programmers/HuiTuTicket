@@ -7,12 +7,11 @@
 //
 
 
-
-//  测试
 #import "HTHomeViewController.h"
 
 #import "HTHomeTableViewCell.h"
 #import "HTHomeHeadView.h"
+
 
 @interface HTHomeViewController ()
 
@@ -60,6 +59,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 #pragma mark  -
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,8 +92,6 @@
     }
     return cell;
 }
-
-
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

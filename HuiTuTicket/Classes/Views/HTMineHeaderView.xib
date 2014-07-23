@@ -30,6 +30,9 @@
                     <state key="normal" title="登  录">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onLoginBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="FRM-2r-Iqc"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZeV-Sw-hni">
                     <rect key="frame" x="0.0" y="100" width="159" height="44"/>

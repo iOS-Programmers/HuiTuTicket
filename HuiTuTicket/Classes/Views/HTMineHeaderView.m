@@ -25,6 +25,10 @@
     return [nibView objectAtIndex:0];
 }
 
+- (IBAction)onLoginBtnClick:(id)sender {
+    
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
