@@ -10,6 +10,8 @@
 
 @interface HTTicketBindingController ()
 
+- (IBAction)onRegisterBtnClick:(id)sender;
+
 @end
 
 @implementation HTTicketBindingController
@@ -36,4 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onRegisterBtnClick:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

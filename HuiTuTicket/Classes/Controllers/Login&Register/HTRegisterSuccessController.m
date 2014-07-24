@@ -1,29 +1,29 @@
 //
-//  HTTicketRegisterController.m
+//  HTRegisterSuccessController.m
 //  HuiTuTicket
 //
 //  Created by Chemayi on 14-7-24.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "HTTicketRegisterController.h"
 #import "HTRegisterSuccessController.h"
-#import "HTTicketBindingController.h"
+#import "HTMyTicketController.h"
 
-@interface HTTicketRegisterController ()
+@interface HTRegisterSuccessController ()
+
+- (IBAction)onMyTicketBtnClick:(id)sender;
+
 - (IBAction)onRegisterBtnClick:(id)sender;
-
-- (IBAction)onBindingBtnClick:(id)sender;
 @end
 
-@implementation HTTicketRegisterController
+@implementation HTRegisterSuccessController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"联票注册";
+        self.title = @"注册成功";
     }
     return self;
 }
@@ -40,12 +40,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onRegisterBtnClick:(id)sender {
-    [self pushViewController:@"HTRegisterSuccessController"];
+- (IBAction)onMyTicketBtnClick:(id)sender
+{
+    [self pushViewController:@"HTMyTicketController"];
 }
 
-- (IBAction)onBindingBtnClick:(id)sender {
+- (IBAction)onRegisterBtnClick:(id)sender
+{
     
-    [self pushViewController:@"HTTicketBindingController"];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

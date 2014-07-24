@@ -13,7 +13,7 @@
 #import "HTMyTicketController.h"
 #import "HTLoginController.h"
 
-@interface HTMineViewController ()
+@interface HTMineViewController ()<HTMineHeaderViewDelegate>
 
 @end
 
@@ -42,6 +42,7 @@
     // Do any additional setup after loading the view from its nib.
     
     HTMineHeaderView *headView = [HTMineHeaderView instanceHeaderView];
+    headView.delegate = self;
     headView.frame = CGRectMake(0, 0, 320, 145);
     
     self.tableView.tableHeaderView = headView;
@@ -52,6 +53,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - HTMineHeadView Delegate
+- (void)onLogin
+{
+    HTLoginController *loginVC = [[HTLoginController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    
+    [self.navigationController presentViewController:nav animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark - UITableView DataSource
@@ -93,6 +105,7 @@
             
         default: {
             //只有我的联票可用，其他的点击提示该功能暂未开发，尽请期待。
+            [self showWithText:@"该功能暂未开发，尽请期待！"];
         }
             break;
     }
@@ -100,18 +113,7 @@
         [self pushNewViewController:viewController];
     }
 
-
 }
 
 #pragma mark - Action
-- (void)onLoginBtn
-{
-    HTLoginController *loginVC = [[HTLoginController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
-    
-    [self.navigationController presentViewController:nav animated:YES completion:^{
-        
-    }];
-}
-
 @end

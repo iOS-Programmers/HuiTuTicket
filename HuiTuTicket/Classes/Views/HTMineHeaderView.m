@@ -26,7 +26,9 @@
 }
 
 - (IBAction)onLoginBtnClick:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(onLogin)]) {
+        [self.delegate onLogin];
+    }
 }
 
 /*
