@@ -11,8 +11,6 @@
 		C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */; };
 		C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */; };
 		C5A6EBB21981019B0041DC2A /* HTOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */; };
-		C5A6EBB5198104930041DC2A /* HTOrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBB4198104930041DC2A /* HTOrderHeadView.m */; };
-		C5A6EBB71981049E0041DC2A /* HTOrderHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBB61981049E0041DC2A /* HTOrderHeadView.xib */; };
 		C5A6EBB91981131A0041DC2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A6EBB81981131A0041DC2A /* QuartzCore.framework */; };
 		C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */; };
 		C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */; };
@@ -126,9 +124,6 @@
 		C5A6EBAE1981019B0041DC2A /* HTOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderTableViewCell.h; sourceTree = "<group>"; };
 		C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderTableViewCell.m; sourceTree = "<group>"; };
 		C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderTableViewCell.xib; sourceTree = "<group>"; };
-		C5A6EBB3198104930041DC2A /* HTOrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderHeadView.h; sourceTree = "<group>"; };
-		C5A6EBB4198104930041DC2A /* HTOrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderHeadView.m; sourceTree = "<group>"; };
-		C5A6EBB61981049E0041DC2A /* HTOrderHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderHeadView.xib; sourceTree = "<group>"; };
 		C5A6EBB81981131A0041DC2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeHeadView.h; sourceTree = "<group>"; };
 		C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeHeadView.m; sourceTree = "<group>"; };
@@ -580,9 +575,6 @@
 				C5A6EBAE1981019B0041DC2A /* HTOrderTableViewCell.h */,
 				C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */,
 				C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */,
-				C5A6EBB3198104930041DC2A /* HTOrderHeadView.h */,
-				C5A6EBB4198104930041DC2A /* HTOrderHeadView.m */,
-				C5A6EBB61981049E0041DC2A /* HTOrderHeadView.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -809,7 +801,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D12484197E37E500FF4D83 /* more_setting@2x.png in Resources */,
-				C5A6EBB71981049E0041DC2A /* HTOrderHeadView.xib in Resources */,
 				C5A6EBB21981019B0041DC2A /* HTOrderTableViewCell.xib in Resources */,
 				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
@@ -901,7 +892,6 @@
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
-				C5A6EBB5198104930041DC2A /* HTOrderHeadView.m in Sources */,
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
