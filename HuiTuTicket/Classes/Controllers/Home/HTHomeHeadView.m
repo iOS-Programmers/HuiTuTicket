@@ -8,6 +8,7 @@
 
 #import "HTHomeHeadView.h"
 #import "HTTicketRegisterController.h"
+#import "HTCYOrderViewController.h"
 
 @implementation HTHomeHeadView
 
@@ -60,14 +61,17 @@
             break;
         case 102:
         {
-            HTTicketRegisterController *ticketRegister = [[HTTicketRegisterController alloc] init];
-            ticketRegister.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:ticketRegister animated:YES];
+            HTTicketRegisterController *vc = [[HTTicketRegisterController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:vc animated:YES];
         }
             break;
         case 103:
         {
-            
+            HTCYOrderViewController *vc = [[HTCYOrderViewController alloc] initWithNibName:@"HTCYOrderViewController" bundle:nil];
+            vc.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:vc animated:YES];
+
         }
             break;
             
