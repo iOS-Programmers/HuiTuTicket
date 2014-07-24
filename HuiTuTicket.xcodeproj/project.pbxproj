@@ -84,6 +84,12 @@
 		C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124BF197F691C00FF4D83 /* HTLoginController.m */; };
 		C6D124C2197F691C00FF4D83 /* HTLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124C0197F691C00FF4D83 /* HTLoginController.xib */; };
 		C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124C5197F96B800FF4D83 /* HTLoginTextField.m */; };
+		C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124C81980AC1600FF4D83 /* HTTicketRegisterController.m */; };
+		C6D124CB1980AC1600FF4D83 /* HTTicketRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124C91980AC1600FF4D83 /* HTTicketRegisterController.xib */; };
+		C6D124CE1980B00A00FF4D83 /* pub_btnPoint_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124CC1980B00A00FF4D83 /* pub_btnPoint_selected.png */; };
+		C6D124CF1980B00A00FF4D83 /* pub_btnPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124CD1980B00A00FF4D83 /* pub_btnPoint.png */; };
+		C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124D11980B6D800FF4D83 /* HTTicketBindingController.m */; };
+		C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124D21980B6D800FF4D83 /* HTTicketBindingController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +210,14 @@
 		C6D124C0197F691C00FF4D83 /* HTLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLoginController.xib; sourceTree = "<group>"; };
 		C6D124C4197F96B800FF4D83 /* HTLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLoginTextField.h; sourceTree = "<group>"; };
 		C6D124C5197F96B800FF4D83 /* HTLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLoginTextField.m; sourceTree = "<group>"; };
+		C6D124C71980AC1600FF4D83 /* HTTicketRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketRegisterController.h; sourceTree = "<group>"; };
+		C6D124C81980AC1600FF4D83 /* HTTicketRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketRegisterController.m; sourceTree = "<group>"; };
+		C6D124C91980AC1600FF4D83 /* HTTicketRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketRegisterController.xib; sourceTree = "<group>"; };
+		C6D124CC1980B00A00FF4D83 /* pub_btnPoint_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub_btnPoint_selected.png; sourceTree = "<group>"; };
+		C6D124CD1980B00A00FF4D83 /* pub_btnPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub_btnPoint.png; sourceTree = "<group>"; };
+		C6D124D01980B6D800FF4D83 /* HTTicketBindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketBindingController.h; sourceTree = "<group>"; };
+		C6D124D11980B6D800FF4D83 /* HTTicketBindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketBindingController.m; sourceTree = "<group>"; };
+		C6D124D21980B6D800FF4D83 /* HTTicketBindingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketBindingController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +608,8 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C6D124CC1980B00A00FF4D83 /* pub_btnPoint_selected.png */,
+				C6D124CD1980B00A00FF4D83 /* pub_btnPoint.png */,
 				C6D124A1197E3C0200FF4D83 /* tab_home@2x.png */,
 				C6D124A2197E3C0200FF4D83 /* tab_message@2x.png */,
 				C6D124A3197E3C0200FF4D83 /* tab_mine@2x.png */,
@@ -632,6 +648,12 @@
 				C6D124BE197F691C00FF4D83 /* HTLoginController.h */,
 				C6D124BF197F691C00FF4D83 /* HTLoginController.m */,
 				C6D124C0197F691C00FF4D83 /* HTLoginController.xib */,
+				C6D124C71980AC1600FF4D83 /* HTTicketRegisterController.h */,
+				C6D124C81980AC1600FF4D83 /* HTTicketRegisterController.m */,
+				C6D124C91980AC1600FF4D83 /* HTTicketRegisterController.xib */,
+				C6D124D01980B6D800FF4D83 /* HTTicketBindingController.h */,
+				C6D124D11980B6D800FF4D83 /* HTTicketBindingController.m */,
+				C6D124D21980B6D800FF4D83 /* HTTicketBindingController.xib */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
@@ -732,6 +754,8 @@
 				C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C6D1247F197E37E500FF4D83 /* more_aboutus@2x.png in Resources */,
+				C6D124CF1980B00A00FF4D83 /* pub_btnPoint.png in Resources */,
+				C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
@@ -747,6 +771,7 @@
 				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
+				C6D124CB1980AC1600FF4D83 /* HTTicketRegisterController.xib in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
@@ -761,6 +786,7 @@
 				C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */,
 				C6D12493197E397500FF4D83 /* order_04@2x.png in Resources */,
 				C6D12483197E37E500FF4D83 /* more_score@2x.png in Resources */,
+				C6D124CE1980B00A00FF4D83 /* pub_btnPoint_selected.png in Resources */,
 				C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */,
 				C6D124A0197E3AC800FF4D83 /* my_06@2x.png in Resources */,
 				C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */,
@@ -794,6 +820,7 @@
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
+				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
@@ -802,6 +829,7 @@
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
+				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,

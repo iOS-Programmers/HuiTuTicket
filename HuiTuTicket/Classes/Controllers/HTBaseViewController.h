@@ -33,6 +33,23 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
 - (void)pushNewViewController:(UIViewController *)newViewController;
 
 /**
+ *  点击view的时候取消掉键盘第一响应
+ */
+- (void)clearKeyboard;
+- (void)setControlView:(id)sender;
+
+#pragma mark ViewController presentModal
+/**
+ *  直接push到某个类 在不需要传数据的情况下可以使用这种。(如果需要传数据还是使用传统的push方法)
+ *
+ *  @param className 类名
+ *  @param animated  是否带动画
+ */
+- (void)lxPushViewController:(NSString *)className animated:(BOOL)animated;
+- (void)pushViewController:(NSString *)className;
+- (void)pushViewControllerNoAnimated:(NSString *)className;
+
+/**
  *  显示加载的loading，没有文字的
  */
 - (void)showLoading;

@@ -15,6 +15,8 @@
 
 @property (nonatomic, copy) HTBarButtonItemActionBlock barbuttonItemAction;
 
+@property (nonatomic,retain)UIControl *ctrlView;
+
 @end
 
 @implementation HTBaseViewController
@@ -24,6 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _ctrlView = [[UIControl alloc] init];
     }
     return self;
 }
@@ -64,6 +67,44 @@
 
 - (void)pushNewViewController:(UIViewController *)newViewController {
     [self.navigationController pushViewController:newViewController animated:YES];
+}
+
+- (void)clearKeyboard
+{
+    [self.view endEditing:YES];
+}
+- (void)setControlView:(id)sender
+{
+    self.ctrlView.autoresizesSubviews = YES;
+    UIView *view = (UIView *)sender;
+    self.ctrlView.frame = view.bounds;
+    self.ctrlView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.ctrlView.autoresizesSubviews = YES;
+    [_ctrlView addTarget:self action:@selector(clearKeyboard)forControlEvents:UIControlEventTouchUpInside];
+    if ([sender isKindOfClass:[UIView class]])
+    {
+        [(UIView *)sender addSubview:self.ctrlView];
+        [(UIView *)sender sendSubviewToBack:self.ctrlView];
+    }
+}
+
+#pragma mark - ViewController presentModal
+
+- (void)lxPushViewController:(NSString *)className animated:(BOOL)animated {
+    Class cls = NSClassFromString(className);
+    NSAssert1(cls, @"could not find class '%@'",className);
+    id obj = [[cls alloc] initWithNibName:className bundle:nil];
+    
+    [self.navigationController pushViewController:obj animated:animated];
+    
+}
+
+- (void)pushViewController:(NSString *)className {
+    [self lxPushViewController:className animated:YES];
+}
+
+- (void)pushViewControllerNoAnimated:(NSString *)className {
+    [self lxPushViewController:className animated:NO];
 }
 
 #pragma mark - Loading
@@ -157,6 +198,13 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
 #endif
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setControlView:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
