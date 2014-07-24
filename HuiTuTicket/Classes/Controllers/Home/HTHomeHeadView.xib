@@ -15,7 +15,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZ4-hh-Po0">
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZ4-hh-Po0">
                     <rect key="frame" x="11" y="70" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.21568629145622253" green="0.75294125080108643" blue="0.64313727617263794" alpha="1" colorSpace="deviceRGB"/>
@@ -27,7 +27,7 @@
                         <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="unJ-Ms-1lH"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g9c-3k-CCB">
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g9c-3k-CCB">
                     <rect key="frame" x="164" y="70" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.57254904508590698" blue="0.23921570181846619" alpha="1" colorSpace="deviceRGB"/>
@@ -40,7 +40,7 @@
                         <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="Wga-RC-nex"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qQ8-LW-IGd">
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qQ8-LW-IGd">
                     <rect key="frame" x="11" y="133" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.31372550129890442" green="0.76470595598220825" blue="0.93333339691162109" alpha="1" colorSpace="deviceRGB"/>
@@ -52,7 +52,7 @@
                         <action selector="headBtnsClicked:" destination="yRm-oK-ChO" eventType="touchUpInside" id="MnI-dG-RKu"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VP-G2-i3C">
+                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VP-G2-i3C">
                     <rect key="frame" x="164" y="133" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.93725496530532837" green="0.43921571969985962" blue="0.56078433990478516" alpha="1" colorSpace="deviceRGB"/>

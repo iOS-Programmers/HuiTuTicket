@@ -7,6 +7,7 @@
 //
 
 #import "HTHomeHeadView.h"
+#import "HTTicketRegisterController.h"
 
 @implementation HTHomeHeadView
 
@@ -27,6 +28,20 @@
     // Drawing code
 }
 */
+
+- (UIViewController *)viewController
+{
+    for (UIView* next = [self superview]; next; next = next.superview)
+    {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+        {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
 # pragma mark -
 # pragma mark - Action
 - (IBAction)headBtnsClicked:(UIButton *)sender
@@ -45,7 +60,9 @@
             break;
         case 102:
         {
-            
+            HTTicketRegisterController *ticketRegister = [[HTTicketRegisterController alloc] init];
+            ticketRegister.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:ticketRegister animated:YES];
         }
             break;
         case 103:
