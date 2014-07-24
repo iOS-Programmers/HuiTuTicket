@@ -9,6 +9,8 @@
 #import "HTMyTicketController.h"
 #import "HTMyTicketCell.h"
 
+#import "HTTicketDetailController.h"
+
 @interface HTMyTicketController ()
 
 @end
@@ -60,6 +62,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self pushViewController:@"HTTicketDetailController"];
 }
 
 @end

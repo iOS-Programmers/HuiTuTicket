@@ -20,8 +20,8 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="103-3J-htx">
                     <rect key="frame" x="10" y="135" width="300" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.44431734109999999" blue="0.24225105890000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="登      录">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="登      录" backgroundImage="pub_OrangBtn.png">
                         <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -74,4 +74,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="pub_OrangBtn.png" width="200" height="35"/>
+    </resources>
 </document>

@@ -95,6 +95,11 @@
 		C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124DB1980E7ED00FF4D83 /* HTRegisterSuccessController.m */; };
 		C6D124DE1980E7ED00FF4D83 /* HTRegisterSuccessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124DC1980E7ED00FF4D83 /* HTRegisterSuccessController.xib */; };
 		C6D124E01980E84B00FF4D83 /* pub_success_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124DF1980E84B00FF4D83 /* pub_success_img@2x.png */; };
+		C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124E21981011500FF4D83 /* HTTicketDetailController.m */; };
+		C6D124E51981011500FF4D83 /* HTTicketDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E31981011500FF4D83 /* HTTicketDetailController.xib */; };
+		C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */; };
+		C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */; };
+		C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +235,12 @@
 		C6D124DB1980E7ED00FF4D83 /* HTRegisterSuccessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRegisterSuccessController.m; sourceTree = "<group>"; };
 		C6D124DC1980E7ED00FF4D83 /* HTRegisterSuccessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTRegisterSuccessController.xib; sourceTree = "<group>"; };
 		C6D124DF1980E84B00FF4D83 /* pub_success_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_success_img@2x.png"; sourceTree = "<group>"; };
+		C6D124E11981011500FF4D83 /* HTTicketDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailController.h; sourceTree = "<group>"; };
+		C6D124E21981011500FF4D83 /* HTTicketDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailController.m; sourceTree = "<group>"; };
+		C6D124E31981011500FF4D83 /* HTTicketDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailController.xib; sourceTree = "<group>"; };
+		C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_greenBtn@2x.png"; sourceTree = "<group>"; };
+		C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_OrangBtn@2x.png"; sourceTree = "<group>"; };
+		C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_ziseBtn@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +536,9 @@
 				C6D124AB197E40B200FF4D83 /* HTMyTicketController.h */,
 				C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */,
 				C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */,
+				C6D124E11981011500FF4D83 /* HTTicketDetailController.h */,
+				C6D124E21981011500FF4D83 /* HTTicketDetailController.m */,
+				C6D124E31981011500FF4D83 /* HTTicketDetailController.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -623,6 +637,9 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */,
+				C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */,
+				C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */,
 				C6D124DF1980E84B00FF4D83 /* pub_success_img@2x.png */,
 				C6D124CC1980B00A00FF4D83 /* pub_btnPoint_selected@2x.png */,
 				C6D124CD1980B00A00FF4D83 /* pub_btnPoint@2x.png */,
@@ -783,6 +800,7 @@
 				C6BADF8E1976921700543D39 /* HTHomeViewController.xib in Resources */,
 				C6D124AA197E3C0200FF4D83 /* tab_order@2x.png in Resources */,
 				C6BADF89197691EB00543D39 /* HTOrderViewController.xib in Resources */,
+				C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */,
 				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
@@ -795,8 +813,10 @@
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
+				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
 				C5FB47E5197E6A7D00FE5364 /* HTHomeTableViewCell.xib in Resources */,
+				C6D124E51981011500FF4D83 /* HTTicketDetailController.xib in Resources */,
 				C6D124E01980E84B00FF4D83 /* pub_success_img@2x.png in Resources */,
 				C6D124DE1980E7ED00FF4D83 /* HTRegisterSuccessController.xib in Resources */,
 				C6D1249E197E3AC800FF4D83 /* my_04@2x.png in Resources */,
@@ -809,6 +829,7 @@
 				C6D12483197E37E500FF4D83 /* more_score@2x.png in Resources */,
 				C6D124CE1980B00A00FF4D83 /* pub_btnPoint_selected@2x.png in Resources */,
 				C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */,
+				C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */,
 				C6D124A0197E3AC800FF4D83 /* my_06@2x.png in Resources */,
 				C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */,
 				C6D12480197E37E500FF4D83 /* more_feedback@2x.png in Resources */,
@@ -854,6 +875,7 @@
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
+				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
