@@ -90,6 +90,8 @@
 		C6D124CF1980B00A00FF4D83 /* pub_btnPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124CD1980B00A00FF4D83 /* pub_btnPoint.png */; };
 		C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124D11980B6D800FF4D83 /* HTTicketBindingController.m */; };
 		C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124D21980B6D800FF4D83 /* HTTicketBindingController.xib */; };
+		C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D124D61980BCE200FF4D83 /* HTMyTicketCell.m */; };
+		C6D124D91980BCE200FF4D83 /* HTMyTicketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6D124D71980BCE200FF4D83 /* HTMyTicketCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +220,9 @@
 		C6D124D01980B6D800FF4D83 /* HTTicketBindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketBindingController.h; sourceTree = "<group>"; };
 		C6D124D11980B6D800FF4D83 /* HTTicketBindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketBindingController.m; sourceTree = "<group>"; };
 		C6D124D21980B6D800FF4D83 /* HTTicketBindingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketBindingController.xib; sourceTree = "<group>"; };
+		C6D124D51980BCE200FF4D83 /* HTMyTicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMyTicketCell.h; path = ../Controllers/Mine/HTMyTicketCell.h; sourceTree = "<group>"; };
+		C6D124D61980BCE200FF4D83 /* HTMyTicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMyTicketCell.m; path = ../Controllers/Mine/HTMyTicketCell.m; sourceTree = "<group>"; };
+		C6D124D71980BCE200FF4D83 /* HTMyTicketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HTMyTicketCell.xib; path = ../Controllers/Mine/HTMyTicketCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +394,9 @@
 				C6B941A21977A3C400208F20 /* HTMineHeaderView.h */,
 				C6B941A31977A3C400208F20 /* HTMineHeaderView.m */,
 				C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */,
+				C6D124D51980BCE200FF4D83 /* HTMyTicketCell.h */,
+				C6D124D61980BCE200FF4D83 /* HTMyTicketCell.m */,
+				C6D124D71980BCE200FF4D83 /* HTMyTicketCell.xib */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -792,6 +800,7 @@
 				C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */,
 				C6D12480197E37E500FF4D83 /* more_feedback@2x.png in Resources */,
 				C5FB47EC197E6A9C00FE5364 /* home002@2x.png in Resources */,
+				C6D124D91980BCE200FF4D83 /* HTMyTicketCell.xib in Resources */,
 				C5FB47ED197E6A9C00FE5364 /* home003@2x.png in Resources */,
 				C60F6FD019762D7800AFC182 /* Images.xcassets in Resources */,
 			);
@@ -817,6 +826,7 @@
 				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
 				C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */,
 				C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */,
+				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
