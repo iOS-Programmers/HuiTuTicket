@@ -19,6 +19,8 @@
 		C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */; };
 		C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */; };
 		C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBCE19825CC40041DC2A /* datesel@2x.png */; };
+		C5A6EBD3198267650041DC2A /* HTEntranceTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */; };
+		C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */; };
 		C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */; };
 		C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */; };
 		C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */; };
@@ -152,6 +154,9 @@
 		C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCustomDateCell.m; sourceTree = "<group>"; };
 		C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCustomDateCell.xib; sourceTree = "<group>"; };
 		C5A6EBCE19825CC40041DC2A /* datesel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "datesel@2x.png"; sourceTree = "<group>"; };
+		C5A6EBD0198267650041DC2A /* HTEntranceTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEntranceTicketController.h; sourceTree = "<group>"; };
+		C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEntranceTicketController.m; sourceTree = "<group>"; };
+		C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEntranceTicketController.xib; sourceTree = "<group>"; };
 		C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeHeadView.h; sourceTree = "<group>"; };
 		C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeHeadView.m; sourceTree = "<group>"; };
 		C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeHeadView.xib; sourceTree = "<group>"; };
@@ -687,6 +692,9 @@
 				C6BADF8A1976921700543D39 /* HTHomeViewController.h */,
 				C6BADF8B1976921700543D39 /* HTHomeViewController.m */,
 				C6BADF8C1976921700543D39 /* HTHomeViewController.xib */,
+				C5A6EBD0198267650041DC2A /* HTEntranceTicketController.h */,
+				C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */,
+				C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */,
 				C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */,
 				C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */,
 				C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */,
@@ -971,6 +979,7 @@
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
+				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
 				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
@@ -1042,6 +1051,7 @@
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
+				C5A6EBD3198267650041DC2A /* HTEntranceTicketController.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
