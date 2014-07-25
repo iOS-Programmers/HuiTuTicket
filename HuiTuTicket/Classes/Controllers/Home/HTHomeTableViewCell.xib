@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-2U-Mh8">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mine_header_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-2U-Mh8">
                         <rect key="frame" x="7" y="5" width="90" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
@@ -59,4 +59,7 @@
             </tableViewCellContentView>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="mine_header_bg.png" width="640" height="200"/>
+    </resources>
 </document>
