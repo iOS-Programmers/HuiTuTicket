@@ -8,7 +8,7 @@
 
 #import "HTCYOrderViewController.h"
 #import "HTOrderTableViewCell.h"
-
+#import "HTOrderDetailViewController.h"
 @interface HTCYOrderViewController ()
 
 
@@ -55,7 +55,8 @@
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    HTOrderDetailViewController *vc = [[HTOrderDetailViewController alloc] initWithNibName:@"HTOrderDetailViewController" bundle:Nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -
