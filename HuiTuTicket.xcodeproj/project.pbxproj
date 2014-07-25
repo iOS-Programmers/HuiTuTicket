@@ -12,6 +12,13 @@
 		C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */; };
 		C5A6EBB21981019B0041DC2A /* HTOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */; };
 		C5A6EBB91981131A0041DC2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A6EBB81981131A0041DC2A /* QuartzCore.framework */; };
+		C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBC019822A920041DC2A /* HTOrderDetailViewController.m */; };
+		C5A6EBC319822A920041DC2A /* HTOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBC119822A920041DC2A /* HTOrderDetailViewController.xib */; };
+		C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBC519822BF80041DC2A /* HTCustomMapCell.m */; };
+		C5A6EBC819822BF80041DC2A /* HTCustomMapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBC619822BF80041DC2A /* HTCustomMapCell.xib */; };
+		C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */; };
+		C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */; };
+		C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBCE19825CC40041DC2A /* datesel@2x.png */; };
 		C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */; };
 		C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */; };
 		C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */; };
@@ -35,6 +42,7 @@
 		C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */; };
 		C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */; };
 		C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */; };
+<<<<<<< HEAD
 		C6B5BE0719825222000306BB /* HTEntranceTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B5BE0519825222000306BB /* HTEntranceTicketController.m */; };
 		C6B5BE0819825222000306BB /* HTEntranceTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */; };
 		C6B5BE291982622E000306BB /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B5BE231982622E000306BB /* libzbar.a */; };
@@ -42,6 +50,8 @@
 		C6B5BE2B1982622E000306BB /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = C6B5BE261982622E000306BB /* zbar-help.html */; };
 		C6B5BE2C1982622E000306BB /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B5BE271982622E000306BB /* zbar-helpicons.png */; };
 		C6B5BE2D1982622E000306BB /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B5BE281982622E000306BB /* zbar-samples.png */; };
+=======
+>>>>>>> FETCH_HEAD
 		C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9419D1977967800208F20 /* HTMineViewController.m */; };
 		C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9419E1977967800208F20 /* HTMineViewController.xib */; };
 		C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941A31977A3C400208F20 /* HTMineHeaderView.m */; };
@@ -132,6 +142,16 @@
 		C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderTableViewCell.m; sourceTree = "<group>"; };
 		C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderTableViewCell.xib; sourceTree = "<group>"; };
 		C5A6EBB81981131A0041DC2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C5A6EBBF19822A920041DC2A /* HTOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderDetailViewController.h; sourceTree = "<group>"; };
+		C5A6EBC019822A920041DC2A /* HTOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderDetailViewController.m; sourceTree = "<group>"; };
+		C5A6EBC119822A920041DC2A /* HTOrderDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderDetailViewController.xib; sourceTree = "<group>"; };
+		C5A6EBC419822BF80041DC2A /* HTCustomMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCustomMapCell.h; sourceTree = "<group>"; };
+		C5A6EBC519822BF80041DC2A /* HTCustomMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCustomMapCell.m; sourceTree = "<group>"; };
+		C5A6EBC619822BF80041DC2A /* HTCustomMapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCustomMapCell.xib; sourceTree = "<group>"; };
+		C5A6EBC919822C0D0041DC2A /* HTCustomDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCustomDateCell.h; sourceTree = "<group>"; };
+		C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCustomDateCell.m; sourceTree = "<group>"; };
+		C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCustomDateCell.xib; sourceTree = "<group>"; };
+		C5A6EBCE19825CC40041DC2A /* datesel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "datesel@2x.png"; sourceTree = "<group>"; };
 		C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeHeadView.h; sourceTree = "<group>"; };
 		C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeHeadView.m; sourceTree = "<group>"; };
 		C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeHeadView.xib; sourceTree = "<group>"; };
@@ -164,6 +184,7 @@
 		C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreAboutUsController.h; sourceTree = "<group>"; };
 		C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMoreAboutUsController.m; sourceTree = "<group>"; };
 		C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMoreAboutUsController.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C6B5BE0419825222000306BB /* HTEntranceTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEntranceTicketController.h; sourceTree = "<group>"; };
 		C6B5BE0519825222000306BB /* HTEntranceTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEntranceTicketController.m; sourceTree = "<group>"; };
 		C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEntranceTicketController.xib; sourceTree = "<group>"; };
@@ -192,6 +213,8 @@
 		C6B5BE261982622E000306BB /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		C6B5BE271982622E000306BB /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		C6B5BE281982622E000306BB /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+=======
+>>>>>>> FETCH_HEAD
 		C6B9419C1977967800208F20 /* HTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineViewController.h; sourceTree = "<group>"; };
 		C6B9419D1977967800208F20 /* HTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineViewController.m; sourceTree = "<group>"; };
 		C6B9419E1977967800208F20 /* HTMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineViewController.xib; sourceTree = "<group>"; };
@@ -676,9 +699,15 @@
 				C5A6EBAE1981019B0041DC2A /* HTOrderTableViewCell.h */,
 				C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */,
 				C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */,
-				C6B5BE0419825222000306BB /* HTEntranceTicketController.h */,
-				C6B5BE0519825222000306BB /* HTEntranceTicketController.m */,
-				C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */,
+				C5A6EBBF19822A920041DC2A /* HTOrderDetailViewController.h */,
+				C5A6EBC019822A920041DC2A /* HTOrderDetailViewController.m */,
+				C5A6EBC119822A920041DC2A /* HTOrderDetailViewController.xib */,
+				C5A6EBC419822BF80041DC2A /* HTCustomMapCell.h */,
+				C5A6EBC519822BF80041DC2A /* HTCustomMapCell.m */,
+				C5A6EBC619822BF80041DC2A /* HTCustomMapCell.xib */,
+				C5A6EBC919822C0D0041DC2A /* HTCustomDateCell.h */,
+				C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */,
+				C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -784,6 +813,7 @@
 				C5FB47E8197E6A9C00FE5364 /* home003@2x.png */,
 				C5FB47E9197E6A9C00FE5364 /* home004@2x.png */,
 				C5FB47EA197E6A9C00FE5364 /* home005@2x.png */,
+				C5A6EBCE19825CC40041DC2A /* datesel@2x.png */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -911,6 +941,7 @@
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
 				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
 				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
+				C5A6EBC319822A920041DC2A /* HTOrderDetailViewController.xib in Resources */,
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C6D1249D197E3AC800FF4D83 /* my_03@2x.png in Resources */,
 				C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */,
@@ -920,6 +951,7 @@
 				C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
+				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
 				C6D12491197E397500FF4D83 /* order_02@2x.png in Resources */,
 				C6D124C2197F691C00FF4D83 /* HTLoginController.xib in Resources */,
@@ -933,7 +965,6 @@
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
 				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
-				C6B5BE0819825222000306BB /* HTEntranceTicketController.xib in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
 				C6D124CB1980AC1600FF4D83 /* HTTicketRegisterController.xib in Resources */,
@@ -943,6 +974,7 @@
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
 				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
+				C5A6EBC819822BF80041DC2A /* HTCustomMapCell.xib in Resources */,
 				C5FB47E5197E6A7D00FE5364 /* HTHomeTableViewCell.xib in Resources */,
 				C6D124E51981011500FF4D83 /* HTTicketDetailController.xib in Resources */,
 				C6D124E01980E84B00FF4D83 /* pub_success_img@2x.png in Resources */,
@@ -950,6 +982,7 @@
 				C6D1249E197E3AC800FF4D83 /* my_04@2x.png in Resources */,
 				C6D12481197E37E500FF4D83 /* more_helpcenter@2x.png in Resources */,
 				C5FB47EE197E6A9C00FE5364 /* home004@2x.png in Resources */,
+				C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */,
 				C6D1249C197E3AC800FF4D83 /* my_02@2x.png in Resources */,
 				C6D12492197E397500FF4D83 /* order_03@2x.png in Resources */,
 				C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */,
@@ -987,6 +1020,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
+				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
 				C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */,
 				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
 				C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */,
@@ -998,15 +1032,16 @@
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
+				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
-				C6B5BE0719825222000306BB /* HTEntranceTicketController.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
+				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
