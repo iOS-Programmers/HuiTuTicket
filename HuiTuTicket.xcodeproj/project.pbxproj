@@ -35,6 +35,8 @@
 		C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */; };
 		C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */; };
 		C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */; };
+		C6B5BE0719825222000306BB /* HTEntranceTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B5BE0519825222000306BB /* HTEntranceTicketController.m */; };
+		C6B5BE0819825222000306BB /* HTEntranceTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */; };
 		C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9419D1977967800208F20 /* HTMineViewController.m */; };
 		C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9419E1977967800208F20 /* HTMineViewController.xib */; };
 		C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941A31977A3C400208F20 /* HTMineHeaderView.m */; };
@@ -157,6 +159,9 @@
 		C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreAboutUsController.h; sourceTree = "<group>"; };
 		C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMoreAboutUsController.m; sourceTree = "<group>"; };
 		C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMoreAboutUsController.xib; sourceTree = "<group>"; };
+		C6B5BE0419825222000306BB /* HTEntranceTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEntranceTicketController.h; sourceTree = "<group>"; };
+		C6B5BE0519825222000306BB /* HTEntranceTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEntranceTicketController.m; sourceTree = "<group>"; };
+		C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEntranceTicketController.xib; sourceTree = "<group>"; };
 		C6B9419C1977967800208F20 /* HTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineViewController.h; sourceTree = "<group>"; };
 		C6B9419D1977967800208F20 /* HTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineViewController.m; sourceTree = "<group>"; };
 		C6B9419E1977967800208F20 /* HTMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineViewController.xib; sourceTree = "<group>"; };
@@ -575,6 +580,9 @@
 				C5A6EBAE1981019B0041DC2A /* HTOrderTableViewCell.h */,
 				C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */,
 				C5A6EBB01981019B0041DC2A /* HTOrderTableViewCell.xib */,
+				C6B5BE0419825222000306BB /* HTEntranceTicketController.h */,
+				C6B5BE0519825222000306BB /* HTEntranceTicketController.m */,
+				C6B5BE0619825222000306BB /* HTEntranceTicketController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -827,6 +835,7 @@
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
 				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
+				C6B5BE0819825222000306BB /* HTEntranceTicketController.xib in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
 				C6D124CB1980AC1600FF4D83 /* HTTicketRegisterController.xib in Resources */,
@@ -895,6 +904,7 @@
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
+				C6B5BE0719825222000306BB /* HTEntranceTicketController.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,

@@ -10,7 +10,7 @@
 #import "HTStoreManager.h"
 
 #import "HTMoreAboutUsController.h"
-#import "HTTicketRegisterController.h"
+
 
 @interface HTMoreViewController ()
 
@@ -77,9 +77,7 @@
     switch (section) {
         case 0: {
             //设置
-            HTTicketRegisterController *ticketRegister = [[HTTicketRegisterController alloc] init];
-            ticketRegister.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ticketRegister animated:YES];
+
         }
             break;
         case 1: {

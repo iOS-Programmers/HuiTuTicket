@@ -7,6 +7,7 @@
 //
 
 #import "HTHomeHeadView.h"
+#import "HTEntranceTicketController.h"
 #import "HTTicketRegisterController.h"
 #import "HTCYOrderViewController.h"
 
@@ -51,7 +52,10 @@
     {
         case 100:
         {
-            
+            //景区门票
+            HTEntranceTicketController *entranceTicket = [[HTEntranceTicketController alloc] init];
+            entranceTicket.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:entranceTicket animated:YES];
         }
             break;
         case 101:
