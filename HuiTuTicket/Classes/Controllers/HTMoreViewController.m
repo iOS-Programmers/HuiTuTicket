@@ -9,6 +9,7 @@
 #import "HTMoreViewController.h"
 #import "HTStoreManager.h"
 
+//#import "ZBarSDK.h"
 #import "HTMoreAboutUsController.h"
 
 
@@ -81,7 +82,20 @@
         }
             break;
         case 1: {
-        
+            //扫一扫
+//            ZBarReaderViewController *reader = [ZBarReaderViewController new];
+//            reader.readerDelegate = self;
+//            reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+//            
+//            ZBarImageScanner *scanner = reader.scanner;
+//            
+//            [scanner setSymbology: ZBAR_I25
+//                           config: ZBAR_CFG_ENABLE
+//                               to: 0];
+//            
+//            [self presentViewController:reader animated:YES completion:^{
+//                
+//            }];
         }
             break;
         case 2: {

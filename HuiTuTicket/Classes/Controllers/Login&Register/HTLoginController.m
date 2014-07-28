@@ -8,6 +8,8 @@
 
 #import "HTLoginController.h"
 #import "HTLoginTextField.h"    
+#import "HTRegeisterController.h"
+#import "HTFindPasswordController.h"
 @interface HTLoginController ()
 
 @property (weak, nonatomic) IBOutlet HTLoginTextField *userNameTF;
@@ -42,7 +44,7 @@
     // Do any additional setup after loading the view from its nib.
     [self configuraBackButton];
     
-    self.view.backgroundColor = UIColorRGB(235, 235, 235);
+    
     
 }
 - (void)didReceiveMemoryWarning
@@ -64,8 +66,11 @@
 }
 
 - (IBAction)onFindPasswordClick:(id)sender {
+    [self pushViewController:@"HTFindPasswordController"];
 }
 
-- (IBAction)onRegisterBtnClick:(id)sender {
+- (IBAction)onRegisterBtnClick:(id)sender
+{
+    [self pushViewController:@"HTRegeisterController"];
 }
 @end

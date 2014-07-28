@@ -181,7 +181,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorRGB(235, 235, 235);
 #if defined(__IPHONE_7_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
     
     //修复iOS7系统下布局从（0，0）开始问题
