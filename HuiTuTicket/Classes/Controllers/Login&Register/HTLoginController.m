@@ -8,6 +8,7 @@
 
 #import "HTLoginController.h"
 #import "HTLoginTextField.h"    
+#import "HTRegeisterController.h"
 @interface HTLoginController ()
 
 @property (weak, nonatomic) IBOutlet HTLoginTextField *userNameTF;
@@ -66,6 +67,8 @@
 - (IBAction)onFindPasswordClick:(id)sender {
 }
 
-- (IBAction)onRegisterBtnClick:(id)sender {
+- (IBAction)onRegisterBtnClick:(id)sender
+{
+    [self pushViewController:@"HTRegeisterController"];
 }
 @end
