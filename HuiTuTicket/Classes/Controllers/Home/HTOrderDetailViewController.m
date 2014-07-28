@@ -26,7 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"预约";
     }
     return self;
 }
@@ -34,13 +34,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //504
+    CGRect rect = self.tableView.frame;
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 504);
+    self.tableView.scrollEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma mark -
+# pragma mark - Action
+- (IBAction)submitBtnClicked:(UIButton *)btn
+{
+
 }
 
 #pragma mark -
@@ -66,14 +76,55 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NSArray *array = [[HTDATA_ARRAY objectAtIndex:section] allKeys];
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 21)];
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+    headView.layer.borderWidth = 1;
+    headView.layer.borderColor = [UIColorRGB(235, 235, 235) CGColor];
     headView.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1];;
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(13, 1, 100, 20)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(13, 3, 100, 17)];
     label.textColor = [UIColor darkGrayColor];
     label.font = [UIFont systemFontOfSize:16];
     label.text = [array objectAtIndex:0];
     [headView addSubview:label];
     return headView;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (section==2)
+    {
+        UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+        footView.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1];;
+        footView.layer.borderWidth = 1;
+        footView.layer.borderColor = [UIColorRGB(235, 235, 235) CGColor];
+
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.backgroundColor = [UIColor orangeColor];
+        btn.frame = CGRectMake(60, 8, 202, 37);
+        [btn setTitle:@"提交预约" forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:17];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(submitBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [footView addSubview:btn];
+        return footView;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section==2)
+        return 50;
+    else
+        return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 43;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,8 +175,5 @@
         return cell;
     }
 }
-
-
-
 
 @end
