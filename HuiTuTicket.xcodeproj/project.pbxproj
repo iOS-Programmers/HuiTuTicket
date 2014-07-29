@@ -42,7 +42,6 @@
 		C60F6FD919762D7900AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
 		C60F6FE119762D7900AFC182 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C60F6FDF19762D7900AFC182 /* InfoPlist.strings */; };
 		C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */; };
-
 		C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */; };
 		C6A373F21985FA2C0016A204 /* HTRegeisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */; };
 		C6A373F4198627700016A204 /* icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F3198627700016A204 /* icon_arrow@2x.png */; };
@@ -50,13 +49,11 @@
 		C6A373F819862CD90016A204 /* pub_blueBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F719862CD80016A204 /* pub_blueBtn@2x.png */; };
 		C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373FA1986417F0016A204 /* HTFindPasswordController.m */; };
 		C6A373FD1986417F0016A204 /* HTFindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A373FB1986417F0016A204 /* HTFindPasswordController.xib */; };
-
 		C6B09E921982683F00576A5F /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E8C1982683E00576A5F /* libzbar.a */; };
 		C6B09E931982683F00576A5F /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B09E8E1982683E00576A5F /* zbar-back.png */; };
 		C6B09E941982683F00576A5F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = C6B09E8F1982683F00576A5F /* zbar-help.html */; };
 		C6B09E951982683F00576A5F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B09E901982683F00576A5F /* zbar-helpicons.png */; };
 		C6B09E961982683F00576A5F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B09E911982683F00576A5F /* zbar-samples.png */; };
-
 		C6B09E9819826A3100576A5F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9719826A3100576A5F /* CoreMedia.framework */; };
 		C6B09E9A19826A3A00576A5F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9919826A3A00576A5F /* CoreVideo.framework */; };
 		C6B09E9C19826A4200576A5F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9B19826A4200576A5F /* AVFoundation.framework */; };
@@ -177,6 +174,7 @@
 		C5FB47E8197E6A9C00FE5364 /* home003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home003@2x.png"; sourceTree = "<group>"; };
 		C5FB47E9197E6A9C00FE5364 /* home004@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home004@2x.png"; sourceTree = "<group>"; };
 		C5FB47EA197E6A9C00FE5364 /* home005@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home005@2x.png"; sourceTree = "<group>"; };
+		C6058EB41987ECA200D61484 /* HTHttpMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTHttpMacro.h; sourceTree = "<group>"; };
 		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,7 +191,6 @@
 		C60F6FDE19762D7900AFC182 /* HuiTuTicketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuiTuTicketTests-Info.plist"; sourceTree = "<group>"; };
 		C60F6FE019762D7900AFC182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuiTuTicketTests.m; sourceTree = "<group>"; };
-
 		C6A373EE1985FA2C0016A204 /* HTRegeisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRegeisterController.h; sourceTree = "<group>"; };
 		C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRegeisterController.m; sourceTree = "<group>"; };
 		C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTRegeisterController.xib; sourceTree = "<group>"; };
@@ -203,7 +200,6 @@
 		C6A373F91986417F0016A204 /* HTFindPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFindPasswordController.h; sourceTree = "<group>"; };
 		C6A373FA1986417F0016A204 /* HTFindPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFindPasswordController.m; sourceTree = "<group>"; };
 		C6A373FB1986417F0016A204 /* HTFindPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTFindPasswordController.xib; sourceTree = "<group>"; };
-
 		C6B09E781982683E00576A5F /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		C6B09E791982683E00576A5F /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		C6B09E7A1982683E00576A5F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -229,7 +225,6 @@
 		C6B09E8F1982683F00576A5F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		C6B09E901982683F00576A5F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		C6B09E911982683F00576A5F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
-
 		C6B09E9719826A3100576A5F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C6B09E9919826A3A00576A5F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C6B09E9B19826A4200576A5F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -348,10 +343,7 @@
 				C6B09E9819826A3100576A5F /* CoreMedia.framework in Frameworks */,
 				C5A6EBB91981131A0041DC2A /* QuartzCore.framework in Frameworks */,
 				C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */,
-
-
 				C6B09E921982683F00576A5F /* libzbar.a in Frameworks */,
-
 				C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */,
 				C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */,
 			);
@@ -502,7 +494,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-
 		C6B09E741982683E00576A5F /* ZBarSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,7 +558,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-
 		C6B9419B1977815600208F20 /* HTBaseControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +630,7 @@
 				C6BADF941976966100543D39 /* HTMacro.h */,
 				C6B442F81978EAD000731866 /* HTUIKitMacro.h */,
 				C6B442F71978EABF00731866 /* HTFoundationMacro.h */,
+				C6058EB41987ECA200D61484 /* HTHttpMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -647,9 +638,7 @@
 		C6BADF541976493200543D39 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-
 				C6B09E741982683E00576A5F /* ZBarSDK */,
-
 				C6D124B0197E6AF400FF4D83 /* MBProgressHUD_0.8 */,
 			);
 			path = Vendor;
@@ -1057,9 +1046,7 @@
 				C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */,
 				C5FB47ED197E6A9C00FE5364 /* home003@2x.png in Resources */,
 				C60F6FD019762D7800AFC182 /* Images.xcassets in Resources */,
-
 				C6A373F21985FA2C0016A204 /* HTRegeisterController.xib in Resources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,7 +1089,6 @@
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
-
 				C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */,
 				C5A6EBD3198267650041DC2A /* HTEntranceTicketController.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,

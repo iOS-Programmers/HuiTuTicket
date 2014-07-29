@@ -15,6 +15,12 @@
 // Foundation 框架宏定义
 #import "HTFoundationMacro.h"
 
+//网络接口 宏定义
+#import "HTHttpMacro.h"
+
+//公用类
+#import "HTFoundationCommon.h"
+
 #define APP_ID @"11111111"
 
 #endif
