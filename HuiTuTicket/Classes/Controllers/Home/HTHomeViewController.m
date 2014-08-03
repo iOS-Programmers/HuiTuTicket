@@ -8,7 +8,7 @@
 
 
 #import "HTHomeViewController.h"
-
+#import "HTAppointmentViewController.h"
 #import "HTHomeTableViewCell.h"
 #import "HTHomeHeadView.h"
 
@@ -70,7 +70,9 @@
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+//    [self pushViewController:@"HTAppointmentViewController"];
+    HTAppointmentViewController *app = [[HTAppointmentViewController alloc] init];
+    [self.navigationController pushViewController:app animated:YES];
 }
 
 #pragma mark -
