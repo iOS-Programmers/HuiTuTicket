@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"预约记录";
     self.dataSource = [[NSMutableArray alloc] initWithArray:@[@"1",@"2"]];
     self.tableView.rowHeight = 80;
 }
