@@ -10,9 +10,9 @@
 #define HuiTuTicket_HTFoundationMacro_h
 
 #ifdef DEBUG
-#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+# define LXLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__);
 #else
-#   define DLog(...)
+#define LXLog(fmt, ...)
 #endif
 
 // block self

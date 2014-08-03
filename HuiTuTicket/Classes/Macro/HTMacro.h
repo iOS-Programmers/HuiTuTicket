@@ -21,6 +21,9 @@
 //公用类
 #import "HTFoundationCommon.h"
 
+//网络检测
+#import "Reachability.h"
+
 #define APP_ID @"11111111"
 
 #endif

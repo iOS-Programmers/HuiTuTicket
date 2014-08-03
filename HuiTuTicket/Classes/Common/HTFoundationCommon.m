@@ -9,6 +9,7 @@
 #import "HTFoundationCommon.h"
 #import <CommonCrypto/CommonDigest.h>
 
+
 @implementation HTFoundationCommon
 
 + (CGFloat)getAdapterHeight {
@@ -52,5 +53,34 @@
             
             result[28], result[29],result[30], result[31]];
 }
+
+/**
+ *  检测网络状态
+ *
+ *  @return 网络状态
+ */
++ (BOOL)networkDetect
+{
+    BOOL isExistenceNetwork = YES;
+    Reachability *r = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    switch ([r currentReachabilityStatus])
+    {
+        case NotReachable:
+            isExistenceNetwork = NO;
+            LXLog(@"没有网络");
+            break;
+        case ReachableViaWWAN:
+            isExistenceNetwork = YES;
+            LXLog(@"正在使用3G网络");
+            break;
+        case ReachableViaWiFi:
+            isExistenceNetwork = YES;
+            LXLog(@"正在使用wifi网络");
+            break;
+    }
+    return  isExistenceNetwork;
+    
+}
+
 
 @end
