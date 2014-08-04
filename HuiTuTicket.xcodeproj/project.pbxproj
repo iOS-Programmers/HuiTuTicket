@@ -56,9 +56,9 @@
 		C620A833198F9CE300AD3791 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A832198F9CE300AD3791 /* Login.m */; };
 		C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A835198F9CFB00AD3791 /* LoginPara.m */; };
 		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
+		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1D198FAF52003ADE85 /* btn_adclose.png */; };
 		C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */; };
-		C6938C23198FB377003ADE85 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C22198FB377003ADE85 /* GetUserInfo.m */; };
 		C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */; };
 		C6938C29198FB3B0003ADE85 /* GetUserInfoHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C28198FB3B0003ADE85 /* GetUserInfoHttp.m */; };
 		C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */; };
@@ -284,10 +284,10 @@
 		C620A835198F9CFB00AD3791 /* LoginPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPara.m; sourceTree = "<group>"; };
 		C620A837198F9D0C00AD3791 /* LoginHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHttp.h; sourceTree = "<group>"; };
 		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
+		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
+		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6938C1D198FAF52003ADE85 /* btn_adclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_adclose.png; sourceTree = "<group>"; };
 		C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_adclose@2x.png"; sourceTree = "<group>"; };
-		C6938C21198FB377003ADE85 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
-		C6938C22198FB377003ADE85 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoPara.h; sourceTree = "<group>"; };
 		C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoPara.m; sourceTree = "<group>"; };
 		C6938C27198FB3B0003ADE85 /* GetUserInfoHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoHttp.h; sourceTree = "<group>"; };
@@ -729,8 +729,8 @@
 				C620A835198F9CFB00AD3791 /* LoginPara.m */,
 				C620A837198F9D0C00AD3791 /* LoginHttp.h */,
 				C620A838198F9D0C00AD3791 /* LoginHttp.m */,
-				C6938C21198FB377003ADE85 /* GetUserInfo.h */,
-				C6938C22198FB377003ADE85 /* GetUserInfo.m */,
+				C6912B3A198FBB2C00584586 /* GetUserInfo.h */,
+				C6912B3B198FBB2C00584586 /* GetUserInfo.m */,
 				C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */,
 				C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */,
 				C6938C27198FB3B0003ADE85 /* GetUserInfoHttp.h */,
@@ -1531,7 +1531,6 @@
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
-				C6938C23198FB377003ADE85 /* GetUserInfo.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
 				C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
@@ -1584,6 +1583,7 @@
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
+				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
