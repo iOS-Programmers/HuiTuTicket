@@ -10,4 +10,5 @@
 
 @interface ScenicList : LXDataModel
 
+
 @end
