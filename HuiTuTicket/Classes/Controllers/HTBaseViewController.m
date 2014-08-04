@@ -7,9 +7,12 @@
 //
 
 #import "HTBaseViewController.h"
+#import "ASIFormDataRequest.h"
 #import "MBProgressHUD.h"
 
 @interface HTBaseViewController () <MBProgressHUDDelegate>
+
+@property (nonatomic, strong) ASIFormDataRequest *baseRequest;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
 
@@ -87,6 +90,45 @@
         [(UIView *)sender sendSubviewToBack:self.ctrlView];
     }
 }
+
+#pragma mark - Http Request
+/*
+ * 请求数据
+ */
+- (void)requestData:(NSArray *)parameterName parameterValue:(NSArray *)parameterValue Url:(NSString *)url tag:(int)tag {
+    NSURL *urls = [NSURL URLWithString:[NSString stringWithFormat:@"%@",url]];
+    _baseRequest = [[ASIFormDataRequest alloc] initWithURL:urls];
+	
+    [_baseRequest setRequestMethod:@"POST"];
+    [_baseRequest setDelegate:self];
+    //	[request addRequestHeader:@"User-Agent" value:@"application/x-www-form-urlencoded"];
+    
+	[_baseRequest setTimeOutSeconds:15];
+    for (int i = 0; i <[parameterName count]; i ++) {
+        [_baseRequest setPostValue:parameterValue[i] forKey:parameterName[i]];
+        
+        LXLog(@"value----- %@  name ---  %@",parameterValue[i],parameterName[i]);
+    }
+
+    _baseRequest.tag = tag;
+    [_baseRequest setDidFailSelector:@selector(postrequestDidFailed:)];
+    [_baseRequest setDidFinishSelector:@selector(postrequestDidSuccess:)];
+    [_baseRequest setDefaultResponseEncoding:NSUTF8StringEncoding];
+    [_baseRequest setResponseEncoding:NSUTF8StringEncoding];
+    [_baseRequest startAsynchronous];
+    
+}
+
+//子类重写
+- (void)postrequestDidSuccess:(ASIFormDataRequest *)request{
+    
+}
+
+- (void)postrequestDidFailed:(ASIFormDataRequest *)request
+{
+    
+}
+
 
 #pragma mark - ViewController presentModal
 
@@ -205,6 +247,13 @@
     [super viewWillAppear:animated];
     
     [self setControlView:self.view];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.baseRequest clearDelegatesAndCancel];
 }
 
 - (void)didReceiveMemoryWarning {

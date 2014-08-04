@@ -41,6 +41,13 @@ typedef void (^HttpModelFailedBlock) ();
 @property (nonatomic, copy) NSString *apiFuncName;
 
 /**
+ *  http api url
+ *
+ *  default is  'nil'
+ */
+@property (nonatomic, copy) NSString *api_url;
+
+/**
  *
  * ASIHttpRequest
  *
@@ -112,10 +119,24 @@ typedef void (^HttpModelFailedBlock) ();
  */
 @property(nonatomic, assign) BOOL useCacheAfterGetFailed;
 
+/**
+ *  请求接口用到的方法
+ *
+ *  @param params           入参 （为一个对象）
+ *  @param completionBlock  请求成功处理方法
+ *  @param failedBlock      请求失败处理方法
+ */
 - (void)getDataWithParameters:(LXParameterModel *)params
               completionBlock:(HttpModelCompletionBlock)completionBlock
                   failedBlock:(HttpModelFailedBlock)failedBlock;
 
+/**
+ *  上传用到的方法
+ *
+ *  @param params          入参 （为一个对象）
+ *  @param completionBlock 请求成功处理方法
+ *  @param failedBlock     请求失败处理方法
+ */
 - (void)uploadDataWithParameters:(LXParameterModel *)params
                  completionBlock:(HttpModelCompletionBlock)completionBlock
                      failedBlock:(HttpModelFailedBlock)failedBlock;

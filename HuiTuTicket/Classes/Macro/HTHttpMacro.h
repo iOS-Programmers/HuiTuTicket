@@ -27,6 +27,7 @@
  */
 
 
+#define API_KEY    @"123456"
 #define HOST_NAME  @"appapi.chemayi.com"
 
 #define kURL_Member_Pre @"http://m-test.huitupiaowu.com/index.php/member"

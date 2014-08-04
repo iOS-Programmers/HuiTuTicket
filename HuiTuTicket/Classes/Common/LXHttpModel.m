@@ -23,7 +23,10 @@
     self = [super init];
     if (self)
     {
-        self.method = @"GET";
+        self.method = @"POST";
+        
+        #warning 这个api_url默认的是会员注册的接口的，其他接口调用的时候要在子类里重新设置下
+        self.api_url = @"m-test.huitupiaowu.com/index.php/member";
         self.dataDic = [[[NSMutableDictionary alloc] init] autorelease];
     }
     return self;
@@ -58,9 +61,16 @@
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock
 {
-//    LXLog(@"sub class not implete getDataWithCompletionBlock:failedBlock!");
+    LXLog(@"sub class not implete getDataWithCompletionBlock:failedBlock!");
 }
 
+/**
+ *  把入参对象转换成字典的形式
+ *
+ *  @param params 入参对象
+ *
+ *  @return 返回对应的字典
+ */
 - (NSMutableDictionary *)convertParameters:(LXParameterModel *)params
 {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
@@ -77,38 +87,46 @@
     return dictionary;
 }
 
+/**
+ *  请求接口用到的方法
+ *
+ *  @param params           入参 （为一个对象）
+ *  @param completionBlock  请求成功处理方法
+ *  @param failedBlock      请求失败处理方法
+ */
 - (void)getDataWithParameters:(LXParameterModel *)params
               completionBlock:(HttpModelCompletionBlock)completionBlock
                   failedBlock:(HttpModelFailedBlock)failedBlock
 {
     NSMutableDictionary *dic = [self convertParameters:params];
-    self.path =[NSString stringWithFormat:@"http://%@/service.php?",HOST_NAME];
+    /**
+     *   请求地址格式 http://API_URL?method=user.register&api_key={接口秘钥}
+     */
+    self.path =[NSString stringWithFormat:@"http://%@?method=%@&api_key=%@",self.api_url,self.apiFuncName,API_KEY];
     
-//    if (!FBIsEmpty([LXUserInfoAD userLXToken]))
-//    {
-//        self.path = [NSString stringWithFormat:@"%@act=%@&token=%@",self.path,self.apiFuncName,[LXUserInfoAD userLXToken]];
-//    }
-//    else
-//    {
-//        self.path = [NSString stringWithFormat:@"%@act=%@",self.path,self.apiFuncName];
-//    }
+    
+    
+    NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    self.request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
+    self.request.delegate = self;
+    self.request.requestMethod = self.method;
     
     for (int i=0; i<[[dic allKeys] count]; i++)
     {
         NSString *keyStr = [[dic allKeys] objectAtIndex:i];
         NSString *valueStr = [dic objectForKey:keyStr];
-        self.path = [NSString stringWithFormat:@"%@&%@=%@",self.path,keyStr,valueStr];
+        
+        [self.request setValue:valueStr forKey:keyStr];
+        //        self.path = [NSString stringWithFormat:@"%@&%@=%@",self.path,keyStr,valueStr];
     }
-    NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    self.request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
-    self.request.delegate = self;
+    
     [self.request setTimeOutSeconds:10];
     [self.request setNumberOfTimesToRetryOnTimeout:1];
     [self.request setCompletionBlock:completionBlock];
     [self.request setFailedBlock:failedBlock];
     if ([HTFoundationCommon networkDetect])
     {
-//        LXLog(@"\nStart request path:%@",self.path);
+        LXLog(@"\nStart request path:\n%@\n",self.path);
         [self.request startAsynchronous];
     }
     else
@@ -117,7 +135,13 @@
     }
 }
 
-
+/**
+ *  上传用到的方法
+ *
+ *  @param params          入参 （为一个对象）
+ *  @param completionBlock 请求成功处理方法
+ *  @param failedBlock     请求失败处理方法
+ */
 - (void)uploadDataWithParameters:(LXParameterModel *)params
                  completionBlock:(HttpModelCompletionBlock)completionBlock
                      failedBlock:(HttpModelFailedBlock)failedBlock
@@ -146,7 +170,7 @@
 #pragma mark----- ASIHTTPRequestDelegate
 - (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders
 {
-    LXLog(@"DidReceiveResponseHeaders:%@\n",responseHeaders);
+//    LXLog(@"DidReceiveResponseHeaders:%@\n",responseHeaders);
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request
@@ -154,7 +178,7 @@
     NSString *responseString = [request responseString];
     if (!FBIsEmpty(responseString))
     {
-        LXLog(@"\nGet responseString:%@\n",responseString);
+        LXLog(@"\nGet responseString:\n%@\n",responseString);
         self.dataDic = [responseString objectFromJSONString];
         self.erorCode = [[_dataDic objectForKey:@"error_no"] integerValue];
         if (self.erorCode == 0)

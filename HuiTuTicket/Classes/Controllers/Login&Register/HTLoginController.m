@@ -10,8 +10,12 @@
 #import "HTLoginTextField.h"    
 #import "HTRegeisterController.h"
 #import "HTFindPasswordController.h"
+
+#import "LoginHttp.h"
+
 @interface HTLoginController ()
 
+@property (strong, nonatomic) LoginHttp *loginHttp;
 @property (weak, nonatomic) IBOutlet HTLoginTextField *userNameTF;
 @property (weak, nonatomic) IBOutlet HTLoginTextField *passwordTF;
 
@@ -29,6 +33,7 @@
     if (self) {
         // Custom initialization
         self.title = @"登录";
+        _loginHttp = [[LoginHttp alloc] init];
     }
     return self;
 }
@@ -62,7 +67,40 @@
 }
 
 
-- (IBAction)onLoginBtnClick:(id)sender {
+- (IBAction)onLoginBtnClick:(id)sender
+{
+    self.loginHttp.parameter.username = @"18638616155";
+    self.loginHttp.parameter.password = @"123456";
+    
+    
+    [self showLoadingWithText:@"加载中"];
+    __block HTLoginController *weak_self = self;
+    [self.loginHttp getDataWithCompletionBlock:^{
+        //        [weak_self hideHud];
+        if (weak_self.loginHttp.isValid)
+        {
+            [weak_self showWithText:@"登录成功"];
+            
+        }
+        else
+        {   //显示服务端返回的错误提示
+            //            [weak_self showText:weak_self.registerHttp.erorMessage];
+        };
+        
+        [weak_self hideLoading];
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect])
+        {
+            //            [weak_self showText:LX_CHECKNET];
+        }
+        else
+        {
+            //统统归纳为服务器出错
+            //            [weak_self showText:LX_NETWRONG];
+        };
+    }];
+
 }
 
 - (IBAction)onFindPasswordClick:(id)sender {

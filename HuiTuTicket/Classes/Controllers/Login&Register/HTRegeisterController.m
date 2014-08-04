@@ -7,8 +7,13 @@
 //
 
 #import "HTRegeisterController.h"
+#import "RegisterHttp.h"
 
 @interface HTRegeisterController ()
+
+
+@property (strong, nonatomic) RegisterHttp *registerHttp;
+
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageVerifyLabel;
@@ -50,6 +55,8 @@
     if (self) {
         // Custom initialization
         self.title = @"注册";
+        
+        _registerHttp = [[RegisterHttp alloc] init];
     }
     return self;
 }
@@ -111,6 +118,43 @@
  */
 - (IBAction)onRegisterBtn:(id)sender {
 
-    [self showWithText:@"注册成功!"];
+////    self.registerHttp.parameter.mobile = self.phoneNumberTF.text;
+////    self.registerHttp.parameter.password = self.pw_passwordTF.text;
+////
+////    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"%@%@%@",self.phoneNumberTF.text,self.pw_passwordTF.text,API_KEY]];
+//    self.registerHttp.parameter.mobile = @"18638616155";
+//    self.registerHttp.parameter.password = @"123456";
+//    
+//    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"18638616155123456%@",API_KEY]];
+//
+//    [self showLoadingWithText:@"加载中"];
+//    __block HTRegeisterController *weak_self = self;
+//    [self.registerHttp getDataWithCompletionBlock:^{
+////        [weak_self hideHud];
+//        if (weak_self.registerHttp.isValid)
+//        {
+//            [weak_self showWithText:@"注册成功"];
+//
+//        }
+//        else
+//        {   //显示服务端返回的错误提示
+////            [weak_self showText:weak_self.registerHttp.erorMessage];
+//        };
+//        
+//        [weak_self hideLoading];
+//    }failedBlock:^{
+//        [weak_self hideLoading];
+//        if (![HTFoundationCommon networkDetect])
+//        {
+////            [weak_self showText:LX_CHECKNET];
+//        }
+//        else
+//        {
+//            //统统归纳为服务器出错
+////            [weak_self showText:LX_NETWRONG];
+//        };
+//    }];
+//    
+////    [self showWithText:@"注册成功!"];
 }
 @end

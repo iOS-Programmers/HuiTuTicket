@@ -38,6 +38,12 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
 - (void)clearKeyboard;
 - (void)setControlView:(id)sender;
 
+#pragma mark - Http Request
+/*
+ * 请求数据
+ */
+- (void)requestData:(NSArray *)parameterName parameterValue:(NSArray *)parameterValue Url:(NSString *)url tag:(int)tag;
+
 #pragma mark ViewController presentModal
 /**
  *  直接push到某个类 在不需要传数据的情况下可以使用这种。(如果需要传数据还是使用传统的push方法)
@@ -48,6 +54,8 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
 - (void)lxPushViewController:(NSString *)className animated:(BOOL)animated;
 - (void)pushViewController:(NSString *)className;
 - (void)pushViewControllerNoAnimated:(NSString *)className;
+
+
 
 /**
  *  显示加载的loading，没有文字的

@@ -256,7 +256,7 @@ static NSMutableDictionary *keyNames = nil; // key names for all subclass of Mod
                     }
                     if ([self.allKeys containsObject:key])
                     {
-//                        LXLog(@"SetObjArray:%@forkey:%@",(NSString *)value,key);
+                        LXLog(@"SetObjArray:%@forkey:%@",(NSString *)value,key);
                         [self setValue:array forKey:key];
                     }
                     else
@@ -293,7 +293,7 @@ static NSMutableDictionary *keyNames = nil; // key names for all subclass of Mod
                 {
                     if ([self.allKeys containsObject:key])
                     {
-//                        LXLog(@"Setvalue:%@forkey:%@",(NSString *)value,key);
+                        LXLog(@"Setvalue:%@forkey:%@",(NSString *)value,key);
                         [self setValue:(NSString *)value forKey:key];
                     }
                     else
@@ -305,7 +305,7 @@ static NSMutableDictionary *keyNames = nil; // key names for all subclass of Mod
                 {
                     if ([self.allKeys containsObject:key])
                     {
-//                        LXLog(@"Setvalue:%@forkey:%@",[value stringValue],key);
+                        LXLog(@"Setvalue:%@forkey:%@",[value stringValue],key);
                         [self setValue:[value stringValue] forKey:key];
                     }
                     else

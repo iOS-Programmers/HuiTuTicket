@@ -45,6 +45,13 @@
 		C60F6FD919762D7900AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
 		C60F6FE119762D7900AFC182 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C60F6FDF19762D7900AFC182 /* InfoPlist.strings */; };
 		C60F6FE319762D7900AFC182 /* HuiTuTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */; };
+		C620A827198F766D00AD3791 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A826198F766D00AD3791 /* Register.m */; };
+		C620A82A198F769000AD3791 /* RegisterPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A829198F769000AD3791 /* RegisterPara.m */; };
+		C620A82D198F77B700AD3791 /* RegisterHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A82C198F77B700AD3791 /* RegisterHttp.m */; };
+		C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A82F198F7FFC00AD3791 /* HTUserInfoManager.m */; };
+		C620A833198F9CE300AD3791 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A832198F9CE300AD3791 /* Login.m */; };
+		C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A835198F9CFB00AD3791 /* LoginPara.m */; };
+		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
 		C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */; };
 		C6A373F21985FA2C0016A204 /* HTRegeisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */; };
 		C6A373F4198627700016A204 /* icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F3198627700016A204 /* icon_arrow@2x.png */; };
@@ -246,6 +253,20 @@
 		C60F6FDE19762D7900AFC182 /* HuiTuTicketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuiTuTicketTests-Info.plist"; sourceTree = "<group>"; };
 		C60F6FE019762D7900AFC182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C60F6FE219762D7900AFC182 /* HuiTuTicketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuiTuTicketTests.m; sourceTree = "<group>"; };
+		C620A825198F766D00AD3791 /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
+		C620A826198F766D00AD3791 /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
+		C620A828198F769000AD3791 /* RegisterPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterPara.h; sourceTree = "<group>"; };
+		C620A829198F769000AD3791 /* RegisterPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterPara.m; sourceTree = "<group>"; };
+		C620A82B198F77B700AD3791 /* RegisterHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterHttp.h; sourceTree = "<group>"; };
+		C620A82C198F77B700AD3791 /* RegisterHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterHttp.m; sourceTree = "<group>"; };
+		C620A82E198F7FFC00AD3791 /* HTUserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserInfoManager.h; sourceTree = "<group>"; };
+		C620A82F198F7FFC00AD3791 /* HTUserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTUserInfoManager.m; sourceTree = "<group>"; };
+		C620A831198F9CE300AD3791 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		C620A832198F9CE300AD3791 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		C620A834198F9CFB00AD3791 /* LoginPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPara.h; sourceTree = "<group>"; };
+		C620A835198F9CFB00AD3791 /* LoginPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPara.m; sourceTree = "<group>"; };
+		C620A837198F9D0C00AD3791 /* LoginHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHttp.h; sourceTree = "<group>"; };
+		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
 		C6A373EE1985FA2C0016A204 /* HTRegeisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRegeisterController.h; sourceTree = "<group>"; };
 		C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRegeisterController.m; sourceTree = "<group>"; };
 		C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTRegeisterController.xib; sourceTree = "<group>"; };
@@ -645,10 +666,32 @@
 		C60F6FF1197630D700AFC182 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C620A824198F760600AD3791 /* Login&Register */,
 				C6BADF9519775A1C00543D39 /* HTStoreManager.h */,
 				C6BADF9619775A1C00543D39 /* HTStoreManager.m */,
+				C620A82E198F7FFC00AD3791 /* HTUserInfoManager.h */,
+				C620A82F198F7FFC00AD3791 /* HTUserInfoManager.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C620A824198F760600AD3791 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				C620A825198F766D00AD3791 /* Register.h */,
+				C620A826198F766D00AD3791 /* Register.m */,
+				C620A828198F769000AD3791 /* RegisterPara.h */,
+				C620A829198F769000AD3791 /* RegisterPara.m */,
+				C620A82B198F77B700AD3791 /* RegisterHttp.h */,
+				C620A82C198F77B700AD3791 /* RegisterHttp.m */,
+				C620A831198F9CE300AD3791 /* Login.h */,
+				C620A832198F9CE300AD3791 /* Login.m */,
+				C620A834198F9CFB00AD3791 /* LoginPara.h */,
+				C620A835198F9CFB00AD3791 /* LoginPara.m */,
+				C620A837198F9D0C00AD3791 /* LoginHttp.h */,
+				C620A838198F9D0C00AD3791 /* LoginHttp.m */,
+			);
+			name = "Login&Register";
 			sourceTree = "<group>";
 		};
 		C6ADABA0198E167200AB983B /* SDWebImage 3.5 */ = {
@@ -1411,6 +1454,7 @@
 				C6ADABC2198E167200AB983B /* SDWebImageDecoder.m in Sources */,
 				C6ADABC5198E167200AB983B /* SDWebImageManager.m in Sources */,
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
+				C620A833198F9CE300AD3791 /* Login.m in Sources */,
 				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
 				C6ADAC20198E167C00AB983B /* Reachability.m in Sources */,
 				C6ADAC2A198E190500AB983B /* LXHttpModel.m in Sources */,
@@ -1419,14 +1463,12 @@
 				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
 				C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */,
 				C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */,
-
 				C6ADAC18198E167C00AB983B /* ASICloudFilesRequest.m in Sources */,
+				C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */,
 				C6ADAC1D198E167C00AB983B /* ASIS3Request.m in Sources */,
 				C6ADABBE198E167200AB983B /* MKAnnotationView+WebCache.m in Sources */,
 				C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */,
-
 				A9A7D3EE198E1A0D00044460 /* HTAppointmentViewController.m in Sources */,
-
 				C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */,
 				C6ADAC10198E167C00AB983B /* ASINetworkQueue.m in Sources */,
 				C6ADABCA198E167200AB983B /* UIImage+WebP.m in Sources */,
@@ -1448,9 +1490,11 @@
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
+				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
 				C6ADAC17198E167C00AB983B /* ASICloudFilesObjectRequest.m in Sources */,
 				C6ADAC0F198E167C00AB983B /* ASIInputStream.m in Sources */,
 				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
+				C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */,
 				C6ADAC1C198E167C00AB983B /* ASIS3ObjectRequest.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
@@ -1469,6 +1513,7 @@
 				C6ADAC2F198E1BC200AB983B /* JSONKit.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
+				C620A827198F766D00AD3791 /* Register.m in Sources */,
 				C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */,
 				C5A6EBD3198267650041DC2A /* HTEntranceTicketController.m in Sources */,
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
@@ -1484,7 +1529,9 @@
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				C620A82D198F77B700AD3791 /* RegisterHttp.m in Sources */,
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
+				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
 				C6ADAC09198E167C00AB983B /* ASIAuthenticationDialog.m in Sources */,
 				C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */,
 				C6ADABC7198E167200AB983B /* UIButton+WebCache.m in Sources */,
