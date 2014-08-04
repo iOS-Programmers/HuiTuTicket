@@ -126,7 +126,7 @@
         }
         else {
             //显示服务端返回的错误提示
-            [weak_self showWithText:weak_self.getUserInfoHttp.erorMessage];
+//            [weak_self showWithText:weak_self.getUserInfoHttp.erorMessage];
         };
         
         
