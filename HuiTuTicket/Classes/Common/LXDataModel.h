@@ -44,4 +44,6 @@
 - (NSArray*)allKeys;
 
 - (NSMutableDictionary *)convertToDictionary;
+
+- (NSString *)capitalizedString:(NSString *)string;
 @end

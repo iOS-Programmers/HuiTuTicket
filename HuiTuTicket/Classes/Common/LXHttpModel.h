@@ -10,7 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "JSONKit.h"
-#import "LXDataModel.h"
+#import "LXResultModel.h"
 #import "LXParameterModel.h"
 
 typedef void (^HttpModelCompletionBlock) ();
@@ -59,15 +59,7 @@ typedef void (^HttpModelFailedBlock) ();
  * 返回结果model
  *
  */
-@property (nonatomic, retain) LXDataModel *resultModel;
-
-/**
- *
- * 返回结果子model
- *
- */
-@property (nonatomic, retain) LXDataModel *subModel;
-@property (nonatomic, retain) LXDataModel *subSubModel;
+@property (nonatomic, retain) LXResultModel *resultModel;
 
 
 /**
