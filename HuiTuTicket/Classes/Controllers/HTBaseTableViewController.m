@@ -100,6 +100,23 @@
     return NO;
 }
 
+- (UIBarButtonItem *)createNavBtnItem:(UIViewController *)target normal:(NSString *)imgStr highlight:(NSString *)highStr selector:(SEL)selector
+{
+    UIImage *btnImage = [UIImage imageNamed:imgStr];
+    UIImage *btnImageH = [UIImage imageNamed:highStr];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0.0f, 0.0f, btnImage.size.width+10, btnImage.size.height);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn setImage:btnImage forState:UIControlStateNormal];
+    [btn setImage:btnImageH forState:UIControlStateHighlighted];
+    if (!FBIsEmpty(target))
+    {
+        [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    }
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return item;
+}
+
 #pragma mark - UITableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

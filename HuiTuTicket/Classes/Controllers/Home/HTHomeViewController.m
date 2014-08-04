@@ -55,6 +55,9 @@
     HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
     
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
