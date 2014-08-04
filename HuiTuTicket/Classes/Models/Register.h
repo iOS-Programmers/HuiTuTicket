@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "LXDataModel.h"
+#import "LXResultModel.h"
 
 /**
  *  注册接口返回数据对象
  */
-@interface Register : LXDataModel
+@interface Register : LXResultModel
 
 
 @property (strong, nonatomic) NSString *userid;         //会员ID

@@ -41,4 +41,9 @@
  */
 - (void)loadDataSource;
 
+/**
+ *  自定义导航栏左右按钮
+ */
+- (UIBarButtonItem *)createNavBtnItem:(UIViewController *)target normal:(NSString *)imgStr highlight:(NSString *)highStr selector:(SEL)selector;
+
 @end

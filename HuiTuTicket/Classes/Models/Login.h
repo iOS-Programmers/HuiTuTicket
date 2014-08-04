@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "LXDataModel.h"
+#import "LXResultModel.h"
 
 /**
  *  登录接口返回数据对象
  */
-@interface Login : LXDataModel
+@interface Login : LXResultModel
 
 /**
  *  会员ID   int型

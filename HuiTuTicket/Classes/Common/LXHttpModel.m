@@ -39,14 +39,6 @@
     [_path release],_path = nil;
     [_method release],_method = nil;
     [_resultModel release],_resultModel = nil;
-    if (!FBIsEmpty(self.subModel))
-    {
-        [_subModel release],_subModel = nil;
-    }
-    if (!FBIsEmpty(self.subSubModel))
-    {
-        [_subSubModel release],_subSubModel = nil;
-    }
     [_token release],_token = nil;
     if (!FBIsEmpty(self.request)) {
         [_request release],_request = nil;
@@ -187,14 +179,11 @@
             LXLog(@"RequestSuccess\npath=%@\nGet responseString:%@\n",self.path,self.dataDic);
             if (!FBIsEmpty([self.dataDic objectForKey:@"data"]))
             {
-                if ([[self.dataDic objectForKey:@"data"] isKindOfClass:[NSArray class]])
-                {
-                    [self.resultModel setModelFromArray:[self.dataDic objectForKey:@"data"] model:[self.subModel class] subModel:[self.subSubModel class]];
+                if (!FBIsEmpty(self.dataDic)) {
+                    self.isValid = YES;
+                    [self.resultModel setModelFromValue:[self.dataDic objectForKey:@"data"]];
                 }
-                else
-                {
-                    [self.resultModel setModelFromDictionary:[self.dataDic objectForKey:@"data"] subModel:[self.subModel class] subSubModel:[self.subSubModel class]];
-                }
+
             }
         }
         else if(self.erorCode==-151)
