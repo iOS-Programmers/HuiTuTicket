@@ -13,11 +13,9 @@
 {
     self = [super init];
     if (nil != self){
-        [self.objMapDic setObject:@"UserDateStatistics" forKey:@"info"];
+        [self.objMapDic setObject:@"Scenic" forKey:@"info"];
     }
     return self;
 }
-
-
 
 @end
