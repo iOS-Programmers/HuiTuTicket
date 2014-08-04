@@ -10,6 +10,9 @@
 		A9A7D3EE198E1A0D00044460 /* HTAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */; };
 		A9A7D3F2198E1B2800044460 /* HTAppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */; };
 		A9A7D3F3198E1B2800044460 /* HTAppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */; };
+		C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0AE198FB0860094DC9F /* ScenicList.m */; };
+		C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B1198FB09A0094DC9F /* ScenicListPara.m */; };
+		C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */; };
 		C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */; };
 		C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */; };
 		C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */; };
@@ -205,6 +208,12 @@
 		A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppointmentCell.h; sourceTree = "<group>"; };
 		A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppointmentCell.m; sourceTree = "<group>"; };
 		A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAppointmentCell.xib; sourceTree = "<group>"; };
+		C59CB0AD198FB0860094DC9F /* ScenicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicList.h; sourceTree = "<group>"; };
+		C59CB0AE198FB0860094DC9F /* ScenicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicList.m; sourceTree = "<group>"; };
+		C59CB0B0198FB09A0094DC9F /* ScenicListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicListPara.h; sourceTree = "<group>"; };
+		C59CB0B1198FB09A0094DC9F /* ScenicListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicListPara.m; sourceTree = "<group>"; };
+		C59CB0B3198FB0AC0094DC9F /* ScenicListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicListHttp.h; sourceTree = "<group>"; };
+		C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicListHttp.m; sourceTree = "<group>"; };
 		C5A6EBA9198101300041DC2A /* HTCYOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCYOrderViewController.h; sourceTree = "<group>"; };
 		C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCYOrderViewController.m; sourceTree = "<group>"; };
 		C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCYOrderViewController.xib; sourceTree = "<group>"; };
@@ -536,6 +545,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C59CB0AC198FB0510094DC9F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C59CB0AD198FB0860094DC9F /* ScenicList.h */,
+				C59CB0AE198FB0860094DC9F /* ScenicList.m */,
+				C59CB0B0198FB09A0094DC9F /* ScenicListPara.h */,
+				C59CB0B1198FB09A0094DC9F /* ScenicListPara.m */,
+				C59CB0B3198FB0AC0094DC9F /* ScenicListHttp.h */,
+				C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		C60F6FB119762D7800AFC182 = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +688,7 @@
 		C60F6FF1197630D700AFC182 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C59CB0AC198FB0510094DC9F /* Home */,
 				C620A824198F760600AD3791 /* Login&Register */,
 				C6BADF9519775A1C00543D39 /* HTStoreManager.h */,
 				C6BADF9619775A1C00543D39 /* HTStoreManager.m */,
@@ -1479,6 +1502,7 @@
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
+				C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
@@ -1507,7 +1531,9 @@
 				C6ADAC0C198E167C00AB983B /* ASIDownloadCache.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6ADABCB198E167200AB983B /* UIImageView+WebCache.m in Sources */,
+				C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
+				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
 				C6ADAC1A198E167C00AB983B /* ASIS3BucketObject.m in Sources */,
 				C6ADAC0A198E167C00AB983B /* ASIDataCompressor.m in Sources */,
 				C6ADAC2F198E1BC200AB983B /* JSONKit.m in Sources */,
