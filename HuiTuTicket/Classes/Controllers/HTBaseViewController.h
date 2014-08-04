@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
 /**
  *  显示错误的HUD
  */
-- (void)showError;
+- (void)showErrorWithText:(NSString *)errorText;
 
 /**
  *  显示只带文字的HUD

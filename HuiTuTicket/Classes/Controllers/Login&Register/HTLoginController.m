@@ -12,10 +12,14 @@
 #import "HTFindPasswordController.h"
 
 #import "LoginHttp.h"
+#import "GetUserInfoHttp.h"
 
 @interface HTLoginController ()
 
 @property (strong, nonatomic) LoginHttp *loginHttp;
+@property (strong, nonatomic) GetUserInfoHttp *getUserInfoHttp;
+
+
 @property (weak, nonatomic) IBOutlet HTLoginTextField *userNameTF;
 @property (weak, nonatomic) IBOutlet HTLoginTextField *passwordTF;
 
@@ -34,6 +38,7 @@
         // Custom initialization
         self.title = @"登录";
         _loginHttp = [[LoginHttp alloc] init];
+        _getUserInfoHttp = [[GetUserInfoHttp alloc] init];
     }
     return self;
 }
@@ -72,35 +77,79 @@
     self.loginHttp.parameter.username = @"18638616155";
     self.loginHttp.parameter.password = @"123456";
     
-    
     [self showLoadingWithText:@"加载中"];
     __block HTLoginController *weak_self = self;
     [self.loginHttp getDataWithCompletionBlock:^{
-        //        [weak_self hideHud];
-        if (weak_self.loginHttp.isValid)
-        {
+        [weak_self hideLoading];
+       
+        if (weak_self.loginHttp.isValid) {
             [weak_self showWithText:@"登录成功"];
-            
+            [weak_self getUserInfo];
         }
-        else
-        {   //显示服务端返回的错误提示
-            //            [weak_self showText:weak_self.registerHttp.erorMessage];
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showWithText:weak_self.loginHttp.erorMessage];
         };
         
-        [weak_self hideLoading];
+        
     }failedBlock:^{
         [weak_self hideLoading];
-        if (![HTFoundationCommon networkDetect])
-        {
-            //            [weak_self showText:LX_CHECKNET];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showWithText:kNETWORK_ERROR];
         }
-        else
-        {
+        else {
+        
             //统统归纳为服务器出错
-            //            [weak_self showText:LX_NETWRONG];
+            [weak_self showErrorWithText:kSERVICE_ERROR];
         };
     }];
 
+}
+
+/**
+ *  获取会员信息接口
+ */
+- (void)getUserInfo
+{
+    self.getUserInfoHttp.parameter.uid = self.loginHttp.resultModel.userid;
+    self.getUserInfoHttp.parameter.session_key = self.loginHttp.resultModel.session_key;
+    
+    [self showLoadingWithText:@"加载中"];
+    __block HTLoginController *weak_self = self;
+    [self.getUserInfoHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.getUserInfoHttp.isValid) {
+            [weak_self showWithText:@"会员信息获取成功"];
+            [weak_self saveUserInfo:weak_self.getUserInfoHttp.resultModel];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showWithText:weak_self.getUserInfoHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+}
+
+/**
+ *  保存用户的信息
+ */
+- (void)saveUserInfo:(GetUserInfo *)info
+{
+    LXLog(@"获取的会员信息   %@",info);
 }
 
 - (IBAction)onFindPasswordClick:(id)sender {

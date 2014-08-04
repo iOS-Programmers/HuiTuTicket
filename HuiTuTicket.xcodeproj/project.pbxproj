@@ -52,6 +52,11 @@
 		C620A833198F9CE300AD3791 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A832198F9CE300AD3791 /* Login.m */; };
 		C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A835198F9CFB00AD3791 /* LoginPara.m */; };
 		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
+		C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1D198FAF52003ADE85 /* btn_adclose.png */; };
+		C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */; };
+		C6938C23198FB377003ADE85 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C22198FB377003ADE85 /* GetUserInfo.m */; };
+		C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */; };
+		C6938C29198FB3B0003ADE85 /* GetUserInfoHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C28198FB3B0003ADE85 /* GetUserInfoHttp.m */; };
 		C6A373F11985FA2C0016A204 /* HTRegeisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */; };
 		C6A373F21985FA2C0016A204 /* HTRegeisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */; };
 		C6A373F4198627700016A204 /* icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F3198627700016A204 /* icon_arrow@2x.png */; };
@@ -267,6 +272,14 @@
 		C620A835198F9CFB00AD3791 /* LoginPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPara.m; sourceTree = "<group>"; };
 		C620A837198F9D0C00AD3791 /* LoginHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHttp.h; sourceTree = "<group>"; };
 		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
+		C6938C1D198FAF52003ADE85 /* btn_adclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_adclose.png; sourceTree = "<group>"; };
+		C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_adclose@2x.png"; sourceTree = "<group>"; };
+		C6938C21198FB377003ADE85 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
+		C6938C22198FB377003ADE85 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
+		C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoPara.h; sourceTree = "<group>"; };
+		C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoPara.m; sourceTree = "<group>"; };
+		C6938C27198FB3B0003ADE85 /* GetUserInfoHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoHttp.h; sourceTree = "<group>"; };
+		C6938C28198FB3B0003ADE85 /* GetUserInfoHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoHttp.m; sourceTree = "<group>"; };
 		C6A373EE1985FA2C0016A204 /* HTRegeisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRegeisterController.h; sourceTree = "<group>"; };
 		C6A373EF1985FA2C0016A204 /* HTRegeisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRegeisterController.m; sourceTree = "<group>"; };
 		C6A373F01985FA2C0016A204 /* HTRegeisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTRegeisterController.xib; sourceTree = "<group>"; };
@@ -690,6 +703,12 @@
 				C620A835198F9CFB00AD3791 /* LoginPara.m */,
 				C620A837198F9D0C00AD3791 /* LoginHttp.h */,
 				C620A838198F9D0C00AD3791 /* LoginHttp.m */,
+				C6938C21198FB377003ADE85 /* GetUserInfo.h */,
+				C6938C22198FB377003ADE85 /* GetUserInfo.m */,
+				C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */,
+				C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */,
+				C6938C27198FB3B0003ADE85 /* GetUserInfoHttp.h */,
+				C6938C28198FB3B0003ADE85 /* GetUserInfoHttp.m */,
 			);
 			name = "Login&Register";
 			sourceTree = "<group>";
@@ -1204,6 +1223,8 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C6938C1D198FAF52003ADE85 /* btn_adclose.png */,
+				C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */,
 				C6A373F5198627890016A204 /* bg_bg@2x.png */,
 				C6A373F3198627700016A204 /* icon_arrow@2x.png */,
 				C6A373F719862CD80016A204 /* pub_blueBtn@2x.png */,
@@ -1376,6 +1397,7 @@
 				C6D124CF1980B00A00FF4D83 /* pub_btnPoint@2x.png in Resources */,
 				C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
+				C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
@@ -1424,6 +1446,7 @@
 				C6D124CE1980B00A00FF4D83 /* pub_btnPoint_selected@2x.png in Resources */,
 				C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */,
 				C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */,
+				C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */,
 				C6D124A0197E3AC800FF4D83 /* my_06@2x.png in Resources */,
 				C6B941A91977AF4400208F20 /* mine_header_bg.png in Resources */,
 				C6D12480197E37E500FF4D83 /* more_feedback@2x.png in Resources */,
@@ -1454,6 +1477,7 @@
 				C6ADABC2198E167200AB983B /* SDWebImageDecoder.m in Sources */,
 				C6ADABC5198E167200AB983B /* SDWebImageManager.m in Sources */,
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
+				C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */,
 				C620A833198F9CE300AD3791 /* Login.m in Sources */,
 				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
 				C6ADAC20198E167C00AB983B /* Reachability.m in Sources */,
@@ -1473,11 +1497,13 @@
 				C6ADAC10198E167C00AB983B /* ASINetworkQueue.m in Sources */,
 				C6ADABCA198E167200AB983B /* UIImage+WebP.m in Sources */,
 				C6ADAC16198E167C00AB983B /* ASICloudFilesObject.m in Sources */,
+				C6938C29198FB3B0003ADE85 /* GetUserInfoHttp.m in Sources */,
 				C6ADAC13198E167C00AB983B /* ASICloudFilesContainer.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
+				C6938C23198FB377003ADE85 /* GetUserInfo.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,

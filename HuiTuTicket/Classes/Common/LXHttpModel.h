@@ -85,6 +85,11 @@ typedef void (^HttpModelFailedBlock) ();
 @property (nonatomic, copy) NSString *token;
 
 /**
+ *  状态码 （0是成功，非0失败）
+ */
+@property (nonatomic, assign) int status;
+
+/**
  *
  * 错误代码
  *

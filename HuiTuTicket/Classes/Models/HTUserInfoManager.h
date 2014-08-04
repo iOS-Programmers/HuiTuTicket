@@ -14,4 +14,7 @@
 @interface HTUserInfoManager : NSObject
 
 + (instancetype)shareInfoManager;
+
+
+
 @end

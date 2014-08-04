@@ -180,7 +180,7 @@
     {
         LXLog(@"\nGet responseString:\n%@\n",responseString);
         self.dataDic = [responseString objectFromJSONString];
-        self.erorCode = [[_dataDic objectForKey:@"error_no"] integerValue];
+        self.erorCode = [[_dataDic objectForKey:@"errcode"] integerValue];
         if (self.erorCode == 0)
         {
             self.isValid = YES;
@@ -208,7 +208,7 @@
         else
         {
             self.isValid = NO;
-            self.erorMessage = [_dataDic objectForKey:@"error_info"];
+            self.erorMessage = [_dataDic objectForKey:@"msg"];
             LXLog(@"RequestError\npath=%@\nerorCode=%d errorMessage == %@\nresponseString:%@\n",self.path,self.erorCode,self.erorMessage,self.dataDic);
         }
         if ([[_dataDic allKeys] containsObject:@"token"])

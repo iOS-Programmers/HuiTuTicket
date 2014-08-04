@@ -186,8 +186,21 @@
 	[_hud hide:YES afterDelay:2];
 
 }
-- (void)showError {
-    
+- (void)showErrorWithText:(NSString *)errorText {
+    _hud = [[MBProgressHUD alloc] initWithView:self.view];
+	[self.view addSubview:_hud];
+	
+	// Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
+	_hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn_adclose.png"]];
+	
+	// Set custom view mode
+	_hud.mode = MBProgressHUDModeCustomView;
+	
+	_hud.delegate = self;
+	_hud.labelText = errorText;
+	
+	[_hud show:YES];
+	[_hud hide:YES afterDelay:2];
 }
 
 - (void)showWithText:(NSString *)text
@@ -205,7 +218,7 @@
 }
 
 - (void)hideLoading {
-    [_hud hide:YES];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 #pragma mark -
