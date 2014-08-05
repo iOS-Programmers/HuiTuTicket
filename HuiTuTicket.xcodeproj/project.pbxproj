@@ -58,6 +58,12 @@
 		C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A835198F9CFB00AD3791 /* LoginPara.m */; };
 		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
+		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
+		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
+		C6912B45199079B900584586 /* SendCodeHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B44199079B900584586 /* SendCodeHttp.m */; };
+		C6912B4819907EE600584586 /* ResetPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4719907EE600584586 /* ResetPassword.m */; };
+		C6912B4B19907EFC00584586 /* ResetPasswordPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4A19907EFC00584586 /* ResetPasswordPara.m */; };
+		C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */; };
 		C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1D198FAF52003ADE85 /* btn_adclose.png */; };
 		C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */; };
 		C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */; };
@@ -289,6 +295,18 @@
 		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
+		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
+		C6912B3E1990799700584586 /* SendCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCode.m; sourceTree = "<group>"; };
+		C6912B40199079A800584586 /* SendCodePara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCodePara.h; sourceTree = "<group>"; };
+		C6912B41199079A800584586 /* SendCodePara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCodePara.m; sourceTree = "<group>"; };
+		C6912B43199079B900584586 /* SendCodeHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCodeHttp.h; sourceTree = "<group>"; };
+		C6912B44199079B900584586 /* SendCodeHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCodeHttp.m; sourceTree = "<group>"; };
+		C6912B4619907EE600584586 /* ResetPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPassword.h; sourceTree = "<group>"; };
+		C6912B4719907EE600584586 /* ResetPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPassword.m; sourceTree = "<group>"; };
+		C6912B4919907EFC00584586 /* ResetPasswordPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordPara.h; sourceTree = "<group>"; };
+		C6912B4A19907EFC00584586 /* ResetPasswordPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordPara.m; sourceTree = "<group>"; };
+		C6912B4C19907F0E00584586 /* ResetPasswordHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordHttp.h; sourceTree = "<group>"; };
+		C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordHttp.m; sourceTree = "<group>"; };
 		C6938C1D198FAF52003ADE85 /* btn_adclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_adclose.png; sourceTree = "<group>"; };
 		C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_adclose@2x.png"; sourceTree = "<group>"; };
 		C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoPara.h; sourceTree = "<group>"; };
@@ -740,6 +758,18 @@
 				C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */,
 				C6938C27198FB3B0003ADE85 /* GetUserInfoHttp.h */,
 				C6938C28198FB3B0003ADE85 /* GetUserInfoHttp.m */,
+				C6912B3D1990799600584586 /* SendCode.h */,
+				C6912B3E1990799700584586 /* SendCode.m */,
+				C6912B40199079A800584586 /* SendCodePara.h */,
+				C6912B41199079A800584586 /* SendCodePara.m */,
+				C6912B43199079B900584586 /* SendCodeHttp.h */,
+				C6912B44199079B900584586 /* SendCodeHttp.m */,
+				C6912B4619907EE600584586 /* ResetPassword.h */,
+				C6912B4719907EE600584586 /* ResetPassword.m */,
+				C6912B4919907EFC00584586 /* ResetPasswordPara.h */,
+				C6912B4A19907EFC00584586 /* ResetPasswordPara.m */,
+				C6912B4C19907F0E00584586 /* ResetPasswordHttp.h */,
+				C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */,
 			);
 			name = "Login&Register";
 			sourceTree = "<group>";
@@ -1509,6 +1539,7 @@
 			files = (
 				C6ADABC2198E167200AB983B /* SDWebImageDecoder.m in Sources */,
 				C6ADABC5198E167200AB983B /* SDWebImageManager.m in Sources */,
+				C6912B4819907EE600584586 /* ResetPassword.m in Sources */,
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
 				C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */,
 				C620A833198F9CE300AD3791 /* Login.m in Sources */,
@@ -1534,6 +1565,8 @@
 				C6ADAC13198E167C00AB983B /* ASICloudFilesContainer.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
+				C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */,
+				C6912B3F1990799700584586 /* SendCode.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
@@ -1556,6 +1589,7 @@
 				C6ADAC0F198E167C00AB983B /* ASIInputStream.m in Sources */,
 				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
 				C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */,
+				C6912B42199079A800584586 /* SendCodePara.m in Sources */,
 				C6ADAC1C198E167C00AB983B /* ASIS3ObjectRequest.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
@@ -1572,6 +1606,7 @@
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
 				C6ADAC1A198E167C00AB983B /* ASIS3BucketObject.m in Sources */,
+				C6912B4B19907EFC00584586 /* ResetPasswordPara.m in Sources */,
 				C6ADAC0A198E167C00AB983B /* ASIDataCompressor.m in Sources */,
 				C6ADAC2F198E1BC200AB983B /* JSONKit.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
@@ -1587,6 +1622,7 @@
 				C6ADABC6198E167200AB983B /* SDWebImagePrefetcher.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
+				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,

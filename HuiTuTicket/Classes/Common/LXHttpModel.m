@@ -121,7 +121,7 @@
     [self.request setFailedBlock:failedBlock];
     if ([HTFoundationCommon networkDetect])
     {
-        LXLog(@"\nStart request path:\n%@\n",self.path);
+        LXLog(@"\n\n\nStart request path:\n\n%@\n\n",self.path);
         [self.request startAsynchronous];
     }
     else

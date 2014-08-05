@@ -8,11 +8,14 @@
 
 #import "HTRegeisterController.h"
 #import "RegisterHttp.h"
+#import "SendCodeHttp.h"
 
 @interface HTRegeisterController ()
 
 
 @property (strong, nonatomic) RegisterHttp *registerHttp;
+
+@property (strong, nonatomic) SendCodeHttp *sendcodeHttp;
 
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
@@ -57,6 +60,8 @@
         self.title = @"注册";
         
         _registerHttp = [[RegisterHttp alloc] init];
+        
+        _sendcodeHttp = [[SendCodeHttp alloc] init];
     }
     return self;
 }
@@ -97,8 +102,37 @@
  */
 - (IBAction)onPhoneNumberNextBtn:(id)sender
 {
+    self.sendcodeHttp.parameter.mobile = @"18638616155";
     
-    [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTRegeisterController *weak_self = self;
+    [self.sendcodeHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.sendcodeHttp.isValid) {
+            [weak_self showWithText:@"登录成功"];
+;
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showWithText:weak_self.sendcodeHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+    
+//    [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
 }
 
 /**
@@ -118,43 +152,43 @@
  */
 - (IBAction)onRegisterBtn:(id)sender {
 
-////    self.registerHttp.parameter.mobile = self.phoneNumberTF.text;
-////    self.registerHttp.parameter.password = self.pw_passwordTF.text;
-////
-////    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"%@%@%@",self.phoneNumberTF.text,self.pw_passwordTF.text,API_KEY]];
-//    self.registerHttp.parameter.mobile = @"18638616155";
-//    self.registerHttp.parameter.password = @"123456";
-//    
-//    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"18638616155123456%@",API_KEY]];
+//    self.registerHttp.parameter.mobile = self.phoneNumberTF.text;
+//    self.registerHttp.parameter.password = self.pw_passwordTF.text;
 //
-//    [self showLoadingWithText:@"加载中"];
-//    __block HTRegeisterController *weak_self = self;
-//    [self.registerHttp getDataWithCompletionBlock:^{
-////        [weak_self hideHud];
-//        if (weak_self.registerHttp.isValid)
-//        {
-//            [weak_self showWithText:@"注册成功"];
-//
-//        }
-//        else
-//        {   //显示服务端返回的错误提示
-////            [weak_self showText:weak_self.registerHttp.erorMessage];
-//        };
-//        
-//        [weak_self hideLoading];
-//    }failedBlock:^{
-//        [weak_self hideLoading];
-//        if (![HTFoundationCommon networkDetect])
-//        {
-////            [weak_self showText:LX_CHECKNET];
-//        }
-//        else
-//        {
-//            //统统归纳为服务器出错
-////            [weak_self showText:LX_NETWRONG];
-//        };
-//    }];
-//    
-////    [self showWithText:@"注册成功!"];
+//    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"%@%@%@",self.phoneNumberTF.text,self.pw_passwordTF.text,API_KEY]];
+    self.registerHttp.parameter.mobile = @"18638616154";
+    self.registerHttp.parameter.password = @"123456";
+    
+    self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"18638616154123456%@",API_KEY]];
+
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTRegeisterController *weak_self = self;
+    [self.registerHttp getDataWithCompletionBlock:^{
+
+        if (weak_self.registerHttp.isValid)
+        {
+            [weak_self showWithText:@"注册成功"];
+
+        }
+        else
+        {   //显示服务端返回的错误提示
+//            [weak_self showText:weak_self.registerHttp.erorMessage];
+        };
+        
+        [weak_self hideLoading];
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect])
+        {
+//            [weak_self showText:LX_CHECKNET];
+        }
+        else
+        {
+            //统统归纳为服务器出错
+//            [weak_self showText:LX_NETWRONG];
+        };
+    }];
+    
+//    [self showWithText:@"注册成功!"];
 }
 @end

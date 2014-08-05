@@ -55,7 +55,6 @@
     [self configuraBackButton];
     
     
-    
 }
 - (void)didReceiveMemoryWarning
 {
@@ -77,7 +76,7 @@
     self.loginHttp.parameter.username = @"18638616155";
     self.loginHttp.parameter.password = @"123456";
     
-    [self showLoadingWithText:@"加载中"];
+    [self showLoadingWithText:kLOADING_TEXT];
     __block HTLoginController *weak_self = self;
     [self.loginHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
@@ -115,7 +114,7 @@
     self.getUserInfoHttp.parameter.uid = self.loginHttp.resultModel.userid;
     self.getUserInfoHttp.parameter.session_key = self.loginHttp.resultModel.session_key;
     
-    [self showLoadingWithText:@"加载中"];
+    [self showLoadingWithText:kLOADING_TEXT];
     __block HTLoginController *weak_self = self;
     [self.getUserInfoHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
