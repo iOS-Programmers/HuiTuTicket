@@ -222,6 +222,9 @@
 		C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */; };
 		C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */; };
 		C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */; };
+		C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F11990E3A90075D6C4 /* TicketRegister.m */; };
+		C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F41990E3C10075D6C4 /* TicketRegisterPara.m */; };
+		C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F71990E3F30075D6C4 /* TicketRegisterHttp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -603,6 +606,12 @@
 		C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_greenBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_OrangBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_ziseBtn@2x.png"; sourceTree = "<group>"; };
+		C6ED76F01990E3A90075D6C4 /* TicketRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegister.h; sourceTree = "<group>"; };
+		C6ED76F11990E3A90075D6C4 /* TicketRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketRegister.m; sourceTree = "<group>"; };
+		C6ED76F31990E3C10075D6C4 /* TicketRegisterPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegisterPara.h; sourceTree = "<group>"; };
+		C6ED76F41990E3C10075D6C4 /* TicketRegisterPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketRegisterPara.m; sourceTree = "<group>"; };
+		C6ED76F61990E3F30075D6C4 /* TicketRegisterHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegisterHttp.h; sourceTree = "<group>"; };
+		C6ED76F71990E3F30075D6C4 /* TicketRegisterHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketRegisterHttp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -842,6 +851,12 @@
 		C6912B581990A43700584586 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C6ED76F01990E3A90075D6C4 /* TicketRegister.h */,
+				C6ED76F11990E3A90075D6C4 /* TicketRegister.m */,
+				C6ED76F31990E3C10075D6C4 /* TicketRegisterPara.h */,
+				C6ED76F41990E3C10075D6C4 /* TicketRegisterPara.m */,
+				C6ED76F61990E3F30075D6C4 /* TicketRegisterHttp.h */,
+				C6ED76F71990E3F30075D6C4 /* TicketRegisterHttp.m */,
 				C6912B591990A4D600584586 /* TicketBind.h */,
 				C6912B5A1990A4D600584586 /* TicketBind.m */,
 				C6912B5C1990A4FF00584586 /* TicketBindPara.h */,
@@ -1684,6 +1699,7 @@
 				C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */,
 				C6912B3F1990799700584586 /* SendCode.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
+				C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */,
 				C6912B7A1990AE4400584586 /* MessageNoticePara.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
@@ -1727,6 +1743,7 @@
 				C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
+				C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */,
 				C6ADAC1A198E167C00AB983B /* ASIS3BucketObject.m in Sources */,
 				C6912B4B19907EFC00584586 /* ResetPasswordPara.m in Sources */,
 				C6ADAC0A198E167C00AB983B /* ASIDataCompressor.m in Sources */,
@@ -1755,6 +1772,7 @@
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
+				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				C620A82D198F77B700AD3791 /* RegisterHttp.m in Sources */,
