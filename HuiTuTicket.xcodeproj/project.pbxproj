@@ -228,6 +228,10 @@
 		C6ED76FB19913A190075D6C4 /* TicketDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76FA19913A190075D6C4 /* TicketDetail.m */; };
 		C6ED76FE19913A340075D6C4 /* TicketDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76FD19913A340075D6C4 /* TicketDetailPara.m */; };
 		C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770019913A450075D6C4 /* TicketDetailHttp.m */; };
+		C6ED770419913D5B0075D6C4 /* TicketScenicSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770319913D5B0075D6C4 /* TicketScenicSpot.m */; };
+		C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770619913D670075D6C4 /* TicketScenicSpotList.m */; };
+		C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770919913D7A0075D6C4 /* TicketScenicSpotListPara.m */; };
+		C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770C19913D880075D6C4 /* TicketScenicSpotListHttp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -621,6 +625,14 @@
 		C6ED76FD19913A340075D6C4 /* TicketDetailPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketDetailPara.m; sourceTree = "<group>"; };
 		C6ED76FF19913A450075D6C4 /* TicketDetailHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketDetailHttp.h; sourceTree = "<group>"; };
 		C6ED770019913A450075D6C4 /* TicketDetailHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketDetailHttp.m; sourceTree = "<group>"; };
+		C6ED770219913D5B0075D6C4 /* TicketScenicSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketScenicSpot.h; sourceTree = "<group>"; };
+		C6ED770319913D5B0075D6C4 /* TicketScenicSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpot.m; sourceTree = "<group>"; };
+		C6ED770519913D670075D6C4 /* TicketScenicSpotList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketScenicSpotList.h; sourceTree = "<group>"; };
+		C6ED770619913D670075D6C4 /* TicketScenicSpotList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpotList.m; sourceTree = "<group>"; };
+		C6ED770819913D7A0075D6C4 /* TicketScenicSpotListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketScenicSpotListPara.h; sourceTree = "<group>"; };
+		C6ED770919913D7A0075D6C4 /* TicketScenicSpotListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpotListPara.m; sourceTree = "<group>"; };
+		C6ED770B19913D880075D6C4 /* TicketScenicSpotListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketScenicSpotListHttp.h; sourceTree = "<group>"; };
+		C6ED770C19913D880075D6C4 /* TicketScenicSpotListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpotListHttp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -872,6 +884,14 @@
 				C6ED76FD19913A340075D6C4 /* TicketDetailPara.m */,
 				C6ED76FF19913A450075D6C4 /* TicketDetailHttp.h */,
 				C6ED770019913A450075D6C4 /* TicketDetailHttp.m */,
+				C6ED770219913D5B0075D6C4 /* TicketScenicSpot.h */,
+				C6ED770319913D5B0075D6C4 /* TicketScenicSpot.m */,
+				C6ED770519913D670075D6C4 /* TicketScenicSpotList.h */,
+				C6ED770619913D670075D6C4 /* TicketScenicSpotList.m */,
+				C6ED770819913D7A0075D6C4 /* TicketScenicSpotListPara.h */,
+				C6ED770919913D7A0075D6C4 /* TicketScenicSpotListPara.m */,
+				C6ED770B19913D880075D6C4 /* TicketScenicSpotListHttp.h */,
+				C6ED770C19913D880075D6C4 /* TicketScenicSpotListHttp.m */,
 				C6912B591990A4D600584586 /* TicketBind.h */,
 				C6912B5A1990A4D600584586 /* TicketBind.m */,
 				C6912B5C1990A4FF00584586 /* TicketBindPara.h */,
@@ -1710,6 +1730,7 @@
 				C6ED76FB19913A190075D6C4 /* TicketDetail.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6912B5E1990A4FF00584586 /* TicketBindPara.m in Sources */,
+				C6ED770419913D5B0075D6C4 /* TicketScenicSpot.m in Sources */,
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
 				C6912B831990B46600584586 /* MessageList.m in Sources */,
 				C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */,
@@ -1729,8 +1750,10 @@
 				C6ADAC0D198E167C00AB983B /* ASIFormDataRequest.m in Sources */,
 				C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
+				C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C6ADABC8198E167200AB983B /* UIImage+GIF.m in Sources */,
+				C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */,
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
 				C6912B511990866000584586 /* Logout.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
@@ -1795,6 +1818,7 @@
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				C620A82D198F77B700AD3791 /* RegisterHttp.m in Sources */,
 				C6912B6D1990A96A00584586 /* TicketUnbind.m in Sources */,
+				C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */,
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
 				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
 				C6ADAC09198E167C00AB983B /* ASIAuthenticationDialog.m in Sources */,
