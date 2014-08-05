@@ -64,6 +64,9 @@
 		C6912B4819907EE600584586 /* ResetPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4719907EE600584586 /* ResetPassword.m */; };
 		C6912B4B19907EFC00584586 /* ResetPasswordPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4A19907EFC00584586 /* ResetPasswordPara.m */; };
 		C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */; };
+		C6912B511990866000584586 /* Logout.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B501990866000584586 /* Logout.m */; };
+		C6912B541990886900584586 /* LogoutPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B531990886900584586 /* LogoutPara.m */; };
+		C6912B571990893E00584586 /* LogoutHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B561990893E00584586 /* LogoutHttp.m */; };
 		C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1D198FAF52003ADE85 /* btn_adclose.png */; };
 		C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */; };
 		C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */; };
@@ -307,6 +310,12 @@
 		C6912B4A19907EFC00584586 /* ResetPasswordPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordPara.m; sourceTree = "<group>"; };
 		C6912B4C19907F0E00584586 /* ResetPasswordHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordHttp.h; sourceTree = "<group>"; };
 		C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordHttp.m; sourceTree = "<group>"; };
+		C6912B4F1990866000584586 /* Logout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logout.h; sourceTree = "<group>"; };
+		C6912B501990866000584586 /* Logout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logout.m; sourceTree = "<group>"; };
+		C6912B521990886900584586 /* LogoutPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutPara.h; sourceTree = "<group>"; };
+		C6912B531990886900584586 /* LogoutPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutPara.m; sourceTree = "<group>"; };
+		C6912B551990893E00584586 /* LogoutHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutHttp.h; sourceTree = "<group>"; };
+		C6912B561990893E00584586 /* LogoutHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutHttp.m; sourceTree = "<group>"; };
 		C6938C1D198FAF52003ADE85 /* btn_adclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_adclose.png; sourceTree = "<group>"; };
 		C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_adclose@2x.png"; sourceTree = "<group>"; };
 		C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoPara.h; sourceTree = "<group>"; };
@@ -770,6 +779,12 @@
 				C6912B4A19907EFC00584586 /* ResetPasswordPara.m */,
 				C6912B4C19907F0E00584586 /* ResetPasswordHttp.h */,
 				C6912B4D19907F0E00584586 /* ResetPasswordHttp.m */,
+				C6912B4F1990866000584586 /* Logout.h */,
+				C6912B501990866000584586 /* Logout.m */,
+				C6912B521990886900584586 /* LogoutPara.h */,
+				C6912B531990886900584586 /* LogoutPara.m */,
+				C6912B551990893E00584586 /* LogoutHttp.h */,
+				C6912B561990893E00584586 /* LogoutHttp.m */,
 			);
 			name = "Login&Register";
 			sourceTree = "<group>";
@@ -1563,6 +1578,7 @@
 				C6ADAC16198E167C00AB983B /* ASICloudFilesObject.m in Sources */,
 				C6938C29198FB3B0003ADE85 /* GetUserInfoHttp.m in Sources */,
 				C6ADAC13198E167C00AB983B /* ASICloudFilesContainer.m in Sources */,
+				C6912B571990893E00584586 /* LogoutHttp.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
 				C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */,
@@ -1582,6 +1598,7 @@
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C6ADABC8198E167200AB983B /* UIImage+GIF.m in Sources */,
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
+				C6912B511990866000584586 /* Logout.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
 				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
@@ -1617,6 +1634,7 @@
 				C6D124CA1980AC1600FF4D83 /* HTTicketRegisterController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				A9A7D3F2198E1B2800044460 /* HTAppointmentCell.m in Sources */,
+				C6912B541990886900584586 /* LogoutPara.m in Sources */,
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
 				C6ADAC11198E167C00AB983B /* ASIWebPageRequest.m in Sources */,
 				C6ADABC6198E167200AB983B /* SDWebImagePrefetcher.m in Sources */,
