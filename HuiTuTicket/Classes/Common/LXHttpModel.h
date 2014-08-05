@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "ASIFormDataRequest.h"
 #import "JSONKit.h"
 #import "LXResultModel.h"
 #import "LXParameterModel.h"
@@ -52,7 +53,7 @@ typedef void (^HttpModelFailedBlock) ();
  * ASIHttpRequest
  *
  */
-@property (nonatomic, retain) ASIHTTPRequest *request;
+@property (nonatomic, retain) ASIFormDataRequest *request;
 
 /**
  *

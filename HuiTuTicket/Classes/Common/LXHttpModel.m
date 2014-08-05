@@ -99,7 +99,7 @@
     
     
     NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    self.request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
+    self.request = [[[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
     self.request.delegate = self;
     self.request.requestMethod = self.method;
     
@@ -108,7 +108,10 @@
         NSString *keyStr = [[dic allKeys] objectAtIndex:i];
         NSString *valueStr = [dic objectForKey:keyStr];
         
-        [self.request setValue:valueStr forKey:keyStr];
+        
+        [self.request setPostValue:valueStr forKey:keyStr];
+
+//        [self.request setValue:valueStr forKey:keyStr];
         //        self.path = [NSString stringWithFormat:@"%@&%@=%@",self.path,keyStr,valueStr];
     }
     

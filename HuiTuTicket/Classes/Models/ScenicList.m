@@ -9,5 +9,13 @@
 #import "ScenicList.h"
 
 @implementation ScenicList
+- (id)init
+{
+    self = [super init];
+    if (nil != self){
+        [self.objMapDic setObject:@"Scenic" forKey:@"info"];
+    }
+    return self;
+}
 
 @end

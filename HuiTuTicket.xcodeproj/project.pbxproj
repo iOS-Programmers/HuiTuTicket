@@ -14,6 +14,7 @@
 		C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B1198FB09A0094DC9F /* ScenicListPara.m */; };
 		C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */; };
 		C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B7198FB3510094DC9F /* LXResultModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0BA198FBA4C0094DC9F /* Scenic.m */; };
 		C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */; };
 		C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */; };
 		C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */; };
@@ -222,6 +223,8 @@
 		C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicListHttp.m; sourceTree = "<group>"; };
 		C59CB0B6198FB3510094DC9F /* LXResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXResultModel.h; sourceTree = "<group>"; };
 		C59CB0B7198FB3510094DC9F /* LXResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXResultModel.m; sourceTree = "<group>"; };
+		C59CB0B9198FBA4C0094DC9F /* Scenic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenic.h; sourceTree = "<group>"; };
+		C59CB0BA198FBA4C0094DC9F /* Scenic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenic.m; sourceTree = "<group>"; };
 		C5A6EBA9198101300041DC2A /* HTCYOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCYOrderViewController.h; sourceTree = "<group>"; };
 		C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCYOrderViewController.m; sourceTree = "<group>"; };
 		C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCYOrderViewController.xib; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 		C59CB0AC198FB0510094DC9F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C59CB0B9198FBA4C0094DC9F /* Scenic.h */,
+				C59CB0BA198FBA4C0094DC9F /* Scenic.m */,
 				C59CB0AD198FB0860094DC9F /* ScenicList.h */,
 				C59CB0AE198FB0860094DC9F /* ScenicList.m */,
 				C59CB0B0198FB09A0094DC9F /* ScenicListPara.h */,
@@ -1537,6 +1542,7 @@
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
+				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
 				C6ADAC0D198E167C00AB983B /* ASIFormDataRequest.m in Sources */,
 				C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
