@@ -1,22 +1,23 @@
 //
-//  LogoutHttp.m
+//  MessageListHttp.m
 //  HuiTuTicket
 //
 //  Created by Chemayi on 14-8-5.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "LogoutHttp.h"
+#import "MessageListHttp.h"
 
-@implementation LogoutHttp
+@implementation MessageListHttp
 
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[LogoutPara alloc] init];
-        self.resultModel = [[Logout alloc] init];
-        self.apiFuncName = @"user.logout";
+        self.parameter = [[MessageListPara alloc] init];
+        self.resultModel = [[MessageList alloc] init];
+        self.api_url = kURL_Message_Pre;
+        self.apiFuncName = @"user.lp.list";
     }
     return self;
 }

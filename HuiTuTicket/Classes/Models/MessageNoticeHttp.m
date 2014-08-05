@@ -1,22 +1,23 @@
 //
-//  LogoutHttp.m
+//  MessageNoticeHttp.m
 //  HuiTuTicket
 //
 //  Created by Chemayi on 14-8-5.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "LogoutHttp.h"
+#import "MessageNoticeHttp.h"
 
-@implementation LogoutHttp
+@implementation MessageNoticeHttp
 
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[LogoutPara alloc] init];
-        self.resultModel = [[Logout alloc] init];
-        self.apiFuncName = @"user.logout";
+        self.parameter = [[MessageNoticePara alloc] init];
+        self.resultModel = [[MessageNotice alloc] init];
+        self.api_url = kURL_Message_Pre;
+        self.apiFuncName = @"user.message.newcount";
     }
     return self;
 }
@@ -28,5 +29,6 @@
     
     [self getDataWithParameters:self.parameter completionBlock:completionBlock failedBlock:failedBlock];
 }
+
 
 @end

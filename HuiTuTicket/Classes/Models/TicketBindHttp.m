@@ -1,22 +1,23 @@
 //
-//  LogoutHttp.m
+//  TicketBindHttp.m
 //  HuiTuTicket
 //
 //  Created by Chemayi on 14-8-5.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "LogoutHttp.h"
+#import "TicketBindHttp.h"
 
-@implementation LogoutHttp
+@implementation TicketBindHttp
 
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[LogoutPara alloc] init];
-        self.resultModel = [[Logout alloc] init];
-        self.apiFuncName = @"user.logout";
+        self.parameter = [[TicketBindPara alloc] init];
+        self.resultModel = [[TicketBind alloc] init];
+        self.api_url = kURL_MyTicket_Pre;
+        self.apiFuncName = @"user.lp.bind";
     }
     return self;
 }

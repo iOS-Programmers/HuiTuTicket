@@ -30,6 +30,12 @@
 #define API_KEY    @"123456"
 #define HOST_NAME  @"appapi.chemayi.com"
 
-#define kURL_Member_Pre @"http://m-test.huitupiaowu.com/index.php/member"
+#define kURL_Member_Pre @"m-test.huitupiaowu.com/index.php/member"
+
+#define kURL_MyTicket_Pre @"m-test.huitupiaowu.com/index.php/lp"
+
+#define kURL_Message_Pre @"m-test.huitupiaowu.com/index.php/msg"
+
+#define kURL_Other_Pre @"m-test.huitupiaowu.com/index.php/gateway"
 
 #endif

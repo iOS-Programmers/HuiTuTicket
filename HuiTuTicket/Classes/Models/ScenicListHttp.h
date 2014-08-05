@@ -8,6 +8,9 @@
 
 #import "LXHttpModel.h"
 
+/**
+ *  景区门票列表接口
+ */
 @interface ScenicListHttp : LXHttpModel
 
 @end
