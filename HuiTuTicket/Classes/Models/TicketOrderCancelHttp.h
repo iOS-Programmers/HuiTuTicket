@@ -1,5 +1,5 @@
 //
-//  TicketPriceCalendarHttp.h
+//  TicketOrderCancelHttp.h
 //  HuiTuTicket
 //
 //  Created by Iceland on 14-8-7.
@@ -7,12 +7,12 @@
 //
 
 #import "LXHttpModel.h"
-#import "TicketPriceCalendar.h"
-#import "TicketPriceCalendarPara.h"
+#import "TicketOrderCancel.h"
+#import "TicketOrderCancelPara.h"
 
-@interface TicketPriceCalendarHttp : LXHttpModel
-@property (nonatomic, strong) TicketPriceCalendarPara *parameter;
-@property (nonatomic, strong) TicketPriceCalendar *resultModel;
+@interface TicketOrderCancelHttp : LXHttpModel
+@property (nonatomic, strong) TicketOrderCancelPara *parameter;
+@property (nonatomic, strong) TicketOrderCancel *resultModel;
 
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock;

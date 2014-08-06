@@ -1,23 +1,23 @@
 //
-//  TicketPriceCalendarHttp.m
+//  TicketOrderSubmitHttp.m
 //  HuiTuTicket
 //
 //  Created by Iceland on 14-8-7.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "TicketPriceCalendarHttp.h"
+#import "TicketOrderSubmitHttp.h"
 
-@implementation TicketPriceCalendarHttp
+@implementation TicketOrderSubmitHttp
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[TicketPriceCalendarPara alloc] init];
-        self.resultModel = [[TicketPriceCalendar alloc] init];
+        self.parameter = [[TicketOrderSubmitPara alloc] init];
+        self.resultModel = [[TicketOrderSubmit alloc] init];
         //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
         self.api_url = kURL_MyTicket_Pre;
-        self.apiFuncName = @"scenic.ticket.pricecalendar";
+        self.apiFuncName = @"scenic.ticket.order.post";
     }
     return self;
 }

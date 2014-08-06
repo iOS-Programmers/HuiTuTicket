@@ -11,6 +11,7 @@
 @interface ScenicDetailPara : LXParameterModel
 
 @property (strong, nonatomic) NSString *scenicid;
+@property (strong, nonatomic) NSString *format;
 
 
 @end

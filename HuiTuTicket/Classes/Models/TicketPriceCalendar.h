@@ -9,6 +9,8 @@
 #import "LXResultModel.h"
 
 @interface TicketPriceCalendar : LXResultModel
+//@property (strong, nonatomic) NSString *scenicid;
+//@property (strong, nonatomic) NSString *scenicid;
 
 @end
 
