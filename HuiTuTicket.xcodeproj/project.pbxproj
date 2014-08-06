@@ -10,6 +10,10 @@
 		076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00EE1992838900FC63D1 /* ScenicDetail.m */; };
 		076E00F2199283A800FC63D1 /* ScenicDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F1199283A800FC63D1 /* ScenicDetailPara.m */; };
 		076E00F5199283BA00FC63D1 /* ScenicDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F4199283BA00FC63D1 /* ScenicDetailHttp.m */; };
+		076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F7199285F700FC63D1 /* ScenicTicketHttp.m */; };
+		076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00FA1992860E00FC63D1 /* ScenicTicket.m */; };
+		076E00FE1992862B00FC63D1 /* ScenicTicketPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */; };
+		076E01011992874300FC63D1 /* TicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E01001992874300FC63D1 /* TicketModel.m */; };
 		7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */; };
 		7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */; };
 		7EAAAFC919922B53003676F3 /* s_n_detail_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC419922B53003676F3 /* s_n_detail_star@2x.png */; };
@@ -266,6 +270,14 @@
 		076E00F1199283A800FC63D1 /* ScenicDetailPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicDetailPara.m; sourceTree = "<group>"; };
 		076E00F3199283BA00FC63D1 /* ScenicDetailHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDetailHttp.h; sourceTree = "<group>"; };
 		076E00F4199283BA00FC63D1 /* ScenicDetailHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicDetailHttp.m; sourceTree = "<group>"; };
+		076E00F6199285F700FC63D1 /* ScenicTicketHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicTicketHttp.h; sourceTree = "<group>"; };
+		076E00F7199285F700FC63D1 /* ScenicTicketHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicTicketHttp.m; sourceTree = "<group>"; };
+		076E00F91992860E00FC63D1 /* ScenicTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicTicket.h; sourceTree = "<group>"; };
+		076E00FA1992860E00FC63D1 /* ScenicTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicTicket.m; sourceTree = "<group>"; };
+		076E00FC1992862B00FC63D1 /* ScenicTicketPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicTicketPara.h; sourceTree = "<group>"; };
+		076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicTicketPara.m; sourceTree = "<group>"; };
+		076E00FF1992874300FC63D1 /* TicketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketModel.h; sourceTree = "<group>"; };
+		076E01001992874300FC63D1 /* TicketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketModel.m; sourceTree = "<group>"; };
 		7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicDetailViewController.h; sourceTree = "<group>"; };
 		7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicDetailViewController.m; sourceTree = "<group>"; };
 		7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicDetailViewController.xib; sourceTree = "<group>"; };
@@ -721,6 +733,14 @@
 				076E00F1199283A800FC63D1 /* ScenicDetailPara.m */,
 				076E00F3199283BA00FC63D1 /* ScenicDetailHttp.h */,
 				076E00F4199283BA00FC63D1 /* ScenicDetailHttp.m */,
+				076E00FF1992874300FC63D1 /* TicketModel.h */,
+				076E01001992874300FC63D1 /* TicketModel.m */,
+				076E00F91992860E00FC63D1 /* ScenicTicket.h */,
+				076E00FA1992860E00FC63D1 /* ScenicTicket.m */,
+				076E00FC1992862B00FC63D1 /* ScenicTicketPara.h */,
+				076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */,
+				076E00F6199285F700FC63D1 /* ScenicTicketHttp.h */,
+				076E00F7199285F700FC63D1 /* ScenicTicketHttp.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1806,16 +1826,20 @@
 				C6912B7A1990AE4400584586 /* MessageNoticePara.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
+				076E01011992874300FC63D1 /* TicketModel.m in Sources */,
 				C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
+				076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
+				076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */,
 				7EAAAFD3199231E2003676F3 /* HTScenicDetailViewCell.m in Sources */,
 				C6ADAC0D198E167C00AB983B /* ASIFormDataRequest.m in Sources */,
 				C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
+				076E00FE1992862B00FC63D1 /* ScenicTicketPara.m in Sources */,
 				C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C6ADABC8198E167200AB983B /* UIImage+GIF.m in Sources */,
