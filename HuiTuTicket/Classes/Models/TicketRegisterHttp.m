@@ -26,7 +26,6 @@
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock
 {
-    
     [self getDataWithParameters:self.parameter completionBlock:completionBlock failedBlock:failedBlock];
 }
 
