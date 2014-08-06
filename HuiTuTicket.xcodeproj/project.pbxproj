@@ -14,6 +14,9 @@
 		076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00FA1992860E00FC63D1 /* ScenicTicket.m */; };
 		076E00FE1992862B00FC63D1 /* ScenicTicketPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */; };
 		076E01011992874300FC63D1 /* TicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E01001992874300FC63D1 /* TicketModel.m */; };
+		076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E0103199288A500FC63D1 /* TicketPriceCalendar.m */; };
+		076E0107199288B600FC63D1 /* TicketPriceCalendarPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E0106199288B600FC63D1 /* TicketPriceCalendarPara.m */; };
+		076E010A199288C500FC63D1 /* TicketPriceCalendarHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E0109199288C500FC63D1 /* TicketPriceCalendarHttp.m */; };
 		7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */; };
 		7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */; };
 		7EAAAFC919922B53003676F3 /* s_n_detail_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC419922B53003676F3 /* s_n_detail_star@2x.png */; };
@@ -278,6 +281,12 @@
 		076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicTicketPara.m; sourceTree = "<group>"; };
 		076E00FF1992874300FC63D1 /* TicketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketModel.h; sourceTree = "<group>"; };
 		076E01001992874300FC63D1 /* TicketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketModel.m; sourceTree = "<group>"; };
+		076E0102199288A500FC63D1 /* TicketPriceCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketPriceCalendar.h; sourceTree = "<group>"; };
+		076E0103199288A500FC63D1 /* TicketPriceCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketPriceCalendar.m; sourceTree = "<group>"; };
+		076E0105199288B600FC63D1 /* TicketPriceCalendarPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketPriceCalendarPara.h; sourceTree = "<group>"; };
+		076E0106199288B600FC63D1 /* TicketPriceCalendarPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketPriceCalendarPara.m; sourceTree = "<group>"; };
+		076E0108199288C500FC63D1 /* TicketPriceCalendarHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketPriceCalendarHttp.h; sourceTree = "<group>"; };
+		076E0109199288C500FC63D1 /* TicketPriceCalendarHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketPriceCalendarHttp.m; sourceTree = "<group>"; };
 		7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicDetailViewController.h; sourceTree = "<group>"; };
 		7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicDetailViewController.m; sourceTree = "<group>"; };
 		7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicDetailViewController.xib; sourceTree = "<group>"; };
@@ -741,6 +750,12 @@
 				076E00FD1992862B00FC63D1 /* ScenicTicketPara.m */,
 				076E00F6199285F700FC63D1 /* ScenicTicketHttp.h */,
 				076E00F7199285F700FC63D1 /* ScenicTicketHttp.m */,
+				076E0102199288A500FC63D1 /* TicketPriceCalendar.h */,
+				076E0103199288A500FC63D1 /* TicketPriceCalendar.m */,
+				076E0105199288B600FC63D1 /* TicketPriceCalendarPara.h */,
+				076E0106199288B600FC63D1 /* TicketPriceCalendarPara.m */,
+				076E0108199288C500FC63D1 /* TicketPriceCalendarHttp.h */,
+				076E0109199288C500FC63D1 /* TicketPriceCalendarHttp.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1882,6 +1897,7 @@
 				C6912B671990A75600584586 /* MyTicketPara.m in Sources */,
 				C6ADAC2F198E1BC200AB983B /* JSONKit.m in Sources */,
 				C6912B641990A74400584586 /* MyTicketHttp.m in Sources */,
+				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
 				C620A827198F766D00AD3791 /* Register.m in Sources */,
@@ -1895,10 +1911,12 @@
 				C6912B7D1990AE5E00584586 /* MessageNoticeHttp.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				A9A7D3F2198E1B2800044460 /* HTAppointmentCell.m in Sources */,
+				076E010A199288C500FC63D1 /* TicketPriceCalendarHttp.m in Sources */,
 				C6912B541990886900584586 /* LogoutPara.m in Sources */,
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
 				C6ADAC11198E167C00AB983B /* ASIWebPageRequest.m in Sources */,
 				C6ADABC6198E167200AB983B /* SDWebImagePrefetcher.m in Sources */,
+				076E0107199288B600FC63D1 /* TicketPriceCalendarPara.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,

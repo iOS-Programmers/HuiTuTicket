@@ -9,6 +9,5 @@
 #import "ScenicTicketPara.h"
 
 @implementation ScenicTicketPara
-@property (strong, nonatomic) NSString *scenicid;
 
 @end

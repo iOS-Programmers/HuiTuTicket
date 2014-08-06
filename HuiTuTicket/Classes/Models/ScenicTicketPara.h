@@ -9,5 +9,6 @@
 #import "LXParameterModel.h"
 
 @interface ScenicTicketPara : LXParameterModel
+@property (strong, nonatomic) NSString *scenicid;
 
 @end
