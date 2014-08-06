@@ -7,6 +7,7 @@
 //
 
 #import "LXResultModel.h"
+#import "Scenic.h"
 
 @interface ScenicList : LXResultModel
 
