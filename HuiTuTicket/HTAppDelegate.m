@@ -17,6 +17,9 @@
 #import "HTMineViewController.h"
 #import "HTMoreViewController.h"
 
+/**
+ *  junmade
+ */
 
 @implementation HTAppDelegate
 
