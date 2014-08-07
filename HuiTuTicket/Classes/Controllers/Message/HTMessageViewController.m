@@ -8,7 +8,12 @@
 
 #import "HTMessageViewController.h"
 #import "HTMessageCell.h"
+#import "MessageListHttp.h"
+
 @interface HTMessageViewController ()
+
+
+@property (strong, nonatomic) MessageListHttp *messageListHttp;
 
 @end
 
@@ -19,6 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _messageListHttp = [[MessageListHttp alloc] init];
     }
     return self;
 }
@@ -35,6 +41,8 @@
     [super viewWillAppear:animated];
     if (!self.dataSource.count)
         [self loadDataSource];
+    
+    [self requestData];
 }
 
 - (void)viewDidLoad
@@ -42,6 +50,43 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tableView.rowHeight = 80;
+    
+}
+
+/**
+ *  请求数据
+ */
+- (void)requestData
+{
+//    self.messageListHttp.parameter.uid = @"1";
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTMessageViewController *weak_self = self;
+    [self.messageListHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.messageListHttp.isValid) {
+            [weak_self showWithText:@"获取消息列表成功"];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.messageListHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning
