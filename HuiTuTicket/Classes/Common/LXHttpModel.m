@@ -95,9 +95,6 @@
      *   请求地址格式 http://API_URL?method=user.register&api_key={接口秘钥}
      */
     self.path =[NSString stringWithFormat:@"http://%@?method=%@&api_key=%@",self.api_url,self.apiFuncName,API_KEY];
-    
-    
-    
     NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     self.request = [[[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
     self.request.delegate = self;
