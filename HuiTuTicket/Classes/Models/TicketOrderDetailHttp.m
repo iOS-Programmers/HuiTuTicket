@@ -1,27 +1,26 @@
 //
-//  TicketRegisterHttp.m
+//  TicketOrderDetailHttp.m
 //  HuiTuTicket
 //
-//  Created by Chemayi on 14-8-5.
+//  Created by Iceland on 14-8-7.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "TicketRegisterHttp.h"
+#import "TicketOrderDetailHttp.h"
 
-@implementation TicketRegisterHttp
-
+@implementation TicketOrderDetailHttp
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[TicketRegisterPara alloc] init];
-        self.resultModel = [[TicketRegister alloc] init];
+        self.parameter = [[TicketOrderDetailPara alloc] init];
+        self.resultModel = [[TicketOrderDetail alloc] init];
+        //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
         self.api_url = kURL_MyTicket_Pre;
-        self.apiFuncName = @"lp.code.register";
+        self.apiFuncName = @"scenic.ticket.order.info";
     }
     return self;
 }
-
 
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock

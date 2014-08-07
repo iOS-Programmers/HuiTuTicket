@@ -10,4 +10,25 @@
 
 @implementation ScenicListHttp
 
+
+- (id)init
+{
+    self = [super init];
+    if (nil != self){
+        self.parameter = [[ScenicListPara alloc] init];
+        self.resultModel = [[ScenicList alloc] init];
+        //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
+        self.api_url = kURL_MyTicket_Pre;
+        self.apiFuncName = @"scenic.list";
+    }
+    return self;
+}
+
+- (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
+                       failedBlock:(HttpModelFailedBlock)failedBlock
+{
+    [self getDataWithParameters:self.parameter completionBlock:completionBlock failedBlock:failedBlock];
+}
+
+
 @end

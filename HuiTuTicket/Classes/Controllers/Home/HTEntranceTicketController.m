@@ -8,6 +8,7 @@
 
 #import "HTEntranceTicketController.h"
 #import "HTHomeTableViewCell.h"
+#import "HTScenicDetailViewController.h"
 
 @interface HTEntranceTicketController ()
 
@@ -72,6 +73,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    [self.navigationController pushViewController:app animated:YES];
 }
 
 @end
