@@ -10,6 +10,9 @@
 #import "TicketOrderQuery.h"
 #import "TicketOrderQueryPara.h"
 
+/**
+ *  景区门票订单查询接口
+ */
 @interface TicketOrderQueryHttp : LXHttpModel
 @property (nonatomic, strong) TicketOrderQueryPara *parameter;
 @property (nonatomic, strong) TicketOrderQuery *resultModel;

@@ -10,6 +10,9 @@
 #import "ScenicTicket.h"
 #import "ScenicTicketPara.h"
 
+/**
+ *  景区门票产品接口
+ */
 @interface ScenicTicketHttp : LXHttpModel
 
 @property (nonatomic, strong) ScenicTicketPara *parameter;

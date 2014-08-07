@@ -10,6 +10,9 @@
 #import "TicketPriceCalendar.h"
 #import "TicketPriceCalendarPara.h"
 
+/**
+ *  景区门票价格日历接口
+ */
 @interface TicketPriceCalendarHttp : LXHttpModel
 @property (nonatomic, strong) TicketPriceCalendarPara *parameter;
 @property (nonatomic, strong) TicketPriceCalendar *resultModel;

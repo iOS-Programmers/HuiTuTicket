@@ -48,6 +48,12 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:@selector(back)];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.userNameTF becomeFirstResponder];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -70,11 +76,26 @@
     }];
 }
 
-
+/**
+ *  点击登录按钮
+ *
+ */
 - (IBAction)onLoginBtnClick:(id)sender
 {
-    self.loginHttp.parameter.username = @"18638616155";
-    self.loginHttp.parameter.password = @"123456";
+    if (FBIsEmpty(self.userNameTF.text)) {
+        [self showErrorWithText:@"请输入手机号"];
+        
+        return;
+    }
+    else if (FBIsEmpty(self.passwordTF.text)) {
+        [self showErrorWithText:@"请输入密码"];
+        
+        return;
+    }
+
+    
+    self.loginHttp.parameter.username = self.userNameTF.text;
+    self.loginHttp.parameter.password = self.passwordTF.text;
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTLoginController *weak_self = self;
@@ -87,7 +108,7 @@
         }
         else {
             //显示服务端返回的错误提示
-            [weak_self showWithText:weak_self.loginHttp.erorMessage];
+            [weak_self showErrorWithText:weak_self.loginHttp.erorMessage];
         };
         
         
@@ -95,7 +116,7 @@
         [weak_self hideLoading];
         if (![HTFoundationCommon networkDetect]) {
             
-            [weak_self showWithText:kNETWORK_ERROR];
+            [weak_self showErrorWithText:kNETWORK_ERROR];
         }
         else {
         
@@ -125,7 +146,7 @@
         }
         else {
             //显示服务端返回的错误提示
-//            [weak_self showWithText:weak_self.getUserInfoHttp.erorMessage];
+            [weak_self showErrorWithText:weak_self.loginHttp.erorMessage];
         };
         
         
@@ -133,7 +154,7 @@
         [weak_self hideLoading];
         if (![HTFoundationCommon networkDetect]) {
             
-            [weak_self showWithText:kNETWORK_ERROR];
+            [weak_self showErrorWithText:kNETWORK_ERROR];
         }
         else {
             
@@ -149,9 +170,13 @@
 - (void)saveUserInfo:(GetUserInfo *)info
 {
     LXLog(@"获取的会员信息   %@",info);
+    //保存会员信息
+//    [[NSUserDefaults standardUserDefaults] setObject:info forKey:USER_INFO];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (IBAction)onFindPasswordClick:(id)sender {
+- (IBAction)onFindPasswordClick:(id)sender
+{
     [self pushViewController:@"HTFindPasswordController"];
 }
 

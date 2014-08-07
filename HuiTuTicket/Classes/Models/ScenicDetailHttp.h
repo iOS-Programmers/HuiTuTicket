@@ -10,6 +10,9 @@
 #import "ScenicDetail.h"
 #import "ScenicDetailPara.h"
 
+/**
+ *  景区详细信息接口
+ */
 @interface ScenicDetailHttp : LXHttpModel
 
 @property (nonatomic, strong) ScenicDetailPara *parameter;

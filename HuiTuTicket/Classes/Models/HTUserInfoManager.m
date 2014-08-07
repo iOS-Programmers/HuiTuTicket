@@ -7,6 +7,7 @@
 //
 
 #import "HTUserInfoManager.h"
+#import "GetUserInfo.h"
 
 @implementation HTUserInfoManager
 
@@ -21,5 +22,19 @@
     });
     
     return sharedInfo;
+}
+
+/**
+ *  获取会员信息的对象
+ *
+ *  @return 会员信息
+ */
+- (GetUserInfo *)userInfo
+{
+    GetUserInfo *info;
+
+    info = (GetUserInfo *)[[NSUserDefaults standardUserDefaults] objectForKey:USER_INFO];
+    
+    return info;
 }
 @end

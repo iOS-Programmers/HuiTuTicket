@@ -143,10 +143,10 @@
 {
     NSMutableDictionary *dic = [self convertParameters:params];
     self.path =[NSString stringWithFormat:@"http://%@/service.php?",HOST_NAME];
-//    self.path = [NSString stringWithFormat:@"%@act=%@&token=%@&confirm=%@",self.path,self.apiFuncName,[LXUserInfoAD userLXToken],params.confirm];
+
     NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     ASIFormDataRequest *uploadRequest = [[ASIFormDataRequest alloc]initWithURL:[NSURL URLWithString:urlStr]];
-    //[ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlStr]];
+
     UIImage *img = [dic objectForKey:@"image"];
     NSData *image = UIImageJPEGRepresentation(img, 1.0);
 //  添加请求内容
@@ -200,7 +200,10 @@
         else
         {
             self.isValid = NO;
-            self.erorMessage = [_dataDic objectForKey:@"msg"];
+            
+            //msg是个数组
+            NSMutableArray *msgArr = (NSMutableArray *)[_dataDic objectForKey:@"msg"];
+            self.erorMessage = msgArr[0];
             LXLog(@"RequestError\npath=%@\nerorCode=%d errorMessage == %@\nresponseString:%@\n",self.path,self.erorCode,self.erorMessage,self.dataDic);
         }
         if ([[_dataDic allKeys] containsObject:@"token"])

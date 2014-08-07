@@ -30,4 +30,10 @@
 #define kBorderColor        kColorFromRGB(0xcccccc)
 #define kHomeBGColor        kColorRGB(229, 233, 239)
 
+
+
+#pragma mark -   NSUserDefault Names
+
+#define USER_INFO   @"userInfo"
+
 #endif

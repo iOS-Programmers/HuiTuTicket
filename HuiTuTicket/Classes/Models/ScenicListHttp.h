@@ -11,7 +11,7 @@
 #import "ScenicListPara.h"
 
 /**
- *  景区门票列表接口
+ *  景区列表接口
  */
 @interface ScenicListHttp : LXHttpModel
 

@@ -85,4 +85,14 @@
 }
 
 
+/**
+ *  获取校验秘钥 默认123
+ *
+ *  @return
+ */
++(NSString *)getAPI_KEY
+{
+    return @"123";
+}
+
 @end

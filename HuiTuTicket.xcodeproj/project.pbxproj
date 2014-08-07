@@ -92,6 +92,8 @@
 		C620A833198F9CE300AD3791 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A832198F9CE300AD3791 /* Login.m */; };
 		C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A835198F9CFB00AD3791 /* LoginPara.m */; };
 		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
+		C64517D01993699100DDD2D7 /* pub_line.png in Resources */ = {isa = PBXBuildFile; fileRef = C64517CE1993699100DDD2D7 /* pub_line.png */; };
+		C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C64517CF1993699100DDD2D7 /* pub_line@2x.png */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -417,6 +419,8 @@
 		C620A835198F9CFB00AD3791 /* LoginPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPara.m; sourceTree = "<group>"; };
 		C620A837198F9D0C00AD3791 /* LoginHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHttp.h; sourceTree = "<group>"; };
 		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
+		C64517CE1993699100DDD2D7 /* pub_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub_line.png; sourceTree = "<group>"; };
+		C64517CF1993699100DDD2D7 /* pub_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_line@2x.png"; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -1594,6 +1598,8 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C64517CE1993699100DDD2D7 /* pub_line.png */,
+				C64517CF1993699100DDD2D7 /* pub_line@2x.png */,
 				C6938C1D198FAF52003ADE85 /* btn_adclose.png */,
 				C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */,
 				C6A373F5198627890016A204 /* bg_bg@2x.png */,
@@ -1801,6 +1807,7 @@
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
 				C6D124CB1980AC1600FF4D83 /* HTTicketRegisterController.xib in Resources */,
+				C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
@@ -1808,6 +1815,7 @@
 				A9A7D3F3198E1B2800044460 /* HTAppointmentCell.xib in Resources */,
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
 				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
+				C64517D01993699100DDD2D7 /* pub_line.png in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
 				C6B09E931982683F00576A5F /* zbar-back.png in Resources */,
 				C6B09E941982683F00576A5F /* zbar-help.html in Resources */,

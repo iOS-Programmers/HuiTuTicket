@@ -165,6 +165,7 @@
     _hud = [[MBProgressHUD alloc] initWithView:view];
     [self.view addSubview:_hud];
     _hud.labelText = text;
+    _hud.yOffset = -10.f;
     
     [_hud show:YES];
 }
@@ -192,7 +193,7 @@
 	
 	// Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
 	_hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn_adclose.png"]];
-	
+	_hud.yOffset = -10.f;
 	// Set custom view mode
 	_hud.mode = MBProgressHUDModeCustomView;
 	

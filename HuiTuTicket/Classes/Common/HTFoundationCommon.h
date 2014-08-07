@@ -39,4 +39,10 @@ static inline BOOL FBIsEmpty(id thing)
  */
 + (BOOL)networkDetect;
 
+/**
+ *  获取校验秘钥 默认123
+
+ */
++(NSString *)getAPI_KEY;
+
 @end

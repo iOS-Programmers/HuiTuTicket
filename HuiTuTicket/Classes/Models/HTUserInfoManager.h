@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class GetUserInfo;
 /**
  *  储存项目中用户相关信息的类 （调用的时候用单例模式调用）
  */
@@ -15,6 +15,11 @@
 
 + (instancetype)shareInfoManager;
 
-
+/**
+ *  获取会员信息的对象
+ *
+ *  @return 会员信息
+ */
+- (GetUserInfo *)userInfo;
 
 @end

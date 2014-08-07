@@ -24,6 +24,9 @@
 //网络检测
 #import "Reachability.h"
 
+//会员信息类
+#import "HTUserInfoManager.h"
+
 #define APP_ID @"11111111"
 
 #endif
