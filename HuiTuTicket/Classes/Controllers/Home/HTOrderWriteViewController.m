@@ -1,55 +1,40 @@
 //
-//  HTScenicDetailViewController.m
+//  HTOrderWriteViewController.m
 //  HuiTuTicket
 //
-//  Created by 李 广军 on 14-8-6.
+//  Created by 李 广军 on 14-8-7.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "HTScenicDetailViewController.h"
-#import "HTScenicDetailViewCell.h"
-#import "UIImageView+WebCache.h"
 #import "HTOrderWriteViewController.h"
+#import "HTScenicDetailViewCell.h"
 
-@interface HTScenicDetailViewController ()
+@interface HTOrderWriteViewController ()
 
 @property (nonatomic, strong) IBOutlet UIView *headView;
-@property (nonatomic, strong) IBOutlet UIImageView *headBgImageView;
-@property (nonatomic, strong) IBOutlet UILabel *scenicNameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *evaluateLabel;
-@property (nonatomic, strong) IBOutlet UILabel *addressLabel;
-@property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 
 @end
 
-@implementation HTScenicDetailViewController
+@implementation HTOrderWriteViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"详情";
+        self.title = @"订单填写";
     }
     return self;
-}
-
-- (void)loadDataSource
-{
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"1",@"1"]];
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    self.tableView.tableFooterView = view;
     
-    CGRect frame = self.tableView.frame;
-//    frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.navigationController.navigationBar.bounds);
-    self.tableView.frame = frame;
-    
-    [self loadDataSource];
     [self refreshUIShow];
 }
 
@@ -62,14 +47,6 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-    [self.headBgImageView setImageWithURL:[NSURL URLWithString:@"http://pic.nipic.com/2008-07-15/200871513185159_2.jpg"] placeholderImage:nil];
-    self.scenicNameLabel.text = @"景区名称";
-    self.evaluateLabel.text = @"108好汉评价过";
-    self.addressLabel.text = @"河南省郑大工学院";
-    self.descriptionLabel.text = @"河南省郑大工学院河南省郑大工学院河南省郑大工学院";
-    
-    self.headBgImageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.headBgImageView.clipsToBounds = YES;
     self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
@@ -90,19 +67,17 @@
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 117;
+    return 0;
 }
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
-    [self.navigationController pushViewController:app animated:YES];
 }
 
 @end
