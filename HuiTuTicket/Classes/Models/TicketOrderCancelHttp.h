@@ -14,6 +14,7 @@
  *  景区门票订单取消接口
  */
 @interface TicketOrderCancelHttp : LXHttpModel
+
 @property (nonatomic, strong) TicketOrderCancelPara *parameter;
 @property (nonatomic, strong) TicketOrderCancel *resultModel;
 

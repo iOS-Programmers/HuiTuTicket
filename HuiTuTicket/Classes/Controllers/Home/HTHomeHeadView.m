@@ -8,6 +8,7 @@
 
 #import "HTHomeHeadView.h"
 #import "HTEntranceTicketController.h"
+#import "HTLPTicketListController.h"
 #import "HTTicketRegisterController.h"
 #import "HTCYOrderViewController.h"
 
@@ -60,7 +61,10 @@
             break;
         case 101:
         {
-            
+            //景区联票
+            HTLPTicketListController *lpTicket = [[HTLPTicketListController alloc] init];
+            lpTicket.hidesBottomBarWhenPushed =YES;
+            [[self viewController].navigationController pushViewController:lpTicket animated:YES];
         }
             break;
         case 102:

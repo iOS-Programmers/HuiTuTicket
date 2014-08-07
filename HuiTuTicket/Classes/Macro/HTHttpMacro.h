@@ -38,4 +38,6 @@
 
 #define kURL_Other_Pre @"m-test.huitupiaowu.com/index.php/gateway"
 
+#define kURL_Ticket_Pre @"http://lp-test.huitupiaowu.com/api.php/rest"
+
 #endif

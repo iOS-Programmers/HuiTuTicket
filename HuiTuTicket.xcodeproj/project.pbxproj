@@ -100,6 +100,12 @@
 		C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C620A838198F9D0C00AD3791 /* LoginHttp.m */; };
 		C64517D01993699100DDD2D7 /* pub_line.png in Resources */ = {isa = PBXBuildFile; fileRef = C64517CE1993699100DDD2D7 /* pub_line.png */; };
 		C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C64517CF1993699100DDD2D7 /* pub_line@2x.png */; };
+		C64517D81993A10900DDD2D7 /* HTLPTicketListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517D61993A10900DDD2D7 /* HTLPTicketListController.m */; };
+		C64517D91993A10900DDD2D7 /* HTLPTicketListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64517D71993A10900DDD2D7 /* HTLPTicketListController.xib */; };
+		C64517DC1993A36100DDD2D7 /* LPTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517DB1993A36100DDD2D7 /* LPTicket.m */; };
+		C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E41993A3A600DDD2D7 /* LPTicketList.m */; };
+		C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */; };
+		C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -434,6 +440,17 @@
 		C620A838198F9D0C00AD3791 /* LoginHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHttp.m; sourceTree = "<group>"; };
 		C64517CE1993699100DDD2D7 /* pub_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub_line.png; sourceTree = "<group>"; };
 		C64517CF1993699100DDD2D7 /* pub_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_line@2x.png"; sourceTree = "<group>"; };
+		C64517D51993A10900DDD2D7 /* HTLPTicketListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketListController.h; sourceTree = "<group>"; };
+		C64517D61993A10900DDD2D7 /* HTLPTicketListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListController.m; sourceTree = "<group>"; };
+		C64517D71993A10900DDD2D7 /* HTLPTicketListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListController.xib; sourceTree = "<group>"; };
+		C64517DA1993A36100DDD2D7 /* LPTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicket.h; sourceTree = "<group>"; };
+		C64517DB1993A36100DDD2D7 /* LPTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicket.m; sourceTree = "<group>"; };
+		C64517E31993A3A600DDD2D7 /* LPTicketList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketList.h; sourceTree = "<group>"; };
+		C64517E41993A3A600DDD2D7 /* LPTicketList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketList.m; sourceTree = "<group>"; };
+		C64517E61993A3B300DDD2D7 /* LPTicketListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketListPara.h; sourceTree = "<group>"; };
+		C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListPara.m; sourceTree = "<group>"; };
+		C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketListHttp.h; sourceTree = "<group>"; };
+		C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListHttp.m; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -838,6 +855,14 @@
 				076E012A19928CAE00FC63D1 /* TicketOrderCancelPara.m */,
 				076E012C19928CBE00FC63D1 /* TicketOrderCancelHttp.h */,
 				076E012D19928CBE00FC63D1 /* TicketOrderCancelHttp.m */,
+				C64517DA1993A36100DDD2D7 /* LPTicket.h */,
+				C64517DB1993A36100DDD2D7 /* LPTicket.m */,
+				C64517E31993A3A600DDD2D7 /* LPTicketList.h */,
+				C64517E41993A3A600DDD2D7 /* LPTicketList.m */,
+				C64517E61993A3B300DDD2D7 /* LPTicketListPara.h */,
+				C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */,
+				C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */,
+				C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1025,6 +1050,32 @@
 				C6912B561990893E00584586 /* LogoutHttp.m */,
 			);
 			name = "Login&Register";
+			sourceTree = "<group>";
+		};
+		C64517D2199392FF00DDD2D7 /* EntranceTicket */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6EBD0198267650041DC2A /* HTEntranceTicketController.h */,
+				C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */,
+				C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */,
+				7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */,
+				7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */,
+				7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */,
+				7EC384A3199371E100FB0C6D /* HTOrderWriteViewController.h */,
+				7EC384A4199371E100FB0C6D /* HTOrderWriteViewController.m */,
+				7EC384A5199371E100FB0C6D /* HTOrderWriteViewController.xib */,
+			);
+			name = EntranceTicket;
+			sourceTree = "<group>";
+		};
+		C64517D41993A0DA00DDD2D7 /* LPTickent */ = {
+			isa = PBXGroup;
+			children = (
+				C64517D51993A10900DDD2D7 /* HTLPTicketListController.h */,
+				C64517D61993A10900DDD2D7 /* HTLPTicketListController.m */,
+				C64517D71993A10900DDD2D7 /* HTLPTicketListController.xib */,
+			);
+			name = LPTickent;
 			sourceTree = "<group>";
 		};
 		C6912B581990A43700584586 /* Mine */ = {
@@ -1494,24 +1545,17 @@
 		C6BADF71197689AC00543D39 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C64517D41993A0DA00DDD2D7 /* LPTickent */,
 				C6BADF8A1976921700543D39 /* HTHomeViewController.h */,
 				C6BADF8B1976921700543D39 /* HTHomeViewController.m */,
 				C6BADF8C1976921700543D39 /* HTHomeViewController.xib */,
-				C5A6EBD0198267650041DC2A /* HTEntranceTicketController.h */,
-				C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */,
-				C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */,
-				7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */,
-				7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */,
-				7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */,
-				7EC384A3199371E100FB0C6D /* HTOrderWriteViewController.h */,
-				7EC384A4199371E100FB0C6D /* HTOrderWriteViewController.m */,
-				7EC384A5199371E100FB0C6D /* HTOrderWriteViewController.xib */,
 				C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */,
 				C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */,
 				C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */,
 				C5FB47DF197E6A7D00FE5364 /* HTHomeTableViewCell.h */,
 				C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */,
 				C5FB47E1197E6A7D00FE5364 /* HTHomeTableViewCell.xib */,
+				C64517D2199392FF00DDD2D7 /* EntranceTicket */,
 				C5A6EBA9198101300041DC2A /* HTCYOrderViewController.h */,
 				C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */,
 				C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */,
@@ -1792,6 +1836,7 @@
 				7EC384AB19937A1800FB0C6D /* s_n_order_num_subtraction@2x.png in Resources */,
 				C6ADAC1F198E167C00AB983B /* README-GHUnit in Resources */,
 				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
+				C64517D91993A10900DDD2D7 /* HTLPTicketListController.xib in Resources */,
 				C5A6EBC319822A920041DC2A /* HTOrderDetailViewController.xib in Resources */,
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C6ADAC21198E167C00AB983B /* LICENSE in Resources */,
@@ -1929,6 +1974,7 @@
 				C6ADAC13198E167C00AB983B /* ASICloudFilesContainer.m in Sources */,
 				C6912B571990893E00584586 /* LogoutHttp.m in Sources */,
 				C6ED76FB19913A190075D6C4 /* TicketDetail.m in Sources */,
+				C64517D81993A10900DDD2D7 /* HTLPTicketListController.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6912B5E1990A4FF00584586 /* TicketBindPara.m in Sources */,
 				C6ED770419913D5B0075D6C4 /* TicketScenicSpot.m in Sources */,
@@ -1953,6 +1999,7 @@
 				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
 				076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */,
 				7EAAAFD3199231E2003676F3 /* HTScenicDetailViewCell.m in Sources */,
+				C64517DC1993A36100DDD2D7 /* LPTicket.m in Sources */,
 				C6ADAC0D198E167C00AB983B /* ASIFormDataRequest.m in Sources */,
 				C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */,
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
@@ -1967,6 +2014,7 @@
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
 				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
 				C6ADAC17198E167C00AB983B /* ASICloudFilesObjectRequest.m in Sources */,
+				C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */,
 				C6ADAC0F198E167C00AB983B /* ASIInputStream.m in Sources */,
 				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
 				C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */,
@@ -1985,6 +2033,7 @@
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6912B6A1990A77000584586 /* MyTicket.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
+				C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
 				C6ADAC1E198E167C00AB983B /* ASIS3ServiceRequest.m in Sources */,
 				C6ADAC0C198E167C00AB983B /* ASIDownloadCache.m in Sources */,
@@ -2029,6 +2078,7 @@
 				076E0107199288B600FC63D1 /* TicketPriceCalendarPara.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
+				C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */,
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
