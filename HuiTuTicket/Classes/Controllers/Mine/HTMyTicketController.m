@@ -8,11 +8,12 @@
 
 #import "HTMyTicketController.h"
 #import "HTMyTicketCell.h"
-
+#import "MyTicketHttp.h"
 #import "HTTicketDetailController.h"
 
 @interface HTMyTicketController ()
 
+@property (strong, nonatomic) MyTicketHttp *myticketHttp;
 @end
 
 @implementation HTMyTicketController
@@ -22,6 +23,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"我的联票";
+        _myticketHttp = [[MyTicketHttp alloc] init];
     }
     return self;
 }
@@ -34,6 +37,43 @@
     self.tableView.rowHeight = 80;
     
     self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2"]];
+    
+    [self requestData];
+}
+
+- (void)requestData
+{
+    
+    self.myticketHttp.parameter.uid = @"1";
+    self.myticketHttp.parameter.session_key = @"";
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTMyTicketController *weak_self = self;
+    [self.myticketHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.myticketHttp.isValid) {
+            [weak_self showWithText:@"我的联票列表"];
+
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.myticketHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 - (void)didReceiveMemoryWarning
