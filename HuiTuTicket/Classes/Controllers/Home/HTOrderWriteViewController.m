@@ -8,6 +8,7 @@
 
 #import "HTOrderWriteViewController.h"
 #import "HTScenicDetailViewCell.h"
+#import "HTOrderResultViewController.h"
 
 @interface HTOrderWriteViewController ()
 
@@ -78,6 +79,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HTOrderResultViewController *app = [[HTOrderResultViewController alloc] init];
+    [self.navigationController pushViewController:app animated:YES];
 }
 
 @end

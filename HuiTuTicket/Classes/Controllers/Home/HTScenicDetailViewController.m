@@ -10,6 +10,7 @@
 #import "HTScenicDetailViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "HTOrderWriteViewController.h"
+#import "HTOrderResultViewController.h"
 
 @interface HTScenicDetailViewController ()
 
@@ -101,6 +102,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row%2 == 1) {
+        HTOrderResultViewController *app = [[HTOrderResultViewController alloc] init];
+        [self.navigationController pushViewController:app animated:YES];
+        return;
+    }
     HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
     [self.navigationController pushViewController:app animated:YES];
 }
