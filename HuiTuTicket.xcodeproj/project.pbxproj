@@ -48,6 +48,8 @@
 		7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC384A919937A1800FB0C6D /* s_n_order_num_show@2x.png */; };
 		7EC384AD19937A1800FB0C6D /* s_n_order_num_addition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC384AA19937A1800FB0C6D /* s_n_order_num_addition@2x.png */; };
 		7EC384AF19937D9900FB0C6D /* s_n_order_zhifu_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC384AE19937D9900FB0C6D /* s_n_order_zhifu_bg@2x.png */; };
+		7EC384B31994C45000FB0C6D /* HTOrderResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */; };
+		7EC384B41994C45000FB0C6D /* HTOrderResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */; };
 		A9A7D3EE198E1A0D00044460 /* HTAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */; };
 		A9A7D3F2198E1B2800044460 /* HTAppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */; };
 		A9A7D3F3198E1B2800044460 /* HTAppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */; };
@@ -361,6 +363,9 @@
 		7EC384A919937A1800FB0C6D /* s_n_order_num_show@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s_n_order_num_show@2x.png"; sourceTree = "<group>"; };
 		7EC384AA19937A1800FB0C6D /* s_n_order_num_addition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s_n_order_num_addition@2x.png"; sourceTree = "<group>"; };
 		7EC384AE19937D9900FB0C6D /* s_n_order_zhifu_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s_n_order_zhifu_bg@2x.png"; sourceTree = "<group>"; };
+		7EC384B01994C45000FB0C6D /* HTOrderResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderResultViewController.h; sourceTree = "<group>"; };
+		7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderResultViewController.m; sourceTree = "<group>"; };
+		7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderResultViewController.xib; sourceTree = "<group>"; };
 		A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppointmentViewController.h; sourceTree = "<group>"; };
 		A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppointmentViewController.m; sourceTree = "<group>"; };
 		A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppointmentCell.h; sourceTree = "<group>"; };
@@ -1064,6 +1069,9 @@
 				7EC384A3199371E100FB0C6D /* HTOrderWriteViewController.h */,
 				7EC384A4199371E100FB0C6D /* HTOrderWriteViewController.m */,
 				7EC384A5199371E100FB0C6D /* HTOrderWriteViewController.xib */,
+				7EC384B01994C45000FB0C6D /* HTOrderResultViewController.h */,
+				7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */,
+				7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */,
 			);
 			name = EntranceTicket;
 			sourceTree = "<group>";
@@ -1830,6 +1838,7 @@
 				C6D12484197E37E500FF4D83 /* more_setting@2x.png in Resources */,
 				C5A6EBB21981019B0041DC2A /* HTOrderTableViewCell.xib in Resources */,
 				7EAAAFC919922B53003676F3 /* s_n_detail_star@2x.png in Resources */,
+				7EC384B41994C45000FB0C6D /* HTOrderResultViewController.xib in Resources */,
 				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
 				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
@@ -1995,6 +2004,7 @@
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
 				076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */,
+				7EC384B31994C45000FB0C6D /* HTOrderResultViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
 				076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */,
