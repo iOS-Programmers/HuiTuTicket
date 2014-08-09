@@ -8,9 +8,14 @@
 
 #import "HTTicketDetailController.h"
 
+#import "TicketDetailHttp.h"
+
 @interface HTTicketDetailController ()
 
+@property (strong, nonatomic) TicketDetailHttp *detailHttp;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (IBAction)segementChanged:(id)sender;
 @end
 
@@ -22,6 +27,8 @@
     if (self) {
         // Custom initialization
         self.title = @"联票详情";
+        
+        _detailHttp = [[TicketDetailHttp alloc] init];
     }
     return self;
 }
@@ -30,6 +37,44 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    [self requestDetailData];
+}
+
+- (void)requestDetailData
+{
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTicketDetailController *weak_self = self;
+    
+    self.detailHttp.parameter.typeid = self.ticket.typeId;
+    
+    [self.detailHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.detailHttp.isValid) {
+            [weak_self showWithText:@"联票详情请求成功"];
+//            weak_self.dataSource = weak_self.detailHttp.resultModel.info;
+//            [weak_self.tableView reloadData];
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.detailHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 
 }
 

@@ -172,7 +172,7 @@
     {
         LXLog(@"\nGet responseString:\n%@\n",responseString);
         self.dataDic = [responseString objectFromJSONString];
-        self.erorCode = [[_dataDic objectForKey:@"errcode"] integerValue];
+        self.erorCode = [[_dataDic objectForKey:@"errcode"] intValue];
         if (self.erorCode == 0)
         {
             self.isValid = YES;
