@@ -108,6 +108,8 @@
 		C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E41993A3A600DDD2D7 /* LPTicketList.m */; };
 		C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */; };
 		C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */; };
+		C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */; };
+		C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -456,6 +458,9 @@
 		C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListPara.m; sourceTree = "<group>"; };
 		C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketListHttp.h; sourceTree = "<group>"; };
 		C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListHttp.m; sourceTree = "<group>"; };
+		C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketListCell.h; sourceTree = "<group>"; };
+		C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListCell.m; sourceTree = "<group>"; };
+		C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListCell.xib; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -1082,6 +1087,9 @@
 				C64517D51993A10900DDD2D7 /* HTLPTicketListController.h */,
 				C64517D61993A10900DDD2D7 /* HTLPTicketListController.m */,
 				C64517D71993A10900DDD2D7 /* HTLPTicketListController.xib */,
+				C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */,
+				C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */,
+				C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */,
 			);
 			name = LPTickent;
 			sourceTree = "<group>";
@@ -1862,6 +1870,7 @@
 				C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
 				C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */,
+				C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				7EAAAFCC19922B53003676F3 /* s_n_detail_pulldown_icon@2x.png in Resources */,
 				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
@@ -2029,6 +2038,7 @@
 				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
 				C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */,
 				076E0131199290CD00FC63D1 /* TicketOrderModel.m in Sources */,
+				C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */,
 				C6912B42199079A800584586 /* SendCodePara.m in Sources */,
 				C6ADAC1C198E167C00AB983B /* ASIS3ObjectRequest.m in Sources */,
 				076E010D19928AD200FC63D1 /* TicketOrderSubmitHttp.m in Sources */,

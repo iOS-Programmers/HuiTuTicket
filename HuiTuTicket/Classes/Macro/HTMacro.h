@@ -27,6 +27,9 @@
 //会员信息类
 #import "HTUserInfoManager.h"
 
+//图片缓存
+#import "UIImageView+WebCache.h"
+
 #define APP_ID @"11111111"
 
 #endif

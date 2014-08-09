@@ -7,7 +7,7 @@
 //
 
 #import "HTLPTicketListController.h"
-#import "HTHomeTableViewCell.h"
+#import "HTLPTicketListCell.h"
 #import "LPTicketListHttp.h"
 
 @interface HTLPTicketListController ()
@@ -33,8 +33,7 @@
 
 - (void)loadDataSource
 {
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"1",@"1"]];
-    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,7 +46,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.tableView.rowHeight = 80;
+    self.tableView.rowHeight = 70;
     
     [self requestData];
 }
@@ -60,7 +59,9 @@
         [weak_self hideLoading];
         
         if (weak_self.lplistHttp.isValid) {
-            [weak_self showWithText:@"联票列表获取成功"];
+            
+            weak_self.dataSource = weak_self.lplistHttp.resultModel.info;
+            [weak_self.tableView reloadData];
             
         }
         else {
@@ -95,11 +96,13 @@
 {
     static NSString *cellIdentifier = @"Cell";
     
-    HTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    HTLPTicketListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTLPTicketListCell" owner:self options:nil] lastObject];
     }
+    
+    [cell configureWithData:self.dataSource[indexPath.row]];
     
     return cell;
 }
