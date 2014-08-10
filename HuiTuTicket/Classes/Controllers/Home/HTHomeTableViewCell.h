@@ -10,4 +10,13 @@
 
 @interface HTHomeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *sceneIV;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *oriPriceLabel;
+
 @end

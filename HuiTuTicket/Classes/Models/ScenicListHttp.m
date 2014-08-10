@@ -18,7 +18,7 @@
         self.parameter = [[ScenicListPara alloc] init];
         self.resultModel = [[ScenicList alloc] init];
         //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
-        self.api_url = kURL_MyTicket_Pre;
+        self.api_url = kURL_Ticket_Pre;
         self.apiFuncName = @"scenic.list";
     }
     return self;

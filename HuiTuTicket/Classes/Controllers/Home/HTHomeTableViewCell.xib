@@ -57,6 +57,14 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="levelLabel" destination="28Z-5w-cUw" id="6fa-dO-zFK"/>
+                <outlet property="nameLabel" destination="jiZ-BC-iSt" id="lH1-nz-dVO"/>
+                <outlet property="oriPriceLabel" destination="3Im-ZS-R0o" id="vwh-97-5I0"/>
+                <outlet property="placeLabel" destination="ntN-cS-qF1" id="Gqq-KT-rs0"/>
+                <outlet property="priceLabel" destination="fNc-rQ-bey" id="gGN-Ht-12v"/>
+                <outlet property="sceneIV" destination="m1F-2U-Mh8" id="IMt-6Y-Vkj"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

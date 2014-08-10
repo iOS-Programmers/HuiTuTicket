@@ -74,7 +74,7 @@
                         if ([self.allKeys containsObject:key])
                         {
                             //FIXME: 这里需要补充或修改   加上输出 类名。
-                            LXLog(@"Setvalue:%@forkey:%@",(NSString *)value,key);
+//                            LXLog(@"Setvalue:%@forkey:%@",(NSString *)value,key);
                             [self setValue:(NSString *)value forKey:key];
                         }
                         else
@@ -86,7 +86,7 @@
                     {
                         if ([self.allKeys containsObject:key])
                         {
-                            LXLog(@"Setvalue:%@forkey:%@",[value stringValue],key);
+//                            LXLog(@"Setvalue:%@forkey:%@",[value stringValue],key);
                             [self setValue:[value stringValue] forKey:key];
                         }
                         else
