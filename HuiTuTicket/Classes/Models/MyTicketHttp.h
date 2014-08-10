@@ -7,7 +7,7 @@
 //
 
 #import "LXHttpModel.h"
-#import "MyTicket.h"
+#import "MyTicketList.h"
 #import "MyTicketPara.h"
 /**
  *  我的联票接口
@@ -15,7 +15,7 @@
 @interface MyTicketHttp : LXHttpModel
 
 @property (nonatomic, retain) MyTicketPara *parameter;
-@property (nonatomic, retain) MyTicket *resultModel;
+@property (nonatomic, retain) MyTicketList *resultModel;
 
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock;

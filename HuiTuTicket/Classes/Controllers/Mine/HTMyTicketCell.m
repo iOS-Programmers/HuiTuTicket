@@ -7,6 +7,7 @@
 //
 
 #import "HTMyTicketCell.h"
+#import "MyTicket.h"
 
 @implementation HTMyTicketCell
 
@@ -20,6 +21,18 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)configureWithData:(MyTicket *)info
+{
+    if (info) {
+         [self.imageView setImageWithURL:[NSURL URLWithString:info.typepic] placeholderImage:nil];
+        self.lpNameLabel.text = info.typename;
+        self.lpUserLabel.text = info.lpuser;
+        self.lpEndtimeLabel.text = info.endtime;
+    }
+   
+    
 }
 
 @end

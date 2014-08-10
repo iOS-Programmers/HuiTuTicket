@@ -36,7 +36,7 @@
     
     self.tableView.rowHeight = 80;
     
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2"]];
+//    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2"]];
     
     [self requestData];
 }
@@ -44,8 +44,8 @@
 - (void)requestData
 {
     
-    self.myticketHttp.parameter.uid = @"1";
-    self.myticketHttp.parameter.session_key = @"";
+    self.myticketHttp.parameter.uid = @"2";
+    self.myticketHttp.parameter.session_key = @"bddfca43bf0b5955c76737e34fab386e";
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTMyTicketController *weak_self = self;
@@ -53,7 +53,10 @@
         [weak_self hideLoading];
         
         if (weak_self.myticketHttp.isValid) {
-            [weak_self showWithText:@"我的联票列表"];
+            [weak_self showWithText:@"获取我的联票列表成功"];
+            weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
+            
+            [weak_self.tableView reloadData];
 
         }
         else {
@@ -93,6 +96,8 @@
         
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTMyTicketCell" owner:self options:nil] lastObject];
     }
+    
+    [cell configureWithData:self.dataSource[indexPath.row]];
     
     return cell;
 }

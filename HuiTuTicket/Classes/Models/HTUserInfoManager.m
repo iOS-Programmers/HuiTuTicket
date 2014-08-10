@@ -33,8 +33,23 @@
 {
     GetUserInfo *info;
 
-    info = (GetUserInfo *)[[NSUserDefaults standardUserDefaults] objectForKey:USER_INFO];
+    NSData *myEncodedObject = [[NSUserDefaults standardUserDefaults] objectForKey:USER_INFO];
+    info = (GetUserInfo *)[NSKeyedUnarchiver unarchiveObjectWithData: myEncodedObject];
     
     return info;
+}
+
+/**
+ *  保存个人信息
+ *
+ *  @param info 个人信息对象
+ */
+- (void)saveUserInfo:(GetUserInfo *)info
+{
+    NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:info];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:myEncodedObject forKey:USER_INFO];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 @end

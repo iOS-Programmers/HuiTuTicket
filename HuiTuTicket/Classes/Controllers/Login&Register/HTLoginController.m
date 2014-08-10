@@ -169,10 +169,9 @@
  */
 - (void)saveUserInfo:(GetUserInfo *)info
 {
+    
+    [[HTUserInfoManager shareInfoManager] saveUserInfo:info];
     LXLog(@"获取的会员信息   %@",info);
-    //保存会员信息
-//    [[NSUserDefaults standardUserDefaults] setObject:info forKey:USER_INFO];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (IBAction)onFindPasswordClick:(id)sender

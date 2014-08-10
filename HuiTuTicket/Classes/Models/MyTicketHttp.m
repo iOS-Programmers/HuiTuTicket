@@ -15,7 +15,7 @@
     self = [super init];
     if (nil != self){
         self.parameter = [[MyTicketPara alloc] init];
-        self.resultModel = [[MyTicket alloc] init];
+        self.resultModel = [[MyTicketList alloc] init];
         self.api_url = kURL_MyTicket_Pre;
         self.apiFuncName = @"user.lp.list";
     }

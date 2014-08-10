@@ -11,7 +11,7 @@
 /**
  *  获取会员信息接口的对象
  */
-@interface GetUserInfo : LXResultModel
+@interface GetUserInfo : LXResultModel<NSCoding>
 
 /**
  *  会员ID   int型

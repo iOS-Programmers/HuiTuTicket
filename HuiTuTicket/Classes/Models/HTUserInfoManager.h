@@ -22,4 +22,11 @@
  */
 - (GetUserInfo *)userInfo;
 
+/**
+ *  保存会员信息
+ *
+ *  @param info 会员信息对象
+ */
+- (void)saveUserInfo:(GetUserInfo *)info;
+
 @end
