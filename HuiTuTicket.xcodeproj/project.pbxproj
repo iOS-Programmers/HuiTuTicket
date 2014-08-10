@@ -81,6 +81,7 @@
 		C5FB47ED197E6A9C00FE5364 /* home003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47E8197E6A9C00FE5364 /* home003@2x.png */; };
 		C5FB47EE197E6A9C00FE5364 /* home004@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47E9197E6A9C00FE5364 /* home004@2x.png */; };
 		C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47EA197E6A9C00FE5364 /* home005@2x.png */; };
+		C604ECC71997C246004DFB59 /* HTBorderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C604ECC61997C246004DFB59 /* HTBorderButton.m */; };
 		C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
 		C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */; };
 		C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
@@ -138,6 +139,10 @@
 		C6912B891990B4BF00584586 /* MessageListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B881990B4BF00584586 /* MessageListHttp.m */; };
 		C691FDDB1997721900B3AD53 /* MyTicketList.m in Sources */ = {isa = PBXBuildFile; fileRef = C691FDDA1997721900B3AD53 /* MyTicketList.m */; };
 		C691FDDD1997774D00B3AD53 /* mine_header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C691FDDC1997774D00B3AD53 /* mine_header_bg@2x.png */; };
+		C691FDDF1997B9A400B3AD53 /* my_avatar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C691FDDE1997B9A400B3AD53 /* my_avatar_bg@2x.png */; };
+		C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C691FDE01997BDCD00B3AD53 /* my_avatar_default@2x.png */; };
+		C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C691FDE11997BDCD00B3AD53 /* my_picture@2x.png */; };
+		C691FDE51997BDCD00B3AD53 /* my_qiandao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C691FDE21997BDCD00B3AD53 /* my_qiandao@2x.png */; };
 		C6938C1F198FAF52003ADE85 /* btn_adclose.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1D198FAF52003ADE85 /* btn_adclose.png */; };
 		C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */; };
 		C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6938C25198FB38E003ADE85 /* GetUserInfoPara.m */; };
@@ -415,6 +420,8 @@
 		C5FB47E8197E6A9C00FE5364 /* home003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home003@2x.png"; sourceTree = "<group>"; };
 		C5FB47E9197E6A9C00FE5364 /* home004@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home004@2x.png"; sourceTree = "<group>"; };
 		C5FB47EA197E6A9C00FE5364 /* home005@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home005@2x.png"; sourceTree = "<group>"; };
+		C604ECC51997C246004DFB59 /* HTBorderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBorderButton.h; sourceTree = "<group>"; };
+		C604ECC61997C246004DFB59 /* HTBorderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBorderButton.m; sourceTree = "<group>"; };
 		C6058EB41987ECA200D61484 /* HTHttpMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTHttpMacro.h; sourceTree = "<group>"; };
 		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -517,6 +524,10 @@
 		C691FDD91997721900B3AD53 /* MyTicketList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketList.h; sourceTree = "<group>"; };
 		C691FDDA1997721900B3AD53 /* MyTicketList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketList.m; sourceTree = "<group>"; };
 		C691FDDC1997774D00B3AD53 /* mine_header_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_header_bg@2x.png"; sourceTree = "<group>"; };
+		C691FDDE1997B9A400B3AD53 /* my_avatar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_avatar_bg@2x.png"; sourceTree = "<group>"; };
+		C691FDE01997BDCD00B3AD53 /* my_avatar_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_avatar_default@2x.png"; sourceTree = "<group>"; };
+		C691FDE11997BDCD00B3AD53 /* my_picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_picture@2x.png"; sourceTree = "<group>"; };
+		C691FDE21997BDCD00B3AD53 /* my_qiandao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_qiandao@2x.png"; sourceTree = "<group>"; };
 		C6938C1D198FAF52003ADE85 /* btn_adclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_adclose.png; sourceTree = "<group>"; };
 		C6938C1E198FAF52003ADE85 /* btn_adclose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_adclose@2x.png"; sourceTree = "<group>"; };
 		C6938C24198FB38E003ADE85 /* GetUserInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoPara.h; sourceTree = "<group>"; };
@@ -880,6 +891,15 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		C604ECC41997C1F6004DFB59 /* BorderButton */ = {
+			isa = PBXGroup;
+			children = (
+				C604ECC51997C246004DFB59 /* HTBorderButton.h */,
+				C604ECC61997C246004DFB59 /* HTBorderButton.m */,
+			);
+			name = BorderButton;
+			sourceTree = "<group>";
+		};
 		C60F6FB119762D7800AFC182 = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1020,7 @@
 		C60F6FF0197630CF00AFC182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C604ECC41997C1F6004DFB59 /* BorderButton */,
 				C6D124C3197F968800FF4D83 /* CustomTextField */,
 				C6B941AA1977C27A00208F20 /* Messages */,
 				C6B941A11977A39700208F20 /* Mine */,
@@ -1658,6 +1679,10 @@
 		C6D12487197E38D800FF4D83 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C691FDE01997BDCD00B3AD53 /* my_avatar_default@2x.png */,
+				C691FDE11997BDCD00B3AD53 /* my_picture@2x.png */,
+				C691FDE21997BDCD00B3AD53 /* my_qiandao@2x.png */,
+				C691FDDE1997B9A400B3AD53 /* my_avatar_bg@2x.png */,
 				C691FDDC1997774D00B3AD53 /* mine_header_bg@2x.png */,
 				C6D12495197E3AC800FF4D83 /* my_01@2x.png */,
 				C6D12496197E3AC800FF4D83 /* my_02@2x.png */,
@@ -1819,6 +1844,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = HuiTuTicket;
 				TargetAttributes = {
+					C60F6FB919762D7800AFC182 = {
+						DevelopmentTeam = NCJ9XGFG95;
+					};
 					C60F6FD419762D7900AFC182 = {
 						TestTargetID = C60F6FB919762D7800AFC182;
 					};
@@ -1863,10 +1891,12 @@
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C6ADAC21198E167C00AB983B /* LICENSE in Resources */,
 				C6B09E961982683F00576A5F /* zbar-samples.png in Resources */,
+				C691FDDF1997B9A400B3AD53 /* my_avatar_bg@2x.png in Resources */,
 				C6D1249D197E3AC800FF4D83 /* my_03@2x.png in Resources */,
 				C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */,
 				7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */,
 				7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */,
+				C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C691FDDD1997774D00B3AD53 /* mine_header_bg@2x.png in Resources */,
 				C6D1247F197E37E500FF4D83 /* more_aboutus@2x.png in Resources */,
@@ -1896,6 +1926,7 @@
 				7EAAAFCD19922B53003676F3 /* s_n_detail_reserve_bg@2x.png in Resources */,
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
+				C691FDE51997BDCD00B3AD53 /* my_qiandao@2x.png in Resources */,
 				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,
@@ -1904,6 +1935,7 @@
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
+				C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */,
 				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
 				A9A7D3F3198E1B2800044460 /* HTAppointmentCell.xib in Resources */,
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
@@ -2121,6 +2153,7 @@
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
 				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
 				C6ADAC09198E167C00AB983B /* ASIAuthenticationDialog.m in Sources */,
+				C604ECC71997C246004DFB59 /* HTBorderButton.m in Sources */,
 				C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */,
 				C6912B611990A50E00584586 /* TicketBindHttp.m in Sources */,
 				C6ADABC7198E167200AB983B /* UIButton+WebCache.m in Sources */,
@@ -2245,6 +2278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2253,7 +2287,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",
@@ -2270,6 +2304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HuiTuTicket/HuiTuTicket-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2278,7 +2313,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",

@@ -37,6 +37,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.scrollView setContentSize:CGSizeMake(640, 500)];
 
     [self requestDetailData];
 }
@@ -46,7 +48,7 @@
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketDetailController *weak_self = self;
     
-    self.detailHttp.parameter.typeid = self.ticket.typeId;
+    self.detailHttp.parameter.typeid = @"5";
     
     [self.detailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
