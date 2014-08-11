@@ -130,7 +130,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
     HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    app.scenicId = scenic.scenicId;
     [self.navigationController pushViewController:app animated:YES];
 }
 

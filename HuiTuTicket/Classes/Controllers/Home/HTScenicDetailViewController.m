@@ -12,6 +12,8 @@
 #import "HTOrderWriteViewController.h"
 #import "HTOrderResultViewController.h"
 
+#import "ScenicDetailHttp.h"
+
 @interface HTScenicDetailViewController ()
 
 @property (nonatomic, strong) IBOutlet UIView *headView;
@@ -21,6 +23,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *addressLabel;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 
+@property (nonatomic,strong) ScenicDetailHttp *scenicDetailHttp;
 @end
 
 @implementation HTScenicDetailViewController
@@ -29,16 +32,45 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.scenicDetailHttp = [[ScenicDetailHttp alloc] init];
         self.title = @"详情";
     }
     return self;
 }
 
+- (void)setScenicId:(NSString *)str
+{
+    _scenicId = [str copy];
+    [self loadDataSource];
+}
+
 - (void)loadDataSource
 {
     self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"1",@"1"]];
-    
+    self.scenicDetailHttp.parameter.scenicid = @"11";
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTScenicDetailViewController *weak_self = self;
+    [self.scenicDetailHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.scenicDetailHttp.isValid) {
+            [weak_self refreshUIShow];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.scenicDetailHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 - (void)viewDidLoad
@@ -51,7 +83,6 @@
     self.tableView.frame = frame;
     
     [self loadDataSource];
-    [self refreshUIShow];
 }
 
 - (void)didReceiveMemoryWarning

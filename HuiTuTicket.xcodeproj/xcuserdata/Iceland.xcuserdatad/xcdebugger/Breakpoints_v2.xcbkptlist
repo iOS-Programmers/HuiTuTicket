@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HuiTuTicket/Classes/Controllers/Home/HTEntranceTicketController.m"
-            timestampString = "429282093.323903"
+            filePath = "HuiTuTicket/Classes/Common/LXHttpModel.m"
+            timestampString = "429282140.731055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-loadDataSource"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-getDataWithParameters:completionBlock:failedBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HuiTuTicket/Classes/Common/LXHttpModel.m"
-            timestampString = "429282140.731055"
+            filePath = "HuiTuTicket/Classes/Controllers/Home/HTScenicDetailViewController.m"
+            timestampString = "429466416.651601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-getDataWithParameters:completionBlock:failedBlock:"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Home/HTScenicDetailViewController.m"
+            timestampString = "429465781.13383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-loadDataSource"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
