@@ -34,13 +34,13 @@
 
 - (void)loadDataSource
 {
-    self.scenicListHttp.parameter.cityid = @"410101";
+//    self.scenicListHttp.parameter.cityid = @"410101";
 //    self.scenicListHttp.parameter.keyword = @"";
 //    self.scenicListHttp.parameter.rank = @"";
     self.scenicListHttp.parameter.page = @"1";
     self.scenicListHttp.parameter.pagesize = @"10";
 //    self.scenicListHttp.parameter.orderby = @"";
-    self.scenicListHttp.parameter.format = @"json";
+//    self.scenicListHttp.parameter.format = @"json";
 
 
     [self showLoadingWithText:kLOADING_TEXT];

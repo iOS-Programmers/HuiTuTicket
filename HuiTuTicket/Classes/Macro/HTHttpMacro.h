@@ -36,7 +36,7 @@
 
 #define kURL_Message_Pre @"m-test.huitupiaowu.com/index.php/msg"
 
-#define kURL_Other_Pre @"m-test.huitupiaowu.com/index.php/gateway"
+#define kURL_ScenicTicket_Pre @"m-test.huitupiaowu.com/index.php/gateway"
 
 #define kURL_Ticket_Pre @"lp-test.huitupiaowu.com/api.php/rest"
 

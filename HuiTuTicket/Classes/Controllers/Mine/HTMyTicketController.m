@@ -45,7 +45,8 @@
 {
     
     self.myticketHttp.parameter.uid = @"2";
-    self.myticketHttp.parameter.session_key = @"bddfca43bf0b5955c76737e34fab386e";
+    self.myticketHttp.parameter.session_key = @"004626cc33087ab769a36ee0979cf01c";
+    self.myticketHttp.parameter.page = @"1";
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTMyTicketController *weak_self = self;
