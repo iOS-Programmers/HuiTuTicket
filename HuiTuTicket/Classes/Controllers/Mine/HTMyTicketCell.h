@@ -12,6 +12,8 @@
 
 @interface HTMyTicketCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lpCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lpTimeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *lpNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lpUserLabel;

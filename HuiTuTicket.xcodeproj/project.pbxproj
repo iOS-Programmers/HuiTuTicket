@@ -211,6 +211,8 @@
 		C6B09E9A19826A3A00576A5F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9919826A3A00576A5F /* CoreVideo.framework */; };
 		C6B09E9C19826A4200576A5F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9B19826A4200576A5F /* AVFoundation.framework */; };
 		C6B09E9E19826A6A00576A5F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9D19826A6A00576A5F /* libiconv.dylib */; };
+		C6B1BCFF19991A7400A9B42F /* my_ticket_list_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1BCFD19991A7400A9B42F /* my_ticket_list_icon@2x.png */; };
+		C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1BCFE19991A7400A9B42F /* my_ticket_time_icon@2x.png */; };
 		C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */; };
 		C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */; };
 		C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9419D1977967800208F20 /* HTMineViewController.m */; };
@@ -668,6 +670,8 @@
 		C6B09E9919826A3A00576A5F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C6B09E9B19826A4200576A5F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6B09E9D19826A6A00576A5F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		C6B1BCFD19991A7400A9B42F /* my_ticket_list_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_ticket_list_icon@2x.png"; sourceTree = "<group>"; };
+		C6B1BCFE19991A7400A9B42F /* my_ticket_time_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_ticket_time_icon@2x.png"; sourceTree = "<group>"; };
 		C6B442F71978EABF00731866 /* HTFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFoundationMacro.h; sourceTree = "<group>"; };
 		C6B442F81978EAD000731866 /* HTUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUIKitMacro.h; sourceTree = "<group>"; };
 		C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreAboutUsController.h; sourceTree = "<group>"; };
@@ -1681,6 +1685,8 @@
 		C6D12487197E38D800FF4D83 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C6B1BCFD19991A7400A9B42F /* my_ticket_list_icon@2x.png */,
+				C6B1BCFE19991A7400A9B42F /* my_ticket_time_icon@2x.png */,
 				C691FDE01997BDCD00B3AD53 /* my_avatar_default@2x.png */,
 				C691FDE11997BDCD00B3AD53 /* my_picture@2x.png */,
 				C691FDE21997BDCD00B3AD53 /* my_qiandao@2x.png */,
@@ -1902,6 +1908,7 @@
 				7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */,
 				C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
+				C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */,
 				C691FDDD1997774D00B3AD53 /* mine_header_bg@2x.png in Resources */,
 				C6D1247F197E37E500FF4D83 /* more_aboutus@2x.png in Resources */,
 				C6A373F6198627890016A204 /* bg_bg@2x.png in Resources */,
@@ -1926,6 +1933,7 @@
 				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				7EC384AD19937A1800FB0C6D /* s_n_order_num_addition@2x.png in Resources */,
 				C6B09E951982683F00576A5F /* zbar-helpicons.png in Resources */,
+				C6B1BCFF19991A7400A9B42F /* my_ticket_list_icon@2x.png in Resources */,
 				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
 				7EAAAFCD19922B53003676F3 /* s_n_detail_reserve_bg@2x.png in Resources */,
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
