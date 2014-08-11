@@ -97,7 +97,7 @@
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,13 +115,13 @@
 //    cell.placeLabel.text = model.state;
 //    cell.oriPriceLabel.text = model.price;
 
-//    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
-//    [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
-//    cell.nameLabel.text = scenic.scenicName;
-//    cell.levelLabel.text = scenic.rank;
-//    cell.placeLabel.text = scenic.address;
-//    cell.priceLabel.text = scenic.minprice;
-//    cell.oriPriceLabel.text = scenic.price;
+    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
+    [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
+    cell.nameLabel.text = scenic.scenicName;
+    cell.levelLabel.text = scenic.rank;
+    cell.placeLabel.text = scenic.address;
+    cell.priceLabel.text = scenic.minprice;
+    cell.oriPriceLabel.text = scenic.price;
     return cell;
 }
 
