@@ -19,6 +19,7 @@
         //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
         self.api_url = kURL_ScenicTicket_Pre;
         self.apiFuncName = @"scenic.info";
+        self.method = @"GET";
     }
     return self;
 }

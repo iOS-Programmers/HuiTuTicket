@@ -81,8 +81,6 @@
     CGRect frame = self.tableView.frame;
 //    frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.navigationController.navigationBar.bounds);
     self.tableView.frame = frame;
-    
-    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning

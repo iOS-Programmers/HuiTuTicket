@@ -96,22 +96,29 @@
      */
     self.path =[NSString stringWithFormat:@"http://%@?method=%@&api_key=%@",self.api_url,self.apiFuncName,API_KEY];
     NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
     self.request = [[[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
+
+    if ([self.method isEqualToString:@"POST"])
+    {
+        for (int i=0; i<[[dic allKeys] count]; i++)
+        {
+            NSString *keyStr = [[dic allKeys] objectAtIndex:i];
+            NSString *valueStr = [dic objectForKey:keyStr];
+            [self.request addPostValue:valueStr forKey:keyStr];
+        }
+    }
+    else if([self.method isEqualToString:@"GET"])
+    {
+        for (int i=0; i<[[dic allKeys] count]; i++)
+        {
+            NSString *keyStr = [[dic allKeys] objectAtIndex:i];
+            NSString *valueStr = [dic objectForKey:keyStr];
+            self.request.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&%@=%@",urlStr,keyStr,valueStr]];
+        }
+    }
     self.request.delegate = self;
     self.request.requestMethod = self.method;
-    
-    for (int i=0; i<[[dic allKeys] count]; i++)
-    {
-        NSString *keyStr = [[dic allKeys] objectAtIndex:i];
-        NSString *valueStr = [dic objectForKey:keyStr];
-        
-        
-        [self.request setPostValue:valueStr forKey:keyStr];
-
-//        [self.request setValue:valueStr forKey:keyStr];
-        //        self.path = [NSString stringWithFormat:@"%@&%@=%@",self.path,keyStr,valueStr];
-    }
-    
     [self.request setTimeOutSeconds:10];
     [self.request setNumberOfTimesToRetryOnTimeout:1];
     [self.request setCompletionBlock:completionBlock];
@@ -162,7 +169,7 @@
 #pragma mark----- ASIHTTPRequestDelegate
 - (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders
 {
-//    LXLog(@"DidReceiveResponseHeaders:%@\n",responseHeaders);
+    LXLog(@"DidReceiveResponseHeaders:%@\n%@\n",responseHeaders,request.requestMethod);
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request
