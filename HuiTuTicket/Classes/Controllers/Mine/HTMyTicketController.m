@@ -45,7 +45,7 @@
 {
     
     self.myticketHttp.parameter.uid = @"2";
-    self.myticketHttp.parameter.session_key = @"004626cc33087ab769a36ee0979cf01c";
+    self.myticketHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     self.myticketHttp.parameter.page = @"1";
     
     [self showLoadingWithText:kLOADING_TEXT];

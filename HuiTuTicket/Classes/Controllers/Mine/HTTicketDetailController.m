@@ -7,12 +7,16 @@
 //
 
 #import "HTTicketDetailController.h"
-
+#import "HTTicketDetailCell.h"
 #import "TicketDetailHttp.h"
 
 @interface HTTicketDetailController ()
 
 @property (strong, nonatomic) TicketDetailHttp *detailHttp;
+
+@property (strong, nonatomic) NSMutableArray *titles;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -41,6 +45,17 @@
     [self.scrollView setContentSize:CGSizeMake(640, 500)];
 
     [self requestDetailData];
+    
+    self.titles = [self titleArray];
+}
+
+- (NSMutableArray *)titleArray
+{
+    NSMutableArray *titileArray = [[NSMutableArray alloc] initWithCapacity:0];
+    [titileArray addObject:@[@"联票号码",@"注册人",@"证件号码",@"有效期至",@"注册时间"]];
+    [titileArray addObject:@[@"产品名称",@"景区数量"]];
+    
+    return titileArray;
 }
 
 - (void)requestDetailData
@@ -56,7 +71,7 @@
         if (weak_self.detailHttp.isValid) {
             [weak_self showWithText:@"联票详情请求成功"];
 //            weak_self.dataSource = weak_self.detailHttp.resultModel.info;
-//            [weak_self.tableView reloadData];
+            [weak_self.tableView reloadData];
             
         }
         else {
@@ -108,4 +123,45 @@
             break;
     }
 }
+
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.titles count];
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.titles[section] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"detailCell";
+//
+    HTTicketDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTicketDetailCell" owner:self options:nil] lastObject];
+    }
+    
+    NSArray *titleArr = self.titles[indexPath.section];
+    cell.titleLabel.text = titleArr[indexPath.row];
+    
+    
+
+    return cell;
+}
+
+#pragma mark - UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
+
 @end

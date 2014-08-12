@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-            timestampString = "429100712.472933"
+            timestampString = "429536819.106316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-onLoginBtnClick:"
             landmarkType = "5">
             <Locations>
@@ -67,25 +67,25 @@
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "429347535.383742"
+                  timestampString = "429537313.68409"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "374">
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "596">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke71"
+                  symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke80"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "429347535.383957"
+                  timestampString = "429537313.684317"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
@@ -98,11 +98,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-            timestampString = "429100712.472933"
+            timestampString = "429536819.106316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-getUserInfo"
             landmarkType = "5">
          </BreakpointContent>
@@ -161,7 +161,7 @@
                   symbolName = "-[HTLoginController onLoginBtnClick:]"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "429347535.390257"
+                  timestampString = "429537313.728015"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -175,7 +175,7 @@
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "429347535.390489"
+                  timestampString = "429537313.728639"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"

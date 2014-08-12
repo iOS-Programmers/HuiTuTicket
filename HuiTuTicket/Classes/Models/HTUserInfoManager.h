@@ -29,4 +29,12 @@
  */
 - (void)saveUserInfo:(GetUserInfo *)info;
 
+/**
+ *  设置session_key以及获取session_key的方法
+ *
+ *  @param sessionKey 会员登录key
+ */
+- (void)setSessionKey:(NSString *)sessionKey;
+- (NSString *)sessionKey;
+
 @end

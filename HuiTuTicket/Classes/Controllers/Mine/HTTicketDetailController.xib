@@ -20,13 +20,8 @@
                     <rect key="frame" x="0.0" y="55" width="640" height="513"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WWF-kG-e3G">
-                            <rect key="frame" x="-2" y="0.0" width="320" height="316"/>
-                            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uf7-pB-Xsf">
-                            <rect key="frame" x="60" y="324" width="200" height="40"/>
+                            <rect key="frame" x="60" y="359" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="我要预约" backgroundImage="pub_OrangBtn.png">
@@ -34,7 +29,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cyZ-fg-FAj">
-                            <rect key="frame" x="60" y="375" width="200" height="40"/>
+                            <rect key="frame" x="60" y="405" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="预约记录" backgroundImage="pub_greenBtn.png">
@@ -42,7 +37,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rHX-so-Zre">
-                            <rect key="frame" x="60" y="423" width="200" height="40"/>
+                            <rect key="frame" x="60" y="453" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="解除绑定" backgroundImage="pub_ziseBtn.png">
@@ -67,6 +62,15 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="5" sectionFooterHeight="1" id="Or6-MX-Rkx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="341"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="E1v-hO-PvH"/>
+                                <outlet property="delegate" destination="-1" id="rw1-yY-cXk"/>
+                            </connections>
+                        </tableView>
                     </subviews>
                 </scrollView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="h7e-Zd-BeC">

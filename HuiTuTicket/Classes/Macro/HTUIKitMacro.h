@@ -36,4 +36,6 @@
 
 #define USER_INFO   @"userInfo"
 
+#define SESSION_KEY @"sessionKey"
+
 #endif

@@ -52,4 +52,25 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+/**
+ *  设置session_key以及获取session_key的方法
+ *
+ *  @param sessionKey 会员登录key
+ */
+- (void)setSessionKey:(NSString *)sessionKey
+{
+    //每次重新登录后更新下session_key
+    [[NSUserDefaults standardUserDefaults] setObject:sessionKey forKey:SESSION_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+- (NSString *)sessionKey
+{
+    NSString *key;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:SESSION_KEY]) {
+        key = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:SESSION_KEY];
+    }
+    
+    return key;
+}
 @end

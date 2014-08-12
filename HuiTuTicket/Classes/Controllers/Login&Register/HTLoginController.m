@@ -104,6 +104,9 @@
        
         if (weak_self.loginHttp.isValid) {
             [weak_self showWithText:@"登录成功"];
+            
+            [[HTUserInfoManager shareInfoManager] setSessionKey:weak_self.loginHttp.resultModel.session_key];
+            
             [weak_self getUserInfo];
         }
         else {
@@ -172,6 +175,10 @@
     
     [[HTUserInfoManager shareInfoManager] saveUserInfo:info];
     LXLog(@"获取的会员信息   %@",info);
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)onFindPasswordClick:(id)sender
