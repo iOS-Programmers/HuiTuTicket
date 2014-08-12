@@ -9,18 +9,22 @@
 #import "HTTicketDetailController.h"
 #import "HTTicketDetailCell.h"
 #import "TicketDetailHttp.h"
+#import "TicketUnbindHttp.h"
 
 @interface HTTicketDetailController ()
 
 @property (strong, nonatomic) TicketDetailHttp *detailHttp;
+@property (strong, nonatomic) TicketUnbindHttp *unbindHttp;
 
 @property (strong, nonatomic) NSMutableArray *titles;
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)segementChanged:(id)sender;
+- (IBAction)onYuYueBtnClick:(id)sender;
+- (IBAction)onYuYueRecordBtnClick:(id)sender;
+- (IBAction)onUnbindBtnClick:(id)sender;
+
 @end
 
 @implementation HTTicketDetailController
@@ -33,6 +37,8 @@
         self.title = @"联票详情";
         
         _detailHttp = [[TicketDetailHttp alloc] init];
+        _unbindHttp = [[TicketUnbindHttp alloc] init];
+        
     }
     return self;
 }
@@ -49,6 +55,12 @@
     self.titles = [self titleArray];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (NSMutableArray *)titleArray
 {
     NSMutableArray *titileArray = [[NSMutableArray alloc] initWithCapacity:0];
@@ -57,6 +69,8 @@
     
     return titileArray;
 }
+
+#pragma mark - Aciton
 
 - (void)requestDetailData
 {
@@ -71,7 +85,7 @@
         if (weak_self.detailHttp.isValid) {
             [weak_self showWithText:@"联票详情请求成功"];
 //            weak_self.dataSource = weak_self.detailHttp.resultModel.info;
-            [weak_self.tableView reloadData];
+//            [weak_self.tableView reloadData];
             
         }
         else {
@@ -95,11 +109,47 @@
 
 }
 
-- (void)didReceiveMemoryWarning
+/**
+ *  联票解除绑定接口
+ *
+ *  @param bid 绑定记录id
+ */
+- (void)requestUnbind:(NSString *)bid
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTicketDetailController *weak_self = self;
+    
+    self.unbindHttp.parameter.uid = @"2";
+    self.unbindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    self.unbindHttp.parameter.bid = bid;
+    
+    [self.unbindHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.unbindHttp.isValid) {
+
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.unbindHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
+
 
 - (IBAction)segementChanged:(id)sender
 {
@@ -122,6 +172,22 @@
         default:
             break;
     }
+}
+
+- (IBAction)onYuYueBtnClick:(id)sender {
+}
+
+- (IBAction)onYuYueRecordBtnClick:(id)sender {
+}
+
+/**
+ *  解除绑定
+ *
+ *  @param sender
+ */
+- (IBAction)onUnbindBtnClick:(id)sender
+{
+    [self requestUnbind:@"5"];
 }
 
 
