@@ -13,17 +13,20 @@
 #import "HTOrderResultViewController.h"
 
 #import "ScenicDetailHttp.h"
-
+#import "ScenicTicketHttp.h"
 @interface HTScenicDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @property (nonatomic, strong) IBOutlet UIView *headView;
 @property (nonatomic, strong) IBOutlet UIImageView *headBgImageView;
 @property (nonatomic, strong) IBOutlet UILabel *scenicNameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *evaluateLabel;
 @property (nonatomic, strong) IBOutlet UILabel *addressLabel;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 
 @property (nonatomic,strong) ScenicDetailHttp *scenicDetailHttp;
+
+@property (nonatomic,strong) ScenicTicketHttp *scenicTicketHttp;
+
 @end
 
 @implementation HTScenicDetailViewController
@@ -33,6 +36,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.scenicDetailHttp = [[ScenicDetailHttp alloc] init];
+        self.scenicTicketHttp = [[ScenicTicketHttp alloc] init];
+
         self.title = @"详情";
     }
     return self;
@@ -46,18 +51,47 @@
 
 - (void)loadDataSource
 {
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"1",@"1"]];
-    self.scenicDetailHttp.parameter.scenicid = @"11";
+    self.scenicDetailHttp.parameter.scenicid = self.scenicId;
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTScenicDetailViewController *weak_self = self;
     [self.scenicDetailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.scenicDetailHttp.isValid) {
+            [weak_self loadProductData];
             [weak_self refreshUIShow];
         }
         else {
             //显示服务端返回的错误提示
             [weak_self showErrorWithText:weak_self.scenicDetailHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+}
+
+- (void)loadProductData
+{
+    self.scenicTicketHttp.parameter.scenicid = self.scenicId;
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTScenicDetailViewController *weak_self = self;
+    [self.scenicTicketHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.scenicTicketHttp.isValid) {
+            weak_self.dataSource =weak_self.scenicTicketHttp.resultModel.dataArray;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.scenicTicketHttp.erorMessage];
         };
     }failedBlock:^{
         [weak_self hideLoading];
@@ -93,10 +127,10 @@
 - (void)refreshUIShow
 {
     [self.headBgImageView setImageWithURL:[NSURL URLWithString:@"http://pic.nipic.com/2008-07-15/200871513185159_2.jpg"] placeholderImage:nil];
-    self.scenicNameLabel.text = @"景区名称";
-    self.evaluateLabel.text = @"108好汉评价过";
-    self.addressLabel.text = @"河南省郑大工学院";
-    self.descriptionLabel.text = @"河南省郑大工学院河南省郑大工学院河南省郑大工学院";
+    self.scenicNameLabel.text = self.scenicDetailHttp.resultModel.scenicName;
+    self.addressLabel.text = self.scenicDetailHttp.resultModel.address;
+    self.descriptionLabel.text = self.scenicDetailHttp.resultModel.intro;
+    self.priceLabel.text = self.scenicDetailHttp.resultModel.minprice;
     
     self.headBgImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.headBgImageView.clipsToBounds = YES;
@@ -116,7 +150,13 @@
         
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTScenicDetailViewCell" owner:self options:nil] lastObject];
     }
-    
+    TicketModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    cell.ticketNameLabel.text = model.ticketName;
+    cell.priceLabel.text = [NSString stringWithFormat:@"¥%@",model.bookprice];
+    cell.oriPriceLabel.text = [NSString stringWithFormat:@"¥%@",model.price];
+    cell.returnMoneyLabel.text = [NSString stringWithFormat:@"¥%d",[model.price intValue]-[model.bookprice intValue]];
+
+
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

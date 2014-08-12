@@ -11,5 +11,8 @@
 @interface HTScenicDetailViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *ticketNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *oriPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *returnMoneyLabel;
 
 @end
