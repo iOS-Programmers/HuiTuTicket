@@ -1,23 +1,23 @@
 //
-//  TicketUnbindHttp.m
+//  TicketOrderListHttp.m
 //  HuiTuTicket
 //
-//  Created by Chemayi on 14-8-5.
+//  Created by Chemayi on 14/8/17.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "TicketUnbindHttp.h"
+#import "TicketOrderListHttp.h"
 
-@implementation TicketUnbindHttp
+@implementation TicketOrderListHttp
 
 - (id)init
 {
     self = [super init];
     if (nil != self){
-        self.parameter = [[TicketUnbindPara alloc] init];
-        self.resultModel = [[TicketUnbind alloc] init];
-        self.api_url = kURL_MyTicket_Pre;
-        self.apiFuncName = @"user.lp.unbind";
+        self.parameter = [[TicketOrderListPara alloc] init];
+        self.resultModel = [[TicketOrderList alloc] init];
+        self.api_url = kURL_Ticket_Pre;
+        self.apiFuncName = @"lp.order.list";
     }
     return self;
 }

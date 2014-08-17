@@ -92,7 +92,8 @@
         
         return;
     }
-
+    
+    [self.view endEditing:YES];
     
     self.loginHttp.parameter.username = self.userNameTF.text;
     self.loginHttp.parameter.password = self.passwordTF.text;
@@ -172,7 +173,6 @@
  */
 - (void)saveUserInfo:(GetUserInfo *)info
 {
-    
     [[HTUserInfoManager shareInfoManager] saveUserInfo:info];
     LXLog(@"获取的会员信息   %@",info);
     

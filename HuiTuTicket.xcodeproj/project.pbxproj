@@ -286,6 +286,9 @@
 		C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */; };
 		C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */; };
 		C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */; };
+		C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67219A06E0700867719 /* TicketOrderList.m */; };
+		C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */; };
+		C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */; };
 		C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F11990E3A90075D6C4 /* TicketRegister.m */; };
 		C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F41990E3C10075D6C4 /* TicketRegisterPara.m */; };
 		C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F71990E3F30075D6C4 /* TicketRegisterHttp.m */; };
@@ -777,6 +780,12 @@
 		C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_greenBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_OrangBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_ziseBtn@2x.png"; sourceTree = "<group>"; };
+		C6D9F67119A06E0700867719 /* TicketOrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderList.h; sourceTree = "<group>"; };
+		C6D9F67219A06E0700867719 /* TicketOrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderList.m; sourceTree = "<group>"; };
+		C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListPara.h; sourceTree = "<group>"; };
+		C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderListPara.m; sourceTree = "<group>"; };
+		C6D9F67719A06E3800867719 /* TicketOrderListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListHttp.h; sourceTree = "<group>"; };
+		C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderListHttp.m; sourceTree = "<group>"; };
 		C6ED76F01990E3A90075D6C4 /* TicketRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegister.h; sourceTree = "<group>"; };
 		C6ED76F11990E3A90075D6C4 /* TicketRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketRegister.m; sourceTree = "<group>"; };
 		C6ED76F31990E3C10075D6C4 /* TicketRegisterPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegisterPara.h; sourceTree = "<group>"; };
@@ -1172,6 +1181,12 @@
 				C6912B6F1990A98D00584586 /* TicketUnbindPara.m */,
 				C6912B711990A99F00584586 /* TicketUnbindHttp.h */,
 				C6912B721990A99F00584586 /* TicketUnbindHttp.m */,
+				C6D9F67119A06E0700867719 /* TicketOrderList.h */,
+				C6D9F67219A06E0700867719 /* TicketOrderList.m */,
+				C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */,
+				C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */,
+				C6D9F67719A06E3800867719 /* TicketOrderListHttp.h */,
+				C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -2026,6 +2041,7 @@
 				C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */,
 				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
 				C6ADAC20198E167C00AB983B /* Reachability.m in Sources */,
+				C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */,
 				C6ADAC2A198E190500AB983B /* LXHttpModel.m in Sources */,
 				C6ADAC0B198E167C00AB983B /* ASIDataDecompressor.m in Sources */,
 				C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */,
@@ -2092,6 +2108,7 @@
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
 				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
 				C6ADAC17198E167C00AB983B /* ASICloudFilesObjectRequest.m in Sources */,
+				C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */,
 				C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */,
 				C6ADAC0F198E167C00AB983B /* ASIInputStream.m in Sources */,
 				C5A6EBCC19822C0D0041DC2A /* HTCustomDateCell.m in Sources */,
@@ -2105,6 +2122,7 @@
 				076E011319928B5700FC63D1 /* TicketOrderSubmitPara.m in Sources */,
 				C6912B5B1990A4D600584586 /* TicketBind.m in Sources */,
 				C6912B771990AE2A00584586 /* MessageNotice.m in Sources */,
+				C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,

@@ -7,8 +7,12 @@
 //
 
 #import "HTAppointmentViewController.h"
+#import "TicketOrderListHttp.h"
 #import "HTAppointmentCell.h"
+
 @interface HTAppointmentViewController ()
+
+@property (strong, nonatomic) TicketOrderListHttp *orderListHttp;
 
 @end
 
@@ -19,6 +23,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"预约记录";
+        _orderListHttp = [[TicketOrderListHttp alloc] init];
     }
     return self;
 }
@@ -27,9 +33,49 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"预约记录";
+    
     self.dataSource = [[NSMutableArray alloc] initWithArray:@[@"1",@"2"]];
     self.tableView.rowHeight = 80;
+}
+
+
+- (void)requestOrderListData
+{
+    
+    self.orderListHttp.parameter.codenumber = @"2";
+//    self.orderListHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+//    self.orderListHttp.parameter.page = @"1";
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTAppointmentViewController *weak_self = self;
+    [self.orderListHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.orderListHttp.isValid) {
+            [weak_self showWithText:@"获取我的联票列表成功"];
+//            weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
+//            
+//            [weak_self.tableView reloadData];
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.orderListHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 - (void)didReceiveMemoryWarning
