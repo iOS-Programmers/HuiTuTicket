@@ -114,7 +114,8 @@
         {
             NSString *keyStr = [[dic allKeys] objectAtIndex:i];
             NSString *valueStr = [dic objectForKey:keyStr];
-            self.request.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&%@=%@",urlStr,keyStr,valueStr]];
+            self.path = [NSString stringWithFormat:@"%@&%@=%@",urlStr,keyStr,valueStr];
+            self.request.url = [NSURL URLWithString:self.path];
         }
     }
     self.request.delegate = self;
@@ -169,7 +170,7 @@
 #pragma mark----- ASIHTTPRequestDelegate
 - (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders
 {
-    LXLog(@"DidReceiveResponseHeaders:%@\n%@\n",responseHeaders,request.requestMethod);
+//    LXLog(@"DidReceiveResponseHeaders:%@\n%@\n",responseHeaders,request.requestMethod);
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request

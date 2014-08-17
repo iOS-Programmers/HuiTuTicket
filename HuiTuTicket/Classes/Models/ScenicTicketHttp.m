@@ -16,8 +16,10 @@
         self.parameter = [[ScenicTicketPara alloc] init];
         self.resultModel = [[ScenicTicket alloc] init];
         //http://bizapp.cmyrelease.com/service.php?act=getWorkbench
-        self.api_url = kURL_MyTicket_Pre;
+        self.api_url = kURL_ScenicTicket_Pre;
         self.apiFuncName = @"scenic.ticket";
+        self.method = @"GET";
+
     }
     return self;
 }
