@@ -40,4 +40,10 @@
 
 #define kURL_Ticket_Pre @"lp-test.huitupiaowu.com/api.php/rest"
 
+
+
+
+#define kURL_HelpCenter @"http://m.huitour.cn/help/"
+
+
 #endif

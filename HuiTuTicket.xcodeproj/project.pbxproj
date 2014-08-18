@@ -289,6 +289,13 @@
 		C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67219A06E0700867719 /* TicketOrderList.m */; };
 		C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */; };
 		C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */; };
+		C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC124019A22A9500DFB74C /* HTBaseWebViewController.m */; };
+		C6EC124419A22D9600DFB74C /* HTMoreHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC124319A22D9600DFB74C /* HTMoreHelpController.m */; };
+		C6EC124819A22EA800DFB74C /* HTMoreFeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC124619A22EA800DFB74C /* HTMoreFeedBackController.m */; };
+		C6EC124919A22EA800DFB74C /* HTMoreFeedBackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EC124719A22EA800DFB74C /* HTMoreFeedBackController.xib */; };
+		C6EC124D19A2331000DFB74C /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC124C19A2331000DFB74C /* Feedback.m */; };
+		C6EC125019A2332300DFB74C /* FeedbackPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC124F19A2332300DFB74C /* FeedbackPara.m */; };
+		C6EC125319A2333400DFB74C /* FeedbackHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC125219A2333400DFB74C /* FeedbackHttp.m */; };
 		C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F11990E3A90075D6C4 /* TicketRegister.m */; };
 		C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F41990E3C10075D6C4 /* TicketRegisterPara.m */; };
 		C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED76F71990E3F30075D6C4 /* TicketRegisterHttp.m */; };
@@ -786,6 +793,19 @@
 		C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderListPara.m; sourceTree = "<group>"; };
 		C6D9F67719A06E3800867719 /* TicketOrderListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListHttp.h; sourceTree = "<group>"; };
 		C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderListHttp.m; sourceTree = "<group>"; };
+		C6EC123F19A22A9500DFB74C /* HTBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseWebViewController.h; sourceTree = "<group>"; };
+		C6EC124019A22A9500DFB74C /* HTBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseWebViewController.m; sourceTree = "<group>"; };
+		C6EC124219A22D9600DFB74C /* HTMoreHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreHelpController.h; sourceTree = "<group>"; };
+		C6EC124319A22D9600DFB74C /* HTMoreHelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMoreHelpController.m; sourceTree = "<group>"; };
+		C6EC124519A22EA800DFB74C /* HTMoreFeedBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMoreFeedBackController.h; sourceTree = "<group>"; };
+		C6EC124619A22EA800DFB74C /* HTMoreFeedBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMoreFeedBackController.m; sourceTree = "<group>"; };
+		C6EC124719A22EA800DFB74C /* HTMoreFeedBackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMoreFeedBackController.xib; sourceTree = "<group>"; };
+		C6EC124B19A2331000DFB74C /* Feedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feedback.h; sourceTree = "<group>"; };
+		C6EC124C19A2331000DFB74C /* Feedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
+		C6EC124E19A2332300DFB74C /* FeedbackPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackPara.h; sourceTree = "<group>"; };
+		C6EC124F19A2332300DFB74C /* FeedbackPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackPara.m; sourceTree = "<group>"; };
+		C6EC125119A2333400DFB74C /* FeedbackHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackHttp.h; sourceTree = "<group>"; };
+		C6EC125219A2333400DFB74C /* FeedbackHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackHttp.m; sourceTree = "<group>"; };
 		C6ED76F01990E3A90075D6C4 /* TicketRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegister.h; sourceTree = "<group>"; };
 		C6ED76F11990E3A90075D6C4 /* TicketRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketRegister.m; sourceTree = "<group>"; };
 		C6ED76F31990E3C10075D6C4 /* TicketRegisterPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketRegisterPara.h; sourceTree = "<group>"; };
@@ -1054,6 +1074,7 @@
 				C6912B741990AAE400584586 /* Message */,
 				C6912B581990A43700584586 /* Mine */,
 				C59CB0AC198FB0510094DC9F /* Home */,
+				C6EC124A19A232E400DFB74C /* More */,
 				C620A824198F760600AD3791 /* Login&Register */,
 				C6BADF9519775A1C00543D39 /* HTStoreManager.h */,
 				C6BADF9619775A1C00543D39 /* HTStoreManager.m */,
@@ -1455,6 +1476,7 @@
 		C6B9419B1977815600208F20 /* HTBaseControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6EC123E19A22A7400DFB74C /* HTBaseWebViewController */,
 				C6BADF611976816600543D39 /* HTBaseTabBarController */,
 				C6BADF5D197680FC00543D39 /* HTBaseTableViewController */,
 				C6BADF7719768DDD00543D39 /* HTMultipleSectionTableViewController */,
@@ -1586,6 +1608,11 @@
 				C6BADF7B197690F400543D39 /* HTMoreViewController.h */,
 				C6BADF7C197690F400543D39 /* HTMoreViewController.m */,
 				C6BADF7D197690F400543D39 /* HTMoreViewController.xib */,
+				C6EC124519A22EA800DFB74C /* HTMoreFeedBackController.h */,
+				C6EC124619A22EA800DFB74C /* HTMoreFeedBackController.m */,
+				C6EC124719A22EA800DFB74C /* HTMoreFeedBackController.xib */,
+				C6EC124219A22D9600DFB74C /* HTMoreHelpController.h */,
+				C6EC124319A22D9600DFB74C /* HTMoreHelpController.m */,
 				C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */,
 				C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */,
 				C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */,
@@ -1828,6 +1855,28 @@
 			name = CustomTextField;
 			sourceTree = "<group>";
 		};
+		C6EC123E19A22A7400DFB74C /* HTBaseWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6EC123F19A22A9500DFB74C /* HTBaseWebViewController.h */,
+				C6EC124019A22A9500DFB74C /* HTBaseWebViewController.m */,
+			);
+			name = HTBaseWebViewController;
+			sourceTree = "<group>";
+		};
+		C6EC124A19A232E400DFB74C /* More */ = {
+			isa = PBXGroup;
+			children = (
+				C6EC124B19A2331000DFB74C /* Feedback.h */,
+				C6EC124C19A2331000DFB74C /* Feedback.m */,
+				C6EC124E19A2332300DFB74C /* FeedbackPara.h */,
+				C6EC124F19A2332300DFB74C /* FeedbackPara.m */,
+				C6EC125119A2333400DFB74C /* FeedbackHttp.h */,
+				C6EC125219A2333400DFB74C /* FeedbackHttp.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1991,6 +2040,7 @@
 				C6D1249E197E3AC800FF4D83 /* my_04@2x.png in Resources */,
 				7EAAAFD7199234B3003676F3 /* s_n_detail_return@2x.png in Resources */,
 				C6D12481197E37E500FF4D83 /* more_helpcenter@2x.png in Resources */,
+				C6EC124919A22EA800DFB74C /* HTMoreFeedBackController.xib in Resources */,
 				C5FB47EE197E6A9C00FE5364 /* home004@2x.png in Resources */,
 				C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */,
 				C6A373FD1986417F0016A204 /* HTFindPasswordController.xib in Resources */,
@@ -2037,6 +2087,7 @@
 				C6912B4819907EE600584586 /* ResetPassword.m in Sources */,
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
 				C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */,
+				C6EC124419A22D9600DFB74C /* HTMoreHelpController.m in Sources */,
 				C620A833198F9CE300AD3791 /* Login.m in Sources */,
 				C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */,
 				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
@@ -2053,6 +2104,7 @@
 				C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */,
 				C6ADAC1D198E167C00AB983B /* ASIS3Request.m in Sources */,
 				C6ADABBE198E167200AB983B /* MKAnnotationView+WebCache.m in Sources */,
+				C6EC124D19A2331000DFB74C /* Feedback.m in Sources */,
 				C6912B891990B4BF00584586 /* MessageListHttp.m in Sources */,
 				C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */,
 				A9A7D3EE198E1A0D00044460 /* HTAppointmentViewController.m in Sources */,
@@ -2148,6 +2200,7 @@
 				076E00F5199283BA00FC63D1 /* ScenicDetailHttp.m in Sources */,
 				C6912B671990A75600584586 /* MyTicketPara.m in Sources */,
 				C6ADAC2F198E1BC200AB983B /* JSONKit.m in Sources */,
+				C6EC125319A2333400DFB74C /* FeedbackHttp.m in Sources */,
 				C6912B641990A74400584586 /* MyTicketHttp.m in Sources */,
 				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
@@ -2181,13 +2234,16 @@
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
+				C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
 				076E011619928BC300FC63D1 /* TicketOrderQueryPara.m in Sources */,
+				C6EC124819A22EA800DFB74C /* HTMoreFeedBackController.m in Sources */,
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				C620A82D198F77B700AD3791 /* RegisterHttp.m in Sources */,
 				076E012519928C7200FC63D1 /* TicketOrderDetailHttp.m in Sources */,
+				C6EC125019A2332300DFB74C /* FeedbackPara.m in Sources */,
 				C6912B6D1990A96A00584586 /* TicketUnbind.m in Sources */,
 				C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */,
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,

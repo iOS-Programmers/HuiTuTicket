@@ -11,6 +11,8 @@
 
 //#import "ZBarSDK.h"
 #import "HTMoreAboutUsController.h"
+#import "HTMoreFeedBackController.h"
+#import "HTMoreHelpController.h"
 
 
 @interface HTMoreViewController ()
@@ -82,20 +84,46 @@
         }
             break;
         case 1: {
-            //扫一扫
-//            ZBarReaderViewController *reader = [ZBarReaderViewController new];
-//            reader.readerDelegate = self;
-//            reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-//            
-//            ZBarImageScanner *scanner = reader.scanner;
-//            
-//            [scanner setSymbology: ZBAR_I25
-//                           config: ZBAR_CFG_ENABLE
-//                               to: 0];
-//            
-//            [self presentViewController:reader animated:YES completion:^{
-//                
-//            }];
+
+            switch (row) {
+                case 0: {
+                    //扫一扫
+                    //            ZBarReaderViewController *reader = [ZBarReaderViewController new];
+                    //            reader.readerDelegate = self;
+                    //            reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+                    //
+                    //            ZBarImageScanner *scanner = reader.scanner;
+                    //
+                    //            [scanner setSymbology: ZBAR_I25
+                    //                           config: ZBAR_CFG_ENABLE
+                    //                               to: 0];
+                    //            
+                    //            [self presentViewController:reader animated:YES completion:^{
+                    //                
+                    //            }];
+                    
+                }
+                    break;
+                    
+                case 1: {
+                    //意见反馈
+                    HTMoreFeedBackController *feedback = [[HTMoreFeedBackController alloc] init];
+                    feedback.hidesBottomBarWhenPushed = YES;
+                    viewController = feedback;
+                
+                }
+                    break;
+                case 2: {
+                    //帮助中心
+                    HTMoreHelpController *help = [[HTMoreHelpController alloc] init];
+                    help.hidesBottomBarWhenPushed = YES;
+                    viewController = help;
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
         }
             break;
         case 2: {
