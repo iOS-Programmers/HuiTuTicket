@@ -30,6 +30,8 @@
 		076E012B19928CAE00FC63D1 /* TicketOrderCancelPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E012A19928CAE00FC63D1 /* TicketOrderCancelPara.m */; };
 		076E012E19928CBE00FC63D1 /* TicketOrderCancelHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E012D19928CBE00FC63D1 /* TicketOrderCancelHttp.m */; };
 		076E0131199290CD00FC63D1 /* TicketOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E0130199290CD00FC63D1 /* TicketOrderModel.m */; };
+		07BFC6E119A3A68A00507498 /* HTLPTicketDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */; };
+		07BFC6E219A3A68A00507498 /* HTLPTicketDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */; };
 		07EBBB6219991697002DC25B /* home_ad_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EBBB6119991697002DC25B /* home_ad_image@2x.png */; };
 		7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */; };
 		7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */; };
@@ -365,6 +367,9 @@
 		076E012D19928CBE00FC63D1 /* TicketOrderCancelHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderCancelHttp.m; sourceTree = "<group>"; };
 		076E012F199290CD00FC63D1 /* TicketOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderModel.h; sourceTree = "<group>"; };
 		076E0130199290CD00FC63D1 /* TicketOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderModel.m; sourceTree = "<group>"; };
+		07BFC6DE19A3A68A00507498 /* HTLPTicketDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketDetailVC.h; sourceTree = "<group>"; };
+		07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketDetailVC.m; sourceTree = "<group>"; };
+		07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketDetailVC.xib; sourceTree = "<group>"; };
 		07EBBB6119991697002DC25B /* home_ad_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ad_image@2x.png"; sourceTree = "<group>"; };
 		7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicDetailViewController.h; sourceTree = "<group>"; };
 		7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicDetailViewController.m; sourceTree = "<group>"; };
@@ -1155,6 +1160,9 @@
 				C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */,
 				C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */,
 				C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */,
+				07BFC6DE19A3A68A00507498 /* HTLPTicketDetailVC.h */,
+				07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */,
+				07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */,
 			);
 			name = LPTickent;
 			sourceTree = "<group>";
@@ -2036,6 +2044,7 @@
 				C6D124E51981011500FF4D83 /* HTTicketDetailController.xib in Resources */,
 				C6D124E01980E84B00FF4D83 /* pub_success_img@2x.png in Resources */,
 				C6A373F819862CD90016A204 /* pub_blueBtn@2x.png in Resources */,
+				07BFC6E219A3A68A00507498 /* HTLPTicketDetailVC.xib in Resources */,
 				C6D124DE1980E7ED00FF4D83 /* HTRegisterSuccessController.xib in Resources */,
 				C6D1249E197E3AC800FF4D83 /* my_04@2x.png in Resources */,
 				7EAAAFD7199234B3003676F3 /* s_n_detail_return@2x.png in Resources */,
@@ -2156,6 +2165,7 @@
 				C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */,
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
 				C6912B511990866000584586 /* Logout.m in Sources */,
+				07BFC6E119A3A68A00507498 /* HTLPTicketDetailVC.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
 				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
@@ -2383,7 +2393,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",
@@ -2409,7 +2419,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "HuiTuTicket/HuiTuTicket-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",
