@@ -52,10 +52,9 @@
     
     self.tableView.tableHeaderView = headView;
     
-    //每次判断是否已经登录
-    if (![[HTUserInfoManager shareInfoManager] sessionKey]) {
-        [self updateUI];
-    }
+    
+    [self updateUI];
+
 
 }
 
