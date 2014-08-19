@@ -114,6 +114,8 @@
 		C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */; };
 		C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */; };
 		C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */; };
+		C682AC5619A3B3C000DF08D8 /* home_phone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */; };
+		C682AC5719A3B3C000DF08D8 /* home_saoyisao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */; };
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
@@ -490,6 +492,8 @@
 		C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketListCell.h; sourceTree = "<group>"; };
 		C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListCell.m; sourceTree = "<group>"; };
 		C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListCell.xib; sourceTree = "<group>"; };
+		C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_phone_icon@2x.png"; sourceTree = "<group>"; };
+		C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_saoyisao@2x.png"; sourceTree = "<group>"; };
 		C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailCell.h; sourceTree = "<group>"; };
 		C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailCell.m; sourceTree = "<group>"; };
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
@@ -1795,6 +1799,8 @@
 		C6D1248A197E38FC00FF4D83 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */,
+				C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */,
 				07EBBB6119991697002DC25B /* home_ad_image@2x.png */,
 				7EC384AE19937D9900FB0C6D /* s_n_order_zhifu_bg@2x.png */,
 				7EC384A819937A1800FB0C6D /* s_n_order_num_subtraction@2x.png */,
@@ -2014,12 +2020,14 @@
 				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				7EC384AD19937A1800FB0C6D /* s_n_order_num_addition@2x.png in Resources */,
 				C6B09E951982683F00576A5F /* zbar-helpicons.png in Resources */,
+				C682AC5719A3B3C000DF08D8 /* home_saoyisao@2x.png in Resources */,
 				C6B1BCFF19991A7400A9B42F /* my_ticket_list_icon@2x.png in Resources */,
 				C6B941B21977C35500208F20 /* message_avatar.png in Resources */,
 				7EAAAFCD19922B53003676F3 /* s_n_detail_reserve_bg@2x.png in Resources */,
 				C5FB47EB197E6A9C00FE5364 /* home001@2x.png in Resources */,
 				C6D1249F197E3AC800FF4D83 /* my_05@2x.png in Resources */,
 				C691FDE51997BDCD00B3AD53 /* my_qiandao@2x.png in Resources */,
+				C682AC5619A3B3C000DF08D8 /* home_phone_icon@2x.png in Resources */,
 				C6D124B5197E6AF400FF4D83 /* 37x-Checkmark.png in Resources */,
 				C6D124AF197E40B200FF4D83 /* HTMyTicketController.xib in Resources */,
 				C6D12494197E397500FF4D83 /* order_05@2x.png in Resources */,

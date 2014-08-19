@@ -32,4 +32,7 @@
 
 #define APP_ID @"11111111"
 
+//客服电话
+#define SERVICE_NUMBER @"4000707200"
+
 #endif

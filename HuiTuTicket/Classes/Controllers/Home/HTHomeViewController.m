@@ -79,11 +79,10 @@
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y + 2, rect.size.width, rect.size.height -2);
     HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
+
     
-    
-    
-    
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.leftBarButtonItem = [self leftNavItem];
+    self.navigationItem.rightBarButtonItem = [self rightNavItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +91,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Aciton
+
+- (void)leftItemClick
+{
+    //打电话
+    UIWebView *web = [[UIWebView alloc] init];
+    
+    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",SERVICE_NUMBER]]]];
+    [self.view addSubview:web];
+}
+
+- (void)rightItemClick
+{
+    //扫一扫
+}
+
+
+- (UIBarButtonItem *)leftNavItem
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0.0f, 0.0f, 35, 35);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn setImage:[UIImage imageNamed:@"home_phone_icon"] forState:UIControlStateNormal];
+    btn.showsTouchWhenHighlighted = YES;
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [btn addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [btn showsTouchWhenHighlighted];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return item;
+}
+
+- (UIBarButtonItem *)rightNavItem
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0.0f, 0.0f, 35, 35);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn setImage:[UIImage imageNamed:@"home_saoyisao"] forState:UIControlStateNormal];
+    btn.showsTouchWhenHighlighted = YES;
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [btn addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [btn showsTouchWhenHighlighted];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return item;
+}
 
 
 #pragma mark  -
