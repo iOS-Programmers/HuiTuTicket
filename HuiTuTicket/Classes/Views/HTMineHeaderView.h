@@ -24,6 +24,12 @@
 
 @property (weak, nonatomic) id<HTMineHeaderViewDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginAlertLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+
 - (IBAction)onLoginBtnClick:(id)sender;
 
 

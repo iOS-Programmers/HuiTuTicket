@@ -106,7 +106,12 @@
         if (weak_self.loginHttp.isValid) {
             [weak_self showWithText:@"登录成功"];
             
+            /**
+             *  保存session_key 以及userId
+             */
+            
             [[HTUserInfoManager shareInfoManager] setSessionKey:weak_self.loginHttp.resultModel.session_key];
+            [[HTUserInfoManager shareInfoManager] setuserId:weak_self.loginHttp.resultModel.userid];
             
             [weak_self getUserInfo];
         }
@@ -175,6 +180,8 @@
 {
     [[HTUserInfoManager shareInfoManager] saveUserInfo:info];
     LXLog(@"获取的会员信息   %@",info);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_USERINFO object:nil];
     
     [self dismissViewControllerAnimated:YES completion:^{
         

@@ -73,4 +73,26 @@
     
     return key;
 }
+
+/**
+ *  设置session_key以及获取session_key的方法
+ *
+ *  @param sessionKey 会员登录key
+ */
+- (void)setuserId:(NSString *)userid
+{
+    //每次重新登录后更新下session_key
+    [[NSUserDefaults standardUserDefaults] setObject:userid forKey:USER_ID];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+- (NSString *)userId
+{
+    NSString *userid;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:USER_ID]) {
+        userid = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:USER_ID];
+    }
+    
+    return userid;
+}
+
 @end

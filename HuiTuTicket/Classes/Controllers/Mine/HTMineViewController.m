@@ -14,7 +14,9 @@
 #import "HTLoginController.h"
 
 @interface HTMineViewController ()<HTMineHeaderViewDelegate>
-
+{
+    HTMineHeaderView *headView;
+}
 @end
 
 @implementation HTMineViewController
@@ -41,11 +43,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    HTMineHeaderView *headView = [HTMineHeaderView instanceHeaderView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI) name:UPDATE_USERINFO object:nil];
+    
+    headView = [HTMineHeaderView instanceHeaderView];
     headView.delegate = self;
     headView.frame = CGRectMake(0, 0, 320, 145);
     
     self.tableView.tableHeaderView = headView;
+    
+    //每次判断是否已经登录
+    if (![[HTUserInfoManager shareInfoManager] sessionKey]) {
+        [self updateUI];
+    }
 
 }
 
@@ -53,6 +63,37 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Action
+
+/**
+ *  更新用户信息界面
+ */
+- (void)updateUI
+{
+    //用户未登录时候
+    if (![[HTUserInfoManager shareInfoManager] sessionKey]) {
+        headView.loginButton.hidden = NO;
+        headView.loginAlertLabel.hidden = NO;
+        headView.userNameLabel.hidden = YES;
+    }
+    else {
+        headView.loginButton.hidden = YES;
+        headView.loginAlertLabel.hidden = YES;
+        headView.userNameLabel.hidden = NO;
+        
+        GetUserInfo *info = [[HTUserInfoManager shareInfoManager] userInfo];
+        
+        headView.userNameLabel.text = info.nickname;
+        [headView.avatarImage setImageWithURL:[NSURL URLWithString:info.headpic] placeholderImage:[UIImage imageNamed:@"my_avatar_default"]];
+    }
+    
 }
 
 #pragma mark - HTMineHeadView Delegate

@@ -37,5 +37,13 @@
 #define USER_INFO   @"userInfo"
 
 #define SESSION_KEY @"sessionKey"
+#define USER_ID     @"userid"
+
+
+
+
+#pragma mark -   NSNotifacation Name
+
+#define UPDATE_USERINFO  @"update_userInfo"
 
 #endif

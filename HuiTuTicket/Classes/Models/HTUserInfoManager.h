@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class GetUserInfo;
+#import "GetUserInfo.h"
 /**
  *  储存项目中用户相关信息的类 （调用的时候用单例模式调用）
  */
@@ -36,5 +36,13 @@
  */
 - (void)setSessionKey:(NSString *)sessionKey;
 - (NSString *)sessionKey;
+
+/**
+ *  设置session_key以及获取session_key的方法
+ *
+ *  @param sessionKey 会员登录key
+ */
+- (void)setuserId:(NSString *)userid;
+- (NSString *)userId;
 
 @end
