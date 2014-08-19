@@ -12,7 +12,7 @@
 #import "TicketRegisterHttp.h"
 #import "TicketBindHttp.h"
 
-@interface HTTicketRegisterController ()
+@interface HTTicketRegisterController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic) TicketRegisterHttp *ticketRegisterHttp;
 
@@ -21,11 +21,16 @@
 @property (weak, nonatomic) IBOutlet UITextField *ticketNumTF;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
+@property (weak, nonatomic) IBOutlet UIButton *manButton;
+@property (weak, nonatomic) IBOutlet UIButton *womanButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *IDNumTF;
 
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTF;
 
+//选择证件类型
+@property (weak, nonatomic) IBOutlet UIButton *selectTypeButton;
+- (IBAction)onSexButtonClick:(id)sender;
 
 - (IBAction)onRegisterBtnClick:(id)sender;
 
@@ -50,6 +55,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.manButton.selected = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,19 +64,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onSexButtonClick:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    self.manButton.selected = NO;
+    self.womanButton.selected = NO;
+    
+    btn.selected = !btn.selected;
+}
+
 /**
  *  请求联票注册接口
  *
  */
-- (IBAction)onRegisterBtnClick:(id)sender {
-    
 
-    self.ticketRegisterHttp.parameter.codenumber = @"328004867679";
-    self.ticketRegisterHttp.parameter.username = @"姜英辉";
-    self.ticketRegisterHttp.parameter.sex = @"0";
-    self.ticketRegisterHttp.parameter.mobile = @"18638616155";
+- (IBAction)onRegisterBtnClick:(id)sender {
+    /**
+     *  判断是否数据都有填写
+     */
+    if (FBIsEmpty(self.ticketNumTF.text)) {
+        [self showWithText:@"请输入联票号码"];
+        return;
+    }
+    else if (FBIsEmpty(self.nameTF.text)) {
+        [self showWithText:@"请输入姓名"];
+        return;
+    }
+    else if (FBIsEmpty(self.IDNumTF.text)) {
+        [self showWithText:@"请输入证件号码"];
+        return;
+    }
+    else if (FBIsEmpty(self.phoneNumTF.text)) {
+        [self showWithText:@"请输入手机号"];
+        return;
+    }
+    else if (FBIsEmpty(self.nameTF.text)) {
+        [self showWithText:@"请输入姓名"];
+        return;
+    }
+
+    self.ticketRegisterHttp.parameter.codenumber = self.ticketNumTF.text;
+    self.ticketRegisterHttp.parameter.username = self.nameTF.text;
+    self.ticketRegisterHttp.parameter.sex = self.manButton.selected ? @"0" : @"1";
+    self.ticketRegisterHttp.parameter.mobile = self.phoneNumTF.text;
     self.ticketRegisterHttp.parameter.idtype = @"0";
-    self.ticketRegisterHttp.parameter.idcard = @"41010199001011010";
+    self.ticketRegisterHttp.parameter.idcard = self.IDNumTF.text;
     self.ticketRegisterHttp.parameter.citycode = @"410101";
     
     [self showLoadingWithText:kLOADING_TEXT];
@@ -79,7 +117,7 @@
         [weak_self hideLoading];
         
         if (weak_self.ticketRegisterHttp.isValid) {
-            [weak_self showWithText:@"联票注册成功"];
+
             [self bindTicket];
 
         }
@@ -124,7 +162,7 @@
         [weak_self hideLoading];
         
         if (weak_self.ticketBindHttp.isValid) {
-            [weak_self showWithText:@"联票绑定成功"];
+
             
         }
         else {
@@ -151,5 +189,29 @@
 - (IBAction)onBindingBtnClick:(id)sender {
     
     [self pushViewController:@"HTTicketBindingController"];
+}
+
+#pragma mark - UITextField Delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField == self.IDNumTF || textField == self.phoneNumTF) {
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view frameSetY:-120];
+        }];
+        
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        if (IOS7_OR_LATER) {
+            [self.view frameSetY:64];
+        }
+        else {
+            [self.view frameSetY:0];
+        }
+        
+    }];
 }
 @end

@@ -30,6 +30,9 @@
 //图片缓存
 #import "UIImageView+WebCache.h"
 
+//UIView扩展类别
+#import "UIView+Utils.h"
+
 #define APP_ID @"11111111"
 
 //客服电话
