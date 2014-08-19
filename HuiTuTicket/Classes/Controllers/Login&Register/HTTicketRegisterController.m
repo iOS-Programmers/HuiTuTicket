@@ -65,7 +65,7 @@
 - (IBAction)onRegisterBtnClick:(id)sender {
     
 
-    self.ticketRegisterHttp.parameter.codenumber = @"100105741054";
+    self.ticketRegisterHttp.parameter.codenumber = @"328004867679";
     self.ticketRegisterHttp.parameter.username = @"姜英辉";
     self.ticketRegisterHttp.parameter.sex = @"0";
     self.ticketRegisterHttp.parameter.mobile = @"18638616155";
@@ -80,6 +80,7 @@
         
         if (weak_self.ticketRegisterHttp.isValid) {
             [weak_self showWithText:@"联票注册成功"];
+            [self bindTicket];
 
         }
         else {
@@ -101,6 +102,50 @@
         };
     }];
 //    [self pushViewController:@"HTRegisterSuccessController"];
+}
+
+/**
+ *  联票绑定
+ */
+- (void)bindTicket
+{
+    self.ticketBindHttp.parameter.uid = @"2";
+    self.ticketBindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    self.ticketBindHttp.parameter.lpcode = @"328004867679";
+    self.ticketBindHttp.parameter.lpuser = @"姜英辉";
+    self.ticketBindHttp.parameter.typename = @"0";
+    self.ticketBindHttp.parameter.typepic = @"";
+    self.ticketBindHttp.parameter.endtime = @"0";
+    self.ticketBindHttp.parameter.regtime = @"0";
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTicketRegisterController *weak_self = self;
+    [self.ticketBindHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.ticketBindHttp.isValid) {
+            [weak_self showWithText:@"联票绑定成功"];
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.ticketBindHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+
 }
 
 - (IBAction)onBindingBtnClick:(id)sender {
