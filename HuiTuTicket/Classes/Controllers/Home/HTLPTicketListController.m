@@ -7,7 +7,8 @@
 //
 
 #import "HTLPTicketListController.h"
-#import "HTTicketDetailController.h"
+#import "HTLPTicketDetailVC.h"
+
 #import "HTLPTicketListCell.h"
 #import "LPTicketListHttp.h"
 
@@ -113,8 +114,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    HTTicketDetailController *detail = [[HTTicketDetailController alloc] init];
+
+    HTLPTicketDetailVC *detail = [[HTLPTicketDetailVC alloc] init];
     detail.ticket = (LPTicket *)self.dataSource[indexPath.row];
     [self.navigationController pushViewController:detail animated:YES];
    

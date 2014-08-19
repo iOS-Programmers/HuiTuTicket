@@ -32,6 +32,8 @@
 		076E0131199290CD00FC63D1 /* TicketOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E0130199290CD00FC63D1 /* TicketOrderModel.m */; };
 		07BFC6E119A3A68A00507498 /* HTLPTicketDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */; };
 		07BFC6E219A3A68A00507498 /* HTLPTicketDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */; };
+		07BFC6E619A3B2E300507498 /* HTLPTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC6E419A3B2E300507498 /* HTLPTicketDetailCell.m */; };
+		07BFC6E719A3B2E300507498 /* HTLPTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC6E519A3B2E300507498 /* HTLPTicketDetailCell.xib */; };
 		07EBBB6219991697002DC25B /* home_ad_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EBBB6119991697002DC25B /* home_ad_image@2x.png */; };
 		7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */; };
 		7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */; };
@@ -374,6 +376,9 @@
 		07BFC6DE19A3A68A00507498 /* HTLPTicketDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketDetailVC.h; sourceTree = "<group>"; };
 		07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketDetailVC.m; sourceTree = "<group>"; };
 		07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketDetailVC.xib; sourceTree = "<group>"; };
+		07BFC6E319A3B2E300507498 /* HTLPTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketDetailCell.h; sourceTree = "<group>"; };
+		07BFC6E419A3B2E300507498 /* HTLPTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketDetailCell.m; sourceTree = "<group>"; };
+		07BFC6E519A3B2E300507498 /* HTLPTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketDetailCell.xib; sourceTree = "<group>"; };
 		07EBBB6119991697002DC25B /* home_ad_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ad_image@2x.png"; sourceTree = "<group>"; };
 		7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicDetailViewController.h; sourceTree = "<group>"; };
 		7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicDetailViewController.m; sourceTree = "<group>"; };
@@ -1172,6 +1177,9 @@
 				07BFC6DE19A3A68A00507498 /* HTLPTicketDetailVC.h */,
 				07BFC6DF19A3A68A00507498 /* HTLPTicketDetailVC.m */,
 				07BFC6E019A3A68A00507498 /* HTLPTicketDetailVC.xib */,
+				07BFC6E319A3B2E300507498 /* HTLPTicketDetailCell.h */,
+				07BFC6E419A3B2E300507498 /* HTLPTicketDetailCell.m */,
+				07BFC6E519A3B2E300507498 /* HTLPTicketDetailCell.xib */,
 			);
 			name = LPTickent;
 			sourceTree = "<group>";
@@ -2000,6 +2008,7 @@
 				C6D124B6197E6AF400FF4D83 /* 37x-Checkmark@2x.png in Resources */,
 				7EAAAFC319921A2D003676F3 /* HTScenicDetailViewController.xib in Resources */,
 				07EBBB6219991697002DC25B /* home_ad_image@2x.png in Resources */,
+				07BFC6E719A3B2E300507498 /* HTLPTicketDetailCell.xib in Resources */,
 				7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */,
 				C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
@@ -2253,6 +2262,7 @@
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
 				C6ADAC11198E167C00AB983B /* ASIWebPageRequest.m in Sources */,
 				C6ADABC6198E167200AB983B /* SDWebImagePrefetcher.m in Sources */,
+				07BFC6E619A3B2E300507498 /* HTLPTicketDetailCell.m in Sources */,
 				076E0107199288B600FC63D1 /* TicketPriceCalendarPara.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,

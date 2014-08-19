@@ -29,6 +29,7 @@
 
 #define kBorderColor        kColorFromRGB(0xcccccc)
 #define kHomeBGColor        kColorRGB(229, 233, 239)
+#define kSwitchBorderColor  kColorRGB(71, 176, 218)
 
 
 
