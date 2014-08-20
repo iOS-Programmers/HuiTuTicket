@@ -38,6 +38,8 @@
 
 #define kURL_ScenicTicket_Pre @"m-test.huitupiaowu.com/index.php/gateway"
 
+#define kURL_COMMON_Pre @"m-test.huitupiaowu.com/index.php/common"
+
 #define kURL_Ticket_Pre @"lp-test.huitupiaowu.com/api.php/rest"
 
 

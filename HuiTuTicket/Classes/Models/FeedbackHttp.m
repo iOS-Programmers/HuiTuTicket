@@ -17,7 +17,7 @@
         self.parameter = [[FeedbackPara alloc] init];
         self.resultModel = [[Feedback alloc] init];
         self.apiFuncName = @"common.feedback.post";
-        self.api_url = kURL_ScenicTicket_Pre;
+        self.api_url = kURL_COMMON_Pre;
     }
     return self;
 }
