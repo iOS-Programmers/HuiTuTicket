@@ -47,6 +47,13 @@
                     </button>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iv" destination="api-VI-fFQ" id="IM3-vu-UvZ"/>
+                <outlet property="nameLB" destination="c4M-Ib-TY5" id="sx9-20-pqW"/>
+                <outlet property="orderBtn" destination="VDs-H2-zQY" id="t8L-uH-zmE"/>
+                <outlet property="placeLB" destination="UZf-MH-g1M" id="bgM-X1-yrg"/>
+                <outlet property="timeLB" destination="8sS-qL-tSa" id="hXG-k8-SZ2"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

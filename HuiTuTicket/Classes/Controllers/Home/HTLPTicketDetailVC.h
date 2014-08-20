@@ -6,8 +6,9 @@
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "HTBaseNavigationController.h"
+#import "HTBaseTableViewController.h"
+#import "LPTicket.h"
 
-@interface HTLPTicketDetailVC : HTBaseNavigationController
-
+@interface HTLPTicketDetailVC : HTBaseTableViewController
+@property (nonatomic,strong)LPTicket *ticket;
 @end
