@@ -16,7 +16,7 @@
     if (nil != self){
         self.parameter = [[TicketRegisterPara alloc] init];
         self.resultModel = [[TicketRegister alloc] init];
-        self.api_url = kURL_MyTicket_Pre;
+        self.api_url = kURL_Ticket_Pre;
         self.apiFuncName = @"lp.code.register";
     }
     return self;

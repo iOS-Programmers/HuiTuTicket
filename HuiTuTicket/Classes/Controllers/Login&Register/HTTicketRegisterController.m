@@ -93,6 +93,7 @@
     [self.toolBar setItems:buttons animated:TRUE];
 
     [self.view addSubview:_toolBar];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +147,8 @@
  */
 
 - (IBAction)onRegisterBtnClick:(id)sender {
+    
+    
     /**
      *  判断是否数据都有填写
      */
@@ -219,14 +222,14 @@
  */
 - (void)bindTicket
 {
-    self.ticketBindHttp.parameter.uid = @"2";
+    self.ticketBindHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
     self.ticketBindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
-    self.ticketBindHttp.parameter.lpcode = @"328004867679";
-    self.ticketBindHttp.parameter.lpuser = @"姜英辉";
-    self.ticketBindHttp.parameter.typename = @"0";
-    self.ticketBindHttp.parameter.typepic = @"";
-    self.ticketBindHttp.parameter.endtime = @"0";
-    self.ticketBindHttp.parameter.regtime = @"0";
+    self.ticketBindHttp.parameter.lpcode =FBIsEmpty(self.ticketNumTF.text) ? @"" : self.ticketNumTF.text;
+//    self.ticketBindHttp.parameter.lpuser = @"姜英辉";
+//    self.ticketBindHttp.parameter.typename = @"0";
+//    self.ticketBindHttp.parameter.typepic = @"";
+//    self.ticketBindHttp.parameter.endtime = @"0";
+//    self.ticketBindHttp.parameter.regtime = @"0";
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketRegisterController *weak_self = self;

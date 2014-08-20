@@ -52,11 +52,11 @@
 }
 - (void)requestBingData
 {
-    
+
     self.bindHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
-    self.bindHttp.parameter.session_key = @"bddfca43bf0b5955c76737e34fab386e";
-    self.bindHttp.parameter.lpcode = @"100105741054";
-    self.bindHttp.parameter.lpuser = @"姜英晖";
+    self.bindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    self.bindHttp.parameter.lpcode = self.lpCodeTF.text;
+    self.bindHttp.parameter.lpuser = self.userNameTf.text;
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketBindingController *weak_self = self;
@@ -121,7 +121,8 @@
         [weak_self hideLoading];
         
         if (weak_self.userVerifyHttp.isValid) {
-            [weak_self showWithText:@"联票绑定成功"];
+            //验证成功后进行绑定
+            [weak_self requestBingData];
             
         }
         else {
