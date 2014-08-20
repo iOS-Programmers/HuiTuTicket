@@ -145,8 +145,7 @@
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    [self pushViewController:@"HTAppointmentViewController"];
-    HTAppointmentViewController *app = [[HTAppointmentViewController alloc] init];
-    [self.navigationController pushViewController:app animated:YES];
+    
 }
 
 #pragma mark -

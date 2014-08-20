@@ -7,18 +7,27 @@
 //
 
 #import "HTTicketDetailController.h"
+#import "HTAppointmentViewController.h"
 #import "HTTicketDetailCell.h"
-#import "TicketDetailHttp.h"
+#import "MyTicketDetailInfoHttp.h"
+//#import "TicketDetailHttp.h"
 #import "TicketUnbindHttp.h"
 
 @interface HTTicketDetailController ()
 
-@property (strong, nonatomic) TicketDetailHttp *detailHttp;
+@property (strong, nonatomic) MyTicketDetailInfoHttp *detailHttp;
 @property (strong, nonatomic) TicketUnbindHttp *unbindHttp;
 
 @property (strong, nonatomic) NSMutableArray *titles;
+@property (strong, nonatomic) NSMutableArray *dataSource;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+//联票二维码以及联票号码
+@property (weak, nonatomic) IBOutlet UIImageView *lpCodeImage;
+@property (weak, nonatomic) IBOutlet UILabel *lpCodeLabel;
+
 
 - (IBAction)segementChanged:(id)sender;
 - (IBAction)onYuYueBtnClick:(id)sender;
@@ -36,8 +45,10 @@
         // Custom initialization
         self.title = @"联票详情";
         
-        _detailHttp = [[TicketDetailHttp alloc] init];
+        _detailHttp = [[MyTicketDetailInfoHttp alloc] init];
         _unbindHttp = [[TicketUnbindHttp alloc] init];
+        
+        _dataSource = [[NSMutableArray alloc] initWithCapacity:0];
         
     }
     return self;
@@ -77,15 +88,17 @@
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketDetailController *weak_self = self;
     
-    self.detailHttp.parameter.typeid = @"5";
+    self.detailHttp.parameter.codenumber = @"328004867679";
+    self.detailHttp.parameter.username = @"姜英辉";
     
     [self.detailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         
         if (weak_self.detailHttp.isValid) {
             [weak_self showWithText:@"联票详情请求成功"];
-//            weak_self.dataSource = weak_self.detailHttp.resultModel.info;
-//            [weak_self.tableView reloadData];
+
+            [weak_self reloadTableviewData:weak_self.detailHttp.resultModel];
+
             
         }
         else {
@@ -109,6 +122,23 @@
 
 }
 
+- (void)reloadTableviewData:(MyTicketDetailInfo *)detail
+{
+    //更新界面
+    self.lpCodeLabel.text = detail.codeNumber;
+    
+    
+    LXLog(@"\n\n\n\n\n\\n\n\n\n\\n\n\n    %@",detail);
+    
+    NSMutableArray *dataArray = [[NSMutableArray alloc] initWithCapacity:0];
+    [dataArray addObject:@[detail.codeNumber,detail.username,detail.idcard,detail.endtime,detail.regtime]];
+    [dataArray addObject:@[detail.lpName,detail.scenic_num]];
+    
+    self.dataSource = dataArray;
+    
+    [self.tableView reloadData];
+}
+
 /**
  *  联票解除绑定接口
  *
@@ -119,7 +149,7 @@
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketDetailController *weak_self = self;
     
-    self.unbindHttp.parameter.uid = @"2";
+    self.unbindHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
     self.unbindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     self.unbindHttp.parameter.bid = bid;
     
@@ -177,7 +207,15 @@
 - (IBAction)onYuYueBtnClick:(id)sender {
 }
 
-- (IBAction)onYuYueRecordBtnClick:(id)sender {
+/**
+ *  预约记录
+ *
+ *  @param sender
+ */
+- (IBAction)onYuYueRecordBtnClick:(id)sender
+{
+    HTAppointmentViewController *app = [[HTAppointmentViewController alloc] init];
+    [self.navigationController pushViewController:app animated:YES];
 }
 
 /**
@@ -217,7 +255,11 @@
     NSArray *titleArr = self.titles[indexPath.section];
     cell.titleLabel.text = titleArr[indexPath.row];
     
-    
+   
+    if ([self.dataSource count] != 0) {
+         NSArray *detailArr = self.dataSource[indexPath.section];
+        cell.detailTextLabel.text = detailArr[indexPath.row];
+    }
 
     return cell;
 }

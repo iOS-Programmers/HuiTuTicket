@@ -81,12 +81,13 @@
         headView.loginButton.hidden = NO;
         headView.loginAlertLabel.hidden = NO;
         headView.userNameLabel.hidden = YES;
+        headView.avatarImage.hidden = YES;
     }
     else {
         headView.loginButton.hidden = YES;
         headView.loginAlertLabel.hidden = YES;
         headView.userNameLabel.hidden = NO;
-        
+        headView.avatarImage.hidden = NO;
         GetUserInfo *info = [[HTUserInfoManager shareInfoManager] userInfo];
         
         headView.userNameLabel.text = info.nickname;
