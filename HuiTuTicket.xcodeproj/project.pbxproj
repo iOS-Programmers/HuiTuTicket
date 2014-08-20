@@ -301,7 +301,7 @@
 		C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB219A4779F00C47126 /* MyTicketDetailInfoPara.m */; };
 		C6D47AB619A477AB00C47126 /* MyTicketDetailInfoHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB519A477AB00C47126 /* MyTicketDetailInfoHttp.m */; };
 		C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB819A482D700C47126 /* LPTicketOrderDetail.m */; };
-		C6D47ABD19A48B9400C47126 /* PlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47ABC19A48B9400C47126 /* PlacehoderTextView.m */; };
+		C6D47AC119A4CB5500C47126 /* PlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AC019A4CB5500C47126 /* PlacehoderTextView.m */; };
 		C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67219A06E0700867719 /* TicketOrderList.m */; };
 		C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */; };
 		C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */; };
@@ -828,8 +828,8 @@
 		C6D47AB519A477AB00C47126 /* MyTicketDetailInfoHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketDetailInfoHttp.m; sourceTree = "<group>"; };
 		C6D47AB719A482D700C47126 /* LPTicketOrderDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketOrderDetail.h; sourceTree = "<group>"; };
 		C6D47AB819A482D700C47126 /* LPTicketOrderDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketOrderDetail.m; sourceTree = "<group>"; };
-		C6D47ABB19A48B9400C47126 /* PlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacehoderTextView.h; sourceTree = "<group>"; };
-		C6D47ABC19A48B9400C47126 /* PlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacehoderTextView.m; sourceTree = "<group>"; };
+		C6D47ABF19A4CB5500C47126 /* PlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacehoderTextView.h; sourceTree = "<group>"; };
+		C6D47AC019A4CB5500C47126 /* PlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacehoderTextView.m; sourceTree = "<group>"; };
 		C6D9F67119A06E0700867719 /* TicketOrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderList.h; sourceTree = "<group>"; };
 		C6D9F67219A06E0700867719 /* TicketOrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderList.m; sourceTree = "<group>"; };
 		C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListPara.h; sourceTree = "<group>"; };
@@ -1103,7 +1103,7 @@
 		C60F6FF0197630CF00AFC182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6D47ABA19A48B9400C47126 /* PlacehoderTextView */,
+				C6D47ABE19A4CB5500C47126 /* PlacehoderTextView */,
 				C604ECC41997C1F6004DFB59 /* BorderButton */,
 				C6D124C3197F968800FF4D83 /* CustomTextField */,
 				C6B941AA1977C27A00208F20 /* Messages */,
@@ -1932,14 +1932,13 @@
 			name = TicketRegister;
 			sourceTree = "<group>";
 		};
-		C6D47ABA19A48B9400C47126 /* PlacehoderTextView */ = {
+		C6D47ABE19A4CB5500C47126 /* PlacehoderTextView */ = {
 			isa = PBXGroup;
 			children = (
-				C6D47ABB19A48B9400C47126 /* PlacehoderTextView.h */,
-				C6D47ABC19A48B9400C47126 /* PlacehoderTextView.m */,
+				C6D47ABF19A4CB5500C47126 /* PlacehoderTextView.h */,
+				C6D47AC019A4CB5500C47126 /* PlacehoderTextView.m */,
 			);
-			name = PlacehoderTextView;
-			path = ../../../../../../XcodeSVN/Client/Chemayi_iPhone1.0/Chemayi/Controls/PlacehoderTextView;
+			path = PlacehoderTextView;
 			sourceTree = "<group>";
 		};
 		C6EC123E19A22A7400DFB74C /* HTBaseWebViewController */ = {
@@ -2287,7 +2286,7 @@
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6ADABCB198E167200AB983B /* UIImageView+WebCache.m in Sources */,
 				C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */,
-				C6D47ABD19A48B9400C47126 /* PlacehoderTextView.m in Sources */,
+				C6D47AC119A4CB5500C47126 /* PlacehoderTextView.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
 				C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */,
