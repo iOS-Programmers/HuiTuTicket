@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "-getUserInfo"
+            landmarkName = "-onLoginBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,8 +63,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
             endingLineNumber = "121"
-            landmarkName = "-getUserInfo"
+            landmarkName = "-onLoginBtnClick:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke"
+                  moduleName = "HuiTuTicket"
+                  urlString = "file:///Users/Bird/GitHub/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
+                  timestampString = "430233024.359934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "948">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke88"
+                  moduleName = "HuiTuTicket"
+                  urlString = "file:///Users/Bird/GitHub/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
+                  timestampString = "430233024.360306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -176,6 +206,22 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "-loadDataSource"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Home/HTLPTicketDetailVC.m"
+            timestampString = "430233333.235631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

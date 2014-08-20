@@ -16,7 +16,7 @@
     if (nil != self){
         self.parameter = [[TicketScenicSpotListPara alloc] init];
         self.resultModel = [[TicketScenicSpotList alloc] init];
-        self.api_url = kURL_MyTicket_Pre;
+        self.api_url = kURL_Ticket_Pre;
         self.apiFuncName = @"lp.scenic.list";
     }
     return self;
