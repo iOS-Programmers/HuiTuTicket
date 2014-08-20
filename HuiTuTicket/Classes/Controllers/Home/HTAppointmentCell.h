@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LPTicketOrderDetail.h"
 
 @interface HTAppointmentCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *orderNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *biaojiLabel;
 
+
+- (void)configueUIWithData:(LPTicketOrderDetail *)info;
+
 @end
+

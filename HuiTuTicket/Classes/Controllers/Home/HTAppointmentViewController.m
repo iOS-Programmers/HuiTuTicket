@@ -34,17 +34,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.dataSource = [[NSMutableArray alloc] initWithArray:@[@"1",@"2"]];
+    self.dataSource = [[NSMutableArray alloc] initWithCapacity:0];
     self.tableView.rowHeight = 80;
+    
+    [self requestOrderListData];
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
 - (void)requestOrderListData
 {
     
-    self.orderListHttp.parameter.codenumber = @"2";
-//    self.orderListHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
-//    self.orderListHttp.parameter.page = @"1";
+    self.orderListHttp.parameter.codenumber = @"328004867679";
+    self.orderListHttp.parameter.username = @"姜英辉";
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTAppointmentViewController *weak_self = self;
@@ -52,10 +60,8 @@
         [weak_self hideLoading];
         
         if (weak_self.orderListHttp.isValid) {
-            [weak_self showWithText:@"获取我的联票列表成功"];
-//            weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
-//            
-//            [weak_self.tableView reloadData];
+
+            [weak_self reloadTableViewData:weak_self.orderListHttp.resultModel];
             
         }
         else {
@@ -78,18 +84,22 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)reloadTableViewData:(TicketOrderList *)listInfo
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([listInfo.info count] > 0) {
+        self.dataSource = listInfo.info;
+        [self.tableView reloadData];
+    }
 }
 
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  
     return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // in subClass
+
     static NSString *CellIdentifier = @"Cell";
     HTAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
@@ -103,18 +113,17 @@
             }
         }
     }
+    
+    [cell configueUIWithData:(LPTicketOrderDetail *)self.dataSource[indexPath.row]];
+    
     return cell;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
 
 @end

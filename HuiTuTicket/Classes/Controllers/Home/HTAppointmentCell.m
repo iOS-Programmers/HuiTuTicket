@@ -22,4 +22,14 @@
     // Configure the view for the selected state
 }
 
+- (void)configueUIWithData:(LPTicketOrderDetail *)info
+{
+    if (info) {
+        self.orderNameLabel.text = info.scenicName;
+        self.orderNumLabel.text = [NSString stringWithFormat:@"票号：%@",info.codeNumber];
+        self.orderDateLabel.text = [NSString stringWithFormat:@"日期：%@",info.traveltime];
+        self.biaojiLabel.text = [info.state isEqualToString:@"0"] ? @"未出游" : @"已出游";
+    }
+}
+
 @end

@@ -10,4 +10,13 @@
 
 @implementation TicketOrderList
 
+- (id)init
+{
+    self = [super init];
+    if (nil != self){
+        [self.objMapDic setObject:@"LPTicketOrderDetail" forKey:@"info"];
+    }
+    return self;
+}
+
 @end

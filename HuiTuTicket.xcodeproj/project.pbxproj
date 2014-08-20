@@ -300,6 +300,7 @@
 		C6D47AB019A4778D00C47126 /* MyTicketDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AAF19A4778D00C47126 /* MyTicketDetailInfo.m */; };
 		C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB219A4779F00C47126 /* MyTicketDetailInfoPara.m */; };
 		C6D47AB619A477AB00C47126 /* MyTicketDetailInfoHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB519A477AB00C47126 /* MyTicketDetailInfoHttp.m */; };
+		C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AB819A482D700C47126 /* LPTicketOrderDetail.m */; };
 		C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67219A06E0700867719 /* TicketOrderList.m */; };
 		C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */; };
 		C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */; };
@@ -824,6 +825,8 @@
 		C6D47AB219A4779F00C47126 /* MyTicketDetailInfoPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketDetailInfoPara.m; sourceTree = "<group>"; };
 		C6D47AB419A477AB00C47126 /* MyTicketDetailInfoHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketDetailInfoHttp.h; sourceTree = "<group>"; };
 		C6D47AB519A477AB00C47126 /* MyTicketDetailInfoHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketDetailInfoHttp.m; sourceTree = "<group>"; };
+		C6D47AB719A482D700C47126 /* LPTicketOrderDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketOrderDetail.h; sourceTree = "<group>"; };
+		C6D47AB819A482D700C47126 /* LPTicketOrderDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketOrderDetail.m; sourceTree = "<group>"; };
 		C6D9F67119A06E0700867719 /* TicketOrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderList.h; sourceTree = "<group>"; };
 		C6D9F67219A06E0700867719 /* TicketOrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderList.m; sourceTree = "<group>"; };
 		C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListPara.h; sourceTree = "<group>"; };
@@ -1252,6 +1255,8 @@
 				C6912B6F1990A98D00584586 /* TicketUnbindPara.m */,
 				C6912B711990A99F00584586 /* TicketUnbindHttp.h */,
 				C6912B721990A99F00584586 /* TicketUnbindHttp.m */,
+				C6D47AB719A482D700C47126 /* LPTicketOrderDetail.h */,
+				C6D47AB819A482D700C47126 /* LPTicketOrderDetail.m */,
 				C6D9F67119A06E0700867719 /* TicketOrderList.h */,
 				C6D9F67219A06E0700867719 /* TicketOrderList.m */,
 				C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */,
@@ -2282,6 +2287,7 @@
 				C6912B641990A74400584586 /* MyTicketHttp.m in Sources */,
 				C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */,
 				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
+				C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
 				076E011C19928C1800FC63D1 /* TicketOrderQueryHttp.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
