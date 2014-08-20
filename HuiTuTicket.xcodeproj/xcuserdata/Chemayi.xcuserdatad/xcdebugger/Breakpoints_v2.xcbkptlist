@@ -220,7 +220,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Home/HTLPTicketListController.m"
@@ -287,7 +287,7 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430246132.686909"
+                  timestampString = "430246391.930327"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
@@ -301,7 +301,7 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke139"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430246132.687099"
+                  timestampString = "430246391.930582"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
@@ -452,6 +452,22 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "-onAvatarClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Mine/HTTicketDetailController.m"
+            timestampString = "430246368.574823"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

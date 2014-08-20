@@ -258,7 +258,7 @@
    
     if ([self.dataSource count] != 0) {
          NSArray *detailArr = self.dataSource[indexPath.section];
-        cell.detailTextLabel.text = detailArr[indexPath.row];
+        cell.detailLabel.text = detailArr[indexPath.row];
     }
 
     return cell;
