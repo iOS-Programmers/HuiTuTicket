@@ -12,6 +12,7 @@
 
 #import "HTMyTicketController.h"
 #import "HTLoginController.h"
+#import "HTUserInfoController.h"
 
 @interface HTMineViewController ()<HTMineHeaderViewDelegate>
 {
@@ -77,17 +78,22 @@
 - (void)updateUI
 {
     //用户未登录时候
-    if (![[HTUserInfoManager shareInfoManager] sessionKey]) {
+    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
         headView.loginButton.hidden = NO;
         headView.loginAlertLabel.hidden = NO;
         headView.userNameLabel.hidden = YES;
         headView.avatarImage.hidden = YES;
+        headView.arrowImage.hidden = YES;
+        headView.canClick = NO;
     }
     else {
         headView.loginButton.hidden = YES;
         headView.loginAlertLabel.hidden = YES;
         headView.userNameLabel.hidden = NO;
         headView.avatarImage.hidden = NO;
+        headView.arrowImage.hidden = NO;
+        headView.canClick = YES;
+        
         GetUserInfo *info = [[HTUserInfoManager shareInfoManager] userInfo];
         
         headView.userNameLabel.text = info.nickname;
@@ -105,6 +111,13 @@
     [self.navigationController presentViewController:nav animated:YES completion:^{
         
     }];
+}
+
+- (void)clickAvatar
+{
+    HTUserInfoController *useInfo = [[HTUserInfoController alloc] init];
+    useInfo.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:useInfo animated:YES];
 }
 
 #pragma mark - UITableView DataSource

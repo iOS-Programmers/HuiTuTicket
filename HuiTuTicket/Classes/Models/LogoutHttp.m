@@ -17,6 +17,7 @@
         self.parameter = [[LogoutPara alloc] init];
         self.resultModel = [[Logout alloc] init];
         self.apiFuncName = @"user.logout";
+        self.api_url = kURL_Member_Pre;
     }
     return self;
 }

@@ -48,7 +48,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
@@ -61,32 +61,32 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "430220031.887345"
+                  timestampString = "430245865.47852"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "124"
                   endingLineNumber = "124"
-                  offsetFromSymbolStart = "948">
+                  offsetFromSymbolStart = "781">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke88"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "430220031.887511"
+                  timestampString = "430245865.479577"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "124"
                   endingLineNumber = "124"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -94,7 +94,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
@@ -287,12 +287,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430220031.890453"
+                  timestampString = "430246132.686909"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
                   endingLineNumber = "205"
-                  offsetFromSymbolStart = "364">
+                  offsetFromSymbolStart = "309">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -301,12 +301,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke139"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430220031.890597"
+                  timestampString = "430246132.687099"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
                   endingLineNumber = "205"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -314,7 +314,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
@@ -334,11 +334,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Mine/HTMineViewController.m"
-            timestampString = "430158044.097696"
+            timestampString = "430244423.999194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-updateUI"
             landmarkType = "5">
          </BreakpointContent>
@@ -420,6 +420,38 @@
             startingLineNumber = "123"
             endingLineNumber = "123"
             landmarkName = "-onVerifyAndBindBtnClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Mine/HTMineViewController.m"
+            timestampString = "430244482.796689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-clickAvatar"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Views/HTMineHeaderView.m"
+            timestampString = "430244487.93851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-onAvatarClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

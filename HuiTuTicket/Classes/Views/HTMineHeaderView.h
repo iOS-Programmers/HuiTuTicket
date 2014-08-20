@@ -16,6 +16,11 @@
  */
 - (void)onLogin;
 
+/**
+ *  点击头像区域
+ */
+- (void)clickAvatar;
+
 @end
 
 @interface HTMineHeaderView : UIView
@@ -25,10 +30,13 @@
 @property (weak, nonatomic) id<HTMineHeaderViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (weak, nonatomic) IBOutlet UIImageView *arrowImage;
 
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UILabel *loginAlertLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+
+@property (nonatomic) BOOL canClick;
 
 - (IBAction)onLoginBtnClick:(id)sender;
 
