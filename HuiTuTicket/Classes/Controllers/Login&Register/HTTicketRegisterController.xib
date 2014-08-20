@@ -74,8 +74,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NV4-eu-vUt">
                     <rect key="frame" x="77" y="363" width="166" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.44431734109999999" blue="0.24225105890000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="注    册">
+                    <state key="normal" title="注    册" backgroundImage="pub_OrangBtn.png">
                         <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -140,21 +139,21 @@
                     </connections>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UtK-DN-G8h">
-                    <rect key="frame" x="132" y="131" width="16" height="20"/>
+                    <rect key="frame" x="136" y="131" width="16" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjM-by-D42">
-                    <rect key="frame" x="205" y="131" width="16" height="20"/>
+                    <rect key="frame" x="213" y="131" width="16" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nnK-LW-4FG">
-                    <rect key="frame" x="102" y="130" width="22" height="22"/>
+                    <rect key="frame" x="102" y="126" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="pub_btnPoint.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,21 +164,25 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lG4-iR-eLk">
-                    <rect key="frame" x="175" y="130" width="22" height="22"/>
+                    <rect key="frame" x="175" y="126" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="pub_btnPoint.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" image="pub_btnPoint_selected.png"/>
                     <connections>
                         <action selector="onSexButtonClick:" destination="-1" eventType="touchUpInside" id="GjI-0H-XgD"/>
                     </connections>
                 </button>
                 <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="abu-BX-1To">
-                    <rect key="frame" x="103" y="175" width="165" height="25"/>
+                    <rect key="frame" x="104" y="175" width="165" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="pub_select_type.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onSelectTypeBtnClick:" destination="-1" eventType="touchUpInside" id="Zcy-Ss-1er"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -189,6 +192,7 @@
     </objects>
     <resources>
         <image name="home001.png" width="24" height="25"/>
+        <image name="pub_OrangBtn.png" width="200" height="35"/>
         <image name="pub_btnPoint.png" width="11" height="11"/>
         <image name="pub_btnPoint_selected.png" width="11" height="11"/>
         <image name="pub_select_type.png" width="165" height="25"/>

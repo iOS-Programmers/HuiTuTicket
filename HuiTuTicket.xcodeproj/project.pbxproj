@@ -292,6 +292,9 @@
 		C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */; };
 		C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */; };
 		C6D124EB1981036B00FF4D83 /* pub_ziseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */; };
+		C6D47AA719A4534200C47126 /* TicketUserVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AA619A4534200C47126 /* TicketUserVerify.m */; };
+		C6D47AAA19A4535600C47126 /* TicketUserVerifyPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AA919A4535600C47126 /* TicketUserVerifyPara.m */; };
+		C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D47AAC19A4536900C47126 /* TicketUserVerifyHttp.m */; };
 		C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67219A06E0700867719 /* TicketOrderList.m */; };
 		C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */; };
 		C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */; };
@@ -801,6 +804,12 @@
 		C6D124E61981036B00FF4D83 /* pub_greenBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_greenBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E71981036B00FF4D83 /* pub_OrangBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_OrangBtn@2x.png"; sourceTree = "<group>"; };
 		C6D124E81981036B00FF4D83 /* pub_ziseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_ziseBtn@2x.png"; sourceTree = "<group>"; };
+		C6D47AA519A4534200C47126 /* TicketUserVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketUserVerify.h; sourceTree = "<group>"; };
+		C6D47AA619A4534200C47126 /* TicketUserVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketUserVerify.m; sourceTree = "<group>"; };
+		C6D47AA819A4535600C47126 /* TicketUserVerifyPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketUserVerifyPara.h; sourceTree = "<group>"; };
+		C6D47AA919A4535600C47126 /* TicketUserVerifyPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketUserVerifyPara.m; sourceTree = "<group>"; };
+		C6D47AAB19A4536900C47126 /* TicketUserVerifyHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketUserVerifyHttp.h; sourceTree = "<group>"; };
+		C6D47AAC19A4536900C47126 /* TicketUserVerifyHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketUserVerifyHttp.m; sourceTree = "<group>"; };
 		C6D9F67119A06E0700867719 /* TicketOrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderList.h; sourceTree = "<group>"; };
 		C6D9F67219A06E0700867719 /* TicketOrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketOrderList.m; sourceTree = "<group>"; };
 		C6D9F67419A06E1B00867719 /* TicketOrderListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketOrderListPara.h; sourceTree = "<group>"; };
@@ -1085,6 +1094,7 @@
 		C60F6FF1197630D700AFC182 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6D47AA419A4531B00C47126 /* TicketRegister */,
 				C6912B741990AAE400584586 /* Message */,
 				C6912B581990A43700584586 /* Mine */,
 				C59CB0AC198FB0510094DC9F /* Home */,
@@ -1877,6 +1887,19 @@
 			name = CustomTextField;
 			sourceTree = "<group>";
 		};
+		C6D47AA419A4531B00C47126 /* TicketRegister */ = {
+			isa = PBXGroup;
+			children = (
+				C6D47AA519A4534200C47126 /* TicketUserVerify.h */,
+				C6D47AA619A4534200C47126 /* TicketUserVerify.m */,
+				C6D47AA819A4535600C47126 /* TicketUserVerifyPara.h */,
+				C6D47AA919A4535600C47126 /* TicketUserVerifyPara.m */,
+				C6D47AAB19A4536900C47126 /* TicketUserVerifyHttp.h */,
+				C6D47AAC19A4536900C47126 /* TicketUserVerifyHttp.m */,
+			);
+			name = TicketRegister;
+			sourceTree = "<group>";
+		};
 		C6EC123E19A22A7400DFB74C /* HTBaseWebViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2125,6 +2148,7 @@
 				076E011919928BDB00FC63D1 /* TicketOrderQuery.m in Sources */,
 				C6BADF8D1976921700543D39 /* HTHomeViewController.m in Sources */,
 				C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */,
+				C6D47AA719A4534200C47126 /* TicketUserVerify.m in Sources */,
 				C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */,
 				C6ADAC18198E167C00AB983B /* ASICloudFilesRequest.m in Sources */,
 				C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */,
@@ -2156,6 +2180,7 @@
 				C6ED76FE19913A340075D6C4 /* TicketDetailPara.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */,
+				C6D47AAA19A4535600C47126 /* TicketUserVerifyPara.m in Sources */,
 				C6912B7A1990AE4400584586 /* MessageNoticePara.m in Sources */,
 				C6ADAC1B198E167C00AB983B /* ASIS3BucketRequest.m in Sources */,
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
@@ -2262,6 +2287,7 @@
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
+				C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */,
 				C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,

@@ -181,7 +181,8 @@
         LXLog(@"\nGet responseString:\n%@\n",responseString);
         self.dataDic = [responseString objectFromJSONString];
         self.erorCode = [[_dataDic objectForKey:@"errcode"] intValue];
-        if (self.erorCode == 0)
+        self.status = [[_dataDic objectForKey:@"status"] intValue];
+        if (self.status == 0)
         {
             self.isValid = YES;
             LXLog(@"RequestSuccess\npath=%@\nGet responseString:%@\n",self.path,self.dataDic);
