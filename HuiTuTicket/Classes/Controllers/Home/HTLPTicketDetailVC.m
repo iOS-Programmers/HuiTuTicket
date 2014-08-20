@@ -8,8 +8,10 @@
 
 #import "HTLPTicketDetailVC.h"
 #import "HTLPTicketDetailCell.h"
-#import "HTOrderTableViewCell.h"
 #import "TicketDetailHttp.h"
+#import "TicketScenicSpotListHttp.h"
+#import "TicketScenicSpot.h"
+#import "HTLPSceneTableViewCell.h"
 
 #define ARRAY1  @[@"产品名称",@"注册截止",@"有效期",@"使用截止",@"景区数量",@"合作单位"]
 
@@ -23,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *sceneBtn;
 @property (strong, nonatomic) TicketDetailHttp *detailHttp;
 @property (strong, nonatomic) UIImageView *iv;
+@property (strong, nonatomic) TicketScenicSpotListHttp *ticketScenicSpotListHttp;
+
 
 - (IBAction)switchDetailAction:(id)sender;
 - (IBAction)switchsceneAction:(id)sender;
@@ -36,6 +40,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _detailHttp = [[TicketDetailHttp alloc] init];
+        _ticketScenicSpotListHttp = [[TicketScenicSpotListHttp alloc] init];
     }
     return self;
 }
@@ -47,7 +52,9 @@
     self.switchView.clipsToBounds = YES;
     self.switchView.layer.borderColor = [kSwitchBorderColor CGColor];
     self.switchView.layer.borderWidth = 1;
-
+    self.filterTableHead.layer.borderWidth = 1;
+    self.filterTableHead.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     self.detailBtn.selected = YES;
     [self.detailBtn setBackgroundColor:kSwitchBorderColor];
     
@@ -55,6 +62,7 @@
     self.iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 124)];
     self.tableView.tableHeaderView = _iv;
     [self requestDetailData];
+    [self requestSceneListData];
 }
 
 - (void)requestDetailData
@@ -85,13 +93,43 @@
     
 }
 
+- (void)requestSceneListData
+{
+    [self showLoadingWithText:kLOADING_TEXT];
+    __weak HTLPTicketDetailVC *weak_self = self;
+    
+    self.ticketScenicSpotListHttp.parameter.typeid = self.ticket.typeId;
+    
+    [self.ticketScenicSpotListHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.ticketScenicSpotListHttp.isValid) {
+            [weak_self showWithText:@"详情景区list请求成功"];
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.ticketScenicSpotListHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+    
+}
+
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (self.detailBtn.selected)
         return [ARRAY1 count];
     else
-        return 5;
+        return [self.ticketScenicSpotListHttp.resultModel.info count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,8 +147,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    
-
     if (self.detailBtn.selected)
     {
         HTLPTicketDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -153,18 +189,27 @@
     }
     else
     {
-        HTOrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        HTLPSceneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (cell == nil)
         {
-            NSArray *cellNib = [[NSBundle mainBundle] loadNibNamed:@"HTOrderTableViewCell" owner:self options:nil];
+            NSArray *cellNib = [[NSBundle mainBundle] loadNibNamed:@"HTLPSceneTableViewCell" owner:self options:nil];
             for (id oneObject in cellNib)
             {
-                if ([oneObject isKindOfClass:[HTOrderTableViewCell class]])
+                if ([oneObject isKindOfClass:[HTLPSceneTableViewCell class]])
                 {
-                    cell = (HTOrderTableViewCell *)oneObject;
+                    cell = (HTLPSceneTableViewCell *)oneObject;
                 }
             }
         }
+        TicketScenicSpot *model = [self.ticketScenicSpotListHttp.resultModel.info objectAtIndex:indexPath.row];
+        [cell.iv setImageWithURL:[NSURL URLWithString:model.picture]];
+        cell.nameLabel.text = model.scenicName;
+        cell.timeLimit.text = [model.timelimit intValue]?@"不限时":@"限时浏览";
+        cell.addressLB.text = model.address;
+        NSArray *array = [NSArray arrayWithObjects:@"A",@"AA",@"AAA",@"AAAA",@"AAAAA",nil];
+        cell.levelLB.text = [model.rank isEqualToString:@"0"]?@"":[array objectAtIndex:[model.rank intValue]-1];
+        cell.priceLB.text = model.price;
+        cell.flagLB.text = [model.ptype intValue]?@"免票":@"优惠";
         return cell;
     }
 }

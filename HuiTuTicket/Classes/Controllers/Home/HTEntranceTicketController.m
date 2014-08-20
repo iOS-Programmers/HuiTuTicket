@@ -15,6 +15,9 @@
 @property (nonatomic,retain)ScenicListHttp *scenicListHttp;
 @property (weak, nonatomic) IBOutlet UIView *sectionBar;
 
+
+@property (weak, nonatomic) IBOutlet UIView *filterView;
+
 @end
 
 @implementation HTEntranceTicketController
@@ -79,6 +82,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.filterView.layer.borderWidth = 1;
+    self.filterView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     self.tableView.rowHeight = 70;
     
     self.sectionBar.layer.borderWidth = 1;

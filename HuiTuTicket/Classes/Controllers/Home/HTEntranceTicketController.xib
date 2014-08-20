@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HTEntranceTicketController">
             <connections>
+                <outlet property="filterView" destination="QUk-4U-8dj" id="dnn-Vs-951"/>
                 <outlet property="sectionBar" destination="e3w-1z-PCX" id="WHq-Hd-0Ph"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

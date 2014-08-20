@@ -63,6 +63,8 @@
 		C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */; };
 		C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B7198FB3510094DC9F /* LXResultModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0BA198FBA4C0094DC9F /* Scenic.m */; };
+		C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */; };
+		C5A509CE19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */; };
 		C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */; };
 		C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */; };
 		C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAF1981019B0041DC2A /* HTOrderTableViewCell.m */; };
@@ -430,6 +432,9 @@
 		C59CB0B7198FB3510094DC9F /* LXResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXResultModel.m; sourceTree = "<group>"; };
 		C59CB0B9198FBA4C0094DC9F /* Scenic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenic.h; sourceTree = "<group>"; };
 		C59CB0BA198FBA4C0094DC9F /* Scenic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenic.m; sourceTree = "<group>"; };
+		C5A509CA19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPSceneTableViewCell.h; sourceTree = "<group>"; };
+		C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPSceneTableViewCell.m; sourceTree = "<group>"; };
+		C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPSceneTableViewCell.xib; sourceTree = "<group>"; };
 		C5A6EBA9198101300041DC2A /* HTCYOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCYOrderViewController.h; sourceTree = "<group>"; };
 		C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCYOrderViewController.m; sourceTree = "<group>"; };
 		C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTCYOrderViewController.xib; sourceTree = "<group>"; };
@@ -1213,6 +1218,9 @@
 				07BFC6E319A3B2E300507498 /* HTLPTicketDetailCell.h */,
 				07BFC6E419A3B2E300507498 /* HTLPTicketDetailCell.m */,
 				07BFC6E519A3B2E300507498 /* HTLPTicketDetailCell.xib */,
+				C5A509CA19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.h */,
+				C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */,
+				C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */,
 			);
 			name = LPTickent;
 			sourceTree = "<group>";
@@ -2055,6 +2063,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D12484197E37E500FF4D83 /* more_setting@2x.png in Resources */,
+				C5A509CE19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib in Resources */,
 				C5A6EBB21981019B0041DC2A /* HTOrderTableViewCell.xib in Resources */,
 				7EAAAFC919922B53003676F3 /* s_n_detail_star@2x.png in Resources */,
 				7EC384B41994C45000FB0C6D /* HTOrderResultViewController.xib in Resources */,
@@ -2260,6 +2269,7 @@
 				076E00FE1992862B00FC63D1 /* ScenicTicketPara.m in Sources */,
 				C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
+				C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */,
 				C6ADABC8198E167200AB983B /* UIImage+GIF.m in Sources */,
 				C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */,
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
