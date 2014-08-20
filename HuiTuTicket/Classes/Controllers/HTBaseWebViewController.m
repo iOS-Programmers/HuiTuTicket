@@ -40,14 +40,16 @@
 
 - (UIWebView *)webView
 {
-    if (_webView) {
+    if (!_webView) {
         
         CGRect webViewFrame = [[UIScreen mainScreen] applicationFrame];
         webViewFrame.origin.y = 0;
         webViewFrame.size.height -= CGRectGetHeight(self.navigationController.navigationBar.bounds);
                                     
         _webView = [[UIWebView alloc] initWithFrame:webViewFrame];
-                                    
+        [_webView sizeToFit];
+        
+        _webView.scalesPageToFit = YES;
     }
                                     
     return _webView;
