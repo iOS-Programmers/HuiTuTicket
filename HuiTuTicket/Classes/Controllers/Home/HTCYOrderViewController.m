@@ -44,12 +44,36 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+//- (void)loadDataSource
+//{
+//    self.scenicListHttp.parameter.page = @"1";
+//    self.scenicListHttp.parameter.pagesize = @"10";
+//    [self showLoadingWithText:kLOADING_TEXT];
+//    __block HTHomeViewController *weak_self = self;
+//    [self.scenicListHttp getDataWithCompletionBlock:^{
+//        [weak_self hideLoading];
+//        if (weak_self.scenicListHttp.isValid) {
+//            weak_self.dataSource = weak_self.scenicListHttp.resultModel.info;
+//            [weak_self.tableView reloadData];
+//        }
+//        else {
+//            //显示服务端返回的错误提示
+//            [weak_self showErrorWithText:weak_self.scenicListHttp.erorMessage];
+//        };
+//    }failedBlock:^{
+//        [weak_self hideLoading];
+//        if (![HTFoundationCommon networkDetect]) {
+//            
+//            [weak_self showErrorWithText:kNETWORK_ERROR];
+//        }
+//        else {
+//            
+//            //统统归纳为服务器出错
+//            [weak_self showErrorWithText:kSERVICE_ERROR];
+//        };
+//    }];
+//}
 
 #pragma mark  -
 #pragma mark  - TableView Delegate
