@@ -14,6 +14,8 @@
 
 #import "ScenicListHttp.h"
 #import "UIImageView+WebCache.h"
+#import "HTScenicDetailViewController.h"
+
 @interface HTHomeViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -40,30 +42,32 @@
 
 - (void)loadDataSource
 {
-//    [self showLoadingWithText:kLOADING_TEXT];
-//    __block HTHomeViewController *weak_self = self;
-//    [self.scenicListHttp getDataWithCompletionBlock:^{
-//        [weak_self hideLoading];
-//        if (weak_self.scenicListHttp.isValid) {
-//            weak_self.dataSource = weak_self.scenicListHttp.resultModel.info;
-//            [weak_self.tableView reloadData];
-//        }
-//        else {
-//            //显示服务端返回的错误提示
-//            [weak_self showErrorWithText:weak_self.scenicListHttp.erorMessage];
-//        };
-//    }failedBlock:^{
-//        [weak_self hideLoading];
-//        if (![HTFoundationCommon networkDetect]) {
-//            
-//            [weak_self showErrorWithText:kNETWORK_ERROR];
-//        }
-//        else {
-//            
-//            //统统归纳为服务器出错
-//            [weak_self showErrorWithText:kSERVICE_ERROR];
-//        };
-//    }];
+    self.scenicListHttp.parameter.page = @"1";
+    self.scenicListHttp.parameter.pagesize = @"10";
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTHomeViewController *weak_self = self;
+    [self.scenicListHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.scenicListHttp.isValid) {
+            weak_self.dataSource = weak_self.scenicListHttp.resultModel.info;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.scenicListHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -144,34 +148,36 @@
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self pushViewController:@"HTAppointmentViewController"];
-    
+    [atableView deselectRowAtIndexPath:indexPath animated:YES];
+    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
+    HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    app.scenicId = scenic.scenicId;
+    [self.navigationController pushViewController:app animated:YES];
 }
 
 #pragma mark -
 #pragma mark - TableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.scenicListHttp.resultModel.info count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    HTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
-    {
-        NSArray *cellNib = [[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil];
-        for (id oneObject in cellNib)
-        {
-            if ([oneObject isKindOfClass:[HTHomeTableViewCell class]])
-            {
-                cell = (HTHomeTableViewCell *)oneObject;
-            }
-        }
+    static NSString *cellIdentifier = @"Cell";
+    
+    HTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil] lastObject];
     }
-
-
+    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
+    [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
+    cell.nameLabel.text = scenic.scenicName;
+    cell.levelLabel.text = scenic.rank;
+    cell.placeLabel.text = scenic.address;
+    cell.priceLabel.text = scenic.minprice;
+    cell.oriPriceLabel.text = scenic.price;
     return cell;
 }
 
