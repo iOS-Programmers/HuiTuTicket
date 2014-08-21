@@ -223,22 +223,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HuiTuTicket/Classes/Controllers/Home/HTLPTicketListController.m"
-            timestampString = "429271791.02196"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-requestData"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Common/LXHttpModel.m"
             timestampString = "429272277.07648"
             startingColumnNumber = "9223372036854775807"
@@ -287,12 +271,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430246391.930327"
+                  timestampString = "430317148.800252"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
                   endingLineNumber = "205"
-                  offsetFromSymbolStart = "309">
+                  offsetFromSymbolStart = "325">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -301,12 +285,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke139"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "430246391.930582"
+                  timestampString = "430317148.800472"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
                   endingLineNumber = "205"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>

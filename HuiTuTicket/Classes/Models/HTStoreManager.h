@@ -33,5 +33,11 @@
  */
 - (NSMutableArray *)getOrderConfigureArray;
 
+/**
+ *  配置<关于我们>cell里的内容
+ *
+ *  @return 包含标题的数组
+ */
+- (NSMutableArray *)getAboutUsConfigureArray;
 
 @end

@@ -79,4 +79,11 @@
     return orderConfigureArray;
 }
 
+- (NSMutableArray *)getAboutUsConfigureArray
+{
+     NSMutableArray *aboutUsConfigureArray = [[NSMutableArray alloc] initWithArray:@[@"公司介绍",@"版权说明",@"关于我们"]];
+    
+    return aboutUsConfigureArray;
+}
+
 @end

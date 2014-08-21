@@ -46,6 +46,6 @@
 
 
 #define kURL_HelpCenter @"http://m.huitour.cn/help/"
-
+#define kURL_AboutUs @"http://m.huitour.cn/about/"
 
 #endif

@@ -89,6 +89,9 @@
 		C5FB47EE197E6A9C00FE5364 /* home004@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47E9197E6A9C00FE5364 /* home004@2x.png */; };
 		C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47EA197E6A9C00FE5364 /* home005@2x.png */; };
 		C604ECC71997C246004DFB59 /* HTBorderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C604ECC61997C246004DFB59 /* HTBorderButton.m */; };
+		C6053CFB19A61B0D0085C0A8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C6053CF919A61B0D0085C0A8 /* logo.png */; };
+		C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6053CFA19A61B0D0085C0A8 /* logo@2x.png */; };
+		C6053CFF19A61CFE0085C0A8 /* HTAboutUSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6053CFE19A61CFE0085C0A8 /* HTAboutUSWebViewController.m */; };
 		C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
 		C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */; };
 		C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
@@ -468,6 +471,10 @@
 		C5FB47EA197E6A9C00FE5364 /* home005@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home005@2x.png"; sourceTree = "<group>"; };
 		C604ECC51997C246004DFB59 /* HTBorderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBorderButton.h; sourceTree = "<group>"; };
 		C604ECC61997C246004DFB59 /* HTBorderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBorderButton.m; sourceTree = "<group>"; };
+		C6053CF919A61B0D0085C0A8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../logo.png; sourceTree = "<group>"; };
+		C6053CFA19A61B0D0085C0A8 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "../logo@2x.png"; sourceTree = "<group>"; };
+		C6053CFD19A61CFE0085C0A8 /* HTAboutUSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAboutUSWebViewController.h; sourceTree = "<group>"; };
+		C6053CFE19A61CFE0085C0A8 /* HTAboutUSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAboutUSWebViewController.m; sourceTree = "<group>"; };
 		C6058EB41987ECA200D61484 /* HTHttpMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTHttpMacro.h; sourceTree = "<group>"; };
 		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1692,6 +1699,8 @@
 				C6B442F91978EBB500731866 /* HTMoreAboutUsController.h */,
 				C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */,
 				C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */,
+				C6053CFD19A61CFE0085C0A8 /* HTAboutUSWebViewController.h */,
+				C6053CFE19A61CFE0085C0A8 /* HTAboutUSWebViewController.m */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -1841,6 +1850,8 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C6053CF919A61B0D0085C0A8 /* logo.png */,
+				C6053CFA19A61B0D0085C0A8 /* logo@2x.png */,
 				C67D30AA19A4FE6000D5A46C /* pub_arrow@2x.png */,
 				C64517CE1993699100DDD2D7 /* pub_line.png */,
 				C682AC5819A3BB1F00DF08D8 /* pub_select_type@2x.png */,
@@ -2090,6 +2101,7 @@
 				C67D30B019A5003C00D5A46C /* HTUserInfoController.xib in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */,
+				C6053CFB19A61B0D0085C0A8 /* logo.png in Resources */,
 				C691FDDD1997774D00B3AD53 /* mine_header_bg@2x.png in Resources */,
 				C6D1247F197E37E500FF4D83 /* more_aboutus@2x.png in Resources */,
 				C6A373F6198627890016A204 /* bg_bg@2x.png in Resources */,
@@ -2141,6 +2153,7 @@
 				C6B09E931982683F00576A5F /* zbar-back.png in Resources */,
 				C6B09E941982683F00576A5F /* zbar-help.html in Resources */,
 				C5A6EBC819822BF80041DC2A /* HTCustomMapCell.xib in Resources */,
+				C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */,
 				C5FB47E5197E6A7D00FE5364 /* HTHomeTableViewCell.xib in Resources */,
 				7EAAAFCB19922B53003676F3 /* s_n_detail_address_time@2x.png in Resources */,
 				C6A373F4198627700016A204 /* icon_arrow@2x.png in Resources */,
@@ -2274,6 +2287,7 @@
 				C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */,
 				C6ADABC1198E167200AB983B /* SDWebImageCompat.m in Sources */,
 				C6912B511990866000584586 /* Logout.m in Sources */,
+				C6053CFF19A61CFE0085C0A8 /* HTAboutUSWebViewController.m in Sources */,
 				07BFC6E119A3A68A00507498 /* HTLPTicketDetailVC.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
