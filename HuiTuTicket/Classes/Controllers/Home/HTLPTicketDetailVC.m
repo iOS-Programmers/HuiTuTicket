@@ -73,7 +73,7 @@
     [self.detailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.detailHttp.isValid) {
-            [weak_self showWithText:@"联票详情请求成功"];
+
             [weak_self.tableView reloadData];
         }
         else {

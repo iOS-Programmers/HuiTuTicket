@@ -95,7 +95,6 @@
         [weak_self hideLoading];
         
         if (weak_self.detailHttp.isValid) {
-            [weak_self showWithText:@"联票详情请求成功"];
 
             [weak_self reloadTableviewData:weak_self.detailHttp.resultModel];
 

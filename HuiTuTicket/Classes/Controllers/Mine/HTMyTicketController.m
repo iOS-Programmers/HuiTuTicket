@@ -54,7 +54,7 @@
         [weak_self hideLoading];
         
         if (weak_self.myticketHttp.isValid) {
-            [weak_self showWithText:@"获取我的联票列表成功"];
+
             weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
             
             [weak_self.tableView reloadData];
