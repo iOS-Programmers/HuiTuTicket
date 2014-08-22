@@ -147,6 +147,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *viewController;
 
+    //用户未登录 弹出登录页面
+    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+        
+        [self onLogin];
+        return;
+    }
+    
+    
     NSInteger section = indexPath.section;
     switch (section) {
        case 0: {

@@ -244,6 +244,16 @@
 		C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941AD1977C2AE00208F20 /* HTMessageCell.m */; };
 		C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */; };
 		C6B941B21977C35500208F20 /* message_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B941B11977C35500208F20 /* message_avatar.png */; };
+		C6BA258219A6EB7000B03AD1 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257219A6EB7000B03AD1 /* bitstream.c */; };
+		C6BA258319A6EB7000B03AD1 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257419A6EB7000B03AD1 /* mask.c */; };
+		C6BA258419A6EB7000B03AD1 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257719A6EB7000B03AD1 /* QRCodeGenerator.m */; };
+		C6BA258519A6EB7000B03AD1 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257819A6EB7000B03AD1 /* qrencode.c */; };
+		C6BA258619A6EB7000B03AD1 /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257A19A6EB7000B03AD1 /* qrinput.c */; };
+		C6BA258719A6EB7000B03AD1 /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257C19A6EB7000B03AD1 /* qrspec.c */; };
+		C6BA258819A6EB7000B03AD1 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA257E19A6EB7000B03AD1 /* rscode.c */; };
+		C6BA258919A6EB7000B03AD1 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = C6BA258019A6EB7000B03AD1 /* split.c */; };
+		C6BA258D19A6F81500B03AD1 /* HTYuYueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BA258B19A6F81500B03AD1 /* HTYuYueViewController.m */; };
+		C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BA258C19A6F81500B03AD1 /* HTYuYueViewController.xib */; };
 		C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5719764A1E00543D39 /* HTBaseViewController.m */; };
 		C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5B197680E100543D39 /* HTBaseNavigationController.m */; };
 		C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BADF5F1976815900543D39 /* HTBaseTableViewController.m */; };
@@ -762,6 +772,25 @@
 		C6B941B11977C35500208F20 /* message_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_avatar.png; sourceTree = "<group>"; };
 		C6B941B31977D20D00208F20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C6B941B41977D20D00208F20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C6BA257219A6EB7000B03AD1 /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		C6BA257319A6EB7000B03AD1 /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		C6BA257419A6EB7000B03AD1 /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		C6BA257519A6EB7000B03AD1 /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		C6BA257619A6EB7000B03AD1 /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		C6BA257719A6EB7000B03AD1 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		C6BA257819A6EB7000B03AD1 /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		C6BA257919A6EB7000B03AD1 /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		C6BA257A19A6EB7000B03AD1 /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		C6BA257B19A6EB7000B03AD1 /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		C6BA257C19A6EB7000B03AD1 /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		C6BA257D19A6EB7000B03AD1 /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		C6BA257E19A6EB7000B03AD1 /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		C6BA257F19A6EB7000B03AD1 /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		C6BA258019A6EB7000B03AD1 /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		C6BA258119A6EB7000B03AD1 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		C6BA258A19A6F81500B03AD1 /* HTYuYueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTYuYueViewController.h; sourceTree = "<group>"; };
+		C6BA258B19A6F81500B03AD1 /* HTYuYueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTYuYueViewController.m; sourceTree = "<group>"; };
+		C6BA258C19A6F81500B03AD1 /* HTYuYueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTYuYueViewController.xib; sourceTree = "<group>"; };
 		C6BADF5619764A1E00543D39 /* HTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseViewController.h; sourceTree = "<group>"; };
 		C6BADF5719764A1E00543D39 /* HTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseViewController.m; sourceTree = "<group>"; };
 		C6BADF5A197680E100543D39 /* HTBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseNavigationController.h; sourceTree = "<group>"; };
@@ -939,6 +968,9 @@
 		07A9D9E519A65C2B00D2B520 /* YuYue */ = {
 			isa = PBXGroup;
 			children = (
+				C6BA258A19A6F81500B03AD1 /* HTYuYueViewController.h */,
+				C6BA258B19A6F81500B03AD1 /* HTYuYueViewController.m */,
+				C6BA258C19A6F81500B03AD1 /* HTYuYueViewController.xib */,
 				C5A6EBA9198101300041DC2A /* HTCYOrderViewController.h */,
 				C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */,
 				C5A6EBAB198101300041DC2A /* HTCYOrderViewController.xib */,
@@ -1649,6 +1681,29 @@
 			name = Messages;
 			sourceTree = "<group>";
 		};
+		C6BA257119A6EB7000B03AD1 /* libqrencode */ = {
+			isa = PBXGroup;
+			children = (
+				C6BA257219A6EB7000B03AD1 /* bitstream.c */,
+				C6BA257319A6EB7000B03AD1 /* bitstream.h */,
+				C6BA257419A6EB7000B03AD1 /* mask.c */,
+				C6BA257519A6EB7000B03AD1 /* mask.h */,
+				C6BA257619A6EB7000B03AD1 /* QRCodeGenerator.h */,
+				C6BA257719A6EB7000B03AD1 /* QRCodeGenerator.m */,
+				C6BA257819A6EB7000B03AD1 /* qrencode.c */,
+				C6BA257919A6EB7000B03AD1 /* qrencode.h */,
+				C6BA257A19A6EB7000B03AD1 /* qrinput.c */,
+				C6BA257B19A6EB7000B03AD1 /* qrinput.h */,
+				C6BA257C19A6EB7000B03AD1 /* qrspec.c */,
+				C6BA257D19A6EB7000B03AD1 /* qrspec.h */,
+				C6BA257E19A6EB7000B03AD1 /* rscode.c */,
+				C6BA257F19A6EB7000B03AD1 /* rscode.h */,
+				C6BA258019A6EB7000B03AD1 /* split.c */,
+				C6BA258119A6EB7000B03AD1 /* split.h */,
+			);
+			path = libqrencode;
+			sourceTree = "<group>";
+		};
 		C6BADF511976490C00543D39 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -1682,6 +1737,7 @@
 		C6BADF541976493200543D39 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C6BA257119A6EB7000B03AD1 /* libqrencode */,
 				C6ADAC2C198E1BC200AB983B /* JSONKit 2.0 */,
 				C6ADABCC198E167C00AB983B /* ASIHttpRequest 1.8.1 */,
 				C6ADABA0198E167200AB983B /* SDWebImage 3.5 */,
@@ -2169,6 +2225,7 @@
 				C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
+				C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
 				C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */,
 				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
@@ -2248,6 +2305,7 @@
 				C6ADAC20198E167C00AB983B /* Reachability.m in Sources */,
 				C6D9F67619A06E1B00867719 /* TicketOrderListPara.m in Sources */,
 				C6ADAC2A198E190500AB983B /* LXHttpModel.m in Sources */,
+				C6BA258919A6EB7000B03AD1 /* split.c in Sources */,
 				C6ADAC0B198E167C00AB983B /* ASIDataDecompressor.m in Sources */,
 				C6BADF83197691C400543D39 /* HTMessageViewController.m in Sources */,
 				076E011919928BDB00FC63D1 /* TicketOrderQuery.m in Sources */,
@@ -2263,6 +2321,7 @@
 				C6EC124D19A2331000DFB74C /* Feedback.m in Sources */,
 				C6912B891990B4BF00584586 /* MessageListHttp.m in Sources */,
 				C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */,
+				C6BA258719A6EB7000B03AD1 /* qrspec.c in Sources */,
 				A9A7D3EE198E1A0D00044460 /* HTAppointmentViewController.m in Sources */,
 				C6D124C1197F691C00FF4D83 /* HTLoginController.m in Sources */,
 				C6ADAC10198E167C00AB983B /* ASINetworkQueue.m in Sources */,
@@ -2304,8 +2363,10 @@
 				7EC384B31994C45000FB0C6D /* HTOrderResultViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
+				C6BA258319A6EB7000B03AD1 /* mask.c in Sources */,
 				076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */,
 				7EAAAFD3199231E2003676F3 /* HTScenicDetailViewCell.m in Sources */,
+				C6BA258419A6EB7000B03AD1 /* QRCodeGenerator.m in Sources */,
 				C64517DC1993A36100DDD2D7 /* LPTicket.m in Sources */,
 				C6ADAC0D198E167C00AB983B /* ASIFormDataRequest.m in Sources */,
 				C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */,
@@ -2334,6 +2395,7 @@
 				C6912B42199079A800584586 /* SendCodePara.m in Sources */,
 				C6ADAC1C198E167C00AB983B /* ASIS3ObjectRequest.m in Sources */,
 				076E010D19928AD200FC63D1 /* TicketOrderSubmitHttp.m in Sources */,
+				C6BA258619A6EB7000B03AD1 /* qrinput.c in Sources */,
 				076E011019928B4800FC63D1 /* TicketOrderSubmit.m in Sources */,
 				076E011319928B5700FC63D1 /* TicketOrderSubmitPara.m in Sources */,
 				C6912B5B1990A4D600584586 /* TicketBind.m in Sources */,
@@ -2345,6 +2407,7 @@
 				C6ADABC4198E167200AB983B /* SDWebImageDownloaderOperation.m in Sources */,
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6912B6A1990A77000584586 /* MyTicket.m in Sources */,
+				C6BA258519A6EB7000B03AD1 /* qrencode.c in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
@@ -2352,8 +2415,10 @@
 				C6ADAC0C198E167C00AB983B /* ASIDownloadCache.m in Sources */,
 				C6912B701990A98D00584586 /* TicketUnbindPara.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
+				C6BA258819A6EB7000B03AD1 /* rscode.c in Sources */,
 				C6ADABCB198E167200AB983B /* UIImageView+WebCache.m in Sources */,
 				C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */,
+				C6BA258219A6EB7000B03AD1 /* bitstream.c in Sources */,
 				C6D47AC119A4CB5500C47126 /* PlacehoderTextView.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
@@ -2377,6 +2442,7 @@
 				C620A827198F766D00AD3791 /* Register.m in Sources */,
 				C682AC5C19A3BDBF00DF08D8 /* UIView+Utils.m in Sources */,
 				076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */,
+				C6BA258D19A6F81500B03AD1 /* HTYuYueViewController.m in Sources */,
 				076E011F19928C4800FC63D1 /* TicketOrderDetail.m in Sources */,
 				076E012E19928CBE00FC63D1 /* TicketOrderCancelHttp.m in Sources */,
 				7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */,

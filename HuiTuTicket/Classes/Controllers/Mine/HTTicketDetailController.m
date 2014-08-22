@@ -8,6 +8,10 @@
 
 #import "HTTicketDetailController.h"
 #import "HTAppointmentViewController.h"
+
+//生成二维码
+#import "QRCodeGenerator.h"
+
 #import "HTTicketDetailCell.h"
 #import "MyTicketDetailInfoHttp.h"
 //#import "TicketDetailHttp.h"
@@ -125,6 +129,11 @@
 {
     //更新界面
     self.lpCodeLabel.text = detail.codeNumber;
+    
+    //生成二维码
+    if (!FBIsEmpty(detail.codeNumber)) {
+        self.lpCodeImage.image = [QRCodeGenerator qrImageForString:detail.codeNumber imageSize:self.lpCodeImage.bounds.size.width];
+    }
     
     
     LXLog(@"\n\n\n\n\n\\n\n\n\n\\n\n\n    %@",detail);

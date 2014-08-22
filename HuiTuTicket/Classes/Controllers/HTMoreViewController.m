@@ -9,13 +9,14 @@
 #import "HTMoreViewController.h"
 #import "HTStoreManager.h"
 
-//#import "ZBarSDK.h"
+#import "ZBarSDK.h"
+
 #import "HTMoreAboutUsController.h"
 #import "HTMoreFeedBackController.h"
 #import "HTMoreHelpController.h"
 
 
-@interface HTMoreViewController ()
+@interface HTMoreViewController ()<ZBarReaderDelegate>
 
 @end
 
@@ -88,20 +89,17 @@
             switch (row) {
                 case 0: {
                     //扫一扫
-                    //            ZBarReaderViewController *reader = [ZBarReaderViewController new];
-                    //            reader.readerDelegate = self;
-                    //            reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-                    //
-                    //            ZBarImageScanner *scanner = reader.scanner;
-                    //
-                    //            [scanner setSymbology: ZBAR_I25
-                    //                           config: ZBAR_CFG_ENABLE
-                    //                               to: 0];
-                    //            
-                    //            [self presentViewController:reader animated:YES completion:^{
-                    //                
-                    //            }];
+                    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+                    reader.readerDelegate = self;
+                    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
                     
+                    ZBarImageScanner *scanner = reader.scanner;
+                    
+                    [scanner setSymbology: ZBAR_I25
+                                   config: ZBAR_CFG_ENABLE
+                                       to: 0];
+                    reader.hidesBottomBarWhenPushed = YES;
+                    viewController = reader;
                 }
                     break;
                     
@@ -137,6 +135,8 @@
             switch (row) {
                 case 0: {
                     //检查更新
+                    
+                    [self showWithText:@"当前是最新版本！"];
                 }
                     break;
                 case 1: {
@@ -160,6 +160,69 @@
         [self pushNewViewController:viewController];
     }
    
+}
+
+#pragma mark - ZBar Delegate
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    
+//    label.text =  symbol.data ;
+    LXLog(@"--------------------  %@",symbol.data);
+    
+//    if ([predicate evaluateWithObject:label.text]) {
+//        
+//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil
+//                                                        message:@"It will use the browser to this URL。"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"Close"
+//                                              otherButtonTitles:@"Ok", nil];
+//        alert.delegate = self;
+//        alert.tag=1;
+//        [alert show];
+//        [alert release];
+//        
+//        
+//        
+//    }
+//    else if([ssidPre evaluateWithObject:label.text]){
+//        
+//        NSArray *arr = [label.text componentsSeparatedByString:@";"];
+//        
+//        NSArray * arrInfoHead = [[arr objectAtIndex:0] componentsSeparatedByString:@":"];
+//        
+//        NSArray * arrInfoFoot = [[arr objectAtIndex:1] componentsSeparatedByString:@":"];
+//        
+//        
+//        label.text=
+//        [NSString stringWithFormat:@"ssid: %@ \n password:%@",
+//         [arrInfoHead objectAtIndex:1],[arrInfoFoot objectAtIndex:1]];
+//        
+//        
+//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:label.text
+//                                                        message:@"The password is copied to the clipboard , it will be redirected to the network settings interface"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"Close"
+//                                              otherButtonTitles:@"Ok", nil];
+//        
+//        
+//        alert.delegate = self;
+//        alert.tag=2;
+//        [alert show];
+//        [alert release];
+    
+//        UIPasteboard *pasteboard=[UIPasteboard generalPasteboard];
+        //        然后，可以使用如下代码来把一个字符串放置到剪贴板上：
+//        pasteboard.string = [arrInfoFoot objectAtIndex:1];
+    
+        
+//    }
 }
 
 
