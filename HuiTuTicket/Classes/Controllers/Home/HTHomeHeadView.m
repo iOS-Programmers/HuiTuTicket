@@ -10,8 +10,7 @@
 #import "HTEntranceTicketController.h"
 #import "HTLPTicketListController.h"
 #import "HTTicketRegisterController.h"
-#import "HTCYOrderViewController.h"
-
+#import "HTYuYueViewController.h"
 @implementation HTHomeHeadView
 
 - (id)initWithFrame:(CGRect)frame
@@ -69,6 +68,7 @@
             break;
         case 102:
         {
+            //联票注册
             HTTicketRegisterController *vc = [[HTTicketRegisterController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [[self viewController].navigationController pushViewController:vc animated:YES];
@@ -76,7 +76,8 @@
             break;
         case 103:
         {
-            HTCYOrderViewController *vc = [[HTCYOrderViewController alloc] initWithNibName:@"HTCYOrderViewController" bundle:nil];
+            //出游预约
+            HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
             vc.hidesBottomBarWhenPushed = YES;
             [[self viewController].navigationController pushViewController:vc animated:YES];
 

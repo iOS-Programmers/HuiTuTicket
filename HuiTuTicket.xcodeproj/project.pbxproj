@@ -986,6 +986,11 @@
 				C5A6EBC919822C0D0041DC2A /* HTCustomDateCell.h */,
 				C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */,
 				C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */,
+				A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */,
+				A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */,
+				A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */,
+				A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */,
+				A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */,
 			);
 			name = YuYue;
 			sourceTree = "<group>";
@@ -1840,11 +1845,6 @@
 				C5FB47DF197E6A7D00FE5364 /* HTHomeTableViewCell.h */,
 				C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */,
 				C5FB47E1197E6A7D00FE5364 /* HTHomeTableViewCell.xib */,
-				A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */,
-				A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */,
-				A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */,
-				A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */,
-				A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
