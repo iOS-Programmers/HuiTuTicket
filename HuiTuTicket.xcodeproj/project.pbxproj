@@ -63,6 +63,10 @@
 		C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */; };
 		C59CB0B8198FB3510094DC9F /* LXResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B7198FB3510094DC9F /* LXResultModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0BA198FBA4C0094DC9F /* Scenic.m */; };
+		C5A1393919A6E57D0054DB04 /* HomeBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1393819A6E57D0054DB04 /* HomeBanner.m */; };
+		C5A1393C19A6E5900054DB04 /* HomeBannerPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1393B19A6E5900054DB04 /* HomeBannerPara.m */; };
+		C5A1393F19A6E5A00054DB04 /* HomeBannerHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */; };
+		C5A1394219A6E5C40054DB04 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1394119A6E5C40054DB04 /* Banner.m */; };
 		C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */; };
 		C5A509CE19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */; };
 		C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */; };
@@ -435,6 +439,14 @@
 		C59CB0B7198FB3510094DC9F /* LXResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXResultModel.m; sourceTree = "<group>"; };
 		C59CB0B9198FBA4C0094DC9F /* Scenic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenic.h; sourceTree = "<group>"; };
 		C59CB0BA198FBA4C0094DC9F /* Scenic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenic.m; sourceTree = "<group>"; };
+		C5A1393719A6E57D0054DB04 /* HomeBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBanner.h; sourceTree = "<group>"; };
+		C5A1393819A6E57D0054DB04 /* HomeBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBanner.m; sourceTree = "<group>"; };
+		C5A1393A19A6E5900054DB04 /* HomeBannerPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBannerPara.h; sourceTree = "<group>"; };
+		C5A1393B19A6E5900054DB04 /* HomeBannerPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBannerPara.m; sourceTree = "<group>"; };
+		C5A1393D19A6E5A00054DB04 /* HomeBannerHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBannerHttp.h; sourceTree = "<group>"; };
+		C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBannerHttp.m; sourceTree = "<group>"; };
+		C5A1394019A6E5C40054DB04 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		C5A1394119A6E5C40054DB04 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
 		C5A509CA19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPSceneTableViewCell.h; sourceTree = "<group>"; };
 		C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPSceneTableViewCell.m; sourceTree = "<group>"; };
 		C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPSceneTableViewCell.xib; sourceTree = "<group>"; };
@@ -1011,6 +1023,14 @@
 				C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */,
 				C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */,
 				C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */,
+				C5A1393719A6E57D0054DB04 /* HomeBanner.h */,
+				C5A1393819A6E57D0054DB04 /* HomeBanner.m */,
+				C5A1393A19A6E5900054DB04 /* HomeBannerPara.h */,
+				C5A1393B19A6E5900054DB04 /* HomeBannerPara.m */,
+				C5A1393D19A6E5A00054DB04 /* HomeBannerHttp.h */,
+				C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */,
+				C5A1394019A6E5C40054DB04 /* Banner.h */,
+				C5A1394119A6E5C40054DB04 /* Banner.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2248,6 +2268,7 @@
 				C6ADAC10198E167C00AB983B /* ASINetworkQueue.m in Sources */,
 				C6ADABCA198E167200AB983B /* UIImage+WebP.m in Sources */,
 				076E012819928C9800FC63D1 /* TicketOrderCancel.m in Sources */,
+				C5A1393C19A6E5900054DB04 /* HomeBannerPara.m in Sources */,
 				C6ADAC16198E167C00AB983B /* ASICloudFilesObject.m in Sources */,
 				C6938C29198FB3B0003ADE85 /* GetUserInfoHttp.m in Sources */,
 				076E012B19928CAE00FC63D1 /* TicketOrderCancelPara.m in Sources */,
@@ -2265,6 +2286,7 @@
 				C6912B3F1990799700584586 /* SendCode.m in Sources */,
 				C6ED76FE19913A340075D6C4 /* TicketDetailPara.m in Sources */,
 				C6D47AB619A477AB00C47126 /* MyTicketDetailInfoHttp.m in Sources */,
+				C5A1393919A6E57D0054DB04 /* HomeBanner.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
 				C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */,
 				C6D47AAA19A4535600C47126 /* TicketUserVerifyPara.m in Sources */,
@@ -2277,6 +2299,7 @@
 				076E012219928C5F00FC63D1 /* TicketOrderDetailPara.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
+				C5A1393F19A6E5A00054DB04 /* HomeBannerHttp.m in Sources */,
 				076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */,
 				7EC384B31994C45000FB0C6D /* HTOrderResultViewController.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
@@ -2334,6 +2357,7 @@
 				C6D47AC119A4CB5500C47126 /* PlacehoderTextView.m in Sources */,
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
+				C5A1394219A6E5C40054DB04 /* Banner.m in Sources */,
 				C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */,
 				C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */,
 				C6ADAC1A198E167C00AB983B /* ASIS3BucketObject.m in Sources */,
