@@ -25,6 +25,13 @@ static inline BOOL FBIsEmpty(id thing)
 + (CGFloat)getAdapterHeight;
 
 /**
+ *  获取屏幕高度
+ *
+ *  @return 
+ */
++ (CGFloat)getScreenHeight;
+
+/**
  *  MD5加密 （32位小写）
  *
  *  @param str 传入的字符串

@@ -20,6 +20,15 @@
     return adapterHeight;
 }
 
++ (CGFloat)getScreenHeight {
+    CGFloat ScreenHeight = 0;
+    
+    ScreenHeight = [[UIScreen mainScreen] applicationFrame].size.height;
+    
+    return ScreenHeight;
+}
+
+
 /**
  *  MD5加密 （32位小写）
  *

@@ -10,6 +10,7 @@
 #import "HTStoreManager.h"
 
 #import "ZBarSDK.h"
+#import "HTSaoMiaoLPTicketDetailVC.h"
 
 #import "HTMoreAboutUsController.h"
 #import "HTMoreFeedBackController.h"
@@ -17,6 +18,8 @@
 
 
 @interface HTMoreViewController ()<ZBarReaderDelegate>
+
+@property (strong, nonatomic) ZBarReaderViewController *readerVC;
 
 @end
 
@@ -89,17 +92,17 @@
             switch (row) {
                 case 0: {
                     //扫一扫
-                    ZBarReaderViewController *reader = [ZBarReaderViewController new];
-                    reader.readerDelegate = self;
-                    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+                    self.readerVC = [ZBarReaderViewController new];
+                    self.readerVC.readerDelegate = self;
+                    self.readerVC.supportedOrientationsMask = ZBarOrientationMaskAll;
                     
-                    ZBarImageScanner *scanner = reader.scanner;
+                    ZBarImageScanner *scanner = self.readerVC.scanner;
                     
                     [scanner setSymbology: ZBAR_I25
                                    config: ZBAR_CFG_ENABLE
                                        to: 0];
-                    reader.hidesBottomBarWhenPushed = YES;
-                    viewController = reader;
+                    self.readerVC.hidesBottomBarWhenPushed = YES;
+                    viewController = self.readerVC;
                 }
                     break;
                     
@@ -171,58 +174,14 @@
     ZBarSymbol *symbol = nil;
     for(symbol in results)
         break;
+
     
-    
-//    label.text =  symbol.data ;
-    LXLog(@"--------------------  %@",symbol.data);
-    
-//    if ([predicate evaluateWithObject:label.text]) {
-//        
-//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil
-//                                                        message:@"It will use the browser to this URL。"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"Close"
-//                                              otherButtonTitles:@"Ok", nil];
-//        alert.delegate = self;
-//        alert.tag=1;
-//        [alert show];
-//        [alert release];
-//        
-//        
-//        
-//    }
-//    else if([ssidPre evaluateWithObject:label.text]){
-//        
-//        NSArray *arr = [label.text componentsSeparatedByString:@";"];
-//        
-//        NSArray * arrInfoHead = [[arr objectAtIndex:0] componentsSeparatedByString:@":"];
-//        
-//        NSArray * arrInfoFoot = [[arr objectAtIndex:1] componentsSeparatedByString:@":"];
-//        
-//        
-//        label.text=
-//        [NSString stringWithFormat:@"ssid: %@ \n password:%@",
-//         [arrInfoHead objectAtIndex:1],[arrInfoFoot objectAtIndex:1]];
-//        
-//        
-//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:label.text
-//                                                        message:@"The password is copied to the clipboard , it will be redirected to the network settings interface"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"Close"
-//                                              otherButtonTitles:@"Ok", nil];
-//        
-//        
-//        alert.delegate = self;
-//        alert.tag=2;
-//        [alert show];
-//        [alert release];
-    
-//        UIPasteboard *pasteboard=[UIPasteboard generalPasteboard];
-        //        然后，可以使用如下代码来把一个字符串放置到剪贴板上：
-//        pasteboard.string = [arrInfoFoot objectAtIndex:1];
-    
-        
-//    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //扫描到联票号码，进入联票详情资料页
+        HTSaoMiaoLPTicketDetailVC *saomiao = [[HTSaoMiaoLPTicketDetailVC alloc] init];
+        saomiao.ticketNumber = symbol.data;
+        [self.navigationController pushViewController:saomiao animated:NO];
+    });
 }
 
 

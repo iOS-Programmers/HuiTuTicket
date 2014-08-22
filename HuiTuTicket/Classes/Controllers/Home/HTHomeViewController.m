@@ -12,11 +12,14 @@
 #import "HTHomeTableViewCell.h"
 #import "HTHomeHeadView.h"
 
+#import "ZBarSDK.h"
+#import "HTSaoMiaoLPTicketDetailVC.h"
+
 #import "ScenicListHttp.h"
 #import "UIImageView+WebCache.h"
 #import "HTScenicDetailViewController.h"
 
-@interface HTHomeViewController ()
+@interface HTHomeViewController ()<ZBarReaderDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -110,6 +113,18 @@
 - (void)rightItemClick
 {
     //扫一扫
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    reader.title = @"扫一扫";
+    ZBarImageScanner *scanner = reader.scanner;
+    
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    reader.hidesBottomBarWhenPushed = YES;
+    
+    [self pushNewViewController:reader];
 }
 
 
@@ -187,5 +202,23 @@
     return 70;
 }
 
+#pragma mark - ZBar Delegate
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //扫描到联票号码，进入联票详情资料页
+        HTSaoMiaoLPTicketDetailVC *saomiao = [[HTSaoMiaoLPTicketDetailVC alloc] init];
+        saomiao.ticketNumber = symbol.data;
+        [self.navigationController pushViewController:saomiao animated:NO];
+    });
+}
 
 @end
