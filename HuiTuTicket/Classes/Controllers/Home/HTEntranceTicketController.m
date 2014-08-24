@@ -135,6 +135,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
     HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    app.hidesBottomBarWhenPushed = YES;
     app.scenicId = scenic.scenicId;
     [self.navigationController pushViewController:app animated:YES];
 }
