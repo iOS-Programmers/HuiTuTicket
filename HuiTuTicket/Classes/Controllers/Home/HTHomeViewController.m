@@ -18,6 +18,7 @@
 #import "ScenicListHttp.h"
 #import "UIImageView+WebCache.h"
 #import "HTScenicDetailViewController.h"
+#import "HomeBannerHttp.h"
 
 @interface HTHomeViewController ()<ZBarReaderDelegate>
 
@@ -25,6 +26,7 @@
 
 @property (strong, nonatomic) ScenicListHttp *scenicListHttp;
 
+@property (strong, nonatomic) HomeBannerHttp *homeBannerHttp;
 
 
 @end
@@ -37,11 +39,39 @@
     if (self) {
         // Custom initialization
         self.scenicListHttp = [[ScenicListHttp alloc] init];
+        self.homeBannerHttp = [[HomeBannerHttp alloc] init];
+
     }
     return self;
 }
 
 #pragma mark - DataSource
+- (void)loadBanner
+{
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTHomeViewController *weak_self = self;
+    [self.homeBannerHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.homeBannerHttp.isValid) {
+            [weak_self showSuccess];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.homeBannerHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+}
 
 - (void)loadDataSource
 {
@@ -82,6 +112,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadBanner];
     CGRect rect = self.tableView.frame;
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y + 2, rect.size.width, rect.size.height -2);
     HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];

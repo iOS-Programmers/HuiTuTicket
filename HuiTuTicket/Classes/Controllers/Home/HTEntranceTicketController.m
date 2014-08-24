@@ -86,12 +86,9 @@
     self.filterView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.tableView.rowHeight = 70;
-    
+    self.tableView.tableHeaderView = self.filterView;
     self.sectionBar.layer.borderWidth = 1;
     self.sectionBar.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    
-    CGRect rect = self.tableView.frame;
-    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+88, rect.size.width, rect.size.height - 88);
 }
 
 - (void)didReceiveMemoryWarning

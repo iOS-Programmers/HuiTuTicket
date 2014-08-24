@@ -7,7 +7,7 @@
 //
 
 #import "LXResultModel.h"
-
+#import "Banner.h"
 @interface HomeBanner : LXResultModel
 @property (strong, nonatomic) NSMutableArray *dataArray;
 

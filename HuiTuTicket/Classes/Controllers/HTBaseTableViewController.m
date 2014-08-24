@@ -44,14 +44,23 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        CGRect tableViewFrame = [UIScreen mainScreen].applicationFrame;
-        //  [UIScreen mainScreen].applicationFrame  {{0, 20}, {320, 548}}
-        tableViewFrame.origin.y = 0;
-        tableViewFrame.size.height -= (self.navigationController.viewControllers.count > 1 ?(CGRectGetHeight(self.navigationController.navigationBar.bounds)) : (CGRectGetHeight(self.tabBarController.tabBar.bounds))) + (CGRectGetHeight(self.navigationController.navigationBar.bounds));
+//        CGRect tableViewFrame = [UIScreen mainScreen].applicationFrame;
+//        //  [UIScreen mainScreen].applicationFrame  {{0, 20}, {320, 548}}
+//        tableViewFrame.origin.y = 0;
+//        tableViewFrame.size.height -= (self.navigationController.viewControllers.count > 1 ?(CGRectGetHeight(self.navigationController.navigationBar.bounds)) : (CGRectGetHeight(self.tabBarController.tabBar.bounds))) + (CGRectGetHeight(self.navigationController.navigationBar.bounds));
+//        if (self.navigationController.navigationBarHidden)
+//        {
+//            tableViewFrame.origin.y = IOS7_OR_LATER? tableViewFrame.origin.y+20:tableViewFrame.origin.y;
+//        }
+//        else
+//        {
+//            tableViewFrame.origin.y = IOS7_OR_LATER? tableViewFrame.origin.y+64:tableViewFrame.origin.y;
+//        }
 
-        _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:self.tableViewStyle];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        self.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight;
         if (![self validateSeparatorInset]) {
             if (self.tableViewStyle == UITableViewStyleGrouped) {
                 UIView *backgroundView = [[UIView alloc] initWithFrame:_tableView.bounds];

@@ -112,9 +112,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    CGRect frame = self.tableView.frame;
+//    CGRect frame = self.tableView.frame;
 //    frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.navigationController.navigationBar.bounds);
-    self.tableView.frame = frame;
+//    self.tableView.frame = frame;
+    
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight;
 }
 
 - (void)didReceiveMemoryWarning

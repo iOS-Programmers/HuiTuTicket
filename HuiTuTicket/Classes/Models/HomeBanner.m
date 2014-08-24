@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (nil != self){
-        [self.objMapDic setObject:@"Bnner" forKey:@"dataArray"];
+        [self.objMapDic setObject:@"Banner" forKey:@"dataArray"];
     }
     return self;
 }
