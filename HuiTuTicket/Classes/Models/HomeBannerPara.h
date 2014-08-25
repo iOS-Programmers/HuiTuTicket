@@ -10,4 +10,6 @@
 
 @interface HomeBannerPara : LXParameterModel
 
+@property (strong, nonatomic) NSString *pos_id;
+
 @end
