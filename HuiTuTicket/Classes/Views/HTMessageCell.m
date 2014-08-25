@@ -22,4 +22,13 @@
     // Configure the view for the selected state
 }
 
+- (void)configureUIWithData:(MessageDetail *)detail
+{
+    if (detail) {
+        self.titleLabel.text = detail.title;
+        self.detailTextLabel.text = detail.content;
+        self.timeLabel.text = detail.addtime;
+    }
+}
+
 @end

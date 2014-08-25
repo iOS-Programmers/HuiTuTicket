@@ -31,16 +31,9 @@
 
 #pragma mark - DataSource
 
-- (void)loadDataSource
-{
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"1",@"1"]];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (!self.dataSource.count)
-        [self loadDataSource];
     
     [self requestData];
 }
@@ -50,7 +43,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tableView.rowHeight = 80;
-    
 }
 
 /**
@@ -58,7 +50,13 @@
  */
 - (void)requestData
 {
-//    self.messageListHttp.parameter.uid = @"1";
+    //未登录的情况返回
+    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+
+        return;
+    }
+    self.messageListHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+    self.messageListHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTMessageViewController *weak_self = self;
@@ -66,7 +64,7 @@
         [weak_self hideLoading];
         
         if (weak_self.messageListHttp.isValid) {
-            [weak_self showWithText:@"获取消息列表成功"];
+            [weak_self updateUIWithMessageData:weak_self.messageListHttp.resultModel];
         }
         else {
             //显示服务端返回的错误提示
@@ -96,7 +94,21 @@
 }
 
 
+- (void)updateUIWithMessageData:(MessageList *)list
+{
+    //刷新界面
+    
+    self.dataSource = list.info;
+    
+}
+
+
 #pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.dataSource count];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -107,6 +119,8 @@
 
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTMessageCell" owner:self options:nil] lastObject];
     }
+    
+    [cell configureUIWithData:(MessageDetail *)self.dataSource[indexPath.row]];
     
     return cell;
 }

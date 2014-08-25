@@ -58,7 +58,7 @@
     self.detailBtn.selected = YES;
     [self.detailBtn setBackgroundColor:kSwitchBorderColor];
     
-    self.tableView.frame = CGRectMake(0, self.tableView.frame.origin.y+50, 320, self.tableView.frame.size.height-50);
+    self.tableView.frame = CGRectMake(0, self.tableView.frame.origin.y+50, 320, [HTFoundationCommon getScreenHeight] - 44 - 50);
     self.iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 124)];
     self.tableView.tableHeaderView = _iv;
     [self requestDetailData];
@@ -103,7 +103,7 @@
     [self.ticketScenicSpotListHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.ticketScenicSpotListHttp.isValid) {
-            [weak_self showWithText:@"详情景区list请求成功"];
+
             [weak_self.tableView reloadData];
         }
         else {
