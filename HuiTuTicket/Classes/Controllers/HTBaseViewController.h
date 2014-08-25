@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarReaderViewController.h"
 
 typedef void(^HTBarButtonItemActionBlock)(void);
 
@@ -37,6 +38,13 @@ typedef NS_ENUM(NSInteger, HTBarbuttonItemStyle) {
  */
 - (void)clearKeyboard;
 - (void)setControlView:(id)sender;
+
+/**
+ *  自定义二维码扫描界面
+ *
+ *  @param reader 
+ */
+- (void)setOverlayPickerView:(ZBarReaderViewController *)reader;
 
 #pragma mark - Http Request
 /*

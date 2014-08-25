@@ -26,6 +26,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    if (CURRENT_SYS_VERSION <= 7.0) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    }
+    
     //Message
     HTMessageViewController *messageViewController = [[HTMessageViewController alloc] init];
     messageViewController.title = @"消息";

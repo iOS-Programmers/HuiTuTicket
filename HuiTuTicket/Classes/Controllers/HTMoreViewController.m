@@ -95,13 +95,18 @@
                     self.readerVC = [ZBarReaderViewController new];
                     self.readerVC.readerDelegate = self;
                     self.readerVC.supportedOrientationsMask = ZBarOrientationMaskAll;
-                    
+                    self.readerVC.wantsFullScreenLayout = NO;
+                    self.readerVC.showsZBarControls = NO;
+                    [self setOverlayPickerView:self.readerVC];
                     ZBarImageScanner *scanner = self.readerVC.scanner;
                     
                     [scanner setSymbology: ZBAR_I25
                                    config: ZBAR_CFG_ENABLE
                                        to: 0];
                     self.readerVC.hidesBottomBarWhenPushed = YES;
+                    self.readerVC.showsZBarControls = NO;
+
+                    
                     viewController = self.readerVC;
                 }
                     break;
@@ -169,6 +174,7 @@
 - (void) imagePickerController: (UIImagePickerController*) reader
  didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
+    //得到扫码的结果
     id<NSFastEnumeration> results =
     [info objectForKey: ZBarReaderControllerResults];
     ZBarSymbol *symbol = nil;
@@ -183,6 +189,8 @@
         [self.navigationController pushViewController:saomiao animated:NO];
     });
 }
+
+
 
 
 @end

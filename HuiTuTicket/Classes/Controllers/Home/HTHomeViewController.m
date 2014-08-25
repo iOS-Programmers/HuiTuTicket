@@ -148,12 +148,15 @@
     reader.readerDelegate = self;
     reader.supportedOrientationsMask = ZBarOrientationMaskAll;
     reader.title = @"扫一扫";
+    [self setOverlayPickerView:reader];
     ZBarImageScanner *scanner = reader.scanner;
     
     [scanner setSymbology: ZBAR_I25
                    config: ZBAR_CFG_ENABLE
                        to: 0];
     reader.hidesBottomBarWhenPushed = YES;
+    reader.wantsFullScreenLayout = NO;
+    reader.showsZBarControls = NO;
     
     [self pushNewViewController:reader];
 }
@@ -197,6 +200,7 @@
     [atableView deselectRowAtIndexPath:indexPath animated:YES];
     Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
     HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    app.hidesBottomBarWhenPushed = YES;
     app.scenicId = scenic.scenicId;
     [self.navigationController pushViewController:app animated:YES];
 }

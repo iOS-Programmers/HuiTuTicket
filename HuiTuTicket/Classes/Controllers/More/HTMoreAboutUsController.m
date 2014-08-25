@@ -57,6 +57,7 @@
     
     if (indexPath.row < self.dataSource.count) {
         cell.textLabel.text = self.dataSource[indexPath.row];
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
     }
     
     return cell;
