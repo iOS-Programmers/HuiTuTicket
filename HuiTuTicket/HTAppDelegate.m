@@ -30,30 +30,35 @@
     HTMessageViewController *messageViewController = [[HTMessageViewController alloc] init];
     messageViewController.title = @"消息";
     messageViewController.tabBarItem.image = [UIImage imageNamed:@"tab_message"];
+    messageViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_message_selected"];
     HTBaseNavigationController *messageNav = [[HTBaseNavigationController alloc] initWithRootViewController:messageViewController];
     
     //Order
     HTOrderViewController *orderViewController = [[HTOrderViewController alloc] init];
     orderViewController.title = @"订单";
     orderViewController.tabBarItem.image = [UIImage imageNamed:@"tab_order"];
+    orderViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_order_selected"];
     HTBaseNavigationController *orderNav = [[HTBaseNavigationController alloc] initWithRootViewController:orderViewController];
     
     //Home
     HTHomeViewController *homeRootViewController = [[HTHomeViewController alloc] init];
     homeRootViewController.title = @"主页";
     homeRootViewController.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
+    homeRootViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_home_selected"];
     HTBaseNavigationController *homeRootNav = [[HTBaseNavigationController alloc] initWithRootViewController:homeRootViewController];
     
     //Mine
     HTMineViewController *mineViewController = [[HTMineViewController alloc] init];
     mineViewController.title = @"我的";
     mineViewController.tabBarItem.image = [UIImage imageNamed:@"tab_mine"];
+    mineViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_mine_selected"];
     HTBaseNavigationController *mineNav = [[HTBaseNavigationController alloc] initWithRootViewController:mineViewController];
     
     //More
     HTMoreViewController *moreViewController = [[HTMoreViewController alloc] init];
     moreViewController.title = @"更多";
     moreViewController.tabBarItem.image = [UIImage imageNamed:@"tab_more"];
+    moreViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_more_selected"];
     HTBaseNavigationController *moreNav = [[HTBaseNavigationController alloc] initWithRootViewController:moreViewController];
     
     //tabBar
@@ -63,19 +68,26 @@
     
     // setup UI Image
     UIColor *color = UIColorToRGB(0x3fb0dc);
-//    [rootTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBkg"]];
-    [rootTabBarController.tabBar setSelectedImageTintColor:color];
     
+    [rootTabBarController.tabBar setSelectedImageTintColor:color];
+
+    NSJSONSerialization
     if (CURRENT_SYS_VERSION >= 7.0) {
         [[UINavigationBar appearance] setBarTintColor:UIColorToRGB(0x3fb0dc)];
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        
+        [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                               [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:17], NSFontAttributeName, nil]];
     } else {
         [[UINavigationBar appearance] setTintColor:UIColorToRGB(0x3fb0dc)];
+        [rootTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tab_bg"]];
+        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                           UIColorToRGB(0x3fb0dc), UITextAttributeTextColor,
+                                                           nil] forState:UIControlStateSelected];
     }
     
     
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:17], NSFontAttributeName, nil]];
+    
     
     self.window.rootViewController = rootTabBarController;
     
