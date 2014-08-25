@@ -71,7 +71,7 @@
     
     [rootTabBarController.tabBar setSelectedImageTintColor:color];
 
-    NSJSONSerialization
+    
     if (CURRENT_SYS_VERSION >= 7.0) {
         [[UINavigationBar appearance] setBarTintColor:UIColorToRGB(0x3fb0dc)];
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
