@@ -32,8 +32,11 @@
     
     self.dataSource = [[HTStoreManager shareStoreManager] getAboutUsConfigureArray];
     
-    self.tableView.frame = CGRectMake(0, 190, 320, 132);
+    self.tableView.frame = CGRectMake(0, 190, 320, 152);
     self.tableView.scrollEnabled = NO;
+    self.tableView.rowHeight = 44;
+    self.tableView.sectionFooterHeight = 1;
+    self.tableView.sectionHeaderHeight = 1;
 }
 
 - (void)didReceiveMemoryWarning

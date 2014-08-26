@@ -67,7 +67,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *viewController;
-    NSInteger row = indexPath.row;
+//    NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
     switch (section) {
             //        case 0: {
@@ -76,7 +76,10 @@
             //            break;
             //        }
             
-        default:
+        default: {
+            //只有景区门票订单可用，其他的点击提示该功能暂未开发，尽请期待。
+            [self showWithText:@"该功能暂未开发，尽请期待！"];
+        }
             break;
     }
     if (viewController) {

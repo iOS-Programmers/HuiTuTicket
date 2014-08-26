@@ -65,6 +65,9 @@
     
     [self.scrollView setContentSize:CGSizeMake(640, 500)];
 
+    self.tableView.backgroundColor = kColorClear;
+    self.tableView.backgroundView = nil;
+    
     [self requestDetailData];
     
     self.titles = [self titleArray];

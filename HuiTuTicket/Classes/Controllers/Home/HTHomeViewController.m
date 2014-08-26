@@ -53,7 +53,7 @@
     [self.homeBannerHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.homeBannerHttp.isValid) {
-            [weak_self showSuccess];
+
         }
         else {
             //显示服务端返回的错误提示
