@@ -83,6 +83,21 @@
 		C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBCE19825CC40041DC2A /* datesel@2x.png */; };
 		C5A6EBD3198267650041DC2A /* HTEntranceTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */; };
 		C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */; };
+		C5C9094719C06E7A006E1BE4 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9092B19C06E7A006E1BE4 /* AlipayRsaLib.a */; };
+		C5C9094819C06E7B006E1BE4 /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5C9092D19C06E7A006E1BE4 /* Alixpay.bundle */; };
+		C5C9094919C06E7B006E1BE4 /* AlixPaylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9092E19C06E7A006E1BE4 /* AlixPaylib.a */; };
+		C5C9094A19C06E7B006E1BE4 /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093019C06E7A006E1BE4 /* AlixPayOrder.m */; };
+		C5C9094B19C06E7B006E1BE4 /* AlixPayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093219C06E7A006E1BE4 /* AlixPayResult.m */; };
+		C5C9094C19C06E7B006E1BE4 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093619C06E7A006E1BE4 /* NSObject+SBJSON.m */; };
+		C5C9094D19C06E7B006E1BE4 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093819C06E7A006E1BE4 /* NSString+SBJSON.m */; };
+		C5C9094E19C06E7B006E1BE4 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093A19C06E7A006E1BE4 /* SBJSON.m */; };
+		C5C9094F19C06E7B006E1BE4 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093C19C06E7A006E1BE4 /* SBJsonBase.m */; };
+		C5C9095019C06E7B006E1BE4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9093E19C06E7A006E1BE4 /* SBJsonParser.m */; };
+		C5C9095119C06E7B006E1BE4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9094019C06E7A006E1BE4 /* SBJsonWriter.m */; };
+		C5C9095219C06E7B006E1BE4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9094119C06E7A006E1BE4 /* libcrypto.a */; };
+		C5C9095319C06E7B006E1BE4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9094219C06E7A006E1BE4 /* libssl.a */; };
+		C5C9095519C07F2A006E1BE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9095419C07F2A006E1BE4 /* CFNetwork.framework */; };
+		C5C9095719C07F3E006E1BE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9095619C07F3E006E1BE4 /* Security.framework */; };
 		C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */; };
 		C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */; };
 		C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */; };
@@ -491,6 +506,34 @@
 		C5A6EBD0198267650041DC2A /* HTEntranceTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEntranceTicketController.h; sourceTree = "<group>"; };
 		C5A6EBD1198267650041DC2A /* HTEntranceTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEntranceTicketController.m; sourceTree = "<group>"; };
 		C5A6EBD2198267650041DC2A /* HTEntranceTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTEntranceTicketController.xib; sourceTree = "<group>"; };
+		C5C9092B19C06E7A006E1BE4 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
+		C5C9092C19C06E7A006E1BE4 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
+		C5C9092D19C06E7A006E1BE4 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
+		C5C9092E19C06E7A006E1BE4 /* AlixPaylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib.a; sourceTree = "<group>"; };
+		C5C9092F19C06E7A006E1BE4 /* AlixPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayOrder.h; sourceTree = "<group>"; };
+		C5C9093019C06E7A006E1BE4 /* AlixPayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayOrder.m; sourceTree = "<group>"; };
+		C5C9093119C06E7A006E1BE4 /* AlixPayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayResult.h; sourceTree = "<group>"; };
+		C5C9093219C06E7A006E1BE4 /* AlixPayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayResult.m; sourceTree = "<group>"; };
+		C5C9093419C06E7A006E1BE4 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		C5C9093519C06E7A006E1BE4 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		C5C9093619C06E7A006E1BE4 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		C5C9093719C06E7A006E1BE4 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		C5C9093819C06E7A006E1BE4 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		C5C9093919C06E7A006E1BE4 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		C5C9093A19C06E7A006E1BE4 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		C5C9093B19C06E7A006E1BE4 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		C5C9093C19C06E7A006E1BE4 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		C5C9093D19C06E7A006E1BE4 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		C5C9093E19C06E7A006E1BE4 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		C5C9093F19C06E7A006E1BE4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		C5C9094019C06E7A006E1BE4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C5C9094119C06E7A006E1BE4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		C5C9094219C06E7A006E1BE4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		C5C9094319C06E7A006E1BE4 /* PartnerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerConfig.h; sourceTree = "<group>"; };
+		C5C9094519C06E7A006E1BE4 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
+		C5C9094619C06E7A006E1BE4 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
+		C5C9095419C07F2A006E1BE4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C5C9095619C07F3E006E1BE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeHeadView.h; sourceTree = "<group>"; };
 		C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeHeadView.m; sourceTree = "<group>"; };
 		C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeHeadView.xib; sourceTree = "<group>"; };
@@ -962,17 +1005,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C9095719C07F3E006E1BE4 /* Security.framework in Frameworks */,
+				C5C9095519C07F2A006E1BE4 /* CFNetwork.framework in Frameworks */,
 				C6ADAC37198E216800AB983B /* libxml2.dylib in Frameworks */,
 				C6ADAC35198E20CC00AB983B /* libz.1.2.5.dylib in Frameworks */,
+				C5C9095219C06E7B006E1BE4 /* libcrypto.a in Frameworks */,
 				C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */,
 				C6ADAC33198E20B000AB983B /* MobileCoreServices.framework in Frameworks */,
+				C5C9094719C06E7A006E1BE4 /* AlipayRsaLib.a in Frameworks */,
 				C6ADAC31198E209700AB983B /* SystemConfiguration.framework in Frameworks */,
 				C6B09E9E19826A6A00576A5F /* libiconv.dylib in Frameworks */,
 				C6B09E9C19826A4200576A5F /* AVFoundation.framework in Frameworks */,
 				C6B09E9A19826A3A00576A5F /* CoreVideo.framework in Frameworks */,
 				C6B09E9819826A3100576A5F /* CoreMedia.framework in Frameworks */,
+				C5C9095319C06E7B006E1BE4 /* libssl.a in Frameworks */,
 				C5A6EBB91981131A0041DC2A /* QuartzCore.framework in Frameworks */,
 				C6B09E921982683F00576A5F /* libzbar.a in Frameworks */,
+				C5C9094919C06E7B006E1BE4 /* AlixPaylib.a in Frameworks */,
 				C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */,
 				C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */,
 			);
@@ -1098,6 +1147,55 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		C5C9092A19C06E7A006E1BE4 /* AliPay */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9092B19C06E7A006E1BE4 /* AlipayRsaLib.a */,
+				C5C9092C19C06E7A006E1BE4 /* AlixLibService.h */,
+				C5C9092D19C06E7A006E1BE4 /* Alixpay.bundle */,
+				C5C9092E19C06E7A006E1BE4 /* AlixPaylib.a */,
+				C5C9092F19C06E7A006E1BE4 /* AlixPayOrder.h */,
+				C5C9093019C06E7A006E1BE4 /* AlixPayOrder.m */,
+				C5C9093119C06E7A006E1BE4 /* AlixPayResult.h */,
+				C5C9093219C06E7A006E1BE4 /* AlixPayResult.m */,
+				C5C9093319C06E7A006E1BE4 /* json */,
+				C5C9094119C06E7A006E1BE4 /* libcrypto.a */,
+				C5C9094219C06E7A006E1BE4 /* libssl.a */,
+				C5C9094319C06E7A006E1BE4 /* PartnerConfig.h */,
+				C5C9094419C06E7A006E1BE4 /* RSA */,
+			);
+			path = AliPay;
+			sourceTree = "<group>";
+		};
+		C5C9093319C06E7A006E1BE4 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9093419C06E7A006E1BE4 /* JSON.h */,
+				C5C9093519C06E7A006E1BE4 /* NSObject+SBJSON.h */,
+				C5C9093619C06E7A006E1BE4 /* NSObject+SBJSON.m */,
+				C5C9093719C06E7A006E1BE4 /* NSString+SBJSON.h */,
+				C5C9093819C06E7A006E1BE4 /* NSString+SBJSON.m */,
+				C5C9093919C06E7A006E1BE4 /* SBJSON.h */,
+				C5C9093A19C06E7A006E1BE4 /* SBJSON.m */,
+				C5C9093B19C06E7A006E1BE4 /* SBJsonBase.h */,
+				C5C9093C19C06E7A006E1BE4 /* SBJsonBase.m */,
+				C5C9093D19C06E7A006E1BE4 /* SBJsonParser.h */,
+				C5C9093E19C06E7A006E1BE4 /* SBJsonParser.m */,
+				C5C9093F19C06E7A006E1BE4 /* SBJsonWriter.h */,
+				C5C9094019C06E7A006E1BE4 /* SBJsonWriter.m */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C5C9094419C06E7A006E1BE4 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9094519C06E7A006E1BE4 /* DataSigner.h */,
+				C5C9094619C06E7A006E1BE4 /* DataVerifier.h */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
 		C604ECC41997C1F6004DFB59 /* BorderButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1129,6 +1227,8 @@
 		C60F6FBC19762D7800AFC182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5C9095619C07F3E006E1BE4 /* Security.framework */,
+				C5C9095419C07F2A006E1BE4 /* CFNetwork.framework */,
 				C6ADAC36198E216800AB983B /* libxml2.dylib */,
 				C6ADAC34198E20CC00AB983B /* libz.1.2.5.dylib */,
 				C6ADAC32198E20B000AB983B /* MobileCoreServices.framework */,
@@ -1768,6 +1868,7 @@
 		C6BADF541976493200543D39 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C5C9092A19C06E7A006E1BE4 /* AliPay */,
 				C6BA257119A6EB7000B03AD1 /* libqrencode */,
 				C6ADAC2C198E1BC200AB983B /* JSONKit 2.0 */,
 				C6ADABCC198E167C00AB983B /* ASIHttpRequest 1.8.1 */,
@@ -2272,6 +2373,7 @@
 				C6DE621A19AAF91E0074DC07 /* tab_message_selected@2x.png in Resources */,
 				C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
+				C5C9094819C06E7B006E1BE4 /* Alixpay.bundle in Resources */,
 				C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */,
 				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
 				C682AC5919A3BB2000DF08D8 /* pub_select_type@2x.png in Resources */,
@@ -2365,7 +2467,9 @@
 				C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */,
 				C6D47AB019A4778D00C47126 /* MyTicketDetailInfo.m in Sources */,
 				C6ADAC1D198E167C00AB983B /* ASIS3Request.m in Sources */,
+				C5C9094E19C06E7B006E1BE4 /* SBJSON.m in Sources */,
 				C6ADABBE198E167200AB983B /* MKAnnotationView+WebCache.m in Sources */,
+				C5C9094F19C06E7B006E1BE4 /* SBJsonBase.m in Sources */,
 				C6EC124D19A2331000DFB74C /* Feedback.m in Sources */,
 				C6912B891990B4BF00584586 /* MessageListHttp.m in Sources */,
 				C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */,
@@ -2409,6 +2513,7 @@
 				C5A1393F19A6E5A00054DB04 /* HomeBannerHttp.m in Sources */,
 				076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */,
 				7EC384B31994C45000FB0C6D /* HTOrderResultViewController.m in Sources */,
+				C5C9095119C06E7B006E1BE4 /* SBJsonWriter.m in Sources */,
 				C60F6FCE19762D7800AFC182 /* HTAppDelegate.m in Sources */,
 				C59CB0BB198FBA4C0094DC9F /* Scenic.m in Sources */,
 				C6BA258319A6EB7000B03AD1 /* mask.c in Sources */,
@@ -2524,6 +2629,7 @@
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */,
 				C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */,
+				C5C9094B19C06E7B006E1BE4 /* AlixPayResult.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
@@ -2534,17 +2640,21 @@
 				076E012519928C7200FC63D1 /* TicketOrderDetailHttp.m in Sources */,
 				C6EC125019A2332300DFB74C /* FeedbackPara.m in Sources */,
 				C6912B6D1990A96A00584586 /* TicketUnbind.m in Sources */,
+				C5C9094A19C06E7B006E1BE4 /* AlixPayOrder.m in Sources */,
 				C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */,
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
+				C5C9094D19C06E7B006E1BE4 /* NSString+SBJSON.m in Sources */,
 				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
 				C6ADAC09198E167C00AB983B /* ASIAuthenticationDialog.m in Sources */,
 				C67D30AF19A5003C00D5A46C /* HTUserInfoController.m in Sources */,
 				C604ECC71997C246004DFB59 /* HTBorderButton.m in Sources */,
 				C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */,
+				C5C9095019C06E7B006E1BE4 /* SBJsonParser.m in Sources */,
 				C6912B611990A50E00584586 /* TicketBindHttp.m in Sources */,
 				C6ADABC7198E167200AB983B /* UIButton+WebCache.m in Sources */,
 				C6ADABC3198E167200AB983B /* SDWebImageDownloader.m in Sources */,
 				C691FDDB1997721900B3AD53 /* MyTicketList.m in Sources */,
+				C5C9094C19C06E7B006E1BE4 /* NSObject+SBJSON.m in Sources */,
 				C60F6FCA19762D7800AFC182 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2678,7 +2788,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",
+					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/AliPay",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
@@ -2705,7 +2817,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/ZBarSDK",
+					"$(PROJECT_DIR)/HuiTuTicket/Classes/Vendor/AliPay",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
