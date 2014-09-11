@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0714AD0B19C204E300BD6253 /* HTScenicOrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */; };
+		0714AD0C19C204E300BD6253 /* HTScenicOrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */; };
 		076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00EE1992838900FC63D1 /* ScenicDetail.m */; };
 		076E00F2199283A800FC63D1 /* ScenicDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F1199283A800FC63D1 /* ScenicDetailPara.m */; };
 		076E00F5199283BA00FC63D1 /* ScenicDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F4199283BA00FC63D1 /* ScenicDetailHttp.m */; };
@@ -395,6 +397,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0714AD0819C204E300BD6253 /* HTScenicOrderDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderDetailVC.h; sourceTree = "<group>"; };
+		0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderDetailVC.m; sourceTree = "<group>"; };
+		0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicOrderDetailVC.xib; sourceTree = "<group>"; };
 		076E00ED1992838900FC63D1 /* ScenicDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDetail.h; sourceTree = "<group>"; };
 		076E00EE1992838900FC63D1 /* ScenicDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicDetail.m; sourceTree = "<group>"; };
 		076E00F0199283A800FC63D1 /* ScenicDetailPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDetailPara.h; sourceTree = "<group>"; };
@@ -2047,6 +2052,9 @@
 				C557C9CE19C1DB4100DCE85D /* HTScenicOrderListCell.xib */,
 				C557C9CF19C1DB4100DCE85D /* HTScenicOrderListViewController.h */,
 				C557C9D019C1DB4100DCE85D /* HTScenicOrderListViewController.m */,
+				0714AD0819C204E300BD6253 /* HTScenicOrderDetailVC.h */,
+				0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */,
+				0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -2430,6 +2438,7 @@
 				C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
+				0714AD0C19C204E300BD6253 /* HTScenicOrderDetailVC.xib in Resources */,
 				C6DE621A19AAF91E0074DC07 /* tab_message_selected@2x.png in Resources */,
 				C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
@@ -2717,6 +2726,7 @@
 				C6912B6D1990A96A00584586 /* TicketUnbind.m in Sources */,
 				C5C9094A19C06E7B006E1BE4 /* AlixPayOrder.m in Sources */,
 				C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */,
+				0714AD0B19C204E300BD6253 /* HTScenicOrderDetailVC.m in Sources */,
 				C6BADF601976815900543D39 /* HTBaseTableViewController.m in Sources */,
 				C5C9094D19C06E7B006E1BE4 /* NSString+SBJSON.m in Sources */,
 				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
