@@ -8,12 +8,18 @@
 
 #import "HTBaseTableViewController.h"
 @class MyTicketDetailInfo;
+@class TicketScenicSpot;
 
 @interface HTOrderDetailViewController : HTBaseTableViewController
 
 /**
- *  上级页面传过来的
+ *  上级页面传过来的 联票数据
  */
 @property (strong, nonatomic) MyTicketDetailInfo *ticketdetail;
+
+/**
+ *  上级页面传过来的 联票景区详情数据
+ */
+@property (strong, nonatomic) TicketScenicSpot *scenicDetail;
 
 @end

@@ -11,7 +11,7 @@
 #import "HTCustomMapCell.h"
 #import "MyTicketDetailInfo.h"
 #import "TicketYuYueDetailHttp.h"
-
+#import "TicketScenicSpot.h"
 #import "TicketYuyueSubmitHttp.h"
 
 
@@ -50,7 +50,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self requesDetailData];
+
+    if (self.scenicDetail) {
+        [self updateUIWithDetailData:self.scenicDetail];
+    }
+    
+    
     self.tableView.tableFooterView = [self footerView];
     
     
@@ -108,48 +113,8 @@
 }
 
 #pragma mark - Action
-- (void)requesDetailData
-{
-    
-    if (self.ticketdetail) {
-        self.orderListHttp.parameter.codenumber = self.ticketdetail.codeNumber;
-//        self.orderListHttp.parameter.orderid = self.ticketdetail.orderid;
-    }
-    
-    [self showLoadingWithText:kLOADING_TEXT];
-    __block HTOrderDetailViewController *weak_self = self;
-    [self.orderListHttp getDataWithCompletionBlock:^{
-        [weak_self hideLoading];
-        
-        if (weak_self.orderListHttp.isValid) {
-            
-            [weak_self updateUIWithDetailData:weak_self.orderListHttp.resultModel];
-            LXLog(@"%@",weak_self.orderListHttp.resultModel);
-            
-        }
-        else {
-            //显示服务端返回的错误提示
-            [weak_self showErrorWithText:weak_self.orderListHttp.erorMessage];
-        };
-        
-        
-    }failedBlock:^{
-        [weak_self hideLoading];
-        if (![HTFoundationCommon networkDetect]) {
-            
-            [weak_self showErrorWithText:kNETWORK_ERROR];
-        }
-        else {
-            
-            //统统归纳为服务器出错
-            [weak_self showErrorWithText:kSERVICE_ERROR];
-        };
-    }];
-}
 
-
-
-- (void)updateUIWithDetailData:(TicketYuYueDetail*)detail
+- (void)updateUIWithDetailData:(TicketScenicSpot*)detail
 {
     detail.timelimit = [detail.timelimit isEqualToString:@"0"] ? @"不限时":@"限时游览";
     detail.ptype = [detail.ptype isEqualToString:@"0"] ? @"免票":@"优惠";
@@ -167,8 +132,8 @@
     //组装数组
     NSMutableArray *dataArr = [[NSMutableArray alloc] initWithCapacity:3];
     [dataArr addObject:@{@"游览景区": @[detail.scenicName,detail.rank,detail.ptype,detail.timelimit,detail.address]}];
-    [dataArr addObject:@{@"游览日期": @[detail.traveltime]}];
-    [dataArr addObject:@{@"预约人": @[detail.codeNumber,detail.username,detail.idcard]}];
+    [dataArr addObject:@{@"游览日期": @[@"请选择出游日期"]}];
+    [dataArr addObject:@{@"预约人": @[self.ticketdetail.codeNumber,self.ticketdetail.username,self.ticketdetail.idcard]}];
     
     self.dataSource = dataArr;
     
@@ -181,11 +146,19 @@
 - (void)submitYuyueBtnClicked
 {
     //
+    if (!self.yuyueDateString) {
+        [self showErrorWithText:@"请选择出游日期"];
+        return;
+    }
     if (self.ticketdetail) {
         self.submitHttp.parameter.codenumber = self.ticketdetail.codeNumber;
-        self.submitHttp.parameter.username = @"";
-        self.submitHttp.parameter.scenicid = @"";
-        self.submitHttp.parameter.time = @"";
+        self.submitHttp.parameter.username = self.ticketdetail.username;
+        self.submitHttp.parameter.scenicid = self.scenicDetail.scenicId;
+     
+        if (self.yuyueDateString) {
+            self.submitHttp.parameter.time = self.yuyueDateString;
+        }
+        
     }
     
     [self showLoadingWithText:kLOADING_TEXT];
@@ -196,6 +169,10 @@
         if (weak_self.submitHttp.isValid) {
             
             LXLog(@"%@",weak_self.submitHttp.resultModel);
+            [weak_self showWithText:@"预约成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weak_self.navigationController popViewControllerAnimated:YES];
+            });
             
         }
         else {

@@ -47,9 +47,14 @@
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height - 44);
     // Do any additional setup after loading the view from its nib.
     
-    [self loadDataSource];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadDataSource];
+}
 
 - (void)loadDataSource
 {
@@ -91,9 +96,15 @@
 {
     [atableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    TicketScenicSpot *info = (TicketScenicSpot *)self.dataSource[indexPath.row];
+    
     HTOrderDetailViewController *vc = [[HTOrderDetailViewController alloc] initWithNibName:@"HTOrderDetailViewController" bundle:Nil];
     
+    //联票数据
     vc.ticketdetail = self.ticketdetail;
+    //联票景区详情数据
+    vc.scenicDetail = info;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 
