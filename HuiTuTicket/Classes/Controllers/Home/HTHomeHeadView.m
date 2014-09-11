@@ -83,6 +83,15 @@
 
         }
             break;
+        case 104:
+        {
+            //景区套票
+            HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
+            vc.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:vc animated:YES];
+            
+        }
+            break;
             
         default:
             break;

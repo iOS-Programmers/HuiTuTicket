@@ -10,6 +10,8 @@
 #import "TicketOrderListHttp.h"
 #import "HTAppointmentCell.h"
 
+#import "HTYuYueDetailViewController.h"
+
 @interface HTAppointmentViewController ()
 
 @property (strong, nonatomic) TicketOrderListHttp *orderListHttp;
@@ -36,6 +38,12 @@
     
     self.dataSource = [[NSMutableArray alloc] initWithCapacity:0];
     self.tableView.rowHeight = 80;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     [self requestOrderListData];
 }
@@ -124,6 +132,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+   LPTicketOrderDetail *detailInfo = (LPTicketOrderDetail *)self.dataSource[indexPath.row];
+    
+    HTYuYueDetailViewController *detail = [[HTYuYueDetailViewController alloc] init];
+    detail.yuyueinfo = detailInfo;
+    
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 @end
