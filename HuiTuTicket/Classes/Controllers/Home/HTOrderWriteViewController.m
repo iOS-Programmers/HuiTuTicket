@@ -311,7 +311,7 @@
 - (IBAction)plusAction:(id)sender
 {
     self.numberLabel.text = [NSString stringWithFormat:@"%d",([self.numberLabel.text intValue]+1)];
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %f元",[self.dataModel.price floatValue]*[self.numberLabel.text intValue]];
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.dataModel.price floatValue]*[self.numberLabel.text intValue]];
 }
 
 - (IBAction)minusAction:(id)sender
