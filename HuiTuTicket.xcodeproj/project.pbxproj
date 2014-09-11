@@ -68,6 +68,9 @@
 		C557C9C919C1D9F100DCE85D /* TicketYuYueDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C557C9BE19C1D9F100DCE85D /* TicketYuYueDetail.m */; };
 		C557C9CA19C1D9F100DCE85D /* TicketYuYueDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C557C9C019C1D9F100DCE85D /* TicketYuYueDetailHttp.m */; };
 		C557C9CB19C1D9F100DCE85D /* TicketYuYueDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C557C9C219C1D9F100DCE85D /* TicketYuYueDetailPara.m */; };
+		C557C9D119C1DB4100DCE85D /* HTScenicOrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C557C9CD19C1DB4100DCE85D /* HTScenicOrderListCell.m */; };
+		C557C9D219C1DB4100DCE85D /* HTScenicOrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C557C9CE19C1DB4100DCE85D /* HTScenicOrderListCell.xib */; };
+		C557C9D319C1DB4100DCE85D /* HTScenicOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C557C9D019C1DB4100DCE85D /* HTScenicOrderListViewController.m */; };
 		C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0AE198FB0860094DC9F /* ScenicList.m */; };
 		C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B1198FB09A0094DC9F /* ScenicListPara.m */; };
 		C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C59CB0B4198FB0AC0094DC9F /* ScenicListHttp.m */; };
@@ -494,6 +497,11 @@
 		C557C9C019C1D9F100DCE85D /* TicketYuYueDetailHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuYueDetailHttp.m; sourceTree = "<group>"; };
 		C557C9C119C1D9F100DCE85D /* TicketYuYueDetailPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuYueDetailPara.h; sourceTree = "<group>"; };
 		C557C9C219C1D9F100DCE85D /* TicketYuYueDetailPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuYueDetailPara.m; sourceTree = "<group>"; };
+		C557C9CC19C1DB4100DCE85D /* HTScenicOrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderListCell.h; sourceTree = "<group>"; };
+		C557C9CD19C1DB4100DCE85D /* HTScenicOrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderListCell.m; sourceTree = "<group>"; };
+		C557C9CE19C1DB4100DCE85D /* HTScenicOrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicOrderListCell.xib; sourceTree = "<group>"; };
+		C557C9CF19C1DB4100DCE85D /* HTScenicOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderListViewController.h; sourceTree = "<group>"; };
+		C557C9D019C1DB4100DCE85D /* HTScenicOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderListViewController.m; sourceTree = "<group>"; };
 		C59CB0AD198FB0860094DC9F /* ScenicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicList.h; sourceTree = "<group>"; };
 		C59CB0AE198FB0860094DC9F /* ScenicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicList.m; sourceTree = "<group>"; };
 		C59CB0B0198FB09A0094DC9F /* ScenicListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicListPara.h; sourceTree = "<group>"; };
@@ -2034,6 +2042,11 @@
 				C6BADF85197691EB00543D39 /* HTOrderViewController.h */,
 				C6BADF86197691EB00543D39 /* HTOrderViewController.m */,
 				C6BADF87197691EB00543D39 /* HTOrderViewController.xib */,
+				C557C9CC19C1DB4100DCE85D /* HTScenicOrderListCell.h */,
+				C557C9CD19C1DB4100DCE85D /* HTScenicOrderListCell.m */,
+				C557C9CE19C1DB4100DCE85D /* HTScenicOrderListCell.xib */,
+				C557C9CF19C1DB4100DCE85D /* HTScenicOrderListViewController.h */,
+				C557C9D019C1DB4100DCE85D /* HTScenicOrderListViewController.m */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -2467,6 +2480,7 @@
 				C6D12480197E37E500FF4D83 /* more_feedback@2x.png in Resources */,
 				C5FB47EC197E6A9C00FE5364 /* home002@2x.png in Resources */,
 				C6D124D91980BCE200FF4D83 /* HTMyTicketCell.xib in Resources */,
+				C557C9D219C1DB4100DCE85D /* HTScenicOrderListCell.xib in Resources */,
 				C67D30AB19A4FE6000D5A46C /* pub_arrow@2x.png in Resources */,
 				C5A6EBAD198101300041DC2A /* HTCYOrderViewController.xib in Resources */,
 				C5FB47ED197E6A9C00FE5364 /* home003@2x.png in Resources */,
@@ -2518,6 +2532,7 @@
 				C6ADABBE198E167200AB983B /* MKAnnotationView+WebCache.m in Sources */,
 				C5C9094F19C06E7B006E1BE4 /* SBJsonBase.m in Sources */,
 				C6EC124D19A2331000DFB74C /* Feedback.m in Sources */,
+				C557C9D119C1DB4100DCE85D /* HTScenicOrderListCell.m in Sources */,
 				C6912B891990B4BF00584586 /* MessageListHttp.m in Sources */,
 				C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */,
 				C6BA258719A6EB7000B03AD1 /* qrspec.c in Sources */,
@@ -2677,6 +2692,7 @@
 				076E0107199288B600FC63D1 /* TicketPriceCalendarPara.m in Sources */,
 				C6BADF5C197680E100543D39 /* HTBaseNavigationController.m in Sources */,
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
+				C557C9D319C1DB4100DCE85D /* HTScenicOrderListViewController.m in Sources */,
 				C557C9CA19C1D9F100DCE85D /* TicketYuYueDetailHttp.m in Sources */,
 				C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */,
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
