@@ -8,13 +8,14 @@
 
 #import "HTTicketDetailController.h"
 #import "HTAppointmentViewController.h"
+#import "HTCYOrderViewController.h"
 
 //生成二维码
 #import "QRCodeGenerator.h"
 
 #import "HTTicketDetailCell.h"
 #import "MyTicketDetailInfoHttp.h"
-//#import "TicketDetailHttp.h"
+
 #import "TicketUnbindHttp.h"
 
 @interface HTTicketDetailController ()
@@ -215,7 +216,16 @@
     }
 }
 
-- (IBAction)onYuYueBtnClick:(id)sender {
+/**
+ *  我要预约
+ *
+ *  @param sender
+ */
+- (IBAction)onYuYueBtnClick:(id)sender
+{
+    HTCYOrderViewController *yuyue = [[HTCYOrderViewController alloc] init];
+
+    [self.navigationController pushViewController:yuyue animated:YES];
 }
 
 /**

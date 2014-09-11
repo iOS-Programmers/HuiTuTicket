@@ -77,6 +77,7 @@
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [atableView deselectRowAtIndexPath:indexPath animated:YES];
     HTOrderDetailViewController *vc = [[HTOrderDetailViewController alloc] initWithNibName:@"HTOrderDetailViewController" bundle:Nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
