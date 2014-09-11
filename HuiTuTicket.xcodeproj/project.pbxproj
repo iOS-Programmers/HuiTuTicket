@@ -111,6 +111,9 @@
 		C6053CFB19A61B0D0085C0A8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C6053CF919A61B0D0085C0A8 /* logo.png */; };
 		C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6053CFA19A61B0D0085C0A8 /* logo@2x.png */; };
 		C6053CFF19A61CFE0085C0A8 /* HTAboutUSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6053CFE19A61CFE0085C0A8 /* HTAboutUSWebViewController.m */; };
+		C60CB9C119C186A200678948 /* HTScenicOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9C019C186A200678948 /* HTScenicOrderListViewController.m */; };
+		C60CB9C519C187C200678948 /* HTScenicOrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9C319C187C200678948 /* HTScenicOrderListCell.m */; };
+		C60CB9C619C187C200678948 /* HTScenicOrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60CB9C419C187C200678948 /* HTScenicOrderListCell.xib */; };
 		C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
 		C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */; };
 		C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
@@ -552,6 +555,11 @@
 		C6053CFD19A61CFE0085C0A8 /* HTAboutUSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAboutUSWebViewController.h; sourceTree = "<group>"; };
 		C6053CFE19A61CFE0085C0A8 /* HTAboutUSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAboutUSWebViewController.m; sourceTree = "<group>"; };
 		C6058EB41987ECA200D61484 /* HTHttpMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTHttpMacro.h; sourceTree = "<group>"; };
+		C60CB9BF19C186A200678948 /* HTScenicOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderListViewController.h; sourceTree = "<group>"; };
+		C60CB9C019C186A200678948 /* HTScenicOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderListViewController.m; sourceTree = "<group>"; };
+		C60CB9C219C187C200678948 /* HTScenicOrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderListCell.h; sourceTree = "<group>"; };
+		C60CB9C319C187C200678948 /* HTScenicOrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderListCell.m; sourceTree = "<group>"; };
+		C60CB9C419C187C200678948 /* HTScenicOrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicOrderListCell.xib; sourceTree = "<group>"; };
 		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1981,6 +1989,11 @@
 				C6BADF85197691EB00543D39 /* HTOrderViewController.h */,
 				C6BADF86197691EB00543D39 /* HTOrderViewController.m */,
 				C6BADF87197691EB00543D39 /* HTOrderViewController.xib */,
+				C60CB9BF19C186A200678948 /* HTScenicOrderListViewController.h */,
+				C60CB9C019C186A200678948 /* HTScenicOrderListViewController.m */,
+				C60CB9C219C187C200678948 /* HTScenicOrderListCell.h */,
+				C60CB9C319C187C200678948 /* HTScenicOrderListCell.m */,
+				C60CB9C419C187C200678948 /* HTScenicOrderListCell.xib */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -2316,6 +2329,7 @@
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C657856419C1507D00867BEC /* home008@2x.png in Resources */,
 				C6ADAC21198E167C00AB983B /* LICENSE in Resources */,
+				C60CB9C619C187C200678948 /* HTScenicOrderListCell.xib in Resources */,
 				C6B09E961982683F00576A5F /* zbar-samples.png in Resources */,
 				C691FDDF1997B9A400B3AD53 /* my_avatar_bg@2x.png in Resources */,
 				C6D1249D197E3AC800FF4D83 /* my_03@2x.png in Resources */,
@@ -2449,6 +2463,7 @@
 				C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */,
 				C6EC124419A22D9600DFB74C /* HTMoreHelpController.m in Sources */,
 				C620A833198F9CE300AD3791 /* Login.m in Sources */,
+				C60CB9C519C187C200678948 /* HTScenicOrderListCell.m in Sources */,
 				C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */,
 				C5A6EBC719822BF80041DC2A /* HTCustomMapCell.m in Sources */,
 				C6ADAC20198E167C00AB983B /* Reachability.m in Sources */,
@@ -2525,6 +2540,7 @@
 				C6BADF7619768D6A00543D39 /* HTFoundationCommon.m in Sources */,
 				076E00FE1992862B00FC63D1 /* ScenicTicketPara.m in Sources */,
 				C6BA259219A7195300B03AD1 /* HTSaoMiaoLPTicketDetailVC.m in Sources */,
+				C60CB9C119C186A200678948 /* HTScenicOrderListViewController.m in Sources */,
 				C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */,
