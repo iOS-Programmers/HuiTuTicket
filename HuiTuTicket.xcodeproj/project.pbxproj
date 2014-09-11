@@ -114,6 +114,10 @@
 		C60CB9C119C186A200678948 /* HTScenicOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9C019C186A200678948 /* HTScenicOrderListViewController.m */; };
 		C60CB9C519C187C200678948 /* HTScenicOrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9C319C187C200678948 /* HTScenicOrderListCell.m */; };
 		C60CB9C619C187C200678948 /* HTScenicOrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60CB9C419C187C200678948 /* HTScenicOrderListCell.xib */; };
+		C60CB9C919C1AB1C00678948 /* HTYuYueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9C819C1AB1C00678948 /* HTYuYueDetailViewController.m */; };
+		C60CB9CC19C1ADA900678948 /* TicketYuYueDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9CB19C1ADA900678948 /* TicketYuYueDetail.m */; };
+		C60CB9CF19C1ADBB00678948 /* TicketYuYueDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9CE19C1ADBB00678948 /* TicketYuYueDetailPara.m */; };
+		C60CB9D219C1ADC800678948 /* TicketYuYueDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C60CB9D119C1ADC800678948 /* TicketYuYueDetailHttp.m */; };
 		C60F6FBE19762D7800AFC182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBD19762D7800AFC182 /* Foundation.framework */; };
 		C60F6FC019762D7800AFC182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */; };
 		C60F6FC219762D7800AFC182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F6FC119762D7800AFC182 /* UIKit.framework */; };
@@ -146,8 +150,6 @@
 		C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */; };
 		C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */; };
 		C67D30AB19A4FE6000D5A46C /* pub_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D30AA19A4FE6000D5A46C /* pub_arrow@2x.png */; };
-		C67D30AF19A5003C00D5A46C /* HTUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D30AD19A5003C00D5A46C /* HTUserInfoController.m */; };
-		C67D30B019A5003C00D5A46C /* HTUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C67D30AE19A5003C00D5A46C /* HTUserInfoController.xib */; };
 		C682AC5619A3B3C000DF08D8 /* home_phone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */; };
 		C682AC5719A3B3C000DF08D8 /* home_saoyisao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */; };
 		C682AC5919A3BB2000DF08D8 /* pub_select_type@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5819A3BB1F00DF08D8 /* pub_select_type@2x.png */; };
@@ -373,6 +375,12 @@
 		C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770619913D670075D6C4 /* TicketScenicSpotList.m */; };
 		C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770919913D7A0075D6C4 /* TicketScenicSpotListPara.m */; };
 		C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED770C19913D880075D6C4 /* TicketScenicSpotListHttp.m */; };
+		C6F2E2A519C1C5E2005C4371 /* TicketYuyueChangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2A419C1C5E2005C4371 /* TicketYuyueChangeDate.m */; };
+		C6F2E2A819C1C5F3005C4371 /* TicketYuyueChangeDatePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2A719C1C5F3005C4371 /* TicketYuyueChangeDatePara.m */; };
+		C6F2E2AB19C1C601005C4371 /* TicketYuyueChangeDateHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2AA19C1C601005C4371 /* TicketYuyueChangeDateHttp.m */; };
+		C6F2E2AE19C1C6DC005C4371 /* TicketYuyueCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2AD19C1C6DC005C4371 /* TicketYuyueCancel.m */; };
+		C6F2E2B119C1C6EE005C4371 /* TicketYuyueCancelPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2B019C1C6EE005C4371 /* TicketYuyueCancelPara.m */; };
+		C6F2E2B419C1C6F7005C4371 /* TicketYuyueCancelHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2E2B319C1C6F7005C4371 /* TicketYuyueCancelHttp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -463,8 +471,8 @@
 		7EC384B01994C45000FB0C6D /* HTOrderResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOrderResultViewController.h; sourceTree = "<group>"; };
 		7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOrderResultViewController.m; sourceTree = "<group>"; };
 		7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOrderResultViewController.xib; sourceTree = "<group>"; };
-		A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppointmentViewController.h; sourceTree = "<group>"; };
-		A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppointmentViewController.m; sourceTree = "<group>"; };
+		A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTAppointmentViewController.h; path = ../Home/HTAppointmentViewController.h; sourceTree = "<group>"; };
+		A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTAppointmentViewController.m; path = ../Home/HTAppointmentViewController.m; sourceTree = "<group>"; };
 		A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppointmentCell.h; sourceTree = "<group>"; };
 		A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppointmentCell.m; sourceTree = "<group>"; };
 		A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTAppointmentCell.xib; sourceTree = "<group>"; };
@@ -560,6 +568,14 @@
 		C60CB9C219C187C200678948 /* HTScenicOrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderListCell.h; sourceTree = "<group>"; };
 		C60CB9C319C187C200678948 /* HTScenicOrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderListCell.m; sourceTree = "<group>"; };
 		C60CB9C419C187C200678948 /* HTScenicOrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicOrderListCell.xib; sourceTree = "<group>"; };
+		C60CB9C719C1AB1C00678948 /* HTYuYueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTYuYueDetailViewController.h; sourceTree = "<group>"; };
+		C60CB9C819C1AB1C00678948 /* HTYuYueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTYuYueDetailViewController.m; sourceTree = "<group>"; };
+		C60CB9CA19C1ADA900678948 /* TicketYuYueDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuYueDetail.h; sourceTree = "<group>"; };
+		C60CB9CB19C1ADA900678948 /* TicketYuYueDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuYueDetail.m; sourceTree = "<group>"; };
+		C60CB9CD19C1ADBB00678948 /* TicketYuYueDetailPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuYueDetailPara.h; sourceTree = "<group>"; };
+		C60CB9CE19C1ADBB00678948 /* TicketYuYueDetailPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuYueDetailPara.m; sourceTree = "<group>"; };
+		C60CB9D019C1ADC800678948 /* TicketYuYueDetailHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuYueDetailHttp.h; sourceTree = "<group>"; };
+		C60CB9D119C1ADC800678948 /* TicketYuYueDetailHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuYueDetailHttp.m; sourceTree = "<group>"; };
 		C60F6FBA19762D7800AFC182 /* HuiTuTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuiTuTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F6FBD19762D7800AFC182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C60F6FBF19762D7800AFC182 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -609,9 +625,6 @@
 		C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListCell.m; sourceTree = "<group>"; };
 		C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListCell.xib; sourceTree = "<group>"; };
 		C67D30AA19A4FE6000D5A46C /* pub_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_arrow@2x.png"; sourceTree = "<group>"; };
-		C67D30AC19A5003C00D5A46C /* HTUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserInfoController.h; sourceTree = "<group>"; };
-		C67D30AD19A5003C00D5A46C /* HTUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTUserInfoController.m; sourceTree = "<group>"; };
-		C67D30AE19A5003C00D5A46C /* HTUserInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTUserInfoController.xib; sourceTree = "<group>"; };
 		C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_phone_icon@2x.png"; sourceTree = "<group>"; };
 		C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_saoyisao@2x.png"; sourceTree = "<group>"; };
 		C682AC5819A3BB1F00DF08D8 /* pub_select_type@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_select_type@2x.png"; sourceTree = "<group>"; };
@@ -1005,6 +1018,18 @@
 		C6ED770919913D7A0075D6C4 /* TicketScenicSpotListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpotListPara.m; sourceTree = "<group>"; };
 		C6ED770B19913D880075D6C4 /* TicketScenicSpotListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketScenicSpotListHttp.h; sourceTree = "<group>"; };
 		C6ED770C19913D880075D6C4 /* TicketScenicSpotListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketScenicSpotListHttp.m; sourceTree = "<group>"; };
+		C6F2E2A319C1C5E2005C4371 /* TicketYuyueChangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueChangeDate.h; sourceTree = "<group>"; };
+		C6F2E2A419C1C5E2005C4371 /* TicketYuyueChangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueChangeDate.m; sourceTree = "<group>"; };
+		C6F2E2A619C1C5F3005C4371 /* TicketYuyueChangeDatePara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueChangeDatePara.h; sourceTree = "<group>"; };
+		C6F2E2A719C1C5F3005C4371 /* TicketYuyueChangeDatePara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueChangeDatePara.m; sourceTree = "<group>"; };
+		C6F2E2A919C1C601005C4371 /* TicketYuyueChangeDateHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueChangeDateHttp.h; sourceTree = "<group>"; };
+		C6F2E2AA19C1C601005C4371 /* TicketYuyueChangeDateHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueChangeDateHttp.m; sourceTree = "<group>"; };
+		C6F2E2AC19C1C6DC005C4371 /* TicketYuyueCancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueCancel.h; sourceTree = "<group>"; };
+		C6F2E2AD19C1C6DC005C4371 /* TicketYuyueCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueCancel.m; sourceTree = "<group>"; };
+		C6F2E2AF19C1C6EE005C4371 /* TicketYuyueCancelPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueCancelPara.h; sourceTree = "<group>"; };
+		C6F2E2B019C1C6EE005C4371 /* TicketYuyueCancelPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueCancelPara.m; sourceTree = "<group>"; };
+		C6F2E2B219C1C6F7005C4371 /* TicketYuyueCancelHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueCancelHttp.h; sourceTree = "<group>"; };
+		C6F2E2B319C1C6F7005C4371 /* TicketYuyueCancelHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueCancelHttp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1068,8 +1093,6 @@
 				C5A6EBC919822C0D0041DC2A /* HTCustomDateCell.h */,
 				C5A6EBCA19822C0D0041DC2A /* HTCustomDateCell.m */,
 				C5A6EBCB19822C0D0041DC2A /* HTCustomDateCell.xib */,
-				A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */,
-				A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */,
 				A9A7D3EF198E1B2800044460 /* HTAppointmentCell.h */,
 				A9A7D3F0198E1B2800044460 /* HTAppointmentCell.m */,
 				A9A7D3F1198E1B2800044460 /* HTAppointmentCell.xib */,
@@ -1501,6 +1524,24 @@
 				C6D9F67519A06E1B00867719 /* TicketOrderListPara.m */,
 				C6D9F67719A06E3800867719 /* TicketOrderListHttp.h */,
 				C6D9F67819A06E3800867719 /* TicketOrderListHttp.m */,
+				C60CB9CA19C1ADA900678948 /* TicketYuYueDetail.h */,
+				C60CB9CB19C1ADA900678948 /* TicketYuYueDetail.m */,
+				C60CB9CD19C1ADBB00678948 /* TicketYuYueDetailPara.h */,
+				C60CB9CE19C1ADBB00678948 /* TicketYuYueDetailPara.m */,
+				C60CB9D019C1ADC800678948 /* TicketYuYueDetailHttp.h */,
+				C60CB9D119C1ADC800678948 /* TicketYuYueDetailHttp.m */,
+				C6F2E2A319C1C5E2005C4371 /* TicketYuyueChangeDate.h */,
+				C6F2E2A419C1C5E2005C4371 /* TicketYuyueChangeDate.m */,
+				C6F2E2A619C1C5F3005C4371 /* TicketYuyueChangeDatePara.h */,
+				C6F2E2A719C1C5F3005C4371 /* TicketYuyueChangeDatePara.m */,
+				C6F2E2A919C1C601005C4371 /* TicketYuyueChangeDateHttp.h */,
+				C6F2E2AA19C1C601005C4371 /* TicketYuyueChangeDateHttp.m */,
+				C6F2E2AC19C1C6DC005C4371 /* TicketYuyueCancel.h */,
+				C6F2E2AD19C1C6DC005C4371 /* TicketYuyueCancel.m */,
+				C6F2E2AF19C1C6EE005C4371 /* TicketYuyueCancelPara.h */,
+				C6F2E2B019C1C6EE005C4371 /* TicketYuyueCancelPara.m */,
+				C6F2E2B219C1C6F7005C4371 /* TicketYuyueCancelHttp.h */,
+				C6F2E2B319C1C6F7005C4371 /* TicketYuyueCancelHttp.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -1948,9 +1989,6 @@
 				C6B9419C1977967800208F20 /* HTMineViewController.h */,
 				C6B9419D1977967800208F20 /* HTMineViewController.m */,
 				C6B9419E1977967800208F20 /* HTMineViewController.xib */,
-				C67D30AC19A5003C00D5A46C /* HTUserInfoController.h */,
-				C67D30AD19A5003C00D5A46C /* HTUserInfoController.m */,
-				C67D30AE19A5003C00D5A46C /* HTUserInfoController.xib */,
 				C6D124AB197E40B200FF4D83 /* HTMyTicketController.h */,
 				C6D124AC197E40B200FF4D83 /* HTMyTicketController.m */,
 				C6D124AD197E40B200FF4D83 /* HTMyTicketController.xib */,
@@ -1960,6 +1998,10 @@
 				C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */,
 				C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */,
 				C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */,
+				A9A7D3EC198E1A0D00044460 /* HTAppointmentViewController.h */,
+				A9A7D3ED198E1A0D00044460 /* HTAppointmentViewController.m */,
+				C60CB9C719C1AB1C00678948 /* HTYuYueDetailViewController.h */,
+				C60CB9C819C1AB1C00678948 /* HTYuYueDetailViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2339,7 +2381,6 @@
 				07BFC6E719A3B2E300507498 /* HTLPTicketDetailCell.xib in Resources */,
 				7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */,
 				C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */,
-				C67D30B019A5003C00D5A46C /* HTUserInfoController.xib in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */,
 				C6053CFB19A61B0D0085C0A8 /* logo.png in Resources */,
@@ -2477,6 +2518,7 @@
 				C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */,
 				C6D47AA719A4534200C47126 /* TicketUserVerify.m in Sources */,
 				C6D124C6197F96B800FF4D83 /* HTLoginTextField.m in Sources */,
+				C6F2E2A819C1C5F3005C4371 /* TicketYuyueChangeDatePara.m in Sources */,
 				C6ADAC18198E167C00AB983B /* ASICloudFilesRequest.m in Sources */,
 				C620A839198F9D0C00AD3791 /* LoginHttp.m in Sources */,
 				C6D47AB019A4778D00C47126 /* MyTicketDetailInfo.m in Sources */,
@@ -2502,11 +2544,13 @@
 				C6912B571990893E00584586 /* LogoutHttp.m in Sources */,
 				C6ED76FB19913A190075D6C4 /* TicketDetail.m in Sources */,
 				C64517D81993A10900DDD2D7 /* HTLPTicketListController.m in Sources */,
+				C6F2E2B119C1C6EE005C4371 /* TicketYuyueCancelPara.m in Sources */,
 				C6D124D81980BCE200FF4D83 /* HTMyTicketCell.m in Sources */,
 				C6912B5E1990A4FF00584586 /* TicketBindPara.m in Sources */,
 				C6ED770419913D5B0075D6C4 /* TicketScenicSpot.m in Sources */,
 				C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */,
 				C6912B831990B46600584586 /* MessageList.m in Sources */,
+				C6F2E2AE19C1C6DC005C4371 /* TicketYuyueCancel.m in Sources */,
 				C6912B4E19907F0E00584586 /* ResetPasswordHttp.m in Sources */,
 				C6912B3F1990799700584586 /* SendCode.m in Sources */,
 				C6ED76FE19913A340075D6C4 /* TicketDetailPara.m in Sources */,
@@ -2520,6 +2564,7 @@
 				C6ADAC19198E167C00AB983B /* ASIS3Bucket.m in Sources */,
 				076E01011992874300FC63D1 /* TicketModel.m in Sources */,
 				C59CB0B5198FB0AC0094DC9F /* ScenicListHttp.m in Sources */,
+				C6F2E2B419C1C6F7005C4371 /* TicketYuyueCancelHttp.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				076E012219928C5F00FC63D1 /* TicketOrderDetailPara.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
@@ -2544,6 +2589,7 @@
 				C6ED770A19913D7A0075D6C4 /* TicketScenicSpotListPara.m in Sources */,
 				C6D124D31980B6D800FF4D83 /* HTTicketBindingController.m in Sources */,
 				C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */,
+				C60CB9C919C1AB1C00678948 /* HTYuYueDetailViewController.m in Sources */,
 				C6ADABC8198E167200AB983B /* UIImage+GIF.m in Sources */,
 				C6ED770719913D670075D6C4 /* TicketScenicSpotList.m in Sources */,
 				C6BA259619A71B7B00B03AD1 /* LPTicketSearch.m in Sources */,
@@ -2569,6 +2615,7 @@
 				076E011019928B4800FC63D1 /* TicketOrderSubmit.m in Sources */,
 				076E011319928B5700FC63D1 /* TicketOrderSubmitPara.m in Sources */,
 				C6912B5B1990A4D600584586 /* TicketBind.m in Sources */,
+				C60CB9D219C1ADC800678948 /* TicketYuYueDetailHttp.m in Sources */,
 				C6912B771990AE2A00584586 /* MessageNotice.m in Sources */,
 				C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
@@ -2605,6 +2652,7 @@
 				C6912B641990A74400584586 /* MyTicketHttp.m in Sources */,
 				C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */,
 				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
+				C60CB9CC19C1ADA900678948 /* TicketYuYueDetail.m in Sources */,
 				C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */,
 				C6BA259919A71B9200B03AD1 /* LPTicketSearchPara.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
@@ -2630,6 +2678,7 @@
 				076E010A199288C500FC63D1 /* TicketPriceCalendarHttp.m in Sources */,
 				C6912B541990886900584586 /* LogoutPara.m in Sources */,
 				C6D124E41981011500FF4D83 /* HTTicketDetailController.m in Sources */,
+				C6F2E2A519C1C5E2005C4371 /* TicketYuyueChangeDate.m in Sources */,
 				C6ADAC11198E167C00AB983B /* ASIWebPageRequest.m in Sources */,
 				C6ADABC6198E167200AB983B /* SDWebImagePrefetcher.m in Sources */,
 				07BFC6E619A3B2E300507498 /* HTLPTicketDetailCell.m in Sources */,
@@ -2638,10 +2687,12 @@
 				C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */,
 				C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */,
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
+				C6F2E2AB19C1C601005C4371 /* TicketYuyueChangeDateHttp.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */,
+				C60CB9CF19C1ADBB00678948 /* TicketYuYueDetailPara.m in Sources */,
 				C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */,
 				C5C9094B19C06E7B006E1BE4 /* AlixPayResult.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
@@ -2660,7 +2711,6 @@
 				C5C9094D19C06E7B006E1BE4 /* NSString+SBJSON.m in Sources */,
 				C620A82A198F769000AD3791 /* RegisterPara.m in Sources */,
 				C6ADAC09198E167C00AB983B /* ASIAuthenticationDialog.m in Sources */,
-				C67D30AF19A5003C00D5A46C /* HTUserInfoController.m in Sources */,
 				C604ECC71997C246004DFB59 /* HTBorderButton.m in Sources */,
 				C6BADF88197691EB00543D39 /* HTOrderViewController.m in Sources */,
 				C5C9095019C06E7B006E1BE4 /* SBJsonParser.m in Sources */,

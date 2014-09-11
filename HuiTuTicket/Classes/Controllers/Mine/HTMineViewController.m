@@ -11,7 +11,6 @@
 
 #import "HTMyTicketController.h"
 #import "HTLoginController.h"
-#import "HTUserInfoController.h"
 
 @interface HTMineViewController ()
 {
