@@ -38,4 +38,8 @@
 //客服电话
 #define SERVICE_NUMBER @"4000707200"
 
+#define BUY_MP_NOTIFICATON @"menpiaogoumai"
+#define ALIPAY_DONE @"alipaycallback"
+
+
 #endif

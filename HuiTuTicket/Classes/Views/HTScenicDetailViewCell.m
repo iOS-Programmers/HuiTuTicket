@@ -22,4 +22,9 @@
     // Configure the view for the selected state
 }
 
+
+- (IBAction)buyAction:(id)sender
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:BUY_MP_NOTIFICATON object:self.model];
+}
 @end

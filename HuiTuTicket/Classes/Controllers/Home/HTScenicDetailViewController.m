@@ -14,6 +14,11 @@
 
 #import "ScenicDetailHttp.h"
 #import "ScenicTicketHttp.h"
+
+
+
+
+
 @interface HTScenicDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
@@ -24,7 +29,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 
 @property (nonatomic,strong) ScenicDetailHttp *scenicDetailHttp;
-
 @property (nonatomic,strong) ScenicTicketHttp *scenicTicketHttp;
 
 @end
@@ -107,6 +111,8 @@
     }];
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -124,6 +130,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - custom
 - (void)refreshUIShow
@@ -157,8 +165,7 @@
     cell.priceLabel.text = [NSString stringWithFormat:@"¥%@",model.bookprice];
     cell.oriPriceLabel.text = [NSString stringWithFormat:@"¥%@",model.price];
     cell.returnMoneyLabel.text = [NSString stringWithFormat:@"¥%d",[model.price intValue]-[model.bookprice intValue]];
-
-
+    cell.model = model;
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -178,8 +185,13 @@
         [self.navigationController pushViewController:app animated:YES];
         return;
     }
+    TicketModel *model = [self.dataSource objectAtIndex:indexPath.row];
     HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
+    app.scenicId = self.scenicId;
+    app.dataModel = model;
     [self.navigationController pushViewController:app animated:YES];
 }
+
+
 
 @end

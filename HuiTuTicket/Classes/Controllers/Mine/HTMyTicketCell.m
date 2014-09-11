@@ -33,8 +33,6 @@
         self.lpUserLabel.text = [NSString stringWithFormat:@"注册人：%@",info.lpuser];
         self.lpEndtimeLabel.text = [NSString stringWithFormat:@"有效期：%@",info.endtime];
     }
-   
-    
 }
 
 @end

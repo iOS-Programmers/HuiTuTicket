@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TicketModel.h"
 @interface HTScenicDetailViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *ticketNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *oriPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *returnMoneyLabel;
+
+@property (strong, nonatomic) TicketModel *model;
+
+- (IBAction)buyAction:(id)sender;
 
 @end

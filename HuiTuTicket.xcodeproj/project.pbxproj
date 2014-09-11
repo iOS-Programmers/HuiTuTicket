@@ -67,6 +67,9 @@
 		C5A1393C19A6E5900054DB04 /* HomeBannerPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1393B19A6E5900054DB04 /* HomeBannerPara.m */; };
 		C5A1393F19A6E5A00054DB04 /* HomeBannerHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */; };
 		C5A1394219A6E5C40054DB04 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A1394119A6E5C40054DB04 /* Banner.m */; };
+		C5A43A3C19C17FBA003EC349 /* HTMPOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A43A3B19C17FBA003EC349 /* HTMPOrderInfo.m */; };
+		C5A43A3F19C17FC9003EC349 /* HTMPOrderInfoPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A43A3E19C17FC9003EC349 /* HTMPOrderInfoPara.m */; };
+		C5A43A4219C17FDA003EC349 /* HTMPOrderInfoHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A43A4119C17FDA003EC349 /* HTMPOrderInfoHttp.m */; };
 		C5A509CD19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */; };
 		C5A509CE19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */; };
 		C5A6EBAC198101300041DC2A /* HTCYOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6EBAA198101300041DC2A /* HTCYOrderViewController.m */; };
@@ -483,6 +486,12 @@
 		C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBannerHttp.m; sourceTree = "<group>"; };
 		C5A1394019A6E5C40054DB04 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
 		C5A1394119A6E5C40054DB04 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		C5A43A3A19C17FBA003EC349 /* HTMPOrderInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMPOrderInfo.h; sourceTree = "<group>"; };
+		C5A43A3B19C17FBA003EC349 /* HTMPOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMPOrderInfo.m; sourceTree = "<group>"; };
+		C5A43A3D19C17FC9003EC349 /* HTMPOrderInfoPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMPOrderInfoPara.h; sourceTree = "<group>"; };
+		C5A43A3E19C17FC9003EC349 /* HTMPOrderInfoPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMPOrderInfoPara.m; sourceTree = "<group>"; };
+		C5A43A4019C17FDA003EC349 /* HTMPOrderInfoHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMPOrderInfoHttp.h; sourceTree = "<group>"; };
+		C5A43A4119C17FDA003EC349 /* HTMPOrderInfoHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMPOrderInfoHttp.m; sourceTree = "<group>"; };
 		C5A509CA19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPSceneTableViewCell.h; sourceTree = "<group>"; };
 		C5A509CB19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPSceneTableViewCell.m; sourceTree = "<group>"; };
 		C5A509CC19A4D0F9009D5CD5 /* HTLPSceneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPSceneTableViewCell.xib; sourceTree = "<group>"; };
@@ -1143,6 +1152,12 @@
 				C5A1393E19A6E5A00054DB04 /* HomeBannerHttp.m */,
 				C5A1394019A6E5C40054DB04 /* Banner.h */,
 				C5A1394119A6E5C40054DB04 /* Banner.m */,
+				C5A43A3A19C17FBA003EC349 /* HTMPOrderInfo.h */,
+				C5A43A3B19C17FBA003EC349 /* HTMPOrderInfo.m */,
+				C5A43A3D19C17FC9003EC349 /* HTMPOrderInfoPara.h */,
+				C5A43A3E19C17FC9003EC349 /* HTMPOrderInfoPara.m */,
+				C5A43A4019C17FDA003EC349 /* HTMPOrderInfoHttp.h */,
+				C5A43A4119C17FDA003EC349 /* HTMPOrderInfoHttp.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2538,6 +2553,7 @@
 				07BFC6E119A3A68A00507498 /* HTLPTicketDetailVC.m in Sources */,
 				C6ADAC14198E167C00AB983B /* ASICloudFilesContainerRequest.m in Sources */,
 				C6ADAC0E198E167C00AB983B /* ASIHTTPRequest.m in Sources */,
+				C5A43A4219C17FDA003EC349 /* HTMPOrderInfoHttp.m in Sources */,
 				C620A830198F7FFC00AD3791 /* HTUserInfoManager.m in Sources */,
 				C6ADAC17198E167C00AB983B /* ASICloudFilesObjectRequest.m in Sources */,
 				C6D9F67919A06E3800867719 /* TicketOrderListHttp.m in Sources */,
@@ -2556,6 +2572,7 @@
 				C6912B5B1990A4D600584586 /* TicketBind.m in Sources */,
 				C6912B771990AE2A00584586 /* MessageNotice.m in Sources */,
 				C6D9F67319A06E0700867719 /* TicketOrderList.m in Sources */,
+				C5A43A3C19C17FBA003EC349 /* HTMPOrderInfo.m in Sources */,
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
@@ -2625,6 +2642,7 @@
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
 				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
+				C5A43A3F19C17FC9003EC349 /* HTMPOrderInfoPara.m in Sources */,
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */,

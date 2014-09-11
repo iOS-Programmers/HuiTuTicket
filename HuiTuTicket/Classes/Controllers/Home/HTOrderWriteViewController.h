@@ -7,7 +7,10 @@
 //
 
 #import "HTBaseTableViewController.h"
+#import "TicketModel.h"
 
 @interface HTOrderWriteViewController : HTBaseTableViewController
+@property (nonatomic, copy) NSString *scenicId;
+@property (nonatomic, strong) TicketModel *dataModel;
 
 @end

@@ -42,6 +42,7 @@
 
 #define kURL_Ticket_Pre @"lp-test.huitupiaowu.com/api.php/rest"
 
+#define kURL_Ticket_Pay @"m-test.huitupiaowu.com/index.php/epay"
 
 
 
