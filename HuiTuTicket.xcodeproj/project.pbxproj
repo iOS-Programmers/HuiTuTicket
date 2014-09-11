@@ -138,6 +138,8 @@
 		C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E41993A3A600DDD2D7 /* LPTicketList.m */; };
 		C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */; };
 		C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */; };
+		C657856419C1507D00867BEC /* home008@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C657856319C1507D00867BEC /* home008@2x.png */; };
+		C657856619C151CB00867BEC /* home006@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C657856519C151CB00867BEC /* home006@2x.png */; };
 		C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */; };
 		C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */; };
 		C67D30AB19A4FE6000D5A46C /* pub_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D30AA19A4FE6000D5A46C /* pub_arrow@2x.png */; };
@@ -595,6 +597,8 @@
 		C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListPara.m; sourceTree = "<group>"; };
 		C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketListHttp.h; sourceTree = "<group>"; };
 		C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListHttp.m; sourceTree = "<group>"; };
+		C657856319C1507D00867BEC /* home008@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home008@2x.png"; sourceTree = "<group>"; };
+		C657856519C151CB00867BEC /* home006@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home006@2x.png"; sourceTree = "<group>"; };
 		C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketListCell.h; sourceTree = "<group>"; };
 		C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListCell.m; sourceTree = "<group>"; };
 		C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListCell.xib; sourceTree = "<group>"; };
@@ -2099,6 +2103,7 @@
 		C6D1248A197E38FC00FF4D83 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C657856319C1507D00867BEC /* home008@2x.png */,
 				C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */,
 				C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */,
 				07EBBB6119991697002DC25B /* home_ad_image@2x.png */,
@@ -2119,6 +2124,7 @@
 				C5FB47E8197E6A9C00FE5364 /* home003@2x.png */,
 				C5FB47E9197E6A9C00FE5364 /* home004@2x.png */,
 				C5FB47EA197E6A9C00FE5364 /* home005@2x.png */,
+				C657856519C151CB00867BEC /* home006@2x.png */,
 				C5A6EBCE19825CC40041DC2A /* datesel@2x.png */,
 			);
 			name = Home;
@@ -2316,6 +2322,7 @@
 				C64517D91993A10900DDD2D7 /* HTLPTicketListController.xib in Resources */,
 				C5A6EBC319822A920041DC2A /* HTOrderDetailViewController.xib in Resources */,
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
+				C657856419C1507D00867BEC /* home008@2x.png in Resources */,
 				C6ADAC21198E167C00AB983B /* LICENSE in Resources */,
 				C6B09E961982683F00576A5F /* zbar-samples.png in Resources */,
 				C691FDDF1997B9A400B3AD53 /* my_avatar_bg@2x.png in Resources */,
@@ -2340,6 +2347,7 @@
 				C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */,
 				C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
+				C657856619C151CB00867BEC /* home006@2x.png in Resources */,
 				7EAAAFCC19922B53003676F3 /* s_n_detail_pulldown_icon@2x.png in Resources */,
 				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
