@@ -75,6 +75,12 @@
  */
 @property (strong, nonatomic) NSString *pmoney;
 
+/**
+ *  状态  0-不要预约 1-正常 2-已预约 3-已出游
+ */
+@property (strong, nonatomic) NSString *state;
+
+
 @end
 
 /*

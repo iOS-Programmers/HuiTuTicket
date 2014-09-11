@@ -239,12 +239,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "432133515.889927"
+                  timestampString = "432146174.074197"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "210"
                   endingLineNumber = "210"
-                  offsetFromSymbolStart = "364">
+                  offsetFromSymbolStart = "325">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -253,12 +253,12 @@
                   symbolName = "__49-[HTTicketRegisterController onRegisterBtnClick:]_block_invoke143"
                   moduleName = "HuiTuTicket"
                   urlString = "file:///Users/Chemayi/Documents/%E9%A1%B9%E7%9B%AE/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTTicketRegisterController.m"
-                  timestampString = "432133515.890134"
+                  timestampString = "432146174.074443"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "210"
                   endingLineNumber = "210"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -366,11 +366,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HuiTuTicket/Classes/Controllers/Mine/HTTicketDetailController.m"
-            timestampString = "430650356.991987"
+            timestampString = "432144073.657402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>

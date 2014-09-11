@@ -7,7 +7,13 @@
 //
 
 #import "HTBaseTableViewController.h"
+@class MyTicketDetailInfo;
 
 @interface HTOrderDetailViewController : HTBaseTableViewController
+
+/**
+ *  上级页面传过来的
+ */
+@property (strong, nonatomic) MyTicketDetailInfo *ticketdetail;
 
 @end

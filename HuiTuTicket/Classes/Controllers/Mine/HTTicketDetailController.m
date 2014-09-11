@@ -224,7 +224,11 @@
 - (IBAction)onYuYueBtnClick:(id)sender
 {
     HTCYOrderViewController *yuyue = [[HTCYOrderViewController alloc] init];
-
+    
+    if (self.detailHttp.resultModel) {
+        yuyue.ticketdetail = (MyTicketDetailInfo *)self.detailHttp.resultModel;
+    }
+    
     [self.navigationController pushViewController:yuyue animated:YES];
 }
 

@@ -36,15 +36,13 @@
     
     self.tableView.rowHeight = 110;
     
-//    self.dataSource = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2"]];
-    
     [self requestData];
 }
 
 - (void)requestData
 {
     
-    self.myticketHttp.parameter.uid = @"2";
+    self.myticketHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
     self.myticketHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     self.myticketHttp.parameter.page = @"1";
     
