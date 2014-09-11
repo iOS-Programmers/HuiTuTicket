@@ -7,17 +7,27 @@
 //
 
 #import "HTMineViewController.h"
-#import "HTMineHeaderView.h"
 #import "HTStoreManager.h"
 
 #import "HTMyTicketController.h"
 #import "HTLoginController.h"
 #import "HTUserInfoController.h"
 
-@interface HTMineViewController ()<HTMineHeaderViewDelegate>
+@interface HTMineViewController ()
 {
-    HTMineHeaderView *headView;
+
 }
+
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginAlertLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+
+- (IBAction)onLogin:(id)sender;
+
 @end
 
 @implementation HTMineViewController
@@ -46,18 +56,18 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI) name:UPDATE_USERINFO object:nil];
+
     
-    headView = [HTMineHeaderView instanceHeaderView];
-    headView.delegate = self;
-    headView.frame = CGRectMake(0, 0, 320, 145);
-    
-    self.tableView.tableHeaderView = headView;
+    self.tableView.tableHeaderView = self.headerView;
     
     
     [self updateUI];
 
 
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -79,45 +89,102 @@
 {
     //用户未登录时候
     if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
-        headView.loginButton.hidden = NO;
-        headView.loginAlertLabel.hidden = NO;
-        headView.userNameLabel.hidden = YES;
-        headView.avatarImage.hidden = YES;
-        headView.arrowImage.hidden = YES;
-        headView.canClick = NO;
+        self.loginAlertLabel.text = @"您还没有登录哦";
+        [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
+        self.loginAlertLabel.hidden = NO;
+        self.userNameLabel.hidden = YES;
+        self.avatarImage.hidden = YES;
+
     }
     else {
-        headView.loginButton.hidden = YES;
-        headView.loginAlertLabel.hidden = YES;
-        headView.userNameLabel.hidden = NO;
-        headView.avatarImage.hidden = NO;
-        headView.arrowImage.hidden = NO;
-        headView.canClick = YES;
+        [self.loginButton setTitle:@"退出登录" forState:UIControlStateNormal];
+        self.loginAlertLabel.text = @"亲，您已经成功登录！";
+
+        self.userNameLabel.hidden = NO;
+        self.avatarImage.hidden = NO;
         
         GetUserInfo *info = [[HTUserInfoManager shareInfoManager] userInfo];
         
-        headView.userNameLabel.text = info.nickname;
-        [headView.avatarImage setImageWithURL:[NSURL URLWithString:info.headpic] placeholderImage:[UIImage imageNamed:@"my_avatar_default"]];
+        self.userNameLabel.text = info.nickname;
+        [self.avatarImage setImageWithURL:[NSURL URLWithString:info.headpic] placeholderImage:[UIImage imageNamed:@"my_avatar_default"]];
     }
     
 }
 
-#pragma mark - HTMineHeadView Delegate
-- (void)onLogin
-{
-    HTLoginController *loginVC = [[HTLoginController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
-    
-    [self.navigationController presentViewController:nav animated:YES completion:^{
+
+- (IBAction)onLogin:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    if ([btn.titleLabel.text isEqualToString:@"退出登录"]) {
+        //退出登录操作
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您确认要退出登录吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+        [alert show];
         
-    }];
+    }
+    else {
+        HTLoginController *loginVC = [[HTLoginController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        
+        [self.navigationController presentViewController:nav animated:YES completion:^{
+            
+        }];
+    }
 }
 
-- (void)clickAvatar
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    HTUserInfoController *useInfo = [[HTUserInfoController alloc] init];
-    useInfo.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:useInfo animated:YES];
+    if (buttonIndex == 1) {
+        //退出登录
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:SESSION_KEY];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_ID];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_USERINFO object:nil];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        //        self.logoutHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+        //        self.logoutHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+        //
+        //
+        //        [self showLoadingWithText:kLOADING_TEXT];
+        //        __block HTUserInfoController *weak_self = self;
+        //        [self.logoutHttp getDataWithCompletionBlock:^{
+        //            [weak_self hideLoading];
+        //
+        //            if (weak_self.logoutHttp.isValid) {
+        //
+        //                /**
+        //                 *  退出登录成功后 移除掉sessionKey userid 返回到上个页面
+        //                 */
+        //                [[NSUserDefaults standardUserDefaults] removeObjectForKey:SESSION_KEY];
+        //                [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_ID];
+        //
+        //                [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_USERINFO object:nil];
+        //
+        //                [self.navigationController popViewControllerAnimated:YES];
+        //
+        //
+        //            }
+        //            else {
+        //                //显示服务端返回的错误提示
+        //                [weak_self showErrorWithText:weak_self.logoutHttp.erorMessage];
+        //            };
+        //
+        //
+        //        }failedBlock:^{
+        //            [weak_self hideLoading];
+        //            if (![HTFoundationCommon networkDetect]) {
+        //
+        //                [weak_self showErrorWithText:kNETWORK_ERROR];
+        //            }
+        //            else {
+        //                
+        //                //统统归纳为服务器出错
+        //                [weak_self showErrorWithText:kSERVICE_ERROR];
+        //            };
+        //        }];
+        
+    }
 }
 
 #pragma mark - UITableView DataSource
@@ -150,7 +217,7 @@
     //用户未登录 弹出登录页面
     if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
         
-        [self onLogin];
+        [self onLogin:self.loginButton];
         return;
     }
     

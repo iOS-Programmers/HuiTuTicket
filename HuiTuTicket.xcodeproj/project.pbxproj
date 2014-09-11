@@ -256,8 +256,6 @@
 		C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B442FB1978EBB500731866 /* HTMoreAboutUsController.xib */; };
 		C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9419D1977967800208F20 /* HTMineViewController.m */; };
 		C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B9419E1977967800208F20 /* HTMineViewController.xib */; };
-		C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941A31977A3C400208F20 /* HTMineHeaderView.m */; };
-		C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */; };
 		C6B941AF1977C2AE00208F20 /* HTMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B941AD1977C2AE00208F20 /* HTMessageCell.m */; };
 		C6B941B01977C2AE00208F20 /* HTMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */; };
 		C6B941B21977C35500208F20 /* message_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B941B11977C35500208F20 /* message_avatar.png */; };
@@ -821,9 +819,6 @@
 		C6B9419C1977967800208F20 /* HTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineViewController.h; sourceTree = "<group>"; };
 		C6B9419D1977967800208F20 /* HTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineViewController.m; sourceTree = "<group>"; };
 		C6B9419E1977967800208F20 /* HTMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineViewController.xib; sourceTree = "<group>"; };
-		C6B941A21977A3C400208F20 /* HTMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMineHeaderView.h; sourceTree = "<group>"; };
-		C6B941A31977A3C400208F20 /* HTMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMineHeaderView.m; sourceTree = "<group>"; };
-		C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMineHeaderView.xib; sourceTree = "<group>"; };
 		C6B941AC1977C2AE00208F20 /* HTMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMessageCell.h; sourceTree = "<group>"; };
 		C6B941AD1977C2AE00208F20 /* HTMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMessageCell.m; sourceTree = "<group>"; };
 		C6B941AE1977C2AE00208F20 /* HTMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTMessageCell.xib; sourceTree = "<group>"; };
@@ -1779,9 +1774,6 @@
 		C6B941A11977A39700208F20 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				C6B941A21977A3C400208F20 /* HTMineHeaderView.h */,
-				C6B941A31977A3C400208F20 /* HTMineHeaderView.m */,
-				C6B941A51977A51A00208F20 /* HTMineHeaderView.xib */,
 				C6D124D51980BCE200FF4D83 /* HTMyTicketCell.h */,
 				C6D124D61980BCE200FF4D83 /* HTMyTicketCell.m */,
 				C6D124D71980BCE200FF4D83 /* HTMyTicketCell.xib */,
@@ -2359,7 +2351,6 @@
 				C6BADF89197691EB00543D39 /* HTOrderViewController.xib in Resources */,
 				C6D124E91981036B00FF4D83 /* pub_greenBtn@2x.png in Resources */,
 				7EAAAFD4199231E2003676F3 /* HTScenicDetailViewCell.xib in Resources */,
-				C6B941A61977A51A00208F20 /* HTMineHeaderView.xib in Resources */,
 				7EC384AD19937A1800FB0C6D /* s_n_order_num_addition@2x.png in Resources */,
 				C6B09E951982683F00576A5F /* zbar-helpicons.png in Resources */,
 				C682AC5719A3B3C000DF08D8 /* home_saoyisao@2x.png in Resources */,
@@ -2632,7 +2623,6 @@
 				C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */,
 				C6912B45199079B900584586 /* SendCodeHttp.m in Sources */,
 				C6D124DD1980E7ED00FF4D83 /* HTRegisterSuccessController.m in Sources */,
-				C6B941A41977A3C400208F20 /* HTMineHeaderView.m in Sources */,
 				C6912B731990A99F00584586 /* TicketUnbindHttp.m in Sources */,
 				C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */,
 				C6D47AAD19A4536900C47126 /* TicketUserVerifyHttp.m in Sources */,
