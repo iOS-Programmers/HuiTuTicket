@@ -9,5 +9,6 @@
 #import "HTBaseViewController.h"
 
 @interface HTScenicOrderDetailVC : HTBaseViewController
+@property (copy, nonatomic) NSString *ticketOrderId;
 
 @end

@@ -9,7 +9,7 @@
 #import "HTScenicOrderListViewController.h"
 #import "HTScenicOrderListCell.h"
 #import "TicketOrderQueryHttp.h"
-
+#import "HTScenicOrderDetailVC.h"
 @interface HTScenicOrderListViewController ()
 
 
@@ -120,7 +120,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    TicketOrderModel *model = self.dataSource[indexPath.row];
+    HTScenicOrderDetailVC *vc = [[HTScenicOrderDetailVC alloc] initWithNibName:@"HTScenicOrderDetailVC" bundle:nil];
+    vc.ticketOrderId = model.orderId;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
