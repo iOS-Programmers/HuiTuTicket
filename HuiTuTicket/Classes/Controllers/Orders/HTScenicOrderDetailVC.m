@@ -9,6 +9,7 @@
 #import "HTScenicOrderDetailVC.h"
 #import "TicketOrderDetailHttp.h"
 #import "QRCodeGenerator.h"
+#import "TicketOrderCancelHttp.h"
 
 @interface HTScenicOrderDetailVC ()
 
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *orderPhoneLabel;
 
 @property (strong, nonatomic) TicketOrderDetailHttp *ticketOrderDetailHttp;
+@property (nonatomic,retain)TicketOrderCancelHttp *ticketOrderCancelHttp;
 
 - (IBAction)cancelOrderAction:(id)sender;
 
@@ -40,6 +42,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _ticketOrderDetailHttp = [[TicketOrderDetailHttp alloc] init];
+        self.ticketOrderCancelHttp = [[TicketOrderCancelHttp alloc] init];
     }
     return self;
 }
@@ -115,9 +118,37 @@
 
 #pragma mark -
 #pragma mark - Action
-- (IBAction)cancelOrderAction:(id)sender {
+- (IBAction)cancelOrderAction:(id)sender
+{
+    self.ticketOrderCancelHttp.parameter.orderid = self.ticketOrderId;
+    self.ticketOrderDetailHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    self.ticketOrderDetailHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+    [self showLoadingWithText:kLOADING_TEXT];
+    __weak HTScenicOrderDetailVC *weak_self = self;
+    [self.ticketOrderCancelHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.ticketOrderCancelHttp.isValid) {
+            [weak_self showWithText:@"订单取消成功"];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.ticketOrderCancelHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
-- (IBAction)goonAction:(id)sender {
+- (IBAction)goonAction:(id)sender
+{
+
+
 }
 @end

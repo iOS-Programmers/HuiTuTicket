@@ -13,6 +13,7 @@
 
 @interface HTEntranceTicketController ()
 @property (nonatomic,retain)ScenicListHttp *scenicListHttp;
+
 @property (weak, nonatomic) IBOutlet UIView *sectionBar;
 
 
