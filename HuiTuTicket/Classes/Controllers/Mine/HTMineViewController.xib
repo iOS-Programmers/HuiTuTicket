@@ -36,9 +36,6 @@
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="qiandao:" destination="-1" eventType="touchUpInside" id="yzr-JG-FLU"/>
-                    </connections>
                 </button>
                 <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="apn-7E-bgX" customClass="HTBorderButton">
                     <rect key="frame" x="160" y="101" width="160" height="44"/>

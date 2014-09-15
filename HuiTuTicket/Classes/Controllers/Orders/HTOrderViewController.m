@@ -8,6 +8,7 @@
 
 #import "HTOrderViewController.h"
 #import "HTScenicOrderListViewController.h"
+#import "HTTaopiaoOrderController.h"
 #import "HTStoreManager.h"
 @interface HTOrderViewController ()
 
@@ -78,6 +79,12 @@
                     HTScenicOrderListViewController *order = [[HTScenicOrderListViewController alloc] init];
                     order.hidesBottomBarWhenPushed = YES;
                     [self.navigationController pushViewController:order animated:YES];
+                }
+                    break;
+                case 1: {
+                    HTTaopiaoOrderController *taopiao = [[HTTaopiaoOrderController alloc] init];
+                    taopiao.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:taopiao animated:YES];
                 }
                     break;
                     

@@ -71,10 +71,11 @@
     [orderConfigureArray addObject:@[waitCommentDic]];
     
     NSDictionary *ticketDic = @{@"title": @"景区门票订单",@"image": @"order_02"};
+    NSDictionary *taopiaoticketDic = @{@"title": @"景区套票订单",@"image": @"order_02"};
     NSDictionary *hotelDic = @{@"title": @"酒店订单",@"image": @"order_03"};
     NSDictionary *airTicketDic = @{@"title": @"机票订单",@"image": @"order_04"};
     NSDictionary *freeTraveDic = @{@"title": @"自由行订单",@"image": @"order_05"};
-    [orderConfigureArray addObject:@[ticketDic,hotelDic,airTicketDic,freeTraveDic]];
+    [orderConfigureArray addObject:@[ticketDic,taopiaoticketDic,hotelDic,airTicketDic,freeTraveDic]];
     
     return orderConfigureArray;
 }

@@ -11,6 +11,8 @@
 #import "HTLPTicketListController.h"
 #import "HTTicketRegisterController.h"
 #import "HTYuYueViewController.h"
+
+#import "HTTaoPiaoTicketController.h"
 @implementation HTHomeHeadView
 
 - (id)initWithFrame:(CGRect)frame
@@ -86,7 +88,7 @@
         case 104:
         {
             //景区套票
-            HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
+            HTTaoPiaoTicketController *vc = [[HTTaoPiaoTicketController alloc] initWithNibName:@"HTTaoPiaoTicketController" bundle:nil];
             vc.hidesBottomBarWhenPushed = YES;
             [[self viewController].navigationController pushViewController:vc animated:YES];
             

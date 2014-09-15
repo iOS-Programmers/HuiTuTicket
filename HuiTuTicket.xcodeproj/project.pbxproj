@@ -214,6 +214,17 @@
 		C6A373F819862CD90016A204 /* pub_blueBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A373F719862CD80016A204 /* pub_blueBtn@2x.png */; };
 		C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A373FA1986417F0016A204 /* HTFindPasswordController.m */; };
 		C6A373FD1986417F0016A204 /* HTFindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A373FB1986417F0016A204 /* HTFindPasswordController.xib */; };
+		C6A71A5619C73B3F0039D8F2 /* HTTaoPiaoTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A5419C73B3F0039D8F2 /* HTTaoPiaoTicketController.m */; };
+		C6A71A5719C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A71A5519C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib */; };
+		C6A71A5B19C73C7B0039D8F2 /* HTTaopiaoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A5919C73C7B0039D8F2 /* HTTaopiaoListCell.m */; };
+		C6A71A5C19C73C7B0039D8F2 /* HTTaopiaoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A71A5A19C73C7B0039D8F2 /* HTTaopiaoListCell.xib */; };
+		C6A71A6019C73F620039D8F2 /* HTTaoPiaoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */; };
+		C6A71A6119C73F620039D8F2 /* HTTaoPiaoDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */; };
+		C6A71A6419C740460039D8F2 /* HTTaopiaoOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A6319C740460039D8F2 /* HTTaopiaoOrderController.m */; };
+		C6A71A6819C740750039D8F2 /* HTTaopiaoOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A6619C740750039D8F2 /* HTTaopiaoOrderCell.m */; };
+		C6A71A6919C740750039D8F2 /* HTTaopiaoOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A71A6719C740750039D8F2 /* HTTaopiaoOrderCell.xib */; };
+		C6A71A6D19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A71A6B19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m */; };
+		C6A71A6E19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A71A6C19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib */; };
 		C6ADABBE198E167200AB983B /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ADABA2198E167200AB983B /* MKAnnotationView+WebCache.m */; };
 		C6ADABBF198E167200AB983B /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ADABA4198E167200AB983B /* NSData+GIF.m */; };
 		C6ADABC0198E167200AB983B /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ADABA6198E167200AB983B /* SDImageCache.m */; };
@@ -747,6 +758,23 @@
 		C6A373F91986417F0016A204 /* HTFindPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFindPasswordController.h; sourceTree = "<group>"; };
 		C6A373FA1986417F0016A204 /* HTFindPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTFindPasswordController.m; sourceTree = "<group>"; };
 		C6A373FB1986417F0016A204 /* HTFindPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTFindPasswordController.xib; sourceTree = "<group>"; };
+		C6A71A5319C73B3F0039D8F2 /* HTTaoPiaoTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaoPiaoTicketController.h; sourceTree = "<group>"; };
+		C6A71A5419C73B3F0039D8F2 /* HTTaoPiaoTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaoPiaoTicketController.m; sourceTree = "<group>"; };
+		C6A71A5519C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaoPiaoTicketController.xib; sourceTree = "<group>"; };
+		C6A71A5819C73C7B0039D8F2 /* HTTaopiaoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoListCell.h; sourceTree = "<group>"; };
+		C6A71A5919C73C7B0039D8F2 /* HTTaopiaoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoListCell.m; sourceTree = "<group>"; };
+		C6A71A5A19C73C7B0039D8F2 /* HTTaopiaoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoListCell.xib; sourceTree = "<group>"; };
+		C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaoPiaoDetailController.h; sourceTree = "<group>"; };
+		C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaoPiaoDetailController.m; sourceTree = "<group>"; };
+		C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaoPiaoDetailController.xib; sourceTree = "<group>"; };
+		C6A71A6219C740460039D8F2 /* HTTaopiaoOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoOrderController.h; sourceTree = "<group>"; };
+		C6A71A6319C740460039D8F2 /* HTTaopiaoOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoOrderController.m; sourceTree = "<group>"; };
+		C6A71A6519C740750039D8F2 /* HTTaopiaoOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoOrderCell.h; sourceTree = "<group>"; };
+		C6A71A6619C740750039D8F2 /* HTTaopiaoOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoOrderCell.m; sourceTree = "<group>"; };
+		C6A71A6719C740750039D8F2 /* HTTaopiaoOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoOrderCell.xib; sourceTree = "<group>"; };
+		C6A71A6A19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoOrderDetalController.h; sourceTree = "<group>"; };
+		C6A71A6B19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoOrderDetalController.m; sourceTree = "<group>"; };
+		C6A71A6C19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoOrderDetalController.xib; sourceTree = "<group>"; };
 		C6ADABA1198E167200AB983B /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		C6ADABA2198E167200AB983B /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		C6ADABA3198E167200AB983B /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
@@ -1615,6 +1643,22 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
+		C6A71A5219C73AB70039D8F2 /* TaoPiaoTicket */ = {
+			isa = PBXGroup;
+			children = (
+				C6A71A5319C73B3F0039D8F2 /* HTTaoPiaoTicketController.h */,
+				C6A71A5419C73B3F0039D8F2 /* HTTaoPiaoTicketController.m */,
+				C6A71A5519C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib */,
+				C6A71A5819C73C7B0039D8F2 /* HTTaopiaoListCell.h */,
+				C6A71A5919C73C7B0039D8F2 /* HTTaopiaoListCell.m */,
+				C6A71A5A19C73C7B0039D8F2 /* HTTaopiaoListCell.xib */,
+				C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */,
+				C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */,
+				C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */,
+			);
+			name = TaoPiaoTicket;
+			sourceTree = "<group>";
+		};
 		C6ADABA0198E167200AB983B /* SDWebImage 3.5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2055,6 +2099,7 @@
 		C6BADF71197689AC00543D39 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C6A71A5219C73AB70039D8F2 /* TaoPiaoTicket */,
 				C64517D2199392FF00DDD2D7 /* EntranceTicket */,
 				C64517D41993A0DA00DDD2D7 /* LPTickent */,
 				07A9D9E519A65C2B00D2B520 /* YuYue */,
@@ -2085,6 +2130,14 @@
 				0714AD0819C204E300BD6253 /* HTScenicOrderDetailVC.h */,
 				0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */,
 				0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */,
+				C6A71A6219C740460039D8F2 /* HTTaopiaoOrderController.h */,
+				C6A71A6319C740460039D8F2 /* HTTaopiaoOrderController.m */,
+				C6A71A6519C740750039D8F2 /* HTTaopiaoOrderCell.h */,
+				C6A71A6619C740750039D8F2 /* HTTaopiaoOrderCell.m */,
+				C6A71A6719C740750039D8F2 /* HTTaopiaoOrderCell.xib */,
+				C6A71A6A19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.h */,
+				C6A71A6B19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m */,
+				C6A71A6C19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -2410,6 +2463,8 @@
 				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
 				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
+				C6A71A5C19C73C7B0039D8F2 /* HTTaopiaoListCell.xib in Resources */,
+				C6A71A6919C740750039D8F2 /* HTTaopiaoOrderCell.xib in Resources */,
 				7EC384AB19937A1800FB0C6D /* s_n_order_num_subtraction@2x.png in Resources */,
 				C6ADAC1F198E167C00AB983B /* README-GHUnit in Resources */,
 				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
@@ -2437,9 +2492,11 @@
 				C6D124D41980B6D800FF4D83 /* HTTicketBindingController.xib in Resources */,
 				C60F6FC819762D7800AFC182 /* InfoPlist.strings in Resources */,
 				C6938C20198FAF52003ADE85 /* btn_adclose@2x.png in Resources */,
+				C6A71A6E19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib in Resources */,
 				C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				7EAAAFCC19922B53003676F3 /* s_n_detail_pulldown_icon@2x.png in Resources */,
+				C6A71A5719C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib in Resources */,
 				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
 				C6D12491197E397500FF4D83 /* order_02@2x.png in Resources */,
@@ -2480,6 +2537,7 @@
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
 				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
 				C64517D01993699100DDD2D7 /* pub_line.png in Resources */,
+				C6A71A6119C73F620039D8F2 /* HTTaoPiaoDetailController.xib in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
 				C6B09E931982683F00576A5F /* zbar-back.png in Resources */,
 				C6B09E941982683F00576A5F /* zbar-help.html in Resources */,
@@ -2611,6 +2669,7 @@
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				076E012219928C5F00FC63D1 /* TicketOrderDetailPara.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
+				C6A71A5B19C73C7B0039D8F2 /* HTTaopiaoListCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
 				C5A1393F19A6E5A00054DB04 /* HomeBannerHttp.m in Sources */,
 				076E00F8199285F700FC63D1 /* ScenicTicketHttp.m in Sources */,
@@ -2650,6 +2709,7 @@
 				C620A836198F9CFB00AD3791 /* LoginPara.m in Sources */,
 				076E0131199290CD00FC63D1 /* TicketOrderModel.m in Sources */,
 				C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */,
+				C6A71A6419C740460039D8F2 /* HTTaopiaoOrderController.m in Sources */,
 				C557C9B019C1D8CC00DCE85D /* HTYuYueDetailViewController.m in Sources */,
 				C6912B42199079A800584586 /* SendCodePara.m in Sources */,
 				C6ADAC1C198E167C00AB983B /* ASIS3ObjectRequest.m in Sources */,
@@ -2664,6 +2724,7 @@
 				C6D124AE197E40B200FF4D83 /* HTMyTicketController.m in Sources */,
 				C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */,
 				C6BADF7E197690F400543D39 /* HTMoreViewController.m in Sources */,
+				C6A71A5619C73B3F0039D8F2 /* HTTaoPiaoTicketController.m in Sources */,
 				C6ADABC4198E167200AB983B /* SDWebImageDownloaderOperation.m in Sources */,
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6912B6A1990A77000584586 /* MyTicket.m in Sources */,
@@ -2671,6 +2732,7 @@
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */,
 				C6B9419F1977967800208F20 /* HTMineViewController.m in Sources */,
+				C6A71A6019C73F620039D8F2 /* HTTaoPiaoDetailController.m in Sources */,
 				C6ADAC1E198E167C00AB983B /* ASIS3ServiceRequest.m in Sources */,
 				C6ADAC0C198E167C00AB983B /* ASIDownloadCache.m in Sources */,
 				C655B8EB19C1F623007DD925 /* TicketYuyueScenicListHttp.m in Sources */,
@@ -2704,6 +2766,7 @@
 				C6BA259919A71B9200B03AD1 /* LPTicketSearchPara.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
 				076E011C19928C1800FC63D1 /* TicketOrderQueryHttp.m in Sources */,
+				C6A71A6D19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
 				C620A827198F766D00AD3791 /* Register.m in Sources */,
 				C682AC5C19A3BDBF00DF08D8 /* UIView+Utils.m in Sources */,
@@ -2775,6 +2838,7 @@
 				C6ADABC3198E167200AB983B /* SDWebImageDownloader.m in Sources */,
 				C691FDDB1997721900B3AD53 /* MyTicketList.m in Sources */,
 				C5C9094C19C06E7B006E1BE4 /* NSObject+SBJSON.m in Sources */,
+				C6A71A6819C740750039D8F2 /* HTTaopiaoOrderCell.m in Sources */,
 				C60F6FCA19762D7800AFC182 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
