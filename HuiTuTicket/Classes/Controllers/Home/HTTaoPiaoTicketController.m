@@ -12,7 +12,13 @@
 
 #import "HTTaoPiaoDetailController.h"
 
+#import "TaoPiaoProductListHttp.h"
+
+#import "TaoPiaoProduct.h"
+
 @interface HTTaoPiaoTicketController ()
+
+@property (strong, nonatomic) TaoPiaoProductListHttp *taopiaoListHttp;
 
 @end
 
@@ -24,6 +30,8 @@
     if (self) {
         // Custom initialization
         self.title = @"景区套票";
+        
+        _taopiaoListHttp = [[TaoPiaoProductListHttp alloc] init];
     }
     return self;
 }
@@ -33,6 +41,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tableView.rowHeight = 80;
+    
+    [self loadDataSource];
+}
+
+- (void)loadDataSource
+{
+
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTaoPiaoTicketController *weak_self = self;
+    [self.taopiaoListHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.taopiaoListHttp.isValid) {
+            weak_self.dataSource = weak_self.taopiaoListHttp.resultModel.info;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.taopiaoListHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,8 +83,7 @@
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    return [self.dataSource count];
-    return 10;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,19 +95,13 @@
         
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTaopiaoListCell" owner:self options:nil] lastObject];
     }
-    //    TicketModel *model = [self.dataSource objectAtIndex:indexPath.row];
-    //    cell.nameLabel.text = model.ticketName;
-    //    cell.priceLabel.text = model.bookprice;
-    //    cell.placeLabel.text = model.state;
-    //    cell.oriPriceLabel.text = model.price;
     
-//    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
-//    [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
-//    cell.nameLabel.text = scenic.scenicName;
-//    cell.levelLabel.text = scenic.rank;
-//    cell.placeLabel.text = scenic.address;
-//    cell.priceLabel.text = scenic.minprice;
-//    cell.oriPriceLabel.text = scenic.price;
+    TaoPiaoProduct *info = (TaoPiaoProduct *)self.dataSource[indexPath.row];
+    
+    [cell.imgView setImageWithURL:[NSURL URLWithString:info.picture]];
+    cell.ticketName.text = info.title;
+    cell.priceLabel.text = info.minprice;
+
     return cell;
 }
 

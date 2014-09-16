@@ -162,6 +162,10 @@
 		C655B8EE19C20873007DD925 /* TicketYuyueSubmit.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8ED19C20873007DD925 /* TicketYuyueSubmit.m */; };
 		C655B8F119C20882007DD925 /* TicketYuyueSubmitPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8F019C20882007DD925 /* TicketYuyueSubmitPara.m */; };
 		C655B8F419C2088D007DD925 /* TicketYuyueSubmitHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8F319C2088D007DD925 /* TicketYuyueSubmitHttp.m */; };
+		C65B8CEC19C894F900E92584 /* TaoPiaoProductList.m in Sources */ = {isa = PBXBuildFile; fileRef = C65B8CEB19C894F900E92584 /* TaoPiaoProductList.m */; };
+		C65B8CEF19C8950600E92584 /* TaoPiaoProductListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C65B8CEE19C8950600E92584 /* TaoPiaoProductListPara.m */; };
+		C65B8CF219C8950F00E92584 /* TaoPiaoProductListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C65B8CF119C8950F00E92584 /* TaoPiaoProductListHttp.m */; };
+		C65B8CF519C8967500E92584 /* TaoPiaoProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = C65B8CF419C8967500E92584 /* TaoPiaoProduct.m */; };
 		C671D1B11996205100BA2E67 /* HTLPTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */; };
 		C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */; };
 		C67D30AB19A4FE6000D5A46C /* pub_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D30AA19A4FE6000D5A46C /* pub_arrow@2x.png */; };
@@ -672,6 +676,14 @@
 		C655B8F019C20882007DD925 /* TicketYuyueSubmitPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueSubmitPara.m; sourceTree = "<group>"; };
 		C655B8F219C2088D007DD925 /* TicketYuyueSubmitHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueSubmitHttp.h; sourceTree = "<group>"; };
 		C655B8F319C2088D007DD925 /* TicketYuyueSubmitHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueSubmitHttp.m; sourceTree = "<group>"; };
+		C65B8CEA19C894F900E92584 /* TaoPiaoProductList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoPiaoProductList.h; sourceTree = "<group>"; };
+		C65B8CEB19C894F900E92584 /* TaoPiaoProductList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoPiaoProductList.m; sourceTree = "<group>"; };
+		C65B8CED19C8950600E92584 /* TaoPiaoProductListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoPiaoProductListPara.h; sourceTree = "<group>"; };
+		C65B8CEE19C8950600E92584 /* TaoPiaoProductListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoPiaoProductListPara.m; sourceTree = "<group>"; };
+		C65B8CF019C8950F00E92584 /* TaoPiaoProductListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoPiaoProductListHttp.h; sourceTree = "<group>"; };
+		C65B8CF119C8950F00E92584 /* TaoPiaoProductListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoPiaoProductListHttp.m; sourceTree = "<group>"; };
+		C65B8CF319C8967500E92584 /* TaoPiaoProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoPiaoProduct.h; sourceTree = "<group>"; };
+		C65B8CF419C8967500E92584 /* TaoPiaoProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoPiaoProduct.m; sourceTree = "<group>"; };
 		C671D1AE1996205100BA2E67 /* HTLPTicketListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPTicketListCell.h; sourceTree = "<group>"; };
 		C671D1AF1996205100BA2E67 /* HTLPTicketListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPTicketListCell.m; sourceTree = "<group>"; };
 		C671D1B01996205100BA2E67 /* HTLPTicketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPTicketListCell.xib; sourceTree = "<group>"; };
@@ -1531,9 +1543,25 @@
 			name = LPTickent;
 			sourceTree = "<group>";
 		};
+		C65B8CE919C894CE00E92584 /* TaoPiao */ = {
+			isa = PBXGroup;
+			children = (
+				C65B8CF319C8967500E92584 /* TaoPiaoProduct.h */,
+				C65B8CF419C8967500E92584 /* TaoPiaoProduct.m */,
+				C65B8CEA19C894F900E92584 /* TaoPiaoProductList.h */,
+				C65B8CEB19C894F900E92584 /* TaoPiaoProductList.m */,
+				C65B8CED19C8950600E92584 /* TaoPiaoProductListPara.h */,
+				C65B8CEE19C8950600E92584 /* TaoPiaoProductListPara.m */,
+				C65B8CF019C8950F00E92584 /* TaoPiaoProductListHttp.h */,
+				C65B8CF119C8950F00E92584 /* TaoPiaoProductListHttp.m */,
+			);
+			name = TaoPiao;
+			sourceTree = "<group>";
+		};
 		C6912B581990A43700584586 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				C65B8CE919C894CE00E92584 /* TaoPiao */,
 				C557C9B119C1D9F100DCE85D /* TicketYuyueCancel.h */,
 				C557C9B219C1D9F100DCE85D /* TicketYuyueCancel.m */,
 				C557C9B319C1D9F100DCE85D /* TicketYuyueCancelHttp.h */,
@@ -2740,6 +2768,7 @@
 				C6912B701990A98D00584586 /* TicketUnbindPara.m in Sources */,
 				C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */,
 				C6BA258819A6EB7000B03AD1 /* rscode.c in Sources */,
+				C65B8CF219C8950F00E92584 /* TaoPiaoProductListHttp.m in Sources */,
 				C6ADABCB198E167200AB983B /* UIImageView+WebCache.m in Sources */,
 				C59CB0B2198FB09A0094DC9F /* ScenicListPara.m in Sources */,
 				C655B8E819C1F616007DD925 /* TicketYuyueScenicListPara.m in Sources */,
@@ -2761,6 +2790,7 @@
 				C6EC125319A2333400DFB74C /* FeedbackHttp.m in Sources */,
 				C6912B641990A74400584586 /* MyTicketHttp.m in Sources */,
 				C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */,
+				C65B8CEF19C8950600E92584 /* TaoPiaoProductListPara.m in Sources */,
 				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
 				C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */,
 				C6BA259919A71B9200B03AD1 /* LPTicketSearchPara.m in Sources */,
@@ -2770,6 +2800,7 @@
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,
 				C620A827198F766D00AD3791 /* Register.m in Sources */,
 				C682AC5C19A3BDBF00DF08D8 /* UIView+Utils.m in Sources */,
+				C65B8CEC19C894F900E92584 /* TaoPiaoProductList.m in Sources */,
 				076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */,
 				C6BA258D19A6F81500B03AD1 /* HTYuYueViewController.m in Sources */,
 				076E011F19928C4800FC63D1 /* TicketOrderDetail.m in Sources */,
@@ -2788,6 +2819,7 @@
 				C557C9CB19C1D9F100DCE85D /* TicketYuYueDetailPara.m in Sources */,
 				7EC384A6199371E100FB0C6D /* HTOrderWriteViewController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
+				C65B8CF519C8967500E92584 /* TaoPiaoProduct.m in Sources */,
 				A9A7D3F2198E1B2800044460 /* HTAppointmentCell.m in Sources */,
 				076E010A199288C500FC63D1 /* TicketPriceCalendarHttp.m in Sources */,
 				C6912B541990886900584586 /* LogoutPara.m in Sources */,

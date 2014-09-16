@@ -44,6 +44,8 @@
 
 #define kURL_Ticket_Pay @"m-test.huitupiaowu.com/index.php/epay"
 
+#define kURL_TaoPiao_Pre @"m-test.huitupiaowu.com/index.php/taopiao"
+
 
 
 #define kURL_HelpCenter @"http://m.huitour.cn/help/"
