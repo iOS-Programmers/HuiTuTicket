@@ -110,10 +110,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
+    TaoPiaoProduct *info = (TaoPiaoProduct *)self.dataSource[indexPath.row];
+
     HTTaoPiaoDetailController *app = [[HTTaoPiaoDetailController alloc] init];
     app.hidesBottomBarWhenPushed = YES;
-//    app.scenicId = scenic.scenicId;
+    app.productInfo = info;
     [self.navigationController pushViewController:app animated:YES];
 }
 

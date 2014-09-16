@@ -7,8 +7,13 @@
 //
 
 #import "HTTaoPiaoDetailController.h"
+#import "TaoPiaoProductDetailHttp.h"
 
 @interface HTTaoPiaoDetailController ()
+
+@property (strong, nonatomic) TaoPiaoProductDetailHttp *taopiaoDetailHttp;
+
+
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIView *footView;
 @property (weak, nonatomic) IBOutlet UIImageView *scenicImage;
@@ -27,6 +32,8 @@
     if (self) {
         // Custom initialization
         self.title = @"套票详情";
+        
+        _taopiaoDetailHttp = [[TaoPiaoProductDetailHttp alloc] init];
     }
     return self;
 }
@@ -39,6 +46,8 @@
     
     self.tableView.tableHeaderView = self.headView;
     self.tableView.tableFooterView = self.footView;
+    
+    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +57,37 @@
 }
 
 - (IBAction)onOrderBtnClick:(id)sender {
+}
+
+
+- (void)loadDataSource
+{
+    self.taopiaoDetailHttp.parameter.tpid = self.productInfo.tpid;
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTaoPiaoDetailController *weak_self = self;
+    [self.taopiaoDetailHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.taopiaoDetailHttp.isValid) {
+//            weak_self.dataSource = weak_self.taopiaoDetailHttp.resultModel.info;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.taopiaoDetailHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 

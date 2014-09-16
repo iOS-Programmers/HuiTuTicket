@@ -8,6 +8,11 @@
 
 #import "HTBaseTableViewController.h"
 
+#import "TaoPiaoProduct.h"
+
 @interface HTTaoPiaoDetailController : HTBaseTableViewController
+
+
+@property (strong, nonatomic) TaoPiaoProduct *productInfo;
 
 @end
