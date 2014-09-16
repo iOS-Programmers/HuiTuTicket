@@ -113,7 +113,6 @@
             [weak_self showErrorWithText:kSERVICE_ERROR];
         };
     }];
-    
 }
 
 #pragma mark -
