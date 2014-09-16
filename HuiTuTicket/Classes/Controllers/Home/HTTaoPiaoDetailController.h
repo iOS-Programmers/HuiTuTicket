@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "HTBaseViewController.h"
+#import "HTBaseTableViewController.h"
 
-@interface HTTaoPiaoDetailController : HTBaseViewController
+@interface HTTaoPiaoDetailController : HTBaseTableViewController
 
 @end
