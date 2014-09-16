@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0714AD0B19C204E300BD6253 /* HTScenicOrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */; };
 		0714AD0C19C204E300BD6253 /* HTScenicOrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */; };
+		0714AD1019C88FE200BD6253 /* HTModelSelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714AD0E19C88FE200BD6253 /* HTModelSelVC.m */; };
+		0714AD1119C88FE200BD6253 /* HTModelSelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0714AD0F19C88FE200BD6253 /* HTModelSelVC.xib */; };
+		0714AD1519C8988F00BD6253 /* HTModelSelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714AD1319C8988F00BD6253 /* HTModelSelCell.m */; };
+		0714AD1619C8988F00BD6253 /* HTModelSelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0714AD1419C8988F00BD6253 /* HTModelSelCell.xib */; };
 		076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00EE1992838900FC63D1 /* ScenicDetail.m */; };
 		076E00F2199283A800FC63D1 /* ScenicDetailPara.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F1199283A800FC63D1 /* ScenicDetailPara.m */; };
 		076E00F5199283BA00FC63D1 /* ScenicDetailHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E00F4199283BA00FC63D1 /* ScenicDetailHttp.m */; };
@@ -426,6 +430,12 @@
 		0714AD0819C204E300BD6253 /* HTScenicOrderDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTScenicOrderDetailVC.h; sourceTree = "<group>"; };
 		0714AD0919C204E300BD6253 /* HTScenicOrderDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTScenicOrderDetailVC.m; sourceTree = "<group>"; };
 		0714AD0A19C204E300BD6253 /* HTScenicOrderDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTScenicOrderDetailVC.xib; sourceTree = "<group>"; };
+		0714AD0D19C88FE200BD6253 /* HTModelSelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTModelSelVC.h; sourceTree = "<group>"; };
+		0714AD0E19C88FE200BD6253 /* HTModelSelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTModelSelVC.m; sourceTree = "<group>"; };
+		0714AD0F19C88FE200BD6253 /* HTModelSelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTModelSelVC.xib; sourceTree = "<group>"; };
+		0714AD1219C8988F00BD6253 /* HTModelSelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTModelSelCell.h; sourceTree = "<group>"; };
+		0714AD1319C8988F00BD6253 /* HTModelSelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTModelSelCell.m; sourceTree = "<group>"; };
+		0714AD1419C8988F00BD6253 /* HTModelSelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTModelSelCell.xib; sourceTree = "<group>"; };
 		076E00ED1992838900FC63D1 /* ScenicDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDetail.h; sourceTree = "<group>"; };
 		076E00EE1992838900FC63D1 /* ScenicDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicDetail.m; sourceTree = "<group>"; };
 		076E00F0199283A800FC63D1 /* ScenicDetailPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDetailPara.h; sourceTree = "<group>"; };
@@ -2191,6 +2201,12 @@
 				C6A71A6A19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.h */,
 				C6A71A6B19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m */,
 				C6A71A6C19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.xib */,
+				0714AD0D19C88FE200BD6253 /* HTModelSelVC.h */,
+				0714AD0E19C88FE200BD6253 /* HTModelSelVC.m */,
+				0714AD0F19C88FE200BD6253 /* HTModelSelVC.xib */,
+				0714AD1219C8988F00BD6253 /* HTModelSelCell.h */,
+				0714AD1319C8988F00BD6253 /* HTModelSelCell.m */,
+				0714AD1419C8988F00BD6253 /* HTModelSelCell.xib */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -2534,6 +2550,7 @@
 				07BFC6E719A3B2E300507498 /* HTLPTicketDetailCell.xib in Resources */,
 				7EC384AC19937A1800FB0C6D /* s_n_order_num_show@2x.png in Resources */,
 				C691FDE41997BDCD00B3AD53 /* my_picture@2x.png in Resources */,
+				0714AD1619C8988F00BD6253 /* HTModelSelCell.xib in Resources */,
 				C6D124A9197E3C0200FF4D83 /* tab_more@2x.png in Resources */,
 				C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */,
 				C6053CFB19A61B0D0085C0A8 /* logo.png in Resources */,
@@ -2616,6 +2633,7 @@
 				C6D1249C197E3AC800FF4D83 /* my_02@2x.png in Resources */,
 				C6D12492197E397500FF4D83 /* order_03@2x.png in Resources */,
 				C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */,
+				0714AD1119C88FE200BD6253 /* HTModelSelVC.xib in Resources */,
 				7EAAAFCA19922B53003676F3 /* s_n_detail_address_icon@2x.png in Resources */,
 				C6D12493197E397500FF4D83 /* order_04@2x.png in Resources */,
 				7EAAAFCF19922D0E003676F3 /* s_n_set_line@2x.png in Resources */,
@@ -2724,6 +2742,7 @@
 				C6F666A019C89D9D006ADB63 /* TaoPiaoTicket.m in Sources */,
 				C6A373FC1986417F0016A204 /* HTFindPasswordController.m in Sources */,
 				076E012219928C5F00FC63D1 /* TicketOrderDetailPara.m in Sources */,
+				0714AD1019C88FE200BD6253 /* HTModelSelVC.m in Sources */,
 				C5A6EBB11981019B0041DC2A /* HTOrderTableViewCell.m in Sources */,
 				C6A71A5B19C73C7B0039D8F2 /* HTTaopiaoListCell.m in Sources */,
 				C6ADABC9198E167200AB983B /* UIImage+MultiFormat.m in Sources */,
@@ -2874,6 +2893,7 @@
 				C6EC124119A22A9500DFB74C /* HTBaseWebViewController.m in Sources */,
 				C5C9094B19C06E7B006E1BE4 /* AlixPayResult.m in Sources */,
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
+				0714AD1519C8988F00BD6253 /* HTModelSelCell.m in Sources */,
 				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
 				076E011619928BC300FC63D1 /* TicketOrderQueryPara.m in Sources */,
