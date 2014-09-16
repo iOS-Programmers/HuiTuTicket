@@ -48,7 +48,7 @@
     
     //Home
     HTHomeViewController *homeRootViewController = [[HTHomeViewController alloc] init];
-    homeRootViewController.title = @"主页";
+    homeRootViewController.title = @"惠途假期";
     homeRootViewController.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
     homeRootViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_home_selected"];
     HTBaseNavigationController *homeRootNav = [[HTBaseNavigationController alloc] initWithRootViewController:homeRootViewController];

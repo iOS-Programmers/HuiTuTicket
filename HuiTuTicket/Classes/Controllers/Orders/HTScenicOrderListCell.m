@@ -32,6 +32,8 @@
         self.orderTime.text = [NSString stringWithFormat:@"下单日期：%@",info.addtime];
         
         self.price.text = [NSString stringWithFormat:@"￥%@",info.totalamount];
+        
+        self.orderStatus.text = [info.ispay isEqualToString:@"0"] ? @"未支付" : @"已支付";
     }
     
     

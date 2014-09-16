@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *tourTime;
 @property (weak, nonatomic) IBOutlet UILabel *orderTime;
+@property (weak, nonatomic) IBOutlet UILabel *orderStatus;
 
 - (void)configureWithData:(TicketOrderModel *)info;
 

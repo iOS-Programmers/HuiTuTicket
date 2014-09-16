@@ -40,6 +40,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _ticketOrderDetailHttp = [[TicketOrderDetailHttp alloc] init];
+        
+        self.title = @"详情";
     }
     return self;
 }
@@ -66,7 +68,7 @@
     self.sceneNameLabel.text = self.ticketOrderDetailHttp.resultModel.scenicName;
     self.addressLabel.text = self.ticketOrderDetailHttp.resultModel.address;
     self.sceneAvaTimeLabel.text = self.ticketOrderDetailHttp.resultModel.opentime;
-    self.payModeLabel.text = self.ticketOrderDetailHttp.resultModel.paymode;
+    self.payModeLabel.text = [self.ticketOrderDetailHttp.resultModel.paymode isEqualToString:@"0"] ? @"现场支付" : @"网上支付";
     self.orderPhoneLabel.text = [NSString stringWithFormat:@"%@/%@",self.ticketOrderDetailHttp.resultModel.receivername,self.ticketOrderDetailHttp.resultModel.receivermoblie];
     //生成二维码
     if (!FBIsEmpty(self.ticketOrderDetailHttp.resultModel.ticketId))

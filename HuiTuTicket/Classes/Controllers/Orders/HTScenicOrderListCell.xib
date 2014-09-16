@@ -36,15 +36,23 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="￥280" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-Zg-pB6">
-                        <rect key="frame" x="220" y="30" width="87" height="21"/>
+                        <rect key="frame" x="220" y="38" width="87" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="0.44431734109999999" blue="0.24225105890000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="待支付" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIu-ZX-zfL">
+                        <rect key="frame" x="237" y="9" width="70" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="orderStatus" destination="MIu-ZX-zfL" id="BO2-b7-Ed2"/>
                 <outlet property="orderTime" destination="O1b-rC-Fev" id="IyL-Ee-WIR"/>
                 <outlet property="price" destination="4Dp-Zg-pB6" id="fgV-XP-Hgw"/>
                 <outlet property="scenicName" destination="05q-7D-Lao" id="jo0-9J-k8R"/>

@@ -72,7 +72,7 @@
     NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
     switch (section) {
-        case 1: {
+        case 0: {
             switch (row) {
                 case 0:
                 {
