@@ -17,7 +17,6 @@
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIView *footView;
 @property (weak, nonatomic) IBOutlet UIImageView *scenicImage;
-
 @property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 

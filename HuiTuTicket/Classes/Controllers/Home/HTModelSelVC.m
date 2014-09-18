@@ -42,6 +42,8 @@
     
     self.tableView.tableHeaderView = self.header;
     self.tableView.tableFooterView = self.footer;
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +56,7 @@
 #pragma mark - TableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_dataArray count];
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,7 +74,7 @@
             }
         }
     }
-    cell.selTypeLB.text = [self.dataArray objectAtIndex:indexPath.row];
+    cell.selTypeLB.text = @"sdasdas";
     return cell;
 }
 
