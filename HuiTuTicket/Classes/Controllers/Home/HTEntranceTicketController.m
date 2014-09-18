@@ -10,6 +10,7 @@
 #import "HTHomeTableViewCell.h"
 #import "HTScenicDetailViewController.h"
 #import "ScenicListHttp.h"
+#import "HTModelSelVC.h"
 
 @interface HTEntranceTicketController ()
 @property (nonatomic,retain)ScenicListHttp *scenicListHttp;
@@ -17,6 +18,12 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *filterView;
+
+- (IBAction)orderSelAction:(id)sender;
+- (IBAction)areaSelAction:(id)sender;
+- (IBAction)rangeSelAction:(id)sender;
+
+
 
 @end
 
@@ -140,4 +147,23 @@
     [self.navigationController pushViewController:app animated:YES];
 }
 
+#pragma mark -
+#pragma mark - Action
+- (IBAction)orderSelAction:(id)sender
+{
+    HTModelSelVC *vc = [[HTModelSelVC alloc] initWithNibName:@"HTModelSelVC" bundle:nil];
+    [self.view addSubview:vc.view];
+}
+
+- (IBAction)areaSelAction:(id)sender
+{
+    HTModelSelVC *vc = [[HTModelSelVC alloc] initWithNibName:@"HTModelSelVC" bundle:nil];
+    [self presentViewController:vc animated:YES completion:^{}];
+}
+
+- (IBAction)rangeSelAction:(id)sender
+{
+    HTModelSelVC *vc = [[HTModelSelVC alloc] initWithNibName:@"HTModelSelVC" bundle:nil];
+    [self presentViewController:vc animated:YES completion:^{}];
+}
 @end

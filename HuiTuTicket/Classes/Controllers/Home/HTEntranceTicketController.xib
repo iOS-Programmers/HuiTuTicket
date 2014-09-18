@@ -32,6 +32,9 @@
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="areaSelAction:" destination="-1" eventType="touchUpInside" id="tqe-tj-Ers"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gle-co-0ZI">
                     <rect key="frame" x="215" y="44" width="105" height="44"/>
@@ -41,6 +44,9 @@
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="orderSelAction:" destination="-1" eventType="touchUpInside" id="lUk-E1-hFZ"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BDx-BC-9TJ">
                     <rect key="frame" x="105" y="44" width="110" height="44"/>
@@ -50,6 +56,9 @@
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="rangeSelAction:" destination="-1" eventType="touchUpInside" id="eXs-Lw-xZS"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" id="JPw-0B-1hB">
                     <rect key="frame" x="105" y="44" width="1" height="44"/>
