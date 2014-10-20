@@ -135,6 +135,7 @@
  */
 - (IBAction)onPasswordNextBtn:(id)sender
 {
+    self.mv_sendtoPhoneLabel.text = [NSString stringWithFormat:@"已将短信验证码发送至%@",self.phoneNumberTF];
     if (FBIsEmpty(self.pw_phoneNumTF.text)) {
         [self showErrorWithText:@"请输入手机号"];
         
