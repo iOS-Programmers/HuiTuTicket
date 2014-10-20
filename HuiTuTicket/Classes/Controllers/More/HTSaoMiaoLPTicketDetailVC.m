@@ -71,6 +71,10 @@
         else {
             //显示服务端返回的错误提示
             [weak_self showErrorWithText:weak_self.detailHttp.erorMessage];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weak_self.navigationController popToRootViewControllerAnimated:YES];
+            });
         };
         
         
@@ -79,6 +83,9 @@
         if (![HTFoundationCommon networkDetect]) {
             
             [weak_self showErrorWithText:kNETWORK_ERROR];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weak_self.navigationController popToRootViewControllerAnimated:YES];
+            });
         }
         else {
             

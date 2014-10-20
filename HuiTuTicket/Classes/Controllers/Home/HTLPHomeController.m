@@ -11,15 +11,21 @@
 #import "HTStoreManager.h"
 #import "HomeBannerHttp.h"
 
+#import "HTTicketRegisterController.h"
+#import "HTYuYueViewController.h"
+#import "HTMyTicketController.h"
+#import "HTSaoMiaoLPTicketDetailVC.h"
 
-@interface HTLPHomeController ()
+@interface HTLPHomeController () <ZBarReaderDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (strong, nonatomic) IBOutlet UIView *footView;
 
 @property (strong, nonatomic) HomeBannerHttp *homeBannerHttp;
 
+- (IBAction)onBottomBtnClick:(id)sender;
 @end
 
 @implementation HTLPHomeController
@@ -42,6 +48,10 @@
     // Do any additional setup after loading the view from its nib.
     
     self.tableView.tableHeaderView = self.headerView;
+    [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] - 44];
+    
+    [self.view addSubview:self.footView];
+    [self.footView frameSetY:self.tableView.frame.size.height - 49];
     
     [self loadBanner];
     
@@ -94,6 +104,64 @@
     [self.headImage setImageWithURL:[NSURL URLWithString:bannerInfo.image]];
 }
 
+- (IBAction)onBottomBtnClick:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    
+    switch (btn.tag)
+    {
+        case 1:
+        {
+            //联票注册
+            HTTicketRegisterController *vc = [[HTTicketRegisterController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+            break;
+        case 2:
+        {
+            //出游预约
+            HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+            break;
+        case 3:
+        {
+            //我的联票
+            HTMyTicketController *vc = [[HTMyTicketController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            //扫一扫
+            ZBarReaderViewController *reader = [ZBarReaderViewController new];
+            reader.readerDelegate = self;
+            reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+            reader.title = @"扫一扫";
+            [self setOverlayPickerView:reader];
+            ZBarImageScanner *scanner = reader.scanner;
+            
+            [scanner setSymbology: ZBAR_I25
+                           config: ZBAR_CFG_ENABLE
+                               to: 0];
+            reader.hidesBottomBarWhenPushed = YES;
+            reader.wantsFullScreenLayout = NO;
+            reader.showsZBarControls = NO;
+            
+            [self pushNewViewController:reader];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 #pragma mark - DataSource
 
@@ -129,12 +197,31 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     NSInteger row = indexPath.row;
-    NSInteger section = indexPath.section;
     
     HTLPIntroduceController *inroduce = [[HTLPIntroduceController alloc] init];
     inroduce.type = [NSString stringWithFormat:@"%d",row+1];
     [self.navigationController pushViewController:inroduce animated:YES];
     
 }
+
+#pragma mark - ZBar Delegate
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //扫描到联票号码，进入联票详情资料页
+        HTSaoMiaoLPTicketDetailVC *saomiao = [[HTSaoMiaoLPTicketDetailVC alloc] init];
+        saomiao.ticketNumber = symbol.data;
+        [self.navigationController pushViewController:saomiao animated:NO];
+    });
+}
+
 
 @end

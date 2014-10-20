@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HTLPHomeController">
             <connections>
+                <outlet property="footView" destination="30y-bI-Khc" id="GK0-xP-iaf"/>
                 <outlet property="headImage" destination="Sst-Jd-oXJ" id="TEa-yY-PQk"/>
                 <outlet property="headerView" destination="6gi-ZQ-z52" id="2tQ-RO-21L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -32,5 +33,79 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <view contentMode="scaleToFill" id="30y-bI-Khc" userLabel="View - footerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button appearanceType="aqua" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2bJ-M1-pcE">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="-14" minY="23" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="-15" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="联票注册" image="lp_bottom_01.png">
+                        <color key="titleColor" red="0.33333333329999998" green="0.69411764710000001" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBottomBtnClick:" destination="-1" eventType="touchUpInside" id="K8J-1L-xO4"/>
+                    </connections>
+                </button>
+                <button appearanceType="aqua" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yMc-OA-Kk1">
+                    <rect key="frame" x="80" y="0.0" width="80" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="-14" minY="23" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="-15" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="出游预约" image="lp_bottom_02.png">
+                        <color key="titleColor" red="0.33333333329999998" green="0.69411764710000001" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBottomBtnClick:" destination="-1" eventType="touchUpInside" id="nei-yP-d84"/>
+                    </connections>
+                </button>
+                <button appearanceType="aqua" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nLE-Qf-Nfz">
+                    <rect key="frame" x="160" y="0.0" width="80" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="3" minY="-3" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="-14" minY="23" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="-15" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="我的联票" image="lp_bottom_03.png">
+                        <color key="titleColor" red="0.33333333329999998" green="0.69411764710000001" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBottomBtnClick:" destination="-1" eventType="touchUpInside" id="rw3-53-42L"/>
+                    </connections>
+                </button>
+                <button appearanceType="aqua" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G88-s9-Ngh">
+                    <rect key="frame" x="240" y="0.0" width="80" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="-14" minY="23" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="-15" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="扫一扫" image="lp_bottom_04.png">
+                        <color key="titleColor" red="0.33333333329999998" green="0.69411764710000001" blue="0.87843137250000003" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBottomBtnClick:" destination="-1" eventType="touchUpInside" id="oSZ-cc-LQB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
     </objects>
+    <resources>
+        <image name="lp_bottom_01.png" width="20" height="17"/>
+        <image name="lp_bottom_02.png" width="20" height="17"/>
+        <image name="lp_bottom_03.png" width="20" height="17"/>
+        <image name="lp_bottom_04.png" width="20" height="17"/>
+    </resources>
 </document>
