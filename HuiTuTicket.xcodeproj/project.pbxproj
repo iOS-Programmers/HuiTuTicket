@@ -209,6 +209,8 @@
 		C68DD08F19F5338600D1281E /* lp_bottom_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD08B19F5338600D1281E /* lp_bottom_02@2x.png */; };
 		C68DD09019F5338600D1281E /* lp_bottom_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD08C19F5338600D1281E /* lp_bottom_03@2x.png */; };
 		C68DD09119F5338600D1281E /* lp_bottom_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD08D19F5338600D1281E /* lp_bottom_04@2x.png */; };
+		C68DD09519F54B5000D1281E /* HTResetPasswdController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD09319F54B5000D1281E /* HTResetPasswdController.m */; };
+		C68DD09619F54B5000D1281E /* HTResetPasswdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68DD09419F54B5000D1281E /* HTResetPasswdController.xib */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -788,6 +790,9 @@
 		C68DD08B19F5338600D1281E /* lp_bottom_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lp_bottom_02@2x.png"; sourceTree = "<group>"; };
 		C68DD08C19F5338600D1281E /* lp_bottom_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lp_bottom_03@2x.png"; sourceTree = "<group>"; };
 		C68DD08D19F5338600D1281E /* lp_bottom_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lp_bottom_04@2x.png"; sourceTree = "<group>"; };
+		C68DD09219F54B5000D1281E /* HTResetPasswdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTResetPasswdController.h; sourceTree = "<group>"; };
+		C68DD09319F54B5000D1281E /* HTResetPasswdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTResetPasswdController.m; sourceTree = "<group>"; };
+		C68DD09419F54B5000D1281E /* HTResetPasswdController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTResetPasswdController.xib; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -2490,6 +2495,9 @@
 				C6A373F91986417F0016A204 /* HTFindPasswordController.h */,
 				C6A373FA1986417F0016A204 /* HTFindPasswordController.m */,
 				C6A373FB1986417F0016A204 /* HTFindPasswordController.xib */,
+				C68DD09219F54B5000D1281E /* HTResetPasswdController.h */,
+				C68DD09319F54B5000D1281E /* HTResetPasswdController.m */,
+				C68DD09419F54B5000D1281E /* HTResetPasswdController.xib */,
 				C6D124C71980AC1600FF4D83 /* HTTicketRegisterController.h */,
 				C6D124C81980AC1600FF4D83 /* HTTicketRegisterController.m */,
 				C6D124C91980AC1600FF4D83 /* HTTicketRegisterController.xib */,
@@ -2745,6 +2753,7 @@
 				C68DD08219F5151F00D1281E /* lphome_01@2x.png in Resources */,
 				C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */,
 				C5FB47E5197E6A7D00FE5364 /* HTHomeTableViewCell.xib in Resources */,
+				C68DD09619F54B5000D1281E /* HTResetPasswdController.xib in Resources */,
 				7EAAAFCB19922B53003676F3 /* s_n_detail_address_time@2x.png in Resources */,
 				C6A373F4198627700016A204 /* icon_arrow@2x.png in Resources */,
 				C6D124E51981011500FF4D83 /* HTTicketDetailController.xib in Resources */,
@@ -2946,6 +2955,7 @@
 				C6D124B7197E6AF400FF4D83 /* MBProgressHUD.m in Sources */,
 				C6912B6A1990A77000584586 /* MyTicket.m in Sources */,
 				C6BA258519A6EB7000B03AD1 /* qrencode.c in Sources */,
+				C68DD09519F54B5000D1281E /* HTResetPasswdController.m in Sources */,
 				C6BADF64197681A300543D39 /* HTBaseTabBarController.m in Sources */,
 				07B5335D19CB486100831366 /* TPOrderListHttp.m in Sources */,
 				C6F6669719C89B8A006ADB63 /* TaoPiaoProductDetailHttp.m in Sources */,

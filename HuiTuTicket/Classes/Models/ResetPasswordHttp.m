@@ -17,6 +17,7 @@
         self.parameter = [[ResetPasswordPara alloc] init];
         self.resultModel = [[ResetPassword alloc] init];
         self.apiFuncName = @"user.password.set";
+        self.api_url = kURL_Member_Pre;
     }
     return self;
 }
