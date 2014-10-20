@@ -196,6 +196,15 @@
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
 		C68DD07519F50EA700D1281E /* LXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07419F50EA700D1281E /* LXUtils.m */; };
+		C68DD07919F513AA00D1281E /* HTLPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07719F513AA00D1281E /* HTLPHomeController.m */; };
+		C68DD07A19F513AA00D1281E /* HTLPHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07819F513AA00D1281E /* HTLPHomeController.xib */; };
+		C68DD08019F5151F00D1281E /* home006@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07B19F5151F00D1281E /* home006@2x.png */; };
+		C68DD08119F5151F00D1281E /* home008@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07C19F5151F00D1281E /* home008@2x.png */; };
+		C68DD08219F5151F00D1281E /* lphome_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07D19F5151F00D1281E /* lphome_01@2x.png */; };
+		C68DD08319F5151F00D1281E /* lphome_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07E19F5151F00D1281E /* lphome_02@2x.png */; };
+		C68DD08419F5151F00D1281E /* lphome_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68DD07F19F5151F00D1281E /* lphome_03@2x.png */; };
+		C68DD08819F5181900D1281E /* HTLPIntroduceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD08619F5181900D1281E /* HTLPIntroduceController.m */; };
+		C68DD08919F5181900D1281E /* HTLPIntroduceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68DD08719F5181900D1281E /* HTLPIntroduceController.xib */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -760,6 +769,17 @@
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
 		C68DD07319F50EA700D1281E /* LXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXUtils.h; sourceTree = "<group>"; };
 		C68DD07419F50EA700D1281E /* LXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXUtils.m; sourceTree = "<group>"; };
+		C68DD07619F513AA00D1281E /* HTLPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPHomeController.h; sourceTree = "<group>"; };
+		C68DD07719F513AA00D1281E /* HTLPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPHomeController.m; sourceTree = "<group>"; };
+		C68DD07819F513AA00D1281E /* HTLPHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPHomeController.xib; sourceTree = "<group>"; };
+		C68DD07B19F5151F00D1281E /* home006@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home006@2x.png"; sourceTree = "<group>"; };
+		C68DD07C19F5151F00D1281E /* home008@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home008@2x.png"; sourceTree = "<group>"; };
+		C68DD07D19F5151F00D1281E /* lphome_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lphome_01@2x.png"; sourceTree = "<group>"; };
+		C68DD07E19F5151F00D1281E /* lphome_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lphome_02@2x.png"; sourceTree = "<group>"; };
+		C68DD07F19F5151F00D1281E /* lphome_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lphome_03@2x.png"; sourceTree = "<group>"; };
+		C68DD08519F5181900D1281E /* HTLPIntroduceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLPIntroduceController.h; sourceTree = "<group>"; };
+		C68DD08619F5181900D1281E /* HTLPIntroduceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLPIntroduceController.m; sourceTree = "<group>"; };
+		C68DD08719F5181900D1281E /* HTLPIntroduceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTLPIntroduceController.xib; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -1602,6 +1622,12 @@
 		C64517D41993A0DA00DDD2D7 /* LPTickent */ = {
 			isa = PBXGroup;
 			children = (
+				C68DD07619F513AA00D1281E /* HTLPHomeController.h */,
+				C68DD07719F513AA00D1281E /* HTLPHomeController.m */,
+				C68DD07819F513AA00D1281E /* HTLPHomeController.xib */,
+				C68DD08519F5181900D1281E /* HTLPIntroduceController.h */,
+				C68DD08619F5181900D1281E /* HTLPIntroduceController.m */,
+				C68DD08719F5181900D1281E /* HTLPIntroduceController.xib */,
 				C64517D51993A10900DDD2D7 /* HTLPTicketListController.h */,
 				C64517D61993A10900DDD2D7 /* HTLPTicketListController.m */,
 				C64517D71993A10900DDD2D7 /* HTLPTicketListController.xib */,
@@ -2398,6 +2424,11 @@
 		C6D1248A197E38FC00FF4D83 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C68DD07B19F5151F00D1281E /* home006@2x.png */,
+				C68DD07C19F5151F00D1281E /* home008@2x.png */,
+				C68DD07D19F5151F00D1281E /* lphome_01@2x.png */,
+				C68DD07E19F5151F00D1281E /* lphome_02@2x.png */,
+				C68DD07F19F5151F00D1281E /* lphome_03@2x.png */,
 				0714AD2119C9F1BB00BD6253 /* icon-58.png */,
 				C682AC5419A3B3C000DF08D8 /* home_phone_icon@2x.png */,
 				C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */,
@@ -2609,6 +2640,7 @@
 				C6DE621919AAF91E0074DC07 /* tab_home_selected@2x.png in Resources */,
 				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
+				C68DD08119F5151F00D1281E /* home008@2x.png in Resources */,
 				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
 				C6A71A5C19C73C7B0039D8F2 /* HTTaopiaoListCell.xib in Resources */,
 				C6A71A6919C740750039D8F2 /* HTTaopiaoOrderCell.xib in Resources */,
@@ -2645,6 +2677,7 @@
 				C671D1B21996205100BA2E67 /* HTLPTicketListCell.xib in Resources */,
 				C6D1249B197E3AC800FF4D83 /* my_01@2x.png in Resources */,
 				7EAAAFCC19922B53003676F3 /* s_n_detail_pulldown_icon@2x.png in Resources */,
+				C68DD08319F5151F00D1281E /* lphome_02@2x.png in Resources */,
 				C6A71A5719C73B3F0039D8F2 /* HTTaoPiaoTicketController.xib in Resources */,
 				C5A6EBCD19822C0D0041DC2A /* HTCustomDateCell.xib in Resources */,
 				C6D124A7197E3C0200FF4D83 /* tab_message@2x.png in Resources */,
@@ -2674,23 +2707,28 @@
 				C64517D11993699100DDD2D7 /* pub_line@2x.png in Resources */,
 				C6D12485197E37E500FF4D83 /* more_update@2x.png in Resources */,
 				C6D124A8197E3C0200FF4D83 /* tab_mine@2x.png in Resources */,
+				C68DD07A19F513AA00D1281E /* HTLPHomeController.xib in Resources */,
 				0714AD0C19C204E300BD6253 /* HTScenicOrderDetailVC.xib in Resources */,
+				C68DD08919F5181900D1281E /* HTLPIntroduceController.xib in Resources */,
 				C6DE621A19AAF91E0074DC07 /* tab_message_selected@2x.png in Resources */,
 				C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
 				C5C9094819C06E7B006E1BE4 /* Alixpay.bundle in Resources */,
 				C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */,
+				C68DD08019F5151F00D1281E /* home006@2x.png in Resources */,
 				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
 				C682AC5919A3BB2000DF08D8 /* pub_select_type@2x.png in Resources */,
 				A9A7D3F3198E1B2800044460 /* HTAppointmentCell.xib in Resources */,
 				C6D12482197E37E500FF4D83 /* more_qcore@2x.png in Resources */,
 				C6D124EA1981036B00FF4D83 /* pub_OrangBtn@2x.png in Resources */,
 				C64517D01993699100DDD2D7 /* pub_line.png in Resources */,
+				C68DD08419F5151F00D1281E /* lphome_03@2x.png in Resources */,
 				C6A71A6119C73F620039D8F2 /* HTTaoPiaoDetailController.xib in Resources */,
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
 				C6B09E931982683F00576A5F /* zbar-back.png in Resources */,
 				C6B09E941982683F00576A5F /* zbar-help.html in Resources */,
 				C5A6EBC819822BF80041DC2A /* HTCustomMapCell.xib in Resources */,
+				C68DD08219F5151F00D1281E /* lphome_01@2x.png in Resources */,
 				C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */,
 				C5FB47E5197E6A7D00FE5364 /* HTHomeTableViewCell.xib in Resources */,
 				7EAAAFCB19922B53003676F3 /* s_n_detail_address_time@2x.png in Resources */,
@@ -2815,6 +2853,7 @@
 				C6D47AB619A477AB00C47126 /* MyTicketDetailInfoHttp.m in Sources */,
 				C5A1393919A6E57D0054DB04 /* HomeBanner.m in Sources */,
 				C6BADF5819764A1E00543D39 /* HTBaseViewController.m in Sources */,
+				C68DD08819F5181900D1281E /* HTLPIntroduceController.m in Sources */,
 				C6ED76F21990E3A90075D6C4 /* TicketRegister.m in Sources */,
 				C6D47AAA19A4535600C47126 /* TicketUserVerifyPara.m in Sources */,
 				C6912B7A1990AE4400584586 /* MessageNoticePara.m in Sources */,
@@ -2935,6 +2974,7 @@
 				C6BA259919A71B9200B03AD1 /* LPTicketSearchPara.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
 				C65B8CF819C89B4C00E92584 /* TaoPiaoProductDetail.m in Sources */,
+				C68DD07919F513AA00D1281E /* HTLPHomeController.m in Sources */,
 				076E011C19928C1800FC63D1 /* TicketOrderQueryHttp.m in Sources */,
 				C6A71A6D19C741EB0039D8F2 /* HTTaopiaoOrderDetalController.m in Sources */,
 				C5A6EBC219822A920041DC2A /* HTOrderDetailViewController.m in Sources */,

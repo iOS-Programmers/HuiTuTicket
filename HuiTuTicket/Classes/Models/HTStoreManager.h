@@ -40,4 +40,10 @@
  */
 - (NSMutableArray *)getAboutUsConfigureArray;
 
+/**
+ *  配置<景区联票首页>cell内容
+ *
+ */
+- (NSMutableArray *)getLPHomeConfigureArray;
+
 @end

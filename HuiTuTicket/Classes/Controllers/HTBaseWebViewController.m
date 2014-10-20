@@ -10,6 +10,9 @@
 
 @interface HTBaseWebViewController ()
 
+{
+     UIActivityIndicatorView *activityIndicatorView;
+}
 
 
 @end
@@ -30,6 +33,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.webView];
+    
+    activityIndicatorView = [[UIActivityIndicatorView alloc]
+                             initWithFrame : CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)] ;
+    [activityIndicatorView setCenter: self.view.center] ;
+    [activityIndicatorView setActivityIndicatorViewStyle: UIActivityIndicatorViewStyleGray] ;
+    [self.view addSubview : activityIndicatorView] ;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +57,7 @@
                                     
         _webView = [[UIWebView alloc] initWithFrame:webViewFrame];
         [_webView sizeToFit];
+        _webView.delegate = self;
         
         _webView.scalesPageToFit = YES;
     }
@@ -58,6 +68,21 @@
 - (void)loadDataWithURL:(NSString *)urlString
 {
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [activityIndicatorView startAnimating] ;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [activityIndicatorView stopAnimating];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [activityIndicatorView stopAnimating];
 }
 
 /*

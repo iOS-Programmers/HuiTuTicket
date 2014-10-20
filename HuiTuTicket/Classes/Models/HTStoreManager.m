@@ -81,6 +81,19 @@
     return orderConfigureArray;
 }
 
+- (NSMutableArray *)getLPHomeConfigureArray
+{
+    NSMutableArray *lpHomeConfigureArray = [[NSMutableArray alloc] initWithCapacity:2];
+    
+    NSDictionary *jieshaoDic = @{@"title": @"联票介绍",@"image": @"lphome_01"};
+    NSDictionary *huoquDic = @{@"title": @"获取联票",@"image": @"lphome_02"};
+    NSDictionary *xuzhiDic = @{@"title": @"使用须知",@"image": @"lphome_03"};
+
+    [lpHomeConfigureArray addObject:@[jieshaoDic,huoquDic,xuzhiDic]];
+    
+    return lpHomeConfigureArray;
+}
+
 - (NSMutableArray *)getAboutUsConfigureArray
 {
      NSMutableArray *aboutUsConfigureArray = [[NSMutableArray alloc] initWithArray:@[@"公司介绍",@"版权说明",@"关于我们"]];

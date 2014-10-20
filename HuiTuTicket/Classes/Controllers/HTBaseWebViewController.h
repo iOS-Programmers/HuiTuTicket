@@ -8,7 +8,7 @@
 
 #import "HTBaseViewController.h"
 
-@interface HTBaseWebViewController : HTBaseViewController
+@interface HTBaseWebViewController : HTBaseViewController<UIWebViewDelegate>
 
 /**
  *  显示网页的控件

@@ -11,7 +11,7 @@
 #import "HTLPTicketListController.h"
 #import "HTTicketRegisterController.h"
 #import "HTYuYueViewController.h"
-
+#import "HTLPHomeController.h"
 #import "HTTaoPiaoTicketController.h"
 @implementation HTHomeHeadView
 
@@ -55,7 +55,7 @@
         case 100:
         {
             //景区联票
-            HTLPTicketListController *lpTicket = [[HTLPTicketListController alloc] init];
+            HTLPHomeController *lpTicket = [[HTLPHomeController alloc] init];
             lpTicket.hidesBottomBarWhenPushed =YES;
             [[self viewController].navigationController pushViewController:lpTicket animated:YES];
         }
