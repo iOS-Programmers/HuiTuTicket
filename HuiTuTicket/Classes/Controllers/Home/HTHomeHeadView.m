@@ -13,6 +13,8 @@
 #import "HTYuYueViewController.h"
 #import "HTLPHomeController.h"
 #import "HTTaoPiaoTicketController.h"
+
+#import "HTMyTicketController.h"
 @implementation HTHomeHeadView
 
 - (id)initWithFrame:(CGRect)frame
@@ -79,9 +81,21 @@
         case 103:
         {
             //出游预约
-            HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
-            vc.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:vc animated:YES];
+            //用户未登录 进入出游预约界面
+            if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+                HTYuYueViewController *vc = [[HTYuYueViewController alloc] initWithNibName:@"HTYuYueViewController" bundle:nil];
+                vc.hidesBottomBarWhenPushed = YES;
+                [[self viewController].navigationController pushViewController:vc animated:YES];
+            }
+            else {
+                //用户登陆后进入我的联票界面
+                HTMyTicketController *myTicket = [[HTMyTicketController alloc] init];
+                myTicket.hidesBottomBarWhenPushed = YES;
+                [[self viewController].navigationController pushViewController:myTicket animated:YES];
+            }
+            
+            
+            
 
         }
             break;

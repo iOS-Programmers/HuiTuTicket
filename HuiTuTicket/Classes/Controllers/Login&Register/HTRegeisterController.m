@@ -11,6 +11,11 @@
 #import "SendCodeHttp.h"
 
 @interface HTRegeisterController ()
+{
+    NSTimer *timer;
+    
+    int countDownTime;
+}
 
 
 @property (strong, nonatomic) RegisterHttp *registerHttp;
@@ -152,6 +157,11 @@
     }
     
     [self.scrollView setContentOffset:CGPointMake(640, 0) animated:YES];
+    
+    self.mv_sendtoPhoneLabel.text = [NSString stringWithFormat:@"已将短信验证码发送至您手机%@",self.pw_phoneNumTF.text];
+    
+    //请求发送验证码
+    [self onSendCodeBtnClick:nil];
 }
 
 /**
@@ -178,7 +188,7 @@
         }
         else
         {   //显示服务端返回的错误提示
-//            [weak_self showText:weak_self.registerHttp.erorMessage];
+            [weak_self showWithText:weak_self.registerHttp.erorMessage];
         };
         
         [weak_self hideLoading];
@@ -213,7 +223,10 @@
 
         if (weak_self.sendcodeHttp.isValid) {
             //发送成功
-
+            
+            //获取成功后
+            timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:weak_self selector:@selector(countDown) userInfo:nil repeats:YES];
+            countDownTime = 60;
         }
         else {
             //显示服务端返回的错误提示
@@ -233,5 +246,31 @@
             [weak_self showErrorWithText:kSERVICE_ERROR];
         };
     }];
+}
+
+//倒计时操作
+- (void)countDown
+{
+    countDownTime --;
+    if (countDownTime == 0)
+    {
+        if ([timer isValid]) {
+
+            [timer invalidate];
+            [self changeButtonState];
+            return;
+        }
+    }
+    [self.mv_SendBtn setTitle:[NSString stringWithFormat:@"已发送(%d)",countDownTime] forState:UIControlStateNormal];
+
+    self.mv_SendBtn.userInteractionEnabled = NO;
+    
+}
+
+- (void)changeButtonState{
+    
+    self.mv_SendBtn.userInteractionEnabled = YES;
+
+    [self.mv_SendBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
 }
 @end
