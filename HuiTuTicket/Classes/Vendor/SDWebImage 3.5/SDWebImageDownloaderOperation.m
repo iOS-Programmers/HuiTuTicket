@@ -31,6 +31,10 @@
     BOOL responseFromCached;
 }
 
+//解决xcode6报错问题
+@synthesize executing = _executing;
+@synthesize finished = _finished;
+
 - (id)initWithRequest:(NSURLRequest *)request options:(SDWebImageDownloaderOptions)options progress:(void (^)(NSUInteger, long long))progressBlock completed:(void (^)(UIImage *, NSData *, NSError *, BOOL))completedBlock cancelled:(void (^)())cancelBlock
 {
     if ((self = [super init]))
@@ -40,8 +44,8 @@
         _progressBlock = [progressBlock copy];
         _completedBlock = [completedBlock copy];
         _cancelBlock = [cancelBlock copy];
-        self.executing = NO;
-        self.finished = NO;
+        _executing = NO;
+        _finished = NO;
         _expectedSize = 0;
         responseFromCached = YES; // Initially wrong until `connection:willCacheResponse:` is called or not called
     }
@@ -136,14 +140,14 @@
 - (void)setFinished:(BOOL)finished
 {
     [self willChangeValueForKey:@"isFinished"];
-    finished = finished;
+    _finished = finished;
     [self didChangeValueForKey:@"isFinished"];
 }
 
 - (void)setExecuting:(BOOL)executing
 {
     [self willChangeValueForKey:@"isExecuting"];
-    executing = executing;
+    _executing = executing;
     [self didChangeValueForKey:@"isExecuting"];
 }
 
