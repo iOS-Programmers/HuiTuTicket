@@ -182,7 +182,7 @@
     
     //底部view
     
-    UIView * downView = [[UIView alloc] initWithFrame:CGRectMake(0, 360, 320, 120)];
+    UIView * downView = [[UIView alloc] initWithFrame:CGRectMake(0, 360, 320, 250)];
     
     downView.alpha = 0.3;
     

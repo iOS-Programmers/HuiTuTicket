@@ -91,7 +91,7 @@
 - (void)loadDataSource
 {
     self.scenicListHttp.parameter.page = @"1";
-    self.scenicListHttp.parameter.pagesize = @"10";
+    self.scenicListHttp.parameter.pagesize = @"20";
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTHomeViewController *weak_self = self;
     [self.scenicListHttp getDataWithCompletionBlock:^{
@@ -238,19 +238,45 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil] lastObject];
     }
     Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
+   
     [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
     cell.nameLabel.text = scenic.scenicName;
-    cell.levelLabel.text = scenic.rank;
-    cell.placeLabel.text = scenic.address;
+    cell.levelLabel.text = [self stringChangeToStar:scenic.rank];
+    if (FBIsEmpty(scenic.address)) {
+        cell.placeLabel.text = scenic.city;
+    }
+    else {
+        cell.placeLabel.text = scenic.address;
+    }
+    
     cell.priceLabel.text = scenic.minprice;
     cell.oriPriceLabel.text = scenic.price;
     return cell;
 }
 
+- (NSString *)stringChangeToStar:(NSString *)level
+{
+    NSString *star = @"";
+    
+    if ([level isEqualToString:@"0"]) {
+        level = @"1";
+    }
+    if ([level intValue] > 4) {
+        level = @"4";
+    }
+    
+    NSMutableArray * array = [[NSMutableArray alloc] initWithCapacity:4];
+    [array addObjectsFromArray:@[@"A",@"AA",@"AAA",@"AAAA",@"AAAAA"]];
+    
+    star = array[[level intValue] - 1];
+    
+    return star;
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 80;
 }
 
 #pragma mark - ZBar Delegate
