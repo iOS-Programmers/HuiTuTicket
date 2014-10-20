@@ -128,9 +128,16 @@
         return;
     }
     
-    self.pw_phoneNumTF.text = self.phoneNumberTF.text;
-    
-    [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+    if ([self.phoneNumberTF.text length]==11&&[[self.phoneNumberTF.text substringToIndex:1] isEqualToString:@"1"])
+    {
+        self.pw_phoneNumTF.text = self.phoneNumberTF.text;
+        [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+    }
+    else
+    {
+        [self.phoneNumberTF resignFirstResponder];
+        [self showErrorWithText:@"您输入的号码有误！"];
+    }
 }
 
 /**
@@ -140,6 +147,7 @@
  */
 - (IBAction)onPasswordNextBtn:(id)sender
 {
+    self.mv_sendtoPhoneLabel.text = [NSString stringWithFormat:@"已将短信验证码发送至%@",self.phoneNumberTF];
     if (FBIsEmpty(self.pw_phoneNumTF.text)) {
         [self showErrorWithText:@"请输入手机号"];
         
