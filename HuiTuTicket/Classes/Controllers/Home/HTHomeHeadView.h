@@ -13,6 +13,7 @@
 - (IBAction)headBtnsClicked:(UIButton *)sender;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *bannerImage;
 
 
 

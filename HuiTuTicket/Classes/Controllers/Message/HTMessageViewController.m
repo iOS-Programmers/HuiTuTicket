@@ -51,10 +51,10 @@
 - (void)requestData
 {
     //未登录的情况返回
-    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
-
-        return;
-    }
+//    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+//
+//        return;
+//    }
     self.messageListHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
     self.messageListHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     
@@ -99,7 +99,7 @@
     //刷新界面
     
     self.dataSource = list.info;
-    
+    [self.tableView reloadData];
 }
 
 

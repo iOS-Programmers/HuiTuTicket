@@ -10,6 +10,7 @@
 #import "HTScenicOrderListViewController.h"
 #import "HTTaopiaoOrderController.h"
 #import "HTStoreManager.h"
+#import "HTLoginController.h"
 @interface HTOrderViewController ()
 
 @end
@@ -71,6 +72,21 @@
     UIViewController *viewController;
     NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
+    
+    //用户未登录 弹出登录页面
+    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+
+        HTLoginController *loginVC = [[HTLoginController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        
+        [self.navigationController presentViewController:nav animated:YES completion:^{
+            
+        }];
+        
+        return;
+    }
+    
+    
     switch (section) {
         case 0: {
             switch (row) {

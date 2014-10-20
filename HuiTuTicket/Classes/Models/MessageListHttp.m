@@ -17,7 +17,7 @@
         self.parameter = [[MessageListPara alloc] init];
         self.resultModel = [[MessageList alloc] init];
         self.api_url = kURL_Message_Pre;
-        self.apiFuncName = @"user.lp.list";
+        self.apiFuncName = @"user.message.list";
     }
     return self;
 }

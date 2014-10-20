@@ -195,6 +195,7 @@
 		C682AC5C19A3BDBF00DF08D8 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C682AC5B19A3BDBF00DF08D8 /* UIView+Utils.m */; };
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
+		C68DD07519F50EA700D1281E /* LXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07419F50EA700D1281E /* LXUtils.m */; };
 		C6912B3C198FBB2C00584586 /* GetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3B198FBB2C00584586 /* GetUserInfo.m */; };
 		C6912B3F1990799700584586 /* SendCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B3E1990799700584586 /* SendCode.m */; };
 		C6912B42199079A800584586 /* SendCodePara.m in Sources */ = {isa = PBXBuildFile; fileRef = C6912B41199079A800584586 /* SendCodePara.m */; };
@@ -757,6 +758,8 @@
 		C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailCell.h; sourceTree = "<group>"; };
 		C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailCell.m; sourceTree = "<group>"; };
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
+		C68DD07319F50EA700D1281E /* LXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXUtils.h; sourceTree = "<group>"; };
+		C68DD07419F50EA700D1281E /* LXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXUtils.m; sourceTree = "<group>"; };
 		C6912B3A198FBB2C00584586 /* GetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfo.h; sourceTree = "<group>"; };
 		C6912B3B198FBB2C00584586 /* GetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfo.m; sourceTree = "<group>"; };
 		C6912B3D1990799600584586 /* SendCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCode.h; sourceTree = "<group>"; };
@@ -2118,6 +2121,8 @@
 			children = (
 				C682AC5A19A3BDBF00DF08D8 /* UIView+Utils.h */,
 				C682AC5B19A3BDBF00DF08D8 /* UIView+Utils.m */,
+				C68DD07319F50EA700D1281E /* LXUtils.h */,
+				C68DD07419F50EA700D1281E /* LXUtils.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -2748,6 +2753,7 @@
 			files = (
 				C6ADABC2198E167200AB983B /* SDWebImageDecoder.m in Sources */,
 				C6ADABC5198E167200AB983B /* SDWebImageManager.m in Sources */,
+				C68DD07519F50EA700D1281E /* LXUtils.m in Sources */,
 				C6912B4819907EE600584586 /* ResetPassword.m in Sources */,
 				C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */,
 				C6938C26198FB38E003ADE85 /* GetUserInfoPara.m in Sources */,

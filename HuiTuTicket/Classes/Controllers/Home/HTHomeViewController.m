@@ -21,6 +21,9 @@
 #import "HomeBannerHttp.h"
 
 @interface HTHomeViewController ()<ZBarReaderDelegate>
+{
+    HTHomeHeadView *headView;
+}
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -53,6 +56,8 @@
     [self.homeBannerHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.homeBannerHttp.isValid) {
+            
+            [weak_self updateBannerUI:weak_self.homeBannerHttp.resultModel.dataArray];
 
         }
         else {
@@ -71,6 +76,16 @@
             [weak_self showErrorWithText:kSERVICE_ERROR];
         };
     }];
+}
+
+- (void)updateBannerUI:(NSMutableArray *)array
+{
+    if ([array count] == 0) {
+        return;
+    }
+    
+    Banner *bannerInfo = (Banner *)array[0];
+    [headView.bannerImage setImageWithURL:[NSURL URLWithString:bannerInfo.image]];
 }
 
 - (void)loadDataSource
@@ -112,12 +127,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadBanner];
+    
     CGRect rect = self.tableView.frame;
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y + 2, rect.size.width, rect.size.height -2);
-    HTHomeHeadView *headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
+    headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
 
+    [self loadBanner];
     
     self.navigationItem.leftBarButtonItem = [self leftNavItem];
     self.navigationItem.rightBarButtonItem = [self rightNavItem];

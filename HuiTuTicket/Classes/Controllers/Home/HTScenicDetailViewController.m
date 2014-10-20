@@ -136,7 +136,7 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-    [self.headBgImageView setImageWithURL:[NSURL URLWithString:@"http://pic.nipic.com/2008-07-15/200871513185159_2.jpg"] placeholderImage:nil];
+    [self.headBgImageView setImageWithURL:[NSURL URLWithString:self.scenicDetailHttp.resultModel.picture] placeholderImage:nil];
     self.scenicNameLabel.text = self.scenicDetailHttp.resultModel.scenicName;
     self.addressLabel.text = self.scenicDetailHttp.resultModel.address;
     self.descriptionLabel.text = self.scenicDetailHttp.resultModel.intro;

@@ -54,18 +54,18 @@
     {
         case 100:
         {
-            //景区门票
-            HTEntranceTicketController *entranceTicket = [[HTEntranceTicketController alloc] init];
-            entranceTicket.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:entranceTicket animated:YES];
-        }
-            break;
-        case 101:
-        {
             //景区联票
             HTLPTicketListController *lpTicket = [[HTLPTicketListController alloc] init];
             lpTicket.hidesBottomBarWhenPushed =YES;
             [[self viewController].navigationController pushViewController:lpTicket animated:YES];
+        }
+            break;
+        case 101:
+        {
+                //景区套票
+            HTTaoPiaoTicketController *vc = [[HTTaoPiaoTicketController alloc] initWithNibName:@"HTTaoPiaoTicketController" bundle:nil];
+            vc.hidesBottomBarWhenPushed = YES;
+            [[self viewController].navigationController pushViewController:vc animated:YES];
         }
             break;
         case 102:
@@ -85,16 +85,7 @@
 
         }
             break;
-        case 104:
-        {
-            //景区套票
-            HTTaoPiaoTicketController *vc = [[HTTaoPiaoTicketController alloc] initWithNibName:@"HTTaoPiaoTicketController" bundle:nil];
-            vc.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:vc animated:YES];
-            
-        }
-            break;
-            
+
         default:
             break;
     }

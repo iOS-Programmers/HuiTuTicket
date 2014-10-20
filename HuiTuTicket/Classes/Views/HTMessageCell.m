@@ -26,8 +26,8 @@
 {
     if (detail) {
         self.titleLabel.text = detail.title;
-        self.detailTextLabel.text = detail.content;
-        self.timeLabel.text = detail.addtime;
+        self.subTitleLabel.text = detail.content;
+        self.timeLabel.text = [LXUtils secondChangToDate:detail.addtime];
     }
 }
 

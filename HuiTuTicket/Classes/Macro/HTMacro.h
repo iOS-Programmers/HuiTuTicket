@@ -33,6 +33,9 @@
 //UIView扩展类别
 #import "UIView+Utils.h"
 
+//工具类
+#import "LXUtils.h"
+
 #define APP_ID @"11111111"
 
 //客服电话
