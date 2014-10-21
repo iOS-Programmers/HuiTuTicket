@@ -232,23 +232,22 @@
 
 #pragma mark - UITableView Delegate
 
-#warning 这里暂时改成跳转到支付页面的 用来测试
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==1)
     {
-//        HTHomeDetailSceneDesVC *vc = [[HTHomeDetailSceneDesVC alloc] initWithNibName:@"HTHomeDetailSceneDesVC" bundle:Nil];
-//        vc.scenicId = self.scenicId;
-//        [self.navigationController pushViewController:vc animated:YES];
+        HTHomeDetailSceneDesVC *vc = [[HTHomeDetailSceneDesVC alloc] initWithNibName:@"HTHomeDetailSceneDesVC" bundle:Nil];
+        vc.scenicId = self.scenicId;
+        [self.navigationController pushViewController:vc animated:YES];
         
-        HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
-        app.scenicId = self.scenicId;
-        app.ticketDetail = self.scenicDetailHttp.resultModel;
-        if ([self.dataSource count] > 0) {
-            app.model = self.dataSource[0];
-        }
-
-        [self.navigationController pushViewController:app animated:YES];
+//        HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
+//        app.scenicId = self.scenicId;
+//        app.ticketDetail = self.scenicDetailHttp.resultModel;
+//        if ([self.dataSource count] > 0) {
+//            app.model = self.dataSource[0];
+//        }
+//
+//        [self.navigationController pushViewController:app animated:YES];
     }
 }
 
