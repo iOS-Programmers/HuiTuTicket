@@ -8,14 +8,11 @@
 
 #import "HTTaoPiaoDetailController.h"
 #import "TaoPiaoProductDetailHttp.h"
-<<<<<<< HEAD
 #import "HTTaopiaoDetailCell.h"
 #import "TaoPiaoScenicInfo.h"
 #import "TaoPiaoTicket.h"
 
-=======
-#import "HTTPDetailCell.h"
->>>>>>> FETCH_HEAD
+
 @interface HTTaoPiaoDetailController ()
 
 @property (strong, nonatomic) TaoPiaoProductDetailHttp *taopiaoDetailHttp;
@@ -102,7 +99,6 @@
     }];
 }
 
-
 - (void)updateUIWithInfo:(TaoPiaoProductDetail *)detailInfo
 {
     [self.scenicImage setImageWithURL:[NSURL URLWithString:detailInfo.picture]];
@@ -133,7 +129,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cellIdentfier";
-<<<<<<< HEAD
+
     HTTaopiaoDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         
@@ -144,21 +140,14 @@
         TaoPiaoTicket *ticket = (TaoPiaoTicket *)info.ticket[0];
         cell.ticketAndNumLabel.text = [NSString stringWithFormat:@"%@    %@张",ticket.ticketName,ticket.num];
         cell.priceLabel.text = [NSString stringWithFormat:@"价值    ￥%@",ticket.price];
-=======
-    HTTPDetailCell *cell = (HTTPDetailCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTPDetailCell" owner:self options:nil] lastObject];
->>>>>>> FETCH_HEAD
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     
-<<<<<<< HEAD
+
     cell.scenicName.text = info.scenicName;
     
-=======
->>>>>>> FETCH_HEAD
+
     return cell;
 }
 
