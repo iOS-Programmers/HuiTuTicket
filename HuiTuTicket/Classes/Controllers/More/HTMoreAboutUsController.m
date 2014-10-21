@@ -11,6 +11,8 @@
 #import "HTStoreManager.h"
 @interface HTMoreAboutUsController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+
 @end
 
 @implementation HTMoreAboutUsController
@@ -37,6 +39,16 @@
     self.tableView.rowHeight = 44;
     self.tableView.sectionFooterHeight = 1;
     self.tableView.sectionHeaderHeight = 1;
+    
+    NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];
+    /**
+     *  CFBundleShortVersionString  是取得版本号
+     *  CFBundleVersion             是取的Build号
+     *  不可混用，切记切记
+     */
+    NSString *currentVersion = infoDict[@"CFBundleShortVersionString"];
+    
+    self.versionLabel.text = [NSString stringWithFormat:@"版本号：%@ ",currentVersion];
 }
 
 - (void)didReceiveMemoryWarning
