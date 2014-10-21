@@ -33,7 +33,20 @@
         
         self.price.text = [NSString stringWithFormat:@"￥%@",info.totalamount];
         
-        self.orderStatus.text = [info.ispay isEqualToString:@"0"] ? @"未支付" : @"已支付";
+//        self.orderStatus.text = [info.ispay isEqualToString:@"0"] ? @"未支付" : @"已支付";
+        
+        if ([info.status isEqualToString:@"0"]) {
+            self.orderStatus.text = @"新订单";
+        }
+        else if ([info.status isEqualToString:@"1"]) {
+            self.orderStatus.text = @"库存确认";
+        }
+        else if ([info.status isEqualToString:@"2"]) {
+            self.orderStatus.text = @"已支付(待游玩)";
+        }
+        else if ([info.status isEqualToString:@"3"]) {
+            self.orderStatus.text = @"已游玩";
+        }
     }
     
     

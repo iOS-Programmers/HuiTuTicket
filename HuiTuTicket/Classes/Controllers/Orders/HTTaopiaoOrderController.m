@@ -41,13 +41,20 @@
     // Do any additional setup after loading the view.
     self.tableView.rowHeight = 80;
     
-    [self requestOrderData];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self requestOrderData];
 }
 
 #pragma mark - Action
@@ -109,11 +116,22 @@
     
     TPOrder *tp = (TPOrder *)self.dataSource[indexPath.row];
     cell.scenicName.text = tp.title;
-    cell.price.text = tp.totalamount;
+    cell.price.text = [NSString stringWithFormat:@"￥%@",tp.totalamount];
     cell.tourTime.text = [NSString stringWithFormat:@"出行日期：%@",tp.traveltime];
     cell.orderTime.text = [NSString stringWithFormat:@"下单日期：%@",tp.addtime];
     
-
+    if ([tp.status isEqualToString:@"0"]) {
+        cell.status.text = @"新订单";
+    }
+    else if ([tp.status isEqualToString:@"1"]) {
+        cell.status.text = @"库存确认";
+    }
+    else if ([tp.status isEqualToString:@"2"]) {
+        cell.status.text = @"已支付(待游玩)";
+    }
+    else if ([tp.status isEqualToString:@"3"]) {
+        cell.status.text = @"已游玩";
+    }
     
     return cell;
 }
