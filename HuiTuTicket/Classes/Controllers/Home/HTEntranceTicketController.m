@@ -48,7 +48,7 @@
 //    self.scenicListHttp.parameter.keyword = @"";
 //    self.scenicListHttp.parameter.rank = @"";
     self.scenicListHttp.parameter.page = @"1";
-    self.scenicListHttp.parameter.pagesize = @"10";
+//    self.scenicListHttp.parameter.pagesize = @"10";
 //    self.scenicListHttp.parameter.orderby = @"";
 //    self.scenicListHttp.parameter.format = @"json";
 

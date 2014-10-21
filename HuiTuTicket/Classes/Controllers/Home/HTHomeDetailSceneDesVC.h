@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
-#import "HTBaseViewController.h"
+#import "HTBaseWebViewController.h"
 
-@interface HTHomeDetailSceneDesVC : HTBaseViewController
+@interface HTHomeDetailSceneDesVC : HTBaseWebViewController
 
-@property (nonatomic,copy)NSString *detail;
+@property (nonatomic,copy)NSString *scenicId;
 
 
 @end

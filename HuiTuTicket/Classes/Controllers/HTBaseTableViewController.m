@@ -44,18 +44,6 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-//        CGRect tableViewFrame = [UIScreen mainScreen].applicationFrame;
-//        //  [UIScreen mainScreen].applicationFrame  {{0, 20}, {320, 548}}
-//        tableViewFrame.origin.y = 0;
-//        tableViewFrame.size.height -= (self.navigationController.viewControllers.count > 1 ?(CGRectGetHeight(self.navigationController.navigationBar.bounds)) : (CGRectGetHeight(self.tabBarController.tabBar.bounds))) + (CGRectGetHeight(self.navigationController.navigationBar.bounds));
-//        if (self.navigationController.navigationBarHidden)
-//        {
-//            tableViewFrame.origin.y = IOS7_OR_LATER? tableViewFrame.origin.y+20:tableViewFrame.origin.y;
-//        }
-//        else
-//        {
-//            tableViewFrame.origin.y = IOS7_OR_LATER? tableViewFrame.origin.y+64:tableViewFrame.origin.y;
-//        }
 
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
         _tableView.delegate = self;
@@ -85,7 +73,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (self.canPullRefresh) {
+        //添加下拉刷新
+        if (!_header) {
+            _header = [[MJRefreshHeaderView alloc] init];
+            _header.delegate = self;
+            _header.scrollView = self.tableView;
+        }
+    }
 }
 
 - (void)dealloc {

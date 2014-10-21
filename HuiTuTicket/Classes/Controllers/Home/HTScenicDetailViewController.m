@@ -185,10 +185,10 @@
         [self.navigationController pushViewController:app animated:YES];
         return;
     }
-    TicketModel *model = [self.dataSource objectAtIndex:indexPath.row];
+//    TicketModel *model = [self.dataSource objectAtIndex:indexPath.row];
     HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
     app.scenicId = self.scenicId;
-    app.dataModel = model;
+//    app.dataModel = model;
     [self.navigationController pushViewController:app animated:YES];
 }
 

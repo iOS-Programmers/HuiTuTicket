@@ -11,7 +11,12 @@
 #import "UIImageView+WebCache.h"
 #import "HTHomeDetailSceneDesVC.h"
 
+#import "HTOrderWriteViewController.h"
+
 #import "ScenicDetailHttp.h"
+
+#import "ScenicTicketHttp.h"
+
 @interface HTHomeDetailSceneVC ()
 
 @property (nonatomic, strong) IBOutlet UIView *headView;
@@ -21,6 +26,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 
 @property (nonatomic,strong) ScenicDetailHttp *scenicDetailHttp;
+@property (nonatomic,strong) ScenicTicketHttp *scenicTicketHttp;
 @end
 @implementation HTHomeDetailSceneVC
 
@@ -29,6 +35,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.scenicDetailHttp = [[ScenicDetailHttp alloc] init];
+        self.scenicTicketHttp = [[ScenicTicketHttp alloc] init];
         
         self.title = @"详情";
     }
@@ -50,6 +57,8 @@
         [weak_self hideLoading];
         if (weak_self.scenicDetailHttp.isValid) {
             [weak_self.tableView reloadData];
+            [weak_self loadProductData];
+            
             [weak_self refreshUIShow];
         }
         else {
@@ -94,6 +103,38 @@
     self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
+}
+
+/**
+ *  请求景区门票产品接口
+ */
+- (void)loadProductData
+{
+    self.scenicTicketHttp.parameter.scenicid = self.scenicId;
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTHomeDetailSceneVC *weak_self = self;
+    [self.scenicTicketHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.scenicTicketHttp.isValid) {
+            weak_self.dataSource =weak_self.scenicTicketHttp.resultModel.dataArray;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.scenicTicketHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
 }
 
 #pragma mark - UITableView DataSource
@@ -196,8 +237,17 @@
     if (indexPath.section==1)
     {
         HTHomeDetailSceneDesVC *vc = [[HTHomeDetailSceneDesVC alloc] initWithNibName:@"HTHomeDetailSceneDesVC" bundle:Nil];
-        vc.detail =  self.scenicDetailHttp.resultModel.intro;
+        vc.scenicId = self.scenicId;
         [self.navigationController pushViewController:vc animated:YES];
+        
+//        HTOrderWriteViewController *app = [[HTOrderWriteViewController alloc] init];
+//        app.scenicId = self.scenicId;
+//        app.ticketDetail = self.scenicDetailHttp.resultModel;
+//        if ([self.dataSource count] > 0) {
+//            app.model = self.dataSource[0];
+//        }
+//
+//        [self.navigationController pushViewController:app animated:YES];
     }
 }
 

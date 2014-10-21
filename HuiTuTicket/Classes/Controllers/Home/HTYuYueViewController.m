@@ -9,7 +9,7 @@
 #import "HTYuYueViewController.h"
 #import "HTCYOrderViewController.h"
 #import "ZBarSDK.h"
-
+#import "MyTicketDetailInfo.h"
 
 @interface HTYuYueViewController () <ZBarReaderDelegate>
 
@@ -147,6 +147,13 @@
     
     
     HTCYOrderViewController *vc = [[HTCYOrderViewController alloc] init];
+    
+    MyTicketDetailInfo *ticketdetail = [[MyTicketDetailInfo alloc] init];
+    ticketdetail.username = self.nameTF.text;
+    ticketdetail.codeNumber = self.lpCodeTF.text;
+    
+    vc.ticketdetail = ticketdetail;
+    
     [self.navigationController pushViewController:vc animated:YES];
 
 }
