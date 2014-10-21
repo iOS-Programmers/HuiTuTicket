@@ -50,10 +50,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(ticketBuyAction:)
-                                                 name:BUY_MP_NOTIFICATON
-                                               object:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(aliPayFinish:)
                                                  name:ALIPAY_DONE
@@ -63,7 +60,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:BUY_MP_NOTIFICATON object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:ALIPAY_DONE object:nil];
 }
 
@@ -100,7 +96,7 @@
  */
 - (IBAction)onClientPayBtnClick:(UIButton *)sender
 {
-
+    [self createOrderAndSignToAliPay];
 
 }
 
@@ -117,13 +113,16 @@
 
 - (void)getOrderInfo
 {
+    if (FBIsEmpty(self.orderId)) {
+        [self showWithText:@"订单id不能为空"];
+    }
     self.hTMPOrderInfoHttp.parameter.orderid = self.orderId;
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTOrderResultViewController *weak_self = self;
     [self.hTMPOrderInfoHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.hTMPOrderInfoHttp.isValid) {
-            [weak_self createOrderAndSignToAliPay];
+            
         }
         else {
             //显示服务端返回的错误提示
@@ -211,6 +210,8 @@
     order.tradeNO = self.hTMPOrderInfoHttp.resultModel.trade_no; //订单ID（由商家自行制定）
     order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
     order.productDescription = [NSString stringWithFormat:@"%@",self.hTMPOrderInfoHttp.resultModel.subject]; //商品描述
+#warning 价格这里需要处理
+    order.amount = self.hTMPOrderInfoHttp.resultModel.total_fee;
     order.amount = @"0.01"; //商品价格
     order.notifyURL =  self.hTMPOrderInfoHttp.resultModel.notify_url; //回调URL
 	return [order description];
