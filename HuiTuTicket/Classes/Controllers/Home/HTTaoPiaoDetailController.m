@@ -12,7 +12,7 @@
 #import "HTTaopiaoDetailCell.h"
 #import "TaoPiaoScenicInfo.h"
 #import "TaoPiaoTicket.h"
-
+#import "HTTaoPiaoYuDingController.h"
 
 @interface HTTaoPiaoDetailController ()
 
@@ -66,7 +66,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  点击立即预定
+ *
+ */
 - (IBAction)onOrderBtnClick:(id)sender {
+
+    HTTaoPiaoYuDingController *vc = [[HTTaoPiaoYuDingController alloc] init];
+    vc.productInfo = (TaoPiaoProductDetail *)self.taopiaoDetailHttp.resultModel;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
