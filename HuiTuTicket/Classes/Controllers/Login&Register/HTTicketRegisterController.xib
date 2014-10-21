@@ -175,9 +175,11 @@
                     </connections>
                 </button>
                 <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="abu-BX-1To">
-                    <rect key="frame" x="104" y="175" width="165" height="25"/>
+                    <rect key="frame" x="102" y="175" width="165" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="pub_select_type.png">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="请选择证件类型">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -195,6 +197,5 @@
         <image name="pub_OrangBtn.png" width="200" height="35"/>
         <image name="pub_btnPoint.png" width="11" height="11"/>
         <image name="pub_btnPoint_selected.png" width="11" height="11"/>
-        <image name="pub_select_type.png" width="165" height="25"/>
     </resources>
 </document>

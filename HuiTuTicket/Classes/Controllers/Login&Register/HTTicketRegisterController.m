@@ -12,7 +12,9 @@
 #import "TicketRegisterHttp.h"
 #import "TicketBindHttp.h"
 
-@interface HTTicketRegisterController ()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+#import "ZBarSDK.h"
+
+@interface HTTicketRegisterController ()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,ZBarReaderDelegate>
 
 @property (strong, nonatomic) TicketRegisterHttp *ticketRegisterHttp;
 
@@ -66,10 +68,27 @@
 }
 
 #pragma mark - View Lifecycle
+- (UIBarButtonItem *)rightNavItem
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0.0f, 0.0f, 35, 35);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn setImage:[UIImage imageNamed:@"home_saoyisao"] forState:UIControlStateNormal];
+    btn.showsTouchWhenHighlighted = YES;
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [btn addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [btn showsTouchWhenHighlighted];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return item;
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [self rightNavItem];
 
     //上级页面传过来的联票号码，如果有值，则在页面自动填上
     if (!FBIsEmpty(self.lpCodeNumer)) {
@@ -79,6 +98,10 @@
     self.manButton.selected = YES;
     //默认证件类型是身份证
     self.ticketRegisterHttp.parameter.idtype = @"0";
+    
+    self.selectTypeButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.selectTypeButton.layer.borderWidth = 0.5;
+    
     
     _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].applicationFrame.size.height + 44, 320, 162)];
     _pickerView.backgroundColor = kColorWhite;
@@ -144,6 +167,26 @@
 - (IBAction)onSelectTypeBtnClick:(id)sender
 {
     [self showPickerView];
+}
+
+- (void)rightItemClick
+{
+    //扫一扫
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    reader.title = @"扫一扫";
+    [self setOverlayPickerView:reader];
+    ZBarImageScanner *scanner = reader.scanner;
+    
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    reader.hidesBottomBarWhenPushed = YES;
+    reader.wantsFullScreenLayout = NO;
+    reader.showsZBarControls = NO;
+    
+    [self pushNewViewController:reader];
 }
 
 /**
@@ -295,10 +338,12 @@
     if (row == 0) {
         //身份证
         self.ticketRegisterHttp.parameter.idtype = @"0";
+        [self.selectTypeButton setTitle:@"身份证" forState:UIControlStateNormal];
     }
     else {
         //军官证
         self.ticketRegisterHttp.parameter.idtype = @"1";
+        [self.selectTypeButton setTitle:@"军官证" forState:UIControlStateNormal];
     }
 }
 
@@ -324,5 +369,23 @@
         }
         
     }];
+}
+
+#pragma mark - ZBar Delegate
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    self.ticketNumTF.text = symbol.data;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //扫描到联票号码，
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 @end
