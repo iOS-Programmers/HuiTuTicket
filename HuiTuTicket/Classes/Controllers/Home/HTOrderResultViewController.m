@@ -85,7 +85,22 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-
+    
+    if (!FBIsEmpty(self.produtName)) {
+        self.productNameLabel.text = self.produtName;
+    }
+    
+    if (!FBIsEmpty(self.traveDate)) {
+        self.travelTimeLabel.text = self.traveDate;
+    }
+    
+    if (!FBIsEmpty(self.number)) {
+        self.ticketNumLabel.text = [NSString stringWithFormat:@"%@张",self.number];
+    }
+    
+    if (!FBIsEmpty(self.totalMoney)) {
+        self.orderPriceLabel.text = [NSString stringWithFormat:@"￥%@",self.totalMoney];
+    }
 }
 
 
@@ -211,8 +226,14 @@
     order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
     order.productDescription = [NSString stringWithFormat:@"%@",self.hTMPOrderInfoHttp.resultModel.subject]; //商品描述
 #warning 价格这里需要处理
-    order.amount = self.hTMPOrderInfoHttp.resultModel.total_fee;
-    order.amount = @"0.01"; //商品价格
+    if (!FBIsEmpty(self.totalMoney)) {
+        order.amount = self.totalMoney;
+    }
+    else {
+        order.amount = self.hTMPOrderInfoHttp.resultModel.total_fee;
+    }
+    
+//    order.amount = @"0.01"; //商品价格
     order.notifyURL =  self.hTMPOrderInfoHttp.resultModel.notify_url; //回调URL
 	return [order description];
 }
