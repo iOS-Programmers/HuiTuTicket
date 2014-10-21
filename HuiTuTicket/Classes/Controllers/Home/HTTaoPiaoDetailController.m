@@ -8,19 +8,13 @@
 
 #import "HTTaoPiaoDetailController.h"
 #import "TaoPiaoProductDetailHttp.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> FETCH_HEAD
 #import "HTTaopiaoDetailCell.h"
 #import "TaoPiaoScenicInfo.h"
 #import "TaoPiaoTicket.h"
 #import "HTTaoPiaoYuDingController.h"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> FETCH_HEAD
 @interface HTTaoPiaoDetailController ()
 
 @property (strong, nonatomic) TaoPiaoProductDetailHttp *taopiaoDetailHttp;
@@ -157,13 +151,10 @@
         cell.ticketAndNumLabel.text = [NSString stringWithFormat:@"%@    %@张",ticket.ticketName,ticket.num];
         cell.priceLabel.text = [NSString stringWithFormat:@"价值    ￥%@",ticket.price];
     }
-<<<<<<< HEAD
+
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     
-
-=======
->>>>>>> FETCH_HEAD
     cell.scenicName.text = info.scenicName;
     
 

@@ -18,10 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textView.text = self.detail;
-<<<<<<< HEAD
-=======
-
->>>>>>> FETCH_HEAD
 }
 
 - (void)didReceiveMemoryWarning {
