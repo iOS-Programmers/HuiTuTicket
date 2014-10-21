@@ -8,10 +8,12 @@
 
 #import "HTBaseViewController.h"
 
-#import "LPTicket.h"
+#import "MyTicket.h"
 
 @interface HTTicketDetailController : HTBaseViewController
 
-@property (strong, nonatomic) LPTicket *ticket;
+
+@property (strong, nonatomic) MyTicket *ticket;
+
 
 @end

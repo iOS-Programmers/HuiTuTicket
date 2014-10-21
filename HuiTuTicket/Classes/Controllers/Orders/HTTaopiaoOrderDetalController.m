@@ -7,8 +7,14 @@
 //
 
 #import "HTTaopiaoOrderDetalController.h"
+#import "TPOrderDetailHttp.h"
+
 
 @interface HTTaopiaoOrderDetalController ()
+
+
+@property (strong, nonatomic) TPOrderDetailHttp *orderHttp;
+
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -56,6 +62,50 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)requestOrderData
+{
+    self.orderHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+    self.orderHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    if (!FBIsEmpty(self.orderId)) {
+        self.orderHttp.parameter.orderid = self.orderId;
+    }
+    else {
+        return;
+    }
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTaopiaoOrderDetalController *weak_self = self;
+    [self.orderHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.orderHttp.isValid) {
+            
+
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.orderHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+    
+}
+
+
 
 - (IBAction)onCancelOrderBtnClick:(id)sender {
 }

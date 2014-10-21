@@ -53,6 +53,10 @@
         
         if (weak_self.myticketHttp.isValid) {
 
+            if ([weak_self.dataSource count] == 0) {
+                [weak_self showWithText:@"暂无数据"];
+                return ;
+            }
             weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
             
             [weak_self.tableView reloadData];
@@ -108,6 +112,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self pushViewController:@"HTTicketDetailController"];
+    HTTicketDetailController *vc = [[HTTicketDetailController alloc] init];
+    MyTicket *ticker = (MyTicket *)self.dataSource[indexPath.row];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

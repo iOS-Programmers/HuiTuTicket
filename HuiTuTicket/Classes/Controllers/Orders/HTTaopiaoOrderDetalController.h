@@ -10,4 +10,10 @@
 
 @interface HTTaopiaoOrderDetalController : HTBaseViewController
 
+
+/**
+ *  上级传过来的订单id
+ */
+@property (copy, nonatomic) NSString *orderId;
+
 @end

@@ -96,8 +96,10 @@
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketDetailController *weak_self = self;
     
-    self.detailHttp.parameter.codenumber = @"328004867679";
-    self.detailHttp.parameter.username = @"姜英辉";
+    if (!FBIsEmpty(self.ticket)) {
+        self.detailHttp.parameter.codenumber = self.ticket.lpcode;
+        self.detailHttp.parameter.username = self.ticket.lpuser;
+    }
     
     [self.detailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
@@ -170,7 +172,7 @@
         
         if (weak_self.unbindHttp.isValid) {
 
-            
+            [weak_self showWithText:@"解除绑定成功"];
         }
         else {
             //显示服务端返回的错误提示
@@ -250,7 +252,7 @@
  */
 - (IBAction)onUnbindBtnClick:(id)sender
 {
-    [self requestUnbind:@"5"];
+    [self requestUnbind:self.ticket.lpcode];
 }
 
 

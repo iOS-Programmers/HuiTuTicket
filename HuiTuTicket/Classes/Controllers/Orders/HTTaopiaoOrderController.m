@@ -12,7 +12,12 @@
 
 #import "HTTaopiaoOrderCell.h"
 
+#import "TPOrderListHttp.h"
+
 @interface HTTaopiaoOrderController ()
+
+
+@property (strong, nonatomic) TPOrderListHttp *orderHttp;
 
 @end
 
@@ -24,6 +29,8 @@
     if (self) {
         // Custom initialization
         self.title = @"套票订单";
+        _orderHttp = [[TPOrderListHttp alloc] init];
+        
     }
     return self;
 }
@@ -41,10 +48,50 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Action
+- (void)requestOrderData
+{
+    self.orderHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+    self.orderHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
+    self.orderHttp.parameter.page = @"1";
+    
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTTaopiaoOrderController *weak_self = self;
+    [self.orderHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        
+        if (weak_self.orderHttp.isValid) {
+            
+            weak_self.dataSource = weak_self.orderHttp.resultModel.info;
+            
+            [weak_self.tableView reloadData];
+            
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.orderHttp.erorMessage];
+        };
+        
+        
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    return [self.dataSource count];
-    return 10;
+    return [self.dataSource count];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,7 +104,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTaopiaoOrderCell" owner:self options:nil] lastObject];
     }
     
-//    [cell configureWithData:self.dataSource[indexPath.row]];
+    
+    TPOrder *tp = (TPOrder *)self.dataSource[indexPath.row];
+    cell.scenicName.text = tp.title;
+    cell.price.text = tp.totalamount;
+    cell.tourTime.text = tp .traveltime;
+    cell.orderTime.text = tp.addtime;
+    
+
     
     return cell;
 }
@@ -67,9 +121,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    TicketOrderModel *model = self.dataSource[indexPath.row];
+    TPOrder *model = self.dataSource[indexPath.row];
     HTTaopiaoOrderDetalController *vc = [[HTTaopiaoOrderDetalController alloc] initWithNibName:@"HTTaopiaoOrderDetalController" bundle:nil];
-//    vc.ticketOrderId = model.orderId;
+    vc.orderId = model.orderId;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

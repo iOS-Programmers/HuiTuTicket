@@ -59,8 +59,8 @@
 - (void)requestOrderListData
 {
     
-    self.orderListHttp.parameter.codenumber = @"328004867679";
-    self.orderListHttp.parameter.username = @"姜英辉";
+    self.orderListHttp.parameter.codenumber = @"";
+    self.orderListHttp.parameter.username = @"";
     
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTAppointmentViewController *weak_self = self;
