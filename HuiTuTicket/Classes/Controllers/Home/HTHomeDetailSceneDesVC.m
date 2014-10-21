@@ -7,9 +7,14 @@
 //
 
 #import "HTHomeDetailSceneDesVC.h"
+/**
+ *  查看景区详情介绍的url
+ *  http://m.huitour.cn/app/scenic/content?scenicid=
+ */
+
+#define API_Introduce_URL @"http://m.huitour.cn/app/scenic/content?scenicid="
 
 @interface HTHomeDetailSceneDesVC ()
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -17,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textView.text = self.detail;
+
+    self.title = @"详细介绍";
+    
+    [self loadDataWithURL:[NSString stringWithFormat:@"%@%@",API_Introduce_URL,self.scenicId]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

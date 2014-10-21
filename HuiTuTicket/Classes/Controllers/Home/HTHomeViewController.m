@@ -128,6 +128,8 @@
 {
     [super viewDidLoad];
     
+    self.canPullRefresh = YES;
+    
     CGRect rect = self.tableView.frame;
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y + 2, rect.size.width, rect.size.height -2);
     headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
@@ -296,6 +298,21 @@
         saomiao.ticketNumber = symbol.data;
         [self.navigationController pushViewController:saomiao animated:NO];
     });
+}
+
+#pragma mark 上下拉刷新的Delegate
+- (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
+{
+    //下拉刷新时的操作
+    if (self.header == refreshView) {
+        
+        [self loadDataSource];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [refreshView endRefreshing];
+        });
+    }
+
 }
 
 @end

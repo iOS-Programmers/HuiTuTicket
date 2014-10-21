@@ -196,7 +196,7 @@
     if (indexPath.section==1)
     {
         HTHomeDetailSceneDesVC *vc = [[HTHomeDetailSceneDesVC alloc] initWithNibName:@"HTHomeDetailSceneDesVC" bundle:Nil];
-        vc.detail =  self.scenicDetailHttp.resultModel.intro;
+        vc.scenicId = self.scenicId;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

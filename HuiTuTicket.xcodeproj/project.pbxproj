@@ -203,6 +203,10 @@
 		C68B4A3719F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A3519F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib */; };
 		C68B4A3B19F65BCC002CD0BC /* HTTaopiaoYuDingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */; };
 		C68B4A3C19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */; };
+		C68B4A4619F66644002CD0BC /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A3E19F66644002CD0BC /* MJRefresh.bundle */; };
+		C68B4A4719F66644002CD0BC /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4119F66644002CD0BC /* MJRefreshBaseView.m */; };
+		C68B4A4819F66644002CD0BC /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4319F66644002CD0BC /* MJRefreshFooterView.m */; };
+		C68B4A4919F66644002CD0BC /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4519F66644002CD0BC /* MJRefreshHeaderView.m */; };
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
 		C68DD07519F50EA700D1281E /* LXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07419F50EA700D1281E /* LXUtils.m */; };
@@ -797,6 +801,14 @@
 		C68B4A3819F65BCC002CD0BC /* HTTaopiaoYuDingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoYuDingCell.h; sourceTree = "<group>"; };
 		C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoYuDingCell.m; sourceTree = "<group>"; };
 		C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoYuDingCell.xib; sourceTree = "<group>"; };
+		C68B4A3E19F66644002CD0BC /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		C68B4A3F19F66644002CD0BC /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		C68B4A4019F66644002CD0BC /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		C68B4A4119F66644002CD0BC /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		C68B4A4219F66644002CD0BC /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		C68B4A4319F66644002CD0BC /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		C68B4A4419F66644002CD0BC /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		C68B4A4519F66644002CD0BC /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
 		C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailCell.h; sourceTree = "<group>"; };
 		C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailCell.m; sourceTree = "<group>"; };
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
@@ -1743,6 +1755,21 @@
 			name = TaoPiao;
 			sourceTree = "<group>";
 		};
+		C68B4A3D19F66644002CD0BC /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C68B4A3E19F66644002CD0BC /* MJRefresh.bundle */,
+				C68B4A3F19F66644002CD0BC /* MJRefresh.h */,
+				C68B4A4019F66644002CD0BC /* MJRefreshBaseView.h */,
+				C68B4A4119F66644002CD0BC /* MJRefreshBaseView.m */,
+				C68B4A4219F66644002CD0BC /* MJRefreshFooterView.h */,
+				C68B4A4319F66644002CD0BC /* MJRefreshFooterView.m */,
+				C68B4A4419F66644002CD0BC /* MJRefreshHeaderView.h */,
+				C68B4A4519F66644002CD0BC /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
 		C6912B581990A43700584586 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -1868,16 +1895,9 @@
 				C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */,
 				C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */,
 				C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */,
-
-
 				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
 				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
 				C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */,
-
-				C5CABACA19F62BDF00C55011 /* HTTPDetailCell.h */,
-				C5CABACB19F62BDF00C55011 /* HTTPDetailCell.m */,
-				C5CABACC19F62BDF00C55011 /* HTTPDetailCell.xib */,
-
 				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
 				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
 				C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */,
@@ -1887,7 +1907,6 @@
 				C68B4A3819F65BCC002CD0BC /* HTTaopiaoYuDingCell.h */,
 				C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */,
 				C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */,
-
 			);
 			name = TaoPiaoTicket;
 			sourceTree = "<group>";
@@ -2219,6 +2238,7 @@
 		C6BADF521976491400543D39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C68B4A3D19F66644002CD0BC /* MJRefresh */,
 				C6ADAC22198E18F300AB983B /* BaseHttp */,
 				C6BADF7419768D6A00543D39 /* HTFoundationCommon.h */,
 				C6BADF7519768D6A00543D39 /* HTFoundationCommon.m */,
@@ -2843,6 +2863,7 @@
 				C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */,
 				7EAAAFCA19922B53003676F3 /* s_n_detail_address_icon@2x.png in Resources */,
 				C6D12493197E397500FF4D83 /* order_04@2x.png in Resources */,
+				C68B4A4619F66644002CD0BC /* MJRefresh.bundle in Resources */,
 				7EAAAFCF19922D0E003676F3 /* s_n_set_line@2x.png in Resources */,
 				C6DE621B19AAF91E0074DC07 /* tab_mine_selected@2x.png in Resources */,
 				C6D12483197E37E500FF4D83 /* more_score@2x.png in Resources */,
@@ -3052,6 +3073,7 @@
 				C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */,
 				C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */,
 				0714AD1F19C9E72E00BD6253 /* HTModelSelVC.m in Sources */,
+				C68B4A4919F66644002CD0BC /* MJRefreshHeaderView.m in Sources */,
 				C6ADAC1A198E167C00AB983B /* ASIS3BucketObject.m in Sources */,
 				07B5337219CB4C7200831366 /* TPOrder.m in Sources */,
 				C6912B4B19907EFC00584586 /* ResetPasswordPara.m in Sources */,
@@ -3095,6 +3117,7 @@
 				07B5335119CB47F100831366 /* TPOrderSubmitPara.m in Sources */,
 				C6912B7D1990AE5E00584586 /* MessageNoticeHttp.m in Sources */,
 				C557C9CB19C1D9F100DCE85D /* TicketYuYueDetailPara.m in Sources */,
+				C68B4A4819F66644002CD0BC /* MJRefreshFooterView.m in Sources */,
 				7EC384A6199371E100FB0C6D /* HTOrderWriteViewController.m in Sources */,
 				C68B4A3619F64DD6002CD0BC /* HTTaoPiaoYuDingController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
@@ -3127,6 +3150,7 @@
 				C6ADAC2B198E190500AB983B /* LXParameterModel.m in Sources */,
 				C6ED76F51990E3C10075D6C4 /* TicketRegisterPara.m in Sources */,
 				C6ADAC12198E167C00AB983B /* ASICloudFilesCDNRequest.m in Sources */,
+				C68B4A4719F66644002CD0BC /* MJRefreshBaseView.m in Sources */,
 				076E011619928BC300FC63D1 /* TicketOrderQueryPara.m in Sources */,
 				C6EC124819A22EA800DFB74C /* HTMoreFeedBackController.m in Sources */,
 				C6ADAC15198E167C00AB983B /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
