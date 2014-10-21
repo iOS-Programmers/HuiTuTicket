@@ -61,6 +61,7 @@
     
     _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].applicationFrame.size.height + 44, 320, 162)];
     [_datePicker setDatePickerMode:UIDatePickerModeDate];
+    [_datePicker setMinimumDate:[NSDate dateWithTimeIntervalSinceNow:1*24*60*60]];
     _datePicker.backgroundColor = kColorWhite;
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     

@@ -16,7 +16,9 @@
 
 #import "TicketUserVerifyHttp.h"
 
-@interface HTTicketBindingController ()
+#import "ZBarSDK.h"
+
+@interface HTTicketBindingController () <ZBarReaderDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *lpCodeTF;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTf;
@@ -43,16 +45,54 @@
     return self;
 }
 
+
+- (UIBarButtonItem *)rightNavItem
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0.0f, 0.0f, 35, 35);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn setImage:[UIImage imageNamed:@"home_saoyisao"] forState:UIControlStateNormal];
+    btn.showsTouchWhenHighlighted = YES;
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [btn addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [btn showsTouchWhenHighlighted];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return item;
+}
+
+- (void)rightItemClick
+{
+    //扫一扫
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    reader.title = @"扫一扫";
+    [self setOverlayPickerView:reader];
+    ZBarImageScanner *scanner = reader.scanner;
+    
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    reader.hidesBottomBarWhenPushed = YES;
+    reader.wantsFullScreenLayout = NO;
+    reader.showsZBarControls = NO;
+    
+    [self pushNewViewController:reader];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [self requestBingData];
+    self.navigationItem.rightBarButtonItem = [self rightNavItem];
 }
 - (void)requestBingData
 {
 
+    
+    
     self.bindHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
     self.bindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     self.bindHttp.parameter.lpcode = self.lpCodeTF.text;
@@ -149,4 +189,23 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - ZBar Delegate
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    self.lpCodeTF.text = symbol.data;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //扫描到联票号码，
+        [self.navigationController popViewControllerAnimated:YES];
+    });
+}
+
 @end

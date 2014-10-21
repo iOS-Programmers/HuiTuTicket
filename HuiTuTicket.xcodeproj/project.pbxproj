@@ -199,6 +199,10 @@
 		C682AC5719A3B3C000DF08D8 /* home_saoyisao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5519A3B3C000DF08D8 /* home_saoyisao@2x.png */; };
 		C682AC5919A3BB2000DF08D8 /* pub_select_type@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C682AC5819A3BB1F00DF08D8 /* pub_select_type@2x.png */; };
 		C682AC5C19A3BDBF00DF08D8 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C682AC5B19A3BDBF00DF08D8 /* UIView+Utils.m */; };
+		C68B4A3619F64DD6002CD0BC /* HTTaoPiaoYuDingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A3419F64DD6002CD0BC /* HTTaoPiaoYuDingController.m */; };
+		C68B4A3719F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A3519F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib */; };
+		C68B4A3B19F65BCC002CD0BC /* HTTaopiaoYuDingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */; };
+		C68B4A3C19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */; };
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
 		C68DD07519F50EA700D1281E /* LXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07419F50EA700D1281E /* LXUtils.m */; };
@@ -787,6 +791,12 @@
 		C682AC5819A3BB1F00DF08D8 /* pub_select_type@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pub_select_type@2x.png"; sourceTree = "<group>"; };
 		C682AC5A19A3BDBF00DF08D8 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		C682AC5B19A3BDBF00DF08D8 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		C68B4A3319F64DD6002CD0BC /* HTTaoPiaoYuDingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaoPiaoYuDingController.h; sourceTree = "<group>"; };
+		C68B4A3419F64DD6002CD0BC /* HTTaoPiaoYuDingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaoPiaoYuDingController.m; sourceTree = "<group>"; };
+		C68B4A3519F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaoPiaoYuDingController.xib; sourceTree = "<group>"; };
+		C68B4A3819F65BCC002CD0BC /* HTTaopiaoYuDingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoYuDingCell.h; sourceTree = "<group>"; };
+		C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoYuDingCell.m; sourceTree = "<group>"; };
+		C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoYuDingCell.xib; sourceTree = "<group>"; };
 		C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailCell.h; sourceTree = "<group>"; };
 		C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailCell.m; sourceTree = "<group>"; };
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
@@ -1858,6 +1868,7 @@
 				C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */,
 				C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */,
 				C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */,
+<<<<<<< HEAD
 
 				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
 				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
@@ -1867,6 +1878,17 @@
 				C5CABACB19F62BDF00C55011 /* HTTPDetailCell.m */,
 				C5CABACC19F62BDF00C55011 /* HTTPDetailCell.xib */,
 
+=======
+				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
+				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
+				C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */,
+				C68B4A3319F64DD6002CD0BC /* HTTaoPiaoYuDingController.h */,
+				C68B4A3419F64DD6002CD0BC /* HTTaoPiaoYuDingController.m */,
+				C68B4A3519F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib */,
+				C68B4A3819F65BCC002CD0BC /* HTTaopiaoYuDingCell.h */,
+				C68B4A3919F65BCC002CD0BC /* HTTaopiaoYuDingCell.m */,
+				C68B4A3A19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib */,
+>>>>>>> FETCH_HEAD
 			);
 			name = TaoPiaoTicket;
 			sourceTree = "<group>";
@@ -2697,6 +2719,7 @@
 				7EC384B41994C45000FB0C6D /* HTOrderResultViewController.xib in Resources */,
 				C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */,
 				C6DE621919AAF91E0074DC07 /* tab_home_selected@2x.png in Resources */,
+				C68B4A3C19F65BCC002CD0BC /* HTTaopiaoYuDingCell.xib in Resources */,
 				C6B941A01977967800208F20 /* HTMineViewController.xib in Resources */,
 				C6D124A6197E3C0200FF4D83 /* tab_home@2x.png in Resources */,
 				C68DD08119F5151F00D1281E /* home008@2x.png in Resources */,
@@ -2807,6 +2830,7 @@
 				C6DE621C19AAF91E0074DC07 /* tab_more_selected@2x.png in Resources */,
 				C6D1249E197E3AC800FF4D83 /* my_04@2x.png in Resources */,
 				7EAAAFD7199234B3003676F3 /* s_n_detail_return@2x.png in Resources */,
+				C68B4A3719F64DD6002CD0BC /* HTTaoPiaoYuDingController.xib in Resources */,
 				C68DD09019F5338600D1281E /* lp_bottom_03@2x.png in Resources */,
 				C6D12481197E37E500FF4D83 /* more_helpcenter@2x.png in Resources */,
 				C6EC124919A22EA800DFB74C /* HTMoreFeedBackController.xib in Resources */,
@@ -2943,6 +2967,7 @@
 				C6BA258319A6EB7000B03AD1 /* mask.c in Sources */,
 				076E00FB1992860E00FC63D1 /* ScenicTicket.m in Sources */,
 				7EAAAFD3199231E2003676F3 /* HTScenicDetailViewCell.m in Sources */,
+				C68B4A3B19F65BCC002CD0BC /* HTTaopiaoYuDingCell.m in Sources */,
 				C6BA258419A6EB7000B03AD1 /* QRCodeGenerator.m in Sources */,
 				07B5335A19CB484E00831366 /* TPOrderListPara.m in Sources */,
 				C64517DC1993A36100DDD2D7 /* LPTicket.m in Sources */,
@@ -3072,6 +3097,7 @@
 				C6912B7D1990AE5E00584586 /* MessageNoticeHttp.m in Sources */,
 				C557C9CB19C1D9F100DCE85D /* TicketYuYueDetailPara.m in Sources */,
 				7EC384A6199371E100FB0C6D /* HTOrderWriteViewController.m in Sources */,
+				C68B4A3619F64DD6002CD0BC /* HTTaoPiaoYuDingController.m in Sources */,
 				C6BADF7A19768E1600543D39 /* HTMultipleSectionTableViewController.m in Sources */,
 				07B5336619CB48BA00831366 /* TPOrderDetailHttp.m in Sources */,
 				C65B8CF519C8967500E92584 /* TaoPiaoProduct.m in Sources */,

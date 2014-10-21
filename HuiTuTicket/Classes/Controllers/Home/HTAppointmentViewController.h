@@ -10,4 +10,14 @@
 
 @interface HTAppointmentViewController : HTBaseTableViewController
 
+
+/**
+ *  联票序列号，上级传入
+ */
+@property (copy, nonatomic) NSString *codeNumber;
+
+/**
+ *  姓名，上级传入
+ */
+@property (copy, nonatomic) NSString *userName;
 @end
