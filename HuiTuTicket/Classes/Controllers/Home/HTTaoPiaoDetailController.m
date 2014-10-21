@@ -8,7 +8,7 @@
 
 #import "HTTaoPiaoDetailController.h"
 #import "TaoPiaoProductDetailHttp.h"
-
+#import "HTTPDetailCell.h"
 @interface HTTaoPiaoDetailController ()
 
 @property (strong, nonatomic) TaoPiaoProductDetailHttp *taopiaoDetailHttp;
@@ -103,18 +103,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cellIdentfier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    HTTPDetailCell *cell = (HTTPDetailCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTPDetailCell" owner:self options:nil] lastObject];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     
-//    NSDictionary *moreDictionary = self.dataSource[indexPath.section];
-//    cell.imageView.image = [UIImage imageNamed:[moreDictionary valueForKey:@"image"][indexPath.row]];
-//    cell.textLabel.text = [moreDictionary valueForKey:@"title"][indexPath.row];
-    
-    cell.textLabel.text = @"门票";
     return cell;
 }
 
