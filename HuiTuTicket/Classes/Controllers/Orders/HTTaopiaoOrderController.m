@@ -40,6 +40,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.rowHeight = 80;
+    
+    [self requestOrderData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,8 +110,8 @@
     TPOrder *tp = (TPOrder *)self.dataSource[indexPath.row];
     cell.scenicName.text = tp.title;
     cell.price.text = tp.totalamount;
-    cell.tourTime.text = tp .traveltime;
-    cell.orderTime.text = tp.addtime;
+    cell.tourTime.text = [NSString stringWithFormat:@"出行日期：%@",tp.traveltime];
+    cell.orderTime.text = [NSString stringWithFormat:@"下单日期：%@",tp.addtime];
     
 
     

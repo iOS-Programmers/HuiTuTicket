@@ -97,12 +97,20 @@
     }
     else {
         [self.loginButton setTitle:@"退出登录" forState:UIControlStateNormal];
-        self.loginAlertLabel.text = @"亲，您已经成功登录！";
+       
 
         self.userNameLabel.hidden = NO;
         self.avatarImage.hidden = NO;
         
         GetUserInfo *info = [[HTUserInfoManager shareInfoManager] userInfo];
+        
+        if (!FBIsEmpty(info.mobile)) {
+            self.loginAlertLabel.text = [NSString stringWithFormat:@"亲爱的%@，您已成功登录！",info.mobile];
+        }
+        else {
+            self.loginAlertLabel.text = [NSString stringWithFormat:@"亲爱的，您已成功登录！"];
+        }
+        
         
         self.userNameLabel.text = info.nickname;
         [self.avatarImage setImageWithURL:[NSURL URLWithString:info.headpic] placeholderImage:[UIImage imageNamed:@"my_avatar_default"]];
