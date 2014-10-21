@@ -73,6 +73,11 @@
     // Do any additional setup after loading the view from its nib.
     
     [self refreshUIShow];
+    
+    /**
+     *  请求订单信息
+     */
+    [self getOrderInfo];
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,7 +117,7 @@
 
 - (void)getOrderInfo
 {
-//    self.hTMPOrderInfoHttp.parameter.orderid = self.ticketOrderSubmitHttp.resultModel.orderId;
+    self.hTMPOrderInfoHttp.parameter.orderid = self.orderId;
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTOrderResultViewController *weak_self = self;
     [self.hTMPOrderInfoHttp getDataWithCompletionBlock:^{
@@ -203,11 +208,11 @@
     AlixPayOrder *order = [[AlixPayOrder alloc] init];
     order.partner = PartnerID;
     order.seller = SellerID;
-//    order.tradeNO = self.hTMPOrderInfoHttp.resultModel.trade_no; //订单ID（由商家自行制定）
-//    order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
-//    order.productDescription = [NSString stringWithFormat:@"%@%@",self.ticketOrderSubmitHttp.resultModel.scenicName,self.ticketOrderSubmitHttp.resultModel.ticketName]; //商品描述
-//    order.amount = @"0.01"; //商品价格
-//    order.notifyURL =  self.hTMPOrderInfoHttp.resultModel.notify_url; //回调URL
+    order.tradeNO = self.hTMPOrderInfoHttp.resultModel.trade_no; //订单ID（由商家自行制定）
+    order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
+    order.productDescription = [NSString stringWithFormat:@"%@",self.hTMPOrderInfoHttp.resultModel.subject]; //商品描述
+    order.amount = @"0.01"; //商品价格
+    order.notifyURL =  self.hTMPOrderInfoHttp.resultModel.notify_url; //回调URL
 	return [order description];
 }
 

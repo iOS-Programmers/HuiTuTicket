@@ -12,7 +12,7 @@
 #import "HTOrderResultViewController.h"
 #import "TicketOrderSubmitHttp.h"
 
-
+#import "TicketModel.h"
 #import "ScenicDetail.h"
 
 
@@ -85,15 +85,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+/**
+ *  门票订单提交
+ *
+ *  校验串生成方法：将请求参数中的uid、scenicid、ticketid、number、travel_time、receive_moblie、key七个参数的value值拼成一个无间隔的字符串(顺序不要改变)，key是参数签名密钥。
+    MD5字符串示例：
+    106201307011536259678253012013-07-1613800138000key
+    用32位MD5函数加密该字符串所得值即为我们所需的校验串。
+    注意：得出的32位MD5值需转化为小写。
+ *
+ *
+ */
 - (void)submitOrder:(ScenicDetail *)info
 {
+    if (!FBIsEmpty([[HTUserInfoManager shareInfoManager]userId])) {
+        self.ticketOrderSubmitHttp.parameter.uid = [[HTUserInfoManager shareInfoManager]userId];
+    }
+    if (!FBIsEmpty([[HTUserInfoManager shareInfoManager]sessionKey])) {
+        self.ticketOrderSubmitHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager]sessionKey];
+    }
+    
     self.ticketOrderSubmitHttp.parameter.scenicid = self.scenicId;
-//    self.ticketOrderSubmitHttp.parameter.ticketid = info.ticketId;
+    self.ticketOrderSubmitHttp.parameter.ticketid = self.model.ticketId;
     self.ticketOrderSubmitHttp.parameter.number = self.numberLabel.text;
-    self.ticketOrderSubmitHttp.parameter.travel_time = @"2014-09-20";
+    self.ticketOrderSubmitHttp.parameter.travel_time = @"2014-10-20";
     self.ticketOrderSubmitHttp.parameter.receive_name = @"风暴";
     self.ticketOrderSubmitHttp.parameter.receive_moblie = @"13205810687";
+    self.ticketOrderSubmitHttp.parameter.sig = @"222222";
 
     [self showLoadingWithText:kLOADING_TEXT];
     __weak HTOrderWriteViewController *weak_self = self;
@@ -124,8 +142,6 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-//    self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
-    
     //显示景区介绍
     self.productName.text = [NSString stringWithFormat:@"产品介绍： %@",self.ticketDetail.scenicName];
     self.payType.text = [NSString stringWithFormat:@"支付方式： 在线支付"];
@@ -135,7 +151,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
     self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, self.tableView.frame.size.width, self.tableView.frame.size.height-44);
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.minprice floatValue]*[self.numberLabel.text intValue]];
 }
 
 #pragma mark - UITableView DataSource
@@ -171,8 +187,8 @@
 
 - (void)ticketBuyAction:(NSNotification *)notifaction
 {
-    TicketModel *info = notifaction.object;
-    [self submitOrder:info];
+//    TicketModel *info = notifaction.object;
+//    [self submitOrder:info];
 }
 
 # pragma mark -
@@ -180,7 +196,7 @@
 - (IBAction)plusAction:(id)sender
 {
     self.numberLabel.text = [NSString stringWithFormat:@"%d",([self.numberLabel.text intValue]+1)];
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.minprice floatValue]*[self.numberLabel.text intValue]];
 }
 
 - (IBAction)minusAction:(id)sender
@@ -188,7 +204,7 @@
     if ([self.numberLabel.text intValue]-1>=1)
     {
         self.numberLabel.text = [NSString stringWithFormat:@"%d",([self.numberLabel.text intValue]-1)];
-        self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
+        self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额：%.2f元",[self.ticketDetail.minprice floatValue]*[self.numberLabel.text intValue]];
     }
 }
 
@@ -198,11 +214,11 @@
  */
 - (IBAction)payAction:(id)sender
 {
-//    [self submitOrder:self.ticketDetail];
+    [self submitOrder:nil];
     
-    HTOrderResultViewController *vc = [[HTOrderResultViewController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+//    HTOrderResultViewController *vc = [[HTOrderResultViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
     
 }
 - (IBAction)onChangeDateClick:(UIButton *)sender {

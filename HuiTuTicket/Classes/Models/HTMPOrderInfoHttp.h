@@ -10,6 +10,9 @@
 #import "HTMPOrderInfo.h"
 #import "HTMPOrderInfoPara.h"
 
+/**
+ *  提交订单到服务端
+ */
 @interface HTMPOrderInfoHttp : LXHttpModel
 @property (nonatomic, strong) HTMPOrderInfoPara *parameter;
 @property (nonatomic, strong) HTMPOrderInfo *resultModel;

@@ -10,6 +10,8 @@
 
 @class ScenicDetail;
 
+@class TicketModel;
+
 @interface HTOrderWriteViewController : HTBaseTableViewController
 /**
  *  景区ID，上级界面传入
@@ -20,5 +22,10 @@
  *  景区详情对象 ，上级传入
  */
 @property (nonatomic, strong) ScenicDetail *ticketDetail;
+
+/**
+ *  景区产品对象 ，上级传入
+ */
+@property (nonatomic, strong) TicketModel *model;
 
 @end
