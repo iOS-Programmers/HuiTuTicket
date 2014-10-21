@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textView.text = self.description;
+    self.textView.text = self.detail;
+    
 }
 
 - (void)didReceiveMemoryWarning {
