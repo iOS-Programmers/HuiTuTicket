@@ -8,11 +8,16 @@
 
 #import "HTTaoPiaoDetailController.h"
 #import "TaoPiaoProductDetailHttp.h"
+#import "HTTaopiaoDetailCell.h"
+#import "TaoPiaoScenicInfo.h"
+#import "TaoPiaoTicket.h"
 
 @interface HTTaoPiaoDetailController ()
 
 @property (strong, nonatomic) TaoPiaoProductDetailHttp *taopiaoDetailHttp;
 
+@property (strong, nonatomic) IBOutlet UIView *tableFooterView;
+@property (weak, nonatomic) IBOutlet UITextView *shuomingTextView;
 
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIView *footView;
@@ -42,9 +47,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
+    self.tableView.rowHeight = 60;
     self.tableView.tableHeaderView = self.headView;
-    self.tableView.tableFooterView = self.footView;
+    self.tableView.tableFooterView = self.tableFooterView;
+    [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] + (IOS7_OR_LATER ? 20 : 0) - 50];
+
+    [self.view addSubview:self.footView];
+    [self.footView frameSetY:self.tableView.frame.size.height];
     
     [self loadDataSource];
 }
@@ -68,8 +77,8 @@
     [self.taopiaoDetailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.taopiaoDetailHttp.isValid) {
-//            weak_self.dataSource = weak_self.taopiaoDetailHttp.resultModel.info;
-            [weak_self.tableView reloadData];
+
+            [weak_self updateUIWithInfo:weak_self.taopiaoDetailHttp.resultModel];
         }
         else {
             //显示服务端返回的错误提示
@@ -90,6 +99,23 @@
 }
 
 
+- (void)updateUIWithInfo:(TaoPiaoProductDetail *)detailInfo
+{
+    [self.scenicImage setImageWithURL:[NSURL URLWithString:detailInfo.picture]];
+    self.productNameLabel.text = detailInfo.title;
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",detailInfo.price];
+    
+//    self.shuomingTextView.text = [NSString stringWithFormat:@"%@\n%@",detailInfo.content,detailInfo.ydsm];
+    self.shuomingTextView.text = [NSString stringWithFormat:@"%@",detailInfo.ydsm];
+    
+    if ([detailInfo.scenicinfo count] != 0) {
+        self.dataSource = detailInfo.scenicinfo;
+        [self.tableView reloadData];
+    }
+    
+    
+}
+
 #pragma mark - UITableView DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -97,24 +123,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cellIdentfier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    HTTaopiaoDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HTTaopiaoDetailCell" owner:self options:nil] lastObject];
+    }
+    TaoPiaoScenicInfo *info = (TaoPiaoScenicInfo *)self.dataSource[indexPath.row];
+    if ([info.ticket count] > 0) {
+        TaoPiaoTicket *ticket = (TaoPiaoTicket *)info.ticket[0];
+        cell.ticketAndNumLabel.text = [NSString stringWithFormat:@"%@    %@张",ticket.ticketName,ticket.num];
+        cell.priceLabel.text = [NSString stringWithFormat:@"价值    ￥%@",ticket.price];
     }
     
-//    NSDictionary *moreDictionary = self.dataSource[indexPath.section];
-//    cell.imageView.image = [UIImage imageNamed:[moreDictionary valueForKey:@"image"][indexPath.row]];
-//    cell.textLabel.text = [moreDictionary valueForKey:@"title"][indexPath.row];
+    cell.scenicName.text = info.scenicName;
     
-    cell.textLabel.text = @"门票";
     return cell;
 }
 

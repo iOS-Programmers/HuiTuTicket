@@ -7,6 +7,7 @@
 //
 
 #import "TaoPiaoProductDetail.h"
+#import "TaoPiaoScenicInfo.h"
 
 @implementation TaoPiaoProductDetail
 

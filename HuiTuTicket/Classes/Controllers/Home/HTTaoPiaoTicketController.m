@@ -100,7 +100,7 @@
     
     [cell.imgView setImageWithURL:[NSURL URLWithString:info.picture]];
     cell.ticketName.text = info.title;
-    cell.priceLabel.text = info.minprice;
+    cell.priceLabel.text = [NSString stringWithFormat:@"￥%@",info.minprice];
 
     return cell;
 }

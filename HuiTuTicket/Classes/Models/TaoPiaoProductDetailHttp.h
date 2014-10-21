@@ -10,6 +10,9 @@
 #import "TaoPiaoProductDetail.h"
 #import "TaoPiaoProductDetailPara.h"
 
+/**
+ *  套票产品详情获取接口
+ */
 @interface TaoPiaoProductDetailHttp : LXHttpModel
 
 @property (nonatomic, retain) TaoPiaoProductDetailPara *parameter;

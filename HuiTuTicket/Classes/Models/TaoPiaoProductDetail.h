@@ -36,6 +36,11 @@
  */
 @property (strong, nonatomic) NSString *ydsm;
 
+/**
+ *  产品说明
+ */
+@property (strong, nonatomic) NSString *content;
+
 
 /**
  *  数组 包含详细信息

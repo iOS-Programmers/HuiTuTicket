@@ -7,6 +7,7 @@
 //
 
 #import "TaoPiaoScenicInfo.h"
+#import "TaoPiaoTicket.h"
 
 @implementation TaoPiaoScenicInfo
 

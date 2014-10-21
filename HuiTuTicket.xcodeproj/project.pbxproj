@@ -321,6 +321,8 @@
 		C6B09E9A19826A3A00576A5F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9919826A3A00576A5F /* CoreVideo.framework */; };
 		C6B09E9C19826A4200576A5F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9B19826A4200576A5F /* AVFoundation.framework */; };
 		C6B09E9E19826A6A00576A5F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B09E9D19826A6A00576A5F /* libiconv.dylib */; };
+		C6B1507A19F624F2002F5B96 /* HTTaopiaoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */; };
+		C6B1507B19F624F2002F5B96 /* HTTaopiaoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */; };
 		C6B1BCFF19991A7400A9B42F /* my_ticket_list_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1BCFD19991A7400A9B42F /* my_ticket_list_icon@2x.png */; };
 		C6B1BD0019991A7400A9B42F /* my_ticket_time_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1BCFE19991A7400A9B42F /* my_ticket_time_icon@2x.png */; };
 		C6B442FC1978EBB500731866 /* HTMoreAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B442FA1978EBB500731866 /* HTMoreAboutUsController.m */; };
@@ -1007,6 +1009,9 @@
 		C6B09E9919826A3A00576A5F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C6B09E9B19826A4200576A5F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6B09E9D19826A6A00576A5F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTaopiaoDetailCell.h; sourceTree = "<group>"; };
+		C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTaopiaoDetailCell.m; sourceTree = "<group>"; };
+		C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTaopiaoDetailCell.xib; sourceTree = "<group>"; };
 		C6B1BCFD19991A7400A9B42F /* my_ticket_list_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_ticket_list_icon@2x.png"; sourceTree = "<group>"; };
 		C6B1BCFE19991A7400A9B42F /* my_ticket_time_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_ticket_time_icon@2x.png"; sourceTree = "<group>"; };
 		C6B442F71978EABF00731866 /* HTFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFoundationMacro.h; sourceTree = "<group>"; };
@@ -1838,6 +1843,9 @@
 				C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */,
 				C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */,
 				C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */,
+				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
+				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
+				C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */,
 			);
 			name = TaoPiaoTicket;
 			sourceTree = "<group>";
@@ -2735,6 +2743,7 @@
 				C6BA258E19A6F81500B03AD1 /* HTYuYueViewController.xib in Resources */,
 				C6D12490197E397500FF4D83 /* order_01@2x.png in Resources */,
 				C5C9094819C06E7B006E1BE4 /* Alixpay.bundle in Resources */,
+				C6B1507B19F624F2002F5B96 /* HTTaopiaoDetailCell.xib in Resources */,
 				C691FDE31997BDCD00B3AD53 /* my_avatar_default@2x.png in Resources */,
 				C68DD08019F5151F00D1281E /* home006@2x.png in Resources */,
 				C5A6EBD4198267650041DC2A /* HTEntranceTicketController.xib in Resources */,
@@ -2979,6 +2988,7 @@
 				C6BADF9719775A1C00543D39 /* HTStoreManager.m in Sources */,
 				C655B8E519C1F607007DD925 /* TicketYuyueScenicList.m in Sources */,
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
+				C6B1507A19F624F2002F5B96 /* HTTaopiaoDetailCell.m in Sources */,
 				C557C9C619C1D9F100DCE85D /* TicketYuyueChangeDate.m in Sources */,
 				C5A1394219A6E5C40054DB04 /* Banner.m in Sources */,
 				C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */,
