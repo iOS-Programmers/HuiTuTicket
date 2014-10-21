@@ -17,7 +17,7 @@
 
 #import "ScenicListHttp.h"
 #import "UIImageView+WebCache.h"
-#import "HTScenicDetailViewController.h"
+#import "HTHomeDetailSceneVC.h"
 #import "HomeBannerHttp.h"
 
 @interface HTHomeViewController ()<ZBarReaderDelegate>
@@ -215,7 +215,7 @@
 {
     [atableView deselectRowAtIndexPath:indexPath animated:YES];
     Scenic *scenic = [self.dataSource objectAtIndex:indexPath.row];
-    HTScenicDetailViewController *app = [[HTScenicDetailViewController alloc] init];
+    HTHomeDetailSceneVC *app = [[HTHomeDetailSceneVC alloc] init];
     app.hidesBottomBarWhenPushed = YES;
     app.scenicId = scenic.scenicId;
     [self.navigationController pushViewController:app animated:YES];

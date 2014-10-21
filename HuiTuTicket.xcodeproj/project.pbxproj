@@ -135,6 +135,12 @@
 		C5C9095319C06E7B006E1BE4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9094219C06E7A006E1BE4 /* libssl.a */; };
 		C5C9095519C07F2A006E1BE4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9095419C07F2A006E1BE4 /* CFNetwork.framework */; };
 		C5C9095719C07F3E006E1BE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9095619C07F3E006E1BE4 /* Security.framework */; };
+		C5CABABE19F61F1900C55011 /* HTHomeDetailSceneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CABABC19F61F1900C55011 /* HTHomeDetailSceneVC.m */; };
+		C5CABABF19F61F1900C55011 /* HTHomeDetailSceneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CABABD19F61F1900C55011 /* HTHomeDetailSceneVC.xib */; };
+		C5CABAC319F61F3C00C55011 /* HTHomeDetailSceneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CABAC119F61F3C00C55011 /* HTHomeDetailSceneCell.m */; };
+		C5CABAC419F61F3C00C55011 /* HTHomeDetailSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CABAC219F61F3C00C55011 /* HTHomeDetailSceneCell.xib */; };
+		C5CABAC819F61F6700C55011 /* HTHomeDetailSceneDesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CABAC619F61F6700C55011 /* HTHomeDetailSceneDesVC.m */; };
+		C5CABAC919F61F6700C55011 /* HTHomeDetailSceneDesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CABAC719F61F6700C55011 /* HTHomeDetailSceneDesVC.xib */; };
 		C5FB47E2197E6A7D00FE5364 /* HTHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */; };
 		C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */; };
 		C5FB47E4197E6A7D00FE5364 /* HTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */; };
@@ -680,6 +686,15 @@
 		C5C9094619C06E7A006E1BE4 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
 		C5C9095419C07F2A006E1BE4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C5C9095619C07F3E006E1BE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C5CABABB19F61F1900C55011 /* HTHomeDetailSceneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeDetailSceneVC.h; sourceTree = "<group>"; };
+		C5CABABC19F61F1900C55011 /* HTHomeDetailSceneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeDetailSceneVC.m; sourceTree = "<group>"; };
+		C5CABABD19F61F1900C55011 /* HTHomeDetailSceneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeDetailSceneVC.xib; sourceTree = "<group>"; };
+		C5CABAC019F61F3C00C55011 /* HTHomeDetailSceneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeDetailSceneCell.h; sourceTree = "<group>"; };
+		C5CABAC119F61F3C00C55011 /* HTHomeDetailSceneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeDetailSceneCell.m; sourceTree = "<group>"; };
+		C5CABAC219F61F3C00C55011 /* HTHomeDetailSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeDetailSceneCell.xib; sourceTree = "<group>"; };
+		C5CABAC519F61F6700C55011 /* HTHomeDetailSceneDesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeDetailSceneDesVC.h; sourceTree = "<group>"; };
+		C5CABAC619F61F6700C55011 /* HTHomeDetailSceneDesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeDetailSceneDesVC.m; sourceTree = "<group>"; };
+		C5CABAC719F61F6700C55011 /* HTHomeDetailSceneDesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeDetailSceneDesVC.xib; sourceTree = "<group>"; };
 		C5FB47DC197E6A7D00FE5364 /* HTHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHomeHeadView.h; sourceTree = "<group>"; };
 		C5FB47DD197E6A7D00FE5364 /* HTHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHomeHeadView.m; sourceTree = "<group>"; };
 		C5FB47DE197E6A7D00FE5364 /* HTHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTHomeHeadView.xib; sourceTree = "<group>"; };
@@ -2305,6 +2320,15 @@
 				C5FB47DF197E6A7D00FE5364 /* HTHomeTableViewCell.h */,
 				C5FB47E0197E6A7D00FE5364 /* HTHomeTableViewCell.m */,
 				C5FB47E1197E6A7D00FE5364 /* HTHomeTableViewCell.xib */,
+				C5CABABB19F61F1900C55011 /* HTHomeDetailSceneVC.h */,
+				C5CABABC19F61F1900C55011 /* HTHomeDetailSceneVC.m */,
+				C5CABABD19F61F1900C55011 /* HTHomeDetailSceneVC.xib */,
+				C5CABAC019F61F3C00C55011 /* HTHomeDetailSceneCell.h */,
+				C5CABAC119F61F3C00C55011 /* HTHomeDetailSceneCell.m */,
+				C5CABAC219F61F3C00C55011 /* HTHomeDetailSceneCell.xib */,
+				C5CABAC519F61F6700C55011 /* HTHomeDetailSceneDesVC.h */,
+				C5CABAC619F61F6700C55011 /* HTHomeDetailSceneDesVC.m */,
+				C5CABAC719F61F6700C55011 /* HTHomeDetailSceneDesVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2678,6 +2702,7 @@
 				C6B442FD1978EBB500731866 /* HTMoreAboutUsController.xib in Resources */,
 				C64517D91993A10900DDD2D7 /* HTLPTicketListController.xib in Resources */,
 				0714AD2219C9F1BB00BD6253 /* icon-58.png in Resources */,
+				C5CABAC419F61F3C00C55011 /* HTHomeDetailSceneCell.xib in Resources */,
 				C5A6EBC319822A920041DC2A /* HTOrderDetailViewController.xib in Resources */,
 				C6BADF7F197690F400543D39 /* HTMoreViewController.xib in Resources */,
 				C6ADAC21198E167C00AB983B /* LICENSE in Resources */,
@@ -2758,6 +2783,7 @@
 				C5FB47E3197E6A7D00FE5364 /* HTHomeHeadView.xib in Resources */,
 				C6B09E931982683F00576A5F /* zbar-back.png in Resources */,
 				C6B09E941982683F00576A5F /* zbar-help.html in Resources */,
+				C5CABABF19F61F1900C55011 /* HTHomeDetailSceneVC.xib in Resources */,
 				C5A6EBC819822BF80041DC2A /* HTCustomMapCell.xib in Resources */,
 				C68DD08219F5151F00D1281E /* lphome_01@2x.png in Resources */,
 				C6053CFC19A61B0D0085C0A8 /* logo@2x.png in Resources */,
@@ -2782,6 +2808,7 @@
 				C5A6EBCF19825CC40041DC2A /* datesel@2x.png in Resources */,
 				C68DD08F19F5338600D1281E /* lp_bottom_02@2x.png in Resources */,
 				C6A373FD1986417F0016A204 /* HTFindPasswordController.xib in Resources */,
+				C5CABAC919F61F6700C55011 /* HTHomeDetailSceneDesVC.xib in Resources */,
 				C6D1249C197E3AC800FF4D83 /* my_02@2x.png in Resources */,
 				C6D12492197E397500FF4D83 /* order_03@2x.png in Resources */,
 				C5FB47EF197E6A9C00FE5364 /* home005@2x.png in Resources */,
@@ -2990,6 +3017,7 @@
 				C59CB0AF198FB0860094DC9F /* ScenicList.m in Sources */,
 				C6B1507A19F624F2002F5B96 /* HTTaopiaoDetailCell.m in Sources */,
 				C557C9C619C1D9F100DCE85D /* TicketYuyueChangeDate.m in Sources */,
+				C5CABAC819F61F6700C55011 /* HTHomeDetailSceneDesVC.m in Sources */,
 				C5A1394219A6E5C40054DB04 /* Banner.m in Sources */,
 				C6ED770119913A450075D6C4 /* TicketDetailHttp.m in Sources */,
 				C6ED76F81990E3F30075D6C4 /* TicketRegisterHttp.m in Sources */,
@@ -3006,6 +3034,7 @@
 				C6D47AB319A4779F00C47126 /* MyTicketDetailInfoPara.m in Sources */,
 				C65B8CEF19C8950600E92584 /* TaoPiaoProductListPara.m in Sources */,
 				076E0104199288A500FC63D1 /* TicketPriceCalendar.m in Sources */,
+				C5CABABE19F61F1900C55011 /* HTHomeDetailSceneVC.m in Sources */,
 				C6D47AB919A482D700C47126 /* LPTicketOrderDetail.m in Sources */,
 				C6BA259919A71B9200B03AD1 /* LPTicketSearchPara.m in Sources */,
 				C6ADAC29198E190500AB983B /* LXDataModel.m in Sources */,
@@ -3019,6 +3048,7 @@
 				C65B8CEC19C894F900E92584 /* TaoPiaoProductList.m in Sources */,
 				076E00EF1992838900FC63D1 /* ScenicDetail.m in Sources */,
 				C6BA258D19A6F81500B03AD1 /* HTYuYueViewController.m in Sources */,
+				C5CABAC319F61F3C00C55011 /* HTHomeDetailSceneCell.m in Sources */,
 				076E011F19928C4800FC63D1 /* TicketOrderDetail.m in Sources */,
 				076E012E19928CBE00FC63D1 /* TicketOrderCancelHttp.m in Sources */,
 				7EAAAFC219921A2D003676F3 /* HTScenicDetailViewController.m in Sources */,
