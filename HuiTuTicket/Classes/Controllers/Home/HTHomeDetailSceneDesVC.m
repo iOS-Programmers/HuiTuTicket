@@ -9,6 +9,7 @@
 #import "HTHomeDetailSceneDesVC.h"
 
 @interface HTHomeDetailSceneDesVC ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.textView.text = self.description;
 }
 
 - (void)didReceiveMemoryWarning {

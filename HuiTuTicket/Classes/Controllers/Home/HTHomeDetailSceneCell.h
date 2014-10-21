@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HTHomeDetailSceneCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *upLabel;
+@property (weak, nonatomic) IBOutlet UILabel *downLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *sepLineIV;
 
 @end

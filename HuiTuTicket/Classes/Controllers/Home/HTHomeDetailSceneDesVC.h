@@ -10,4 +10,7 @@
 
 @interface HTHomeDetailSceneDesVC : HTBaseViewController
 
+@property (nonatomic,copy)NSString *detail;
+
+
 @end

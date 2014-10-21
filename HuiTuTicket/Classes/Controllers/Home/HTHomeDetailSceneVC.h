@@ -9,5 +9,6 @@
 #import "HTBaseTableViewController.h"
 
 @interface HTHomeDetailSceneVC : HTBaseTableViewController
+@property (nonatomic, strong) NSString *scenicId;
 
 @end

@@ -11,7 +11,12 @@
 @implementation HTHomeDetailSceneCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
+    self.downLabel.lineBreakMode=NSLineBreakByCharWrapping;
+    self.downLabel.numberOfLines = 0;
+    self.downLabel.opaque = NO; // 选中Opaque表示视图后面的任何内容都不应该绘制
+    self.downLabel.backgroundColor = [UIColor clearColor];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
