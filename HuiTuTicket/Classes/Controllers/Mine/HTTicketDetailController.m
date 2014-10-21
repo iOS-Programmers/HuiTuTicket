@@ -242,6 +242,8 @@
 - (IBAction)onYuYueRecordBtnClick:(id)sender
 {
     HTAppointmentViewController *app = [[HTAppointmentViewController alloc] init];
+    app.userName = self.detailHttp.resultModel.username;
+    app.codeNumber = self.detailHttp.resultModel.codeNumber;
     [self.navigationController pushViewController:app animated:YES];
 }
 
@@ -297,6 +299,16 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    //景区数量 可点击
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        HTCYOrderViewController *yuyue = [[HTCYOrderViewController alloc] init];
+        
+        if (self.detailHttp.resultModel) {
+            yuyue.ticketdetail = (MyTicketDetailInfo *)self.detailHttp.resultModel;
+        }
+        
+        [self.navigationController pushViewController:yuyue animated:YES];
+    }
 }
 
 @end

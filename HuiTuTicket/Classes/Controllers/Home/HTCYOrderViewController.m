@@ -44,7 +44,7 @@
     self.sectionBar.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 
     CGRect rect = self.tableView.frame;
-    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+44, rect.size.width, rect.size.height - 44);
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
     // Do any additional setup after loading the view from its nib.
     
 }
@@ -62,8 +62,7 @@
         self.yuyueHttp.parameter.username = self.ticketdetail.username;
         self.yuyueHttp.parameter.codenumber = self.ticketdetail.codeNumber;
     }
-//    self.yuyueHttp.parameter.page = @"1";
-//    self.yuyueHttp.parameter.pagesize = @"10";
+
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTCYOrderViewController *weak_self = self;
     [self.yuyueHttp getDataWithCompletionBlock:^{
@@ -144,7 +143,7 @@
     else if ([info.state isEqualToString:@"2"]) {
         //已预约
         [cell.orderBtn setTitle:@"已预约" forState:UIControlStateNormal];
-        cell.orderBtn.backgroundColor = [UIColor purpleColor];
+        cell.orderBtn.backgroundColor = [UIColor grayColor];
     }
     
     return cell;

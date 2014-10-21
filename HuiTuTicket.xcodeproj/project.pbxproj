@@ -1858,18 +1858,15 @@
 				C6A71A5D19C73F620039D8F2 /* HTTaoPiaoDetailController.h */,
 				C6A71A5E19C73F620039D8F2 /* HTTaoPiaoDetailController.m */,
 				C6A71A5F19C73F620039D8F2 /* HTTaoPiaoDetailController.xib */,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 				C6B1507719F624F2002F5B96 /* HTTaopiaoDetailCell.h */,
 				C6B1507819F624F2002F5B96 /* HTTaopiaoDetailCell.m */,
 				C6B1507919F624F2002F5B96 /* HTTaopiaoDetailCell.xib */,
-=======
+
 				C5CABACA19F62BDF00C55011 /* HTTPDetailCell.h */,
 				C5CABACB19F62BDF00C55011 /* HTTPDetailCell.m */,
 				C5CABACC19F62BDF00C55011 /* HTTPDetailCell.xib */,
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
+
 			);
 			name = TaoPiaoTicket;
 			sourceTree = "<group>";
