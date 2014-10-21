@@ -9,9 +9,11 @@
 #import "HTOrderWriteViewController.h"
 #import "HTScenicDetailViewCell.h"
 #import "HTOrderResultViewController.h"
-
+#import "HTOrderResultViewController.h"
 #import "TicketOrderSubmitHttp.h"
 #import "HTMPOrderInfoHttp.h"
+
+#import "ScenicDetail.h"
 
 //AlixPay
 #import "PartnerConfig.h"
@@ -23,9 +25,28 @@
 
 @interface HTOrderWriteViewController ()
 
+/******详情View*******/
 @property (nonatomic, strong) IBOutlet UIView *headView;
+
+@property (weak, nonatomic) IBOutlet UILabel *productName;
+@property (weak, nonatomic) IBOutlet UILabel *payType;
+@property (weak, nonatomic) IBOutlet UILabel *scenicIntroduceLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *changeDateBtn;
+
+- (IBAction)onChangeDateClick:(UIButton *)sender;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *userNameTF;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTF;
+@property (weak, nonatomic) IBOutlet UITextField *idCardTF;
+
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *payBtn;
+
+
+
 @property (nonatomic,strong) TicketOrderSubmitHttp *ticketOrderSubmitHttp;
 @property (nonatomic,strong) HTMPOrderInfoHttp *hTMPOrderInfoHttp;
 
@@ -58,6 +79,8 @@
     view.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = view;
     [self refreshUIShow];
+    
+    LXLog(@"--- %@",self.ticketDetail);
     
 }
 
@@ -116,10 +139,10 @@
     }];
 }
 
-- (void)submitOrder:(TicketModel *)info
+- (void)submitOrder:(ScenicDetail *)info
 {
     self.ticketOrderSubmitHttp.parameter.scenicid = self.scenicId;
-    self.ticketOrderSubmitHttp.parameter.ticketid = info.ticketId;
+//    self.ticketOrderSubmitHttp.parameter.ticketid = info.ticketId;
     self.ticketOrderSubmitHttp.parameter.number = self.numberLabel.text;
     self.ticketOrderSubmitHttp.parameter.travel_time = @"2014-09-20";
     self.ticketOrderSubmitHttp.parameter.receive_name = @"风暴";
@@ -154,11 +177,18 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-    self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
+//    self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
+    
+    //显示景区介绍
+    self.productName.text = [NSString stringWithFormat:@"产品介绍： %@",self.ticketDetail.scenicName];
+    self.payType.text = [NSString stringWithFormat:@"支付方式： 在线支付"];
+    self.scenicIntroduceLabel.text = self.ticketDetail.intro;
+    
+    
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = self.headView;
     self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, self.tableView.frame.size.width, self.tableView.frame.size.height-44);
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %f元",[self.dataModel.price floatValue]*[self.numberLabel.text intValue]];
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
 }
 
 #pragma mark - UITableView DataSource
@@ -311,7 +341,7 @@
 - (IBAction)plusAction:(id)sender
 {
     self.numberLabel.text = [NSString stringWithFormat:@"%d",([self.numberLabel.text intValue]+1)];
-    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.dataModel.price floatValue]*[self.numberLabel.text intValue]];
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %.2f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
 }
 
 - (IBAction)minusAction:(id)sender
@@ -319,12 +349,23 @@
     if ([self.numberLabel.text intValue]-1>=1)
     {
         self.numberLabel.text = [NSString stringWithFormat:@"%d",([self.numberLabel.text intValue]-1)];
-        self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %f元",[self.dataModel.price floatValue]*[self.numberLabel.text intValue]];
+        self.totalPriceLabel.text = [NSString stringWithFormat:@"订单金额： %f元",[self.ticketDetail.price floatValue]*[self.numberLabel.text intValue]];
     }
 }
 
+/**
+ *  跳转到选择支付方式页面
+ *
+ */
 - (IBAction)payAction:(id)sender
 {
-    [self submitOrder:self.dataModel];
+//    [self submitOrder:self.ticketDetail];
+    
+    HTOrderResultViewController *vc = [[HTOrderResultViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+- (IBAction)onChangeDateClick:(UIButton *)sender {
 }
 @end

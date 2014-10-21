@@ -207,6 +207,7 @@
 		C68B4A4719F66644002CD0BC /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4119F66644002CD0BC /* MJRefreshBaseView.m */; };
 		C68B4A4819F66644002CD0BC /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4319F66644002CD0BC /* MJRefreshFooterView.m */; };
 		C68B4A4919F66644002CD0BC /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68B4A4519F66644002CD0BC /* MJRefreshHeaderView.m */; };
+		C68B4A4B19F67BEC002CD0BC /* zhifubao_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C68B4A4A19F67BEC002CD0BC /* zhifubao_logo@2x.png */; };
 		C68C4858199A2723000ACA32 /* HTTicketDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */; };
 		C68C4859199A2723000ACA32 /* HTTicketDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */; };
 		C68DD07519F50EA700D1281E /* LXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C68DD07419F50EA700D1281E /* LXUtils.m */; };
@@ -809,6 +810,7 @@
 		C68B4A4319F66644002CD0BC /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
 		C68B4A4419F66644002CD0BC /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
 		C68B4A4519F66644002CD0BC /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		C68B4A4A19F67BEC002CD0BC /* zhifubao_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhifubao_logo@2x.png"; sourceTree = "<group>"; };
 		C68C4855199A2723000ACA32 /* HTTicketDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTicketDetailCell.h; sourceTree = "<group>"; };
 		C68C4856199A2723000ACA32 /* HTTicketDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTicketDetailCell.m; sourceTree = "<group>"; };
 		C68C4857199A2723000ACA32 /* HTTicketDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTicketDetailCell.xib; sourceTree = "<group>"; };
@@ -1658,12 +1660,6 @@
 				7EAAAFBF19921A2D003676F3 /* HTScenicDetailViewController.h */,
 				7EAAAFC019921A2D003676F3 /* HTScenicDetailViewController.m */,
 				7EAAAFC119921A2D003676F3 /* HTScenicDetailViewController.xib */,
-				7EC384A3199371E100FB0C6D /* HTOrderWriteViewController.h */,
-				7EC384A4199371E100FB0C6D /* HTOrderWriteViewController.m */,
-				7EC384A5199371E100FB0C6D /* HTOrderWriteViewController.xib */,
-				7EC384B01994C45000FB0C6D /* HTOrderResultViewController.h */,
-				7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */,
-				7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */,
 				0714AD1A19C9E72E00BD6253 /* HTModelSelVC.h */,
 				0714AD1B19C9E72E00BD6253 /* HTModelSelVC.m */,
 				0714AD1C19C9E72E00BD6253 /* HTModelSelVC.xib */,
@@ -2376,6 +2372,12 @@
 				C5CABAC519F61F6700C55011 /* HTHomeDetailSceneDesVC.h */,
 				C5CABAC619F61F6700C55011 /* HTHomeDetailSceneDesVC.m */,
 				C5CABAC719F61F6700C55011 /* HTHomeDetailSceneDesVC.xib */,
+				7EC384A3199371E100FB0C6D /* HTOrderWriteViewController.h */,
+				7EC384A4199371E100FB0C6D /* HTOrderWriteViewController.m */,
+				7EC384A5199371E100FB0C6D /* HTOrderWriteViewController.xib */,
+				7EC384B01994C45000FB0C6D /* HTOrderResultViewController.h */,
+				7EC384B11994C45000FB0C6D /* HTOrderResultViewController.m */,
+				7EC384B21994C45000FB0C6D /* HTOrderResultViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2481,6 +2483,7 @@
 		C6D12489197E38E500FF4D83 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C68B4A4A19F67BEC002CD0BC /* zhifubao_logo@2x.png */,
 				C6DE621419AAF91E0074DC07 /* tab_home_selected@2x.png */,
 				C6DE621519AAF91E0074DC07 /* tab_message_selected@2x.png */,
 				C6DE621619AAF91E0074DC07 /* tab_mine_selected@2x.png */,
@@ -2744,6 +2747,7 @@
 				C68DD08119F5151F00D1281E /* home008@2x.png in Resources */,
 				C6BADF84197691C400543D39 /* HTMessageViewController.xib in Resources */,
 				C6A71A5C19C73C7B0039D8F2 /* HTTaopiaoListCell.xib in Resources */,
+				C68B4A4B19F67BEC002CD0BC /* zhifubao_logo@2x.png in Resources */,
 				C6A71A6919C740750039D8F2 /* HTTaopiaoOrderCell.xib in Resources */,
 				7EC384AB19937A1800FB0C6D /* s_n_order_num_subtraction@2x.png in Resources */,
 				C6ADAC1F198E167C00AB983B /* README-GHUnit in Resources */,

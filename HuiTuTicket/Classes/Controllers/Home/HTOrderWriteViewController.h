@@ -7,10 +7,18 @@
 //
 
 #import "HTBaseTableViewController.h"
-#import "TicketModel.h"
+
+@class ScenicDetail;
 
 @interface HTOrderWriteViewController : HTBaseTableViewController
+/**
+ *  景区ID，上级界面传入
+ */
 @property (nonatomic, copy) NSString *scenicId;
-@property (nonatomic, strong) TicketModel *dataModel;
+
+/**
+ *  景区详情对象 ，上级传入
+ */
+@property (nonatomic, strong) ScenicDetail *ticketDetail;
 
 @end

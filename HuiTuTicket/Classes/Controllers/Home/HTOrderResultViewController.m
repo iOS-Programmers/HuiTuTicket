@@ -2,7 +2,7 @@
 //  HTOrderResultViewController.m
 //  HuiTuTicket
 //
-//  Created by 李 广军 on 14-8-8.
+//  Created by on 14-8-8.
 //  Copyright (c) 2014年 HuiTuTicket. All rights reserved.
 //
 
@@ -11,7 +11,13 @@
 
 @interface HTOrderResultViewController ()
 
-@property (nonatomic, strong) IBOutlet UIView *headView;
+@property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *travelTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ticketNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *orderPriceLabel;
+
+- (IBAction)onClientPayBtnClick:(UIButton *)sender;
+- (IBAction)onWebPayBtnClick:(UIButton *)sender;
 
 @end
 
@@ -22,7 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"提交成功";
+        self.title = @"支付方式";
     }
     return self;
 }
@@ -44,38 +50,28 @@
 #pragma mark - custom
 - (void)refreshUIShow
 {
-    self.view.backgroundColor = [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.tableHeaderView = self.headView;
+
 }
 
-#pragma mark - TableView DataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Action
+/**
+ *  支付宝客户端支付
+ *
+ */
+- (IBAction)onClientPayBtnClick:(UIButton *)sender
 {
-    static NSString *CellIdentifier = @"Cell";
-    HTHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
-    {
-        NSArray *cellNib = [[NSBundle mainBundle] loadNibNamed:@"HTHomeTableViewCell" owner:self options:nil];
-        for (id oneObject in cellNib)
-        {
-            if ([oneObject isKindOfClass:[HTHomeTableViewCell class]])
-            {
-                cell = (HTHomeTableViewCell *)oneObject;
-            }
-        }
-    }
-    return cell;
+
+
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/**
+ *  支付宝网页支付
+ *
+ */
+- (IBAction)onWebPayBtnClick:(UIButton *)sender
 {
-    return 70;
-}
 
+    [self showWithText:@"该功能暂未开发！"];
+}
 @end
