@@ -12,6 +12,7 @@
 @interface TPOrderDetail : LXResultModel
 
 @property (copy, nonatomic) NSString *orderId;
+@property (copy, nonatomic) NSString *traveltime;
 @property (copy, nonatomic) NSString *tpid;
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *receivername;

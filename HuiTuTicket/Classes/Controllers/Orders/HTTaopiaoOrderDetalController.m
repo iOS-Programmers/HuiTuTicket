@@ -9,6 +9,7 @@
 #import "HTTaopiaoOrderDetalController.h"
 #import "TPOrderDetailHttp.h"
 #import "TPOrderCancelHttp.h"
+#import "HTOrderResultViewController.h"
 
 @interface HTTaopiaoOrderDetalController ()
 
@@ -227,7 +228,18 @@
  *  立即支付
  */
 - (IBAction)onPayBtnClick:(UIButton *)sender {
-    LXLog(@"支付");
+
+    TPOrderDetail *detail =  (TPOrderDetail *)self.orderHttp.resultModel;
+    
+    HTOrderResultViewController *vc = [[HTOrderResultViewController alloc] init];
+    vc.orderId = detail.orderId;
+    vc.produtName = detail.title;
+    vc.traveDate = detail.traveltime;
+    vc.totalMoney = detail.totalamount;
+    vc.number = detail.number;
+    vc.isFromTaoPiao = YES;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
