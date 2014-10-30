@@ -40,8 +40,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke"
                   moduleName = "HuiTuTicket"
-                  urlString = "file:///Users/Bird/GitHub/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "435563816.100171"
+                  urlString = "file:///Users/Bird/Desktop/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
+                  timestampString = "436268808.704493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "124"
@@ -54,8 +54,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__37-[HTLoginController onLoginBtnClick:]_block_invoke88"
                   moduleName = "HuiTuTicket"
-                  urlString = "file:///Users/Bird/GitHub/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
-                  timestampString = "435563816.100321"
+                  urlString = "file:///Users/Bird/Desktop/HuiTuTicket/HuiTuTicket/Classes/Controllers/Login&amp;Register/HTLoginController.m"
+                  timestampString = "436268808.70464"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "124"
@@ -93,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "314"
             endingLineNumber = "314"
-            landmarkName = "-plusAction:"
+            landmarkName = "-dateFinished"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -109,7 +109,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "320"
             endingLineNumber = "320"
-            landmarkName = "-minusAction:"
+            landmarkName = "-hideDatePicker"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -125,7 +125,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "268"
             endingLineNumber = "268"
-            landmarkName = "-doRsa:"
+            landmarkName = "-plusAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -141,7 +141,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "202"
             endingLineNumber = "202"
-            landmarkName = "-createOrderAndSignToAliPay"
+            landmarkName = "-submitOrder:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -157,7 +157,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
             endingLineNumber = "208"
-            landmarkName = "-createOrderAndSignToAliPay"
+            landmarkName = "-submitOrder:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -173,8 +173,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "255"
             endingLineNumber = "255"
-            landmarkName = "-fillOrderInfo"
-            landmarkType = "5">
+            landmarkName = "@implementation HTOrderWriteViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -189,7 +189,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "278"
             endingLineNumber = "278"
-            landmarkName = "-aliPayFinish:"
+            landmarkName = "-minusAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -205,7 +205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
             endingLineNumber = "221"
-            landmarkName = "-paymentResult:"
+            landmarkName = "-refreshUIShow"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -221,7 +221,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
             endingLineNumber = "213"
-            landmarkName = "-paymentResultDelegate:"
+            landmarkName = "-refreshUIShow"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -350,6 +350,38 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "-initWithString:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Home/HTHomeDetailSceneVC.m"
+            timestampString = "436271239.032512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuiTuTicket/Classes/Controllers/Home/HTHomeDetailSceneVC.m"
+            timestampString = "436271239.032512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-setScenicId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

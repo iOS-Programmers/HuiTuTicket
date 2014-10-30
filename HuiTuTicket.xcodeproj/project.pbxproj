@@ -2805,7 +2805,7 @@
 				ORGANIZATIONNAME = HuiTuTicket;
 				TargetAttributes = {
 					C60F6FB919762D7800AFC182 = {
-						DevelopmentTeam = NCJ9XGFG95;
+						DevelopmentTeam = J52R7794K4;
 					};
 					C60F6FD419762D7900AFC182 = {
 						TestTargetID = C60F6FB919762D7800AFC182;
@@ -3401,7 +3401,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhengzhou Yibingding Software Technology Co., Ltd. (J52R7794K4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhengzhou Yibingding Software Technology Co., Ltd. (J52R7794K4)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
