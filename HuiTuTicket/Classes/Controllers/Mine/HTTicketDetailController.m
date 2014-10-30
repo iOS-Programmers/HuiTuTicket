@@ -65,13 +65,20 @@
     // Do any additional setup after loading the view from its nib.
     
     [self.scrollView setContentSize:CGSizeMake(640, 500)];
-
+    
     self.tableView.backgroundColor = kColorClear;
     self.tableView.backgroundView = nil;
     
     [self requestDetailData];
     
     self.titles = [self titleArray];
+    
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -288,6 +295,10 @@
     if ([self.dataSource count] != 0) {
          NSArray *detailArr = self.dataSource[indexPath.section];
         cell.detailLabel.text = detailArr[indexPath.row];
+    }
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        cell.titleLabel.textColor = [UIColor blackColor];
+        cell.detailLabel.textColor = [UIColor blackColor];
     }
 
     return cell;

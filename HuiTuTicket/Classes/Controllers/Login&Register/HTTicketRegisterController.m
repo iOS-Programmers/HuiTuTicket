@@ -12,9 +12,12 @@
 #import "TicketRegisterHttp.h"
 #import "TicketBindHttp.h"
 
+#import "HTCityListViewController.h"
+#import "HTLoginController.h"
+
 #import "ZBarSDK.h"
 
-@interface HTTicketRegisterController ()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,ZBarReaderDelegate>
+@interface HTTicketRegisterController ()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,ZBarReaderDelegate,CityListDelegate>
 
 @property (strong, nonatomic) TicketRegisterHttp *ticketRegisterHttp;
 
@@ -34,10 +37,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *IDNumTF;
 
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTF;
+@property (weak, nonatomic) IBOutlet UITextField *addressTF;
 
+@property (weak, nonatomic) IBOutlet UIView *ticketbgView;
 //选择证件类型
 @property (weak, nonatomic) IBOutlet UIButton *selectTypeButton;
-
+//选择城市
+@property (weak, nonatomic) IBOutlet UIButton *selectCityButton;
 
 /*****点击事件*****/
 - (IBAction)onSexButtonClick:(id)sender;
@@ -48,7 +54,7 @@
 
 - (IBAction)onBindingBtnClick:(id)sender;
 
-
+- (IBAction)onSelectCityBtnClick:(id)sender;
 @end
 
 @implementation HTTicketRegisterController
@@ -83,13 +89,12 @@
     return item;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = [self rightNavItem];
-
+    
     //上级页面传过来的联票号码，如果有值，则在页面自动填上
     if (!FBIsEmpty(self.lpCodeNumer)) {
         self.ticketNumTF.text = self.lpCodeNumer;
@@ -101,7 +106,12 @@
     
     self.selectTypeButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.selectTypeButton.layer.borderWidth = 0.5;
+    self.selectTypeButton.layer.cornerRadius = 6.0;
+
     
+    self.selectCityButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.selectCityButton.layer.borderWidth = 0.5;
+    self.selectCityButton.layer.cornerRadius = 6.0;
     
     _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].applicationFrame.size.height + 44, 320, 162)];
     _pickerView.backgroundColor = kColorWhite;
@@ -109,6 +119,7 @@
     _pickerView.delegate = self;
     
     [self.view addSubview:_pickerView];
+    
     
     _toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,  [UIScreen mainScreen].applicationFrame.size.height, 320, 44)];
     NSMutableArray *buttons = [[NSMutableArray alloc] init];
@@ -123,7 +134,10 @@
     [self.view addSubview:_toolBar];
     
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -197,6 +211,8 @@
 - (IBAction)onRegisterBtnClick:(id)sender {
     
     
+    
+    [self clearKeyboard];
     /**
      *  判断是否数据都有填写
      */
@@ -213,9 +229,17 @@
     else if (FBIsEmpty(self.IDNumTF.text)) {
         [self showWithText:@"请输入证件号码"];
         return;
+    }else if (![NSString validateIDCardNumber:self.IDNumTF.text])
+    {
+        [self showWithText:@"请出入正确的证件号码"];
+        return;
     }
     else if (FBIsEmpty(self.phoneNumTF.text)) {
         [self showWithText:@"请输入手机号"];
+        return;
+    }
+    else if (![NSString isValidateMobile:self.phoneNumTF.text]) {
+        [self showWithText:@"请输入正确的手机号"];
         return;
     }
     else if (FBIsEmpty(self.nameTF.text)) {
@@ -242,6 +266,7 @@
 
             //注册成功后，与当前账号进行绑定
             [self bindTicket];
+            [self showWithText:@"注册联票成功"];
 
         }
         else {
@@ -271,8 +296,12 @@
 - (void)bindTicket
 {
     self.ticketBindHttp.parameter.uid = [[HTUserInfoManager shareInfoManager] userId];
+    
     self.ticketBindHttp.parameter.session_key = [[HTUserInfoManager shareInfoManager] sessionKey];
     self.ticketBindHttp.parameter.lpcode =FBIsEmpty(self.ticketNumTF.text) ? @"" : self.ticketNumTF.text;
+    self.ticketBindHttp.parameter.mobile = self.phoneNumTF.text;
+
+
 //    self.ticketBindHttp.parameter.lpuser = @"";
 //    self.ticketBindHttp.parameter.typename = @"0";
 //    self.ticketBindHttp.parameter.typepic = @"";
@@ -311,9 +340,31 @@
 
 - (IBAction)onBindingBtnClick:(id)sender {
     
+    NSString *uid =[[HTUserInfoManager shareInfoManager] userId];
+    NSString *session_key =[[HTUserInfoManager shareInfoManager] sessionKey];
+    if (FBIsEmpty(uid)||FBIsEmpty(session_key)) {
+        [self showWithText:@"请登录"];
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HTLoginController alloc] init]];
+        [self presentViewController:nav animated:YES completion:nil];
+        
+        return;
+    }
     [self pushViewController:@"HTTicketBindingController"];
 }
+- (IBAction)onSelectCityBtnClick:(id)sender
+{
+    HTCityListViewController *cityListVC = [[HTCityListViewController alloc]init];
+    cityListVC.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cityListVC];
 
+    [self presentViewController:nav animated:YES completion:nil];
+}
+#pragma mark - CiytDelegate
+- (void)controller:(HTCityListViewController *)controller city:(NSString *)city
+{
+    [self.selectCityButton setTitle:city forState:UIControlStateNormal];
+}
 #pragma mark - UIPickerViewDataSource
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -350,25 +401,12 @@
 #pragma mark - UITextField Delegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if (textField == self.IDNumTF || textField == self.phoneNumTF) {
+    if (textField == self.IDNumTF || textField == self.phoneNumTF || textField == self.addressTF) {
         [UIView animateWithDuration:0.3 animations:^{
             [self.view frameSetY:-120];
         }];
         
     }
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    [UIView animateWithDuration:0.3 animations:^{
-        if (IOS7_OR_LATER) {
-            [self.view frameSetY:64];
-        }
-        else {
-            [self.view frameSetY:0];
-        }
-        
-    }];
 }
 
 #pragma mark - ZBar Delegate
@@ -387,5 +425,23 @@
         //扫描到联票号码，
         [self.navigationController popViewControllerAnimated:YES];
     });
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self clearKeyboard];
+}
+- (void)clearKeyboard
+{
+    [super clearKeyboard];
+    [UIView animateWithDuration:0.3 animations:^{
+        if (IOS7_OR_LATER) {
+            [self.view frameSetY:64];
+        }
+        else {
+            [self.view frameSetY:0];
+        }
+        
+    }];
 }
 @end

@@ -178,10 +178,16 @@
  *  @param sender
  */
 - (IBAction)onRegisterBtn:(id)sender {
+    
+    if (FBIsEmpty(self.mv_verifyTF.text)) {
+        [self showErrorWithText:@"请输入验证码"];
+        return;
+    }
 
     self.registerHttp.parameter.mobile = self.phoneNumberTF.text;
     self.registerHttp.parameter.password = self.pw_passwordTF.text;
-
+    self.registerHttp.parameter.validcode = self.mv_verifyTF.text;
+    
     self.registerHttp.parameter.sig = [HTFoundationCommon md5:[NSString stringWithFormat:@"%@%@%@",self.phoneNumberTF.text,self.pw_passwordTF.text,[HTFoundationCommon getAPI_KEY]]];
 
 

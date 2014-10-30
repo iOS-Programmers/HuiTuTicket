@@ -38,7 +38,7 @@
     
     self.dataSource = [[NSMutableArray alloc] initWithCapacity:0];
     self.tableView.rowHeight = 80;
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated

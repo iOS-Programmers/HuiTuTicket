@@ -21,6 +21,11 @@
  *  不能包含中文
  */
 @property (strong, nonatomic) NSString *password;
+/**
+ *  验证码
+ */
+
+@property (strong, nonatomic) NSString *validcode;
 
 /**
  *  参数MD5校验串

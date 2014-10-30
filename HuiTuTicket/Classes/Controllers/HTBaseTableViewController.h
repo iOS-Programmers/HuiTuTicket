@@ -9,13 +9,13 @@
 #import "HTBaseViewController.h"
 
 #import "MJRefresh.h"
+#import "TouchTableView.h"
 
-@interface HTBaseTableViewController : HTBaseViewController<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate>
-
+@interface HTBaseTableViewController : HTBaseViewController<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate,TouchTableViewDelegate>
 /**
  *  显示大量数据的控件
  */
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) TouchTableView *tableView;
 /**
  *  初始化init的时候设置tableView的样式才有效
  */
@@ -63,3 +63,4 @@
 - (UIBarButtonItem *)createNavBtnItem:(UIViewController *)target normal:(NSString *)imgStr highlight:(NSString *)highStr selector:(SEL)selector;
 
 @end
+

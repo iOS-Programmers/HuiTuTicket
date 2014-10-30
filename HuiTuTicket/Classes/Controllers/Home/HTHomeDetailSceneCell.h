@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *downLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *sepLineIV;
 
+@property (weak, nonatomic) IBOutlet UIImageView *titleImg;
+
+
 @end

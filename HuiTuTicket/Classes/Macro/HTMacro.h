@@ -36,6 +36,9 @@
 //工具类
 #import "LXUtils.h"
 
+//字符串处理
+#import "NSString+LT.h"
+
 #define APP_ID @"11111111"
 
 //客服电话

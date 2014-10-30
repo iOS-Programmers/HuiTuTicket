@@ -13,6 +13,9 @@
 @interface HTScenicOrderListViewController ()
 
 
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UILabel *lable;
+
 @property (strong, nonatomic) TicketOrderQueryHttp *ticketOrderHttp;
 
 @end
@@ -36,9 +39,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lphome_03_big@2x"]];
+    imageView.bounds = CGRectMake(0, 0, 96, 88);
+    imageView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+    imageView.hidden = YES;
+    [self.view addSubview:imageView];
+    self.imageView = imageView;
+    
+    UILabel *lable = [[UILabel alloc] initWithFrame:(CGRect){{0,imageView.frame.origin.y + imageView.frame.size.height +5 },{320,20}}];
+    lable.text = @"还没有订单，快来订票吧";
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.textColor = [UIColor grayColor];
+    lable.hidden = YES;
+    [self.view addSubview:lable];
+    self.lable = lable;
+    
     self.tableView.rowHeight = 80;
+    self.tableView.hidden = YES;
     
     [self requestOrderData];
+    [self configuraTableViewNormalSeparatorInset];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +82,15 @@
         if (weak_self.ticketOrderHttp.isValid) {
             
             weak_self.dataSource = weak_self.ticketOrderHttp.resultModel.info;
+            
+            if ([weak_self.dataSource count] == 0) {
+                self.imageView.hidden = NO;
+                self.lable.hidden = NO;
+            }else
+            {
+                self.imageView.hidden = YES;
+                self.lable.hidden = YES;
+            }
             
             [weak_self.tableView reloadData];
             

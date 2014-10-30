@@ -91,7 +91,7 @@
 - (void)loadDataSource
 {
     self.scenicListHttp.parameter.page = @"1";
-    self.scenicListHttp.parameter.pagesize = @"20";
+    self.scenicListHttp.parameter.pagesize = @"10";
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTHomeViewController *weak_self = self;
     [self.scenicListHttp getDataWithCompletionBlock:^{
@@ -134,6 +134,7 @@
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y + 2, rect.size.width, rect.size.height -2);
     headView =[[[NSBundle mainBundle] loadNibNamed:@"HTHomeHeadView" owner:self options:Nil] objectAtIndex:0];
     self.tableView.tableHeaderView = headView;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     [self loadBanner];
     
@@ -244,15 +245,13 @@
     [cell.sceneIV setImageWithURL:[NSURL URLWithString:scenic.picture]];
     cell.nameLabel.text = scenic.scenicName;
     cell.levelLabel.text = [self stringChangeToStar:scenic.rank];
-    if (FBIsEmpty(scenic.address)) {
-        cell.placeLabel.text = scenic.city;
-    }
-    else {
-        cell.placeLabel.text = scenic.address;
-    }
+    cell.provinceLab.text = scenic.province;
+    
+    cell.placeLabel.text = scenic.city;
     
     cell.priceLabel.text = scenic.minprice;
-    cell.oriPriceLabel.text = scenic.price;
+    //cell.oriPriceLabel.text = scenic.price;
+    cell.oldPriceLab.text = scenic.price;
     return cell;
 }
 
@@ -261,16 +260,16 @@
     NSString *star = @"";
     
     if ([level isEqualToString:@"0"]) {
-        level = @"1";
+        level = @"0";
     }
-    if ([level intValue] > 4) {
-        level = @"4";
+    if ([level intValue] > 5) {
+        level = @"5";
     }
     
     NSMutableArray * array = [[NSMutableArray alloc] initWithCapacity:4];
-    [array addObjectsFromArray:@[@"A",@"AA",@"AAA",@"AAAA",@"AAAAA"]];
+    [array addObjectsFromArray:@[@"未评定",@"A",@"AA",@"AAA",@"AAAA",@"AAAAA"]];
     
-    star = array[[level intValue] - 1];
+    star = array[[level intValue]];
     
     return star;
 }

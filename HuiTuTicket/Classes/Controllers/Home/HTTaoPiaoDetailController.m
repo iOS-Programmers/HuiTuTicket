@@ -51,11 +51,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.tableView.rowHeight = 60;
+    self.tableView.hidden = YES;
     self.tableView.tableHeaderView = self.headView;
     self.tableView.tableFooterView = self.tableFooterView;
     [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] + (IOS7_OR_LATER ? 20 : 0) - 50];
 
     [self.view addSubview:self.footView];
+    self.footView.hidden = YES;
     [self.footView frameSetY:self.tableView.frame.size.height];
     
     [self loadDataSource];
@@ -88,7 +90,9 @@
     [self.taopiaoDetailHttp getDataWithCompletionBlock:^{
         [weak_self hideLoading];
         if (weak_self.taopiaoDetailHttp.isValid) {
-
+            
+            self.tableView.hidden = NO;
+            self.footView.hidden = NO;
             [weak_self updateUIWithInfo:weak_self.taopiaoDetailHttp.resultModel];
         }
         else {

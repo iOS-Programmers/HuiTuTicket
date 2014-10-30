@@ -55,6 +55,7 @@
         [self updateUIWithDetailData:self.scenicDetail];
     }
     
+    [self configuraTableViewNormalSeparatorInset];
     
     self.tableView.tableFooterView = [self footerView];
     
@@ -341,7 +342,7 @@
                 }
             }
         }
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSArray *array = [[[HTDATA_ARRAY objectAtIndex:indexPath.section] allValues]objectAtIndex:0];
         cell.leftLB.text = [array objectAtIndex:indexPath.row];
         if ([self.dataSource count] != 0) {

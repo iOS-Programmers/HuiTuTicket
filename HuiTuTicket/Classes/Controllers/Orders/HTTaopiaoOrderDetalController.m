@@ -227,6 +227,7 @@
  *  立即支付
  */
 - (IBAction)onPayBtnClick:(UIButton *)sender {
+    LXLog(@"支付");
 }
 
 

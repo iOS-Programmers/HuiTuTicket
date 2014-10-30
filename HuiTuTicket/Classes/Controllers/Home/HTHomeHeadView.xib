@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="s24-9y-zi2">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage.png" id="s24-9y-zi2">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                 </imageView>
@@ -19,7 +19,7 @@
                     <rect key="frame" x="11" y="70" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.30980392156862746" green="0.75294117647058822" blue="0.64313725490196083" alpha="1" colorSpace="deviceRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
                     <state key="normal" title="景区联票" image="home001.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,7 +32,7 @@
                     <rect key="frame" x="164" y="70" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.99607843137254903" green="0.57647058823529407" blue="0.16862745098039217" alpha="1" colorSpace="deviceRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
                     <state key="normal" title="特惠套票" image="home002.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,9 +45,9 @@
                     <rect key="frame" x="11" y="128" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.88235294117647056" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="deviceRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
-                    <state key="normal" title="联票注册" image="home001.png">
+                    <state key="normal" title="联票注册" image="lphome_01.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -58,9 +58,9 @@
                     <rect key="frame" x="164" y="128" width="145" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.33333333333333331" green="0.69411764705882351" blue="0.8784313725490196" alpha="1" colorSpace="deviceRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="3"/>
-                    <state key="normal" title="出游预约" image="home001.png">
+                    <state key="normal" title="出游预约" image="lphome_03.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -74,12 +74,12 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日特惠" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyq-sG-kAE">
                     <rect key="frame" x="11" y="198" width="68" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" id="fMg-s0-eou">
-                    <rect key="frame" x="0.0" y="189" width="320" height="1"/>
+                    <rect key="frame" x="0.0" y="187" width="320" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.74901962280273438" alpha="1" colorSpace="deviceRGB"/>
                 </view>
@@ -100,5 +100,8 @@
         <image name="home001.png" width="18" height="18"/>
         <image name="home002.png" width="18" height="18"/>
         <image name="home005.png" width="195" height="34"/>
+        <image name="lphome_01.png" width="21" height="21"/>
+        <image name="lphome_03.png" width="21" height="21"/>
+        <image name="placeholderImage.png" width="334" height="220"/>
     </resources>
 </document>

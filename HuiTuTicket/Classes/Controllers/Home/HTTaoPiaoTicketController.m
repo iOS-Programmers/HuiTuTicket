@@ -41,7 +41,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tableView.rowHeight = 80;
-    
+
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self loadDataSource];
 }
 

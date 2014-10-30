@@ -98,6 +98,7 @@
     self.bindHttp.parameter.lpcode = self.lpCodeTF.text;
     self.bindHttp.parameter.lpuser = self.userNameTf.text;
     
+    
     [self showLoadingWithText:kLOADING_TEXT];
     __block HTTicketBindingController *weak_self = self;
     [self.bindHttp getDataWithCompletionBlock:^{

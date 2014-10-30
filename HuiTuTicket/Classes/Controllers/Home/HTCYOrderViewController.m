@@ -45,6 +45,8 @@
 
     CGRect rect = self.tableView.frame;
     self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+    self.tableView.hidden = YES;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view from its nib.
     
 }
@@ -69,6 +71,7 @@
         [weak_self hideLoading];
         if (weak_self.yuyueHttp.isValid) {
             weak_self.dataSource = weak_self.yuyueHttp.resultModel.info;
+            weak_self.tableView.hidden = NO;
             [weak_self.tableView reloadData];
         }
         else {
@@ -106,7 +109,10 @@
     
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 #pragma mark -
 #pragma mark - TableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -131,9 +137,10 @@
     }
     
     TicketScenicSpot *info = (TicketScenicSpot *)self.dataSource[indexPath.row];
-    [cell.iv setImageWithURL:[NSURL URLWithString:info.picture] placeholderImage:nil];
+    [cell.iv setImageWithURL:[NSURL URLWithString:info.picture] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
     cell.nameLB.text = info.scenicName;
-    cell.placeLB.text = info.address;
+    //cell.placeLB.text = info.address;
+    cell.placeLB.text = [NSString stringWithFormat:@"%@ %@",info.province,info.city];
     cell.timeLB.text = [info.timelimit isEqualToString:@"0"] ? @"不限时" : @"限时游览";
     if ([info.state isEqualToString:@"1"]) {
         //正常
@@ -147,12 +154,6 @@
     }
     
     return cell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 71;
 }
 
 @end

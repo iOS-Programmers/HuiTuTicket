@@ -50,4 +50,9 @@
  */
 @property (strong, nonatomic) NSString *regtime;
 
+/**
+ *  注册手机号
+ */
+@property (strong, nonatomic) NSString *mobile;
+
 @end

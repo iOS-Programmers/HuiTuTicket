@@ -44,6 +44,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
     // Do any additional setup after loading the view from its nib.
 }
 

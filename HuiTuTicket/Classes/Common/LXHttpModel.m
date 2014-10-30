@@ -97,6 +97,9 @@
     self.path =[NSString stringWithFormat:@"http://%@?method=%@&api_key=%@",self.api_url,self.apiFuncName,API_KEY];
     NSString *urlStr = [self.path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
+    LXLog(@"%@",urlStr);
+
+    
     self.request = [[[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:urlStr]] autorelease];
 
     if ([self.method isEqualToString:@"POST"])
@@ -105,6 +108,7 @@
         {
             NSString *keyStr = [[dic allKeys] objectAtIndex:i];
             NSString *valueStr = [dic objectForKey:keyStr];
+            LXLog(@"%@:%@",keyStr,valueStr);
             [self.request addPostValue:valueStr forKey:keyStr];
         }
     }
@@ -131,7 +135,7 @@
     }
     else
     {
-        [[[[UIAlertView alloc] initWithTitle:@"提示" message:@"网络不太给力哦,请检查网络!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] autorelease] show];
+        failedBlock();
     }
 }
 

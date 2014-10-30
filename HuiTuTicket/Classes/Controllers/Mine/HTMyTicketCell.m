@@ -28,10 +28,11 @@
     if (info) {
         self.lpCodeLabel.text = info.lpcode;
         self.lpTimeLabel.text = info.regtime;
-        [self.imgView setImageWithURL:[NSURL URLWithString:info.typepic]];
+        [self.imgView setImageWithURL:[NSURL URLWithString:info.typepic] placeholderImage:[UIImage imageNamed:@"mine_header_bg.png"]];
         self.lpNameLabel.text = info.typename;
+        LXLog(@"%@",info.typename);
         self.lpUserLabel.text = [NSString stringWithFormat:@"注册人：%@",info.lpuser];
-        self.lpEndtimeLabel.text = [NSString stringWithFormat:@"有效期：%@",info.endtime];
+        self.lpEndtimeLabel.text = [NSString stringWithFormat:@"有效期：%@ 年",info.endtime];
     }
 }
 

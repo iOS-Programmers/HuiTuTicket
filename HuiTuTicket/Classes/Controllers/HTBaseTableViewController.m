@@ -45,9 +45,10 @@
 - (UITableView *)tableView {
     if (!_tableView) {
 
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
+        _tableView = [[TouchTableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.touchDelegate = self;
         self.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight;
         if (![self validateSeparatorInset]) {
             if (self.tableViewStyle == UITableViewStyleGrouped) {
@@ -62,7 +63,7 @@
 
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
-        _dataSource = [[NSMutableArray alloc] initWithCapacity:1];
+        _dataSource = [[NSMutableArray alloc] initWithCapacity:0];
     }
     return _dataSource;
 }

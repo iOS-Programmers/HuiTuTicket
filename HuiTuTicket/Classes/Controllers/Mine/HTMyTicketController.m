@@ -11,9 +11,15 @@
 #import "MyTicketHttp.h"
 #import "HTTicketDetailController.h"
 
+#import "HTTicketRegisterController.h"
+
 @interface HTMyTicketController ()
 
 @property (strong, nonatomic) MyTicketHttp *myticketHttp;
+
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UILabel *lable;
+
 @end
 
 @implementation HTMyTicketController
@@ -28,17 +34,49 @@
     }
     return self;
 }
-
+//确定按钮
+- (void)configuraAddTicketButton
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStyleBordered target:self action:@selector(ticketRegister)];
+}
+- (void)ticketRegister
+{
+    HTTicketRegisterController *ticketVC = [[HTTicketRegisterController alloc] init];
+    [self.navigationController pushViewController:ticketVC animated:YES];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self configuraAddTicketButton];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lphome_03_big@2x"]];
+    imageView.bounds = CGRectMake(0, 0, 96, 88);
+    imageView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+    imageView.hidden = YES;
+    [self.view addSubview:imageView];
+    self.imageView = imageView;
+    
+    UILabel *lable = [[UILabel alloc] initWithFrame:(CGRect){{0,imageView.frame.origin.y + imageView.frame.size.height +5 },{320,20}}];
+    lable.text = @"暂时无联票，快来注册吧";
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.textColor = [UIColor grayColor];
+    lable.hidden = YES;
+    [self.view addSubview:lable];
+    self.lable = lable;
+
     
     self.tableView.rowHeight = 110;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
     [self requestData];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self requestData];
+}
 - (void)requestData
 {
     
@@ -53,10 +91,14 @@
         
         if (weak_self.myticketHttp.isValid) {
             weak_self.dataSource = weak_self.myticketHttp.resultModel.info;
-        
+
             if ([weak_self.dataSource count] == 0) {
-                [weak_self showWithText:@"暂无数据"];
-                return ;
+                self.imageView.hidden = NO;
+                self.lable.hidden = NO;
+            }else
+            {
+                self.imageView.hidden = YES;
+                self.lable.hidden = YES;
             }
             
             

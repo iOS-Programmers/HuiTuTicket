@@ -209,7 +209,7 @@
             LXLog(@"%@",weak_self.changeDateHttp.resultModel);
             [weak_self showWithText:@"取消成功"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [weak_self.navigationController popViewControllerAnimated:YES];
+                //[weak_self.navigationController popViewControllerAnimated:YES];
             });
             
         }

@@ -15,10 +15,10 @@
 #import "TaoPiaoScenicInfo.h"
 
 #import "TaoPiaoTicket.h"
+#import "HTOrderResultViewController.h"
 #define DATEPICKER_HEIGHT 216
 
-@interface HTTaoPiaoYuDingController ()
-
+@interface HTTaoPiaoYuDingController ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
 @property (strong, nonatomic) IBOutlet UIView *tableFootView;
 
@@ -65,15 +65,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.userNameTF.delegate = self;
+    self.phoneTF.delegate = self;
+    
     self.tableView.rowHeight = 88;
     self.tableView.tableHeaderView = self.tableHeaderView;
     self.tableView.tableFooterView = self.tableFootView;
-    [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] + 20];
-    self.tableView.clipsToBounds = YES;
+    [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] + 20 -44];
     
+    self.tableView.clipsToBounds = YES;
+    self.totoalPriceLabel.text = [NSString stringWithFormat:@"订单金额：%.2f元",[self.productInfo.price floatValue]*[self.ticketNumLabel.text intValue]];
+
     [self dateSelectorInit];
     [self updateUIWithInfo];
     [self shuchuViewFrame];
+    
 }
 
 - (void)shuchuViewFrame
@@ -119,7 +125,7 @@
     NSString *str = @"";
     for (int i = 0; i<[self.productInfo.scenicinfo count]; i++)
     {
-        TaoPiaoScenicInfo *info = [[self.dataDic allKeys] objectAtIndex:i];
+        TaoPiaoScenicInfo *info = [self.productInfo.scenicinfo objectAtIndex:i];
         if (i==0)
         {
             str = [NSString stringWithFormat:@"%@",info.scenicId];
@@ -137,7 +143,7 @@
     NSString *str = @"";
     for (int i = 0; i<[self.productInfo.scenicinfo count]; i++)
     {
-        TaoPiaoScenicInfo *info = [[self.dataDic allKeys] objectAtIndex:i];
+        TaoPiaoScenicInfo *info = [self.productInfo.scenicinfo objectAtIndex:i];
         for (int j=0; j<[info.ticket count]; j++)
         {
             TaoPiaoTicket *ticket= info.ticket[j];
@@ -239,17 +245,24 @@
         self.submitHttp.parameter.number = self.ticketNumLabel.text;
         self.submitHttp.parameter.receive_name = self.userNameTF.text;
         self.submitHttp.parameter.receive_moblie = self.phoneTF.text;
-        
-         NSString *strUnMd5= [NSString stringWithFormat:@"%@%@%@%@%@%@%@",[[HTUserInfoManager shareInfoManager] userId],[self getScenicid],[self getTicketId],self.ticketNumLabel.text,[self getTime],self.phoneTF.text,API_KEY];
+        self.submitHttp.parameter.travel_time = [self getTime];
+        NSString *strUnMd5= [NSString stringWithFormat:@"%@%@%@%@%@%@%@",[[HTUserInfoManager shareInfoManager] userId],[self getScenicid],[self getTicketId],self.ticketNumLabel.text,[self getTime],self.phoneTF.text,API_KEY];
         self.submitHttp.parameter.sig = [HTFoundationCommon md5:strUnMd5];
         [self showLoadingWithText:kLOADING_TEXT];
         __weak HTTaoPiaoYuDingController *weak_self = self;
         [self.submitHttp getDataWithCompletionBlock:^{
             [weak_self hideLoading];
             if (weak_self.submitHttp.isValid) {
-            
                 [weak_self showSuccess];
                 
+                HTOrderResultViewController *vc = [[HTOrderResultViewController alloc] init];
+                vc.orderId = weak_self.submitHttp.resultModel.orderId;
+                vc.produtName = weak_self.submitHttp.resultModel.title;
+                vc.traveDate = [weak_self getOrderDateStr];
+                vc.totalMoney = weak_self.submitHttp.resultModel.totalamount;
+                vc.number = weak_self.ticketNumLabel.text;
+                
+                [weak_self.navigationController pushViewController:vc animated:YES];
                 
             }
             else {
@@ -275,6 +288,29 @@
     }
 }
 
+- (NSString *)getOrderDateStr
+{                //travael_time  34|2014-10-22,37|2014-10-23,38|2014-10-24
+    NSString *str = @"";
+    for (int i = 0; i<[self.dataSource count]; i++)
+    {
+        TaoPiaoScenicInfo *info = (TaoPiaoScenicInfo *)self.dataSource[i];
+        NSString *dateStr = [self.dataDic objectForKey:info.scenicId];
+        if (i==0)
+        {
+            str = [NSString stringWithFormat:@"%@|%@",info.scenicId,dateStr];
+        }
+        else
+        {
+            str = [NSString stringWithFormat:@"%@,%@|%@",str,info.scenicId,dateStr];
+        }
+    }
+    return str;
+}
+
+- (void)tableView:(UITableView *)tableView touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self clearKeyboard];
+}
 #pragma mark - Action
 
 - (void)updateUIWithInfo
@@ -290,6 +326,17 @@
 }
 
 - (IBAction)onPayBtnClick:(id)sender {
+    if (FBIsEmpty(self.userNameTF.text)) {
+        [self showWithText:@"请输入预定人姓名"];
+        return;
+    }else if(FBIsEmpty(self.phoneTF.text))
+    {
+        [self showWithText:@"请输入手机号"];
+        return;
+    }else if(![NSString isValidateMobile:self.phoneTF.text]) {
+        [self showWithText:@"请输入正确的手机号"];
+        return;
+    }
     [self submitOrder];
 }
 
@@ -297,15 +344,17 @@
 {
     int count = [self.ticketNumLabel.text intValue];
     self.ticketNumLabel.text = [NSString stringWithFormat:@"%d",count+1];
+    self.totoalPriceLabel.text = [NSString stringWithFormat:@"订单金额：%.2f元",[self.productInfo.price floatValue]*[self.ticketNumLabel.text intValue]];
 }
 
 - (IBAction)onMinAction:(UIButton *)sender
 {
     int count = [self.ticketNumLabel.text intValue];
-    if (count!=0)
+    if (count!=1)
     {
         self.ticketNumLabel.text = [NSString stringWithFormat:@"%d",count-1];
     }
+    self.totoalPriceLabel.text = [NSString stringWithFormat:@"订单金额：%.2f元",[self.productInfo.price floatValue]*[self.ticketNumLabel.text intValue]];
 }
 
 #pragma mark - UITableView Delegate
@@ -353,4 +402,32 @@
     
     return cell;
 }
+#pragma mark - UITextField Delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField == self.userNameTF || textField == self.phoneTF ) {
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.view frameSetY:65- 216.0];
+        }];
+        
+    }
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self clearKeyboard];
+}
+- (void)clearKeyboard
+{
+    [super clearKeyboard];
+    [UIView animateWithDuration:0.25 animations:^{
+        if (IOS7_OR_LATER) {
+            [self.view frameSetY:64];
+        }
+        else {
+            [self.view frameSetY:0];
+        }
+        
+    }];
+}
+
 @end

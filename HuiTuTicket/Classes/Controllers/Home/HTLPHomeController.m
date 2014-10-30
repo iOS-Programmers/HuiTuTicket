@@ -15,6 +15,7 @@
 #import "HTYuYueViewController.h"
 #import "HTMyTicketController.h"
 #import "HTSaoMiaoLPTicketDetailVC.h"
+#import "HTLoginController.h"
 
 @interface HTLPHomeController () <ZBarReaderDelegate>
 
@@ -49,6 +50,7 @@
     
     self.tableView.tableHeaderView = self.headerView;
     [self.tableView frameSetHeight:[HTFoundationCommon getScreenHeight] - 44];
+    [self configuraTableViewNormalSeparatorInset];
     
     [self.view addSubview:self.footView];
     [self.footView frameSetY:self.tableView.frame.size.height - 49];
@@ -131,6 +133,17 @@
         case 3:
         {
             //我的联票
+            if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+                
+                HTLoginController *loginVC = [[HTLoginController alloc] init];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+                
+                [self.navigationController presentViewController:nav animated:YES completion:^{
+                    
+                }];
+                
+                return;
+            }
             HTMyTicketController *vc = [[HTMyTicketController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
