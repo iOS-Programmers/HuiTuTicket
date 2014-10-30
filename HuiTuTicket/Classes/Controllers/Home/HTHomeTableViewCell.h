@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PriceLable.h"
 @interface HTHomeTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *sceneIV;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *provinceLab;//省标签
+@property (weak, nonatomic) IBOutlet UILabel *placeLabel;// 市标签
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;//价格标签
+
+
+@property (weak, nonatomic) IBOutlet UILabel *oriPriceLabel;//原价格标签
+@property (weak, nonatomic) PriceLable *oldPriceLab;//原价格标签(修改)
 
 @end

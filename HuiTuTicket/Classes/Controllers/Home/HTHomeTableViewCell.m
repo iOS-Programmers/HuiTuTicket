@@ -12,7 +12,12 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    PriceLable *lab = [[PriceLable alloc] initWithFrame:(CGRect){{262,44},{49,16}}];
+    lab.textAlignment = NSTextAlignmentRight;
+    lab.font = [UIFont fontWithName:@"Arial"size:13];
+    lab.textColor = [UIColor blackColor];
+    [self addSubview:lab];
+    self.oldPriceLab = lab;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

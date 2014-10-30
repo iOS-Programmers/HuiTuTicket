@@ -10,4 +10,14 @@
 
 @interface HTOrderTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *iv;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLB;
+@property (weak, nonatomic) IBOutlet UILabel *placeLB;
+@property (weak, nonatomic) IBOutlet UILabel *timeLB;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *orderBtn;
+
+
 @end

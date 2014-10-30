@@ -7,7 +7,10 @@
 //
 
 #import "HTOrderViewController.h"
+#import "HTScenicOrderListViewController.h"
+#import "HTTaopiaoOrderController.h"
 #import "HTStoreManager.h"
+#import "HTLoginController.h"
 @interface HTOrderViewController ()
 
 @end
@@ -33,6 +36,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -69,14 +77,49 @@
     UIViewController *viewController;
     NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
-    switch (section) {
-            //        case 0: {
-            //            XHMoreMyProfileDetailTableViewController *myProfileDetailTableViewController = [[XHMoreMyProfileDetailTableViewController alloc] init];
-            //            viewController = myProfileDetailTableViewController;
-            //            break;
-            //        }
+    
+    //用户未登录 弹出登录页面
+    if ([[[HTUserInfoManager shareInfoManager] sessionKey] length] < 1) {
+
+        HTLoginController *loginVC = [[HTLoginController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        
+        [self.navigationController presentViewController:nav animated:YES completion:^{
             
-        default:
+        }];
+        
+        return;
+    }
+    
+    
+    switch (section) {
+        case 0: {
+            switch (row) {
+                case 0:
+                {
+                    HTScenicOrderListViewController *order = [[HTScenicOrderListViewController alloc] init];
+                    order.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:order animated:YES];
+                }
+                    break;
+                case 1: {
+                    HTTaopiaoOrderController *taopiao = [[HTTaopiaoOrderController alloc] init];
+                    taopiao.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:taopiao animated:YES];
+                }
+                    break;
+                    
+                default:
+                    [self showWithText:@"该功能暂未开发，尽请期待！"];
+                    break;
+            }
+        }
+            break;
+            
+        default: {
+            //只有景区门票订单可用，其他的点击提示该功能暂未开发，尽请期待。
+            [self showWithText:@"该功能暂未开发，尽请期待！"];
+        }
             break;
     }
     if (viewController) {

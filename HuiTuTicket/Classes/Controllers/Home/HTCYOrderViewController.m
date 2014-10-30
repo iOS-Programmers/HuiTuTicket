@@ -9,11 +9,16 @@
 #import "HTCYOrderViewController.h"
 #import "HTOrderTableViewCell.h"
 #import "HTOrderDetailViewController.h"
+
+#import "TicketYuyueScenicListHttp.h"
+#import "MyTicketDetailInfo.h"
+#import "TicketScenicSpot.h"
+
 @interface HTCYOrderViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UIView *sectionBar;
-
+@property (strong, nonatomic) TicketYuyueScenicListHttp  *yuyueHttp;
 
 
 
@@ -25,7 +30,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"联票景区";
+        _yuyueHttp = [[TicketYuyueScenicListHttp alloc] init];
     }
     return self;
 }
@@ -37,33 +43,81 @@
     self.sectionBar.layer.borderWidth = 1;
     self.sectionBar.layer.borderColor = [[UIColor lightGrayColor] CGColor];
 
-    
-    
     CGRect rect = self.tableView.frame;
-    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y+88, rect.size.width, rect.size.height - 88);
+    self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+    self.tableView.hidden = YES;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view from its nib.
+    
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    [self loadDataSource];
 }
 
+- (void)loadDataSource
+{
+    if (self.ticketdetail) {
+        self.yuyueHttp.parameter.username = self.ticketdetail.username;
+        self.yuyueHttp.parameter.codenumber = self.ticketdetail.codeNumber;
+    }
+
+    [self showLoadingWithText:kLOADING_TEXT];
+    __block HTCYOrderViewController *weak_self = self;
+    [self.yuyueHttp getDataWithCompletionBlock:^{
+        [weak_self hideLoading];
+        if (weak_self.yuyueHttp.isValid) {
+            weak_self.dataSource = weak_self.yuyueHttp.resultModel.info;
+            weak_self.tableView.hidden = NO;
+            [weak_self.tableView reloadData];
+        }
+        else {
+            //显示服务端返回的错误提示
+            [weak_self showErrorWithText:weak_self.yuyueHttp.erorMessage];
+        };
+    }failedBlock:^{
+        [weak_self hideLoading];
+        if (![HTFoundationCommon networkDetect]) {
+            
+            [weak_self showErrorWithText:kNETWORK_ERROR];
+        }
+        else {
+            
+            //统统归纳为服务器出错
+            [weak_self showErrorWithText:kSERVICE_ERROR];
+        };
+    }];
+}
 
 #pragma mark  -
 #pragma mark  - TableView Delegate
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [atableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TicketScenicSpot *info = (TicketScenicSpot *)self.dataSource[indexPath.row];
+    
     HTOrderDetailViewController *vc = [[HTOrderDetailViewController alloc] initWithNibName:@"HTOrderDetailViewController" bundle:Nil];
+    
+    //联票数据
+    vc.ticketdetail = self.ticketdetail;
+    //联票景区详情数据
+    vc.scenicDetail = info;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 #pragma mark -
 #pragma mark - TableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,13 +135,25 @@
             }
         }
     }
+    
+    TicketScenicSpot *info = (TicketScenicSpot *)self.dataSource[indexPath.row];
+    [cell.iv setImageWithURL:[NSURL URLWithString:info.picture] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    cell.nameLB.text = info.scenicName;
+    //cell.placeLB.text = info.address;
+    cell.placeLB.text = [NSString stringWithFormat:@"%@ %@",info.province,info.city];
+    cell.timeLB.text = [info.timelimit isEqualToString:@"0"] ? @"不限时" : @"限时游览";
+    if ([info.state isEqualToString:@"1"]) {
+        //正常
+        [cell.orderBtn setTitle:@"预约" forState:UIControlStateNormal];
+        cell.orderBtn.backgroundColor = [UIColor orangeColor];
+    }
+    else if ([info.state isEqualToString:@"2"]) {
+        //已预约
+        [cell.orderBtn setTitle:@"已预约" forState:UIControlStateNormal];
+        cell.orderBtn.backgroundColor = [UIColor grayColor];
+    }
+    
     return cell;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 71;
 }
 
 @end

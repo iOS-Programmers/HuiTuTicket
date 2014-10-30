@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="103-3J-htx">
-                    <rect key="frame" x="10" y="135" width="300" height="40"/>
+                    <rect key="frame" x="11" y="122" width="300" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="登      录" backgroundImage="pub_OrangBtn.png">
@@ -29,7 +29,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XZ1-AL-LFh">
-                    <rect key="frame" x="10" y="192" width="70" height="30"/>
+                    <rect key="frame" x="10" y="170" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="找回密码>">
@@ -41,7 +41,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CRw-Hc-YUc">
-                    <rect key="frame" x="240" y="192" width="70" height="30"/>
+                    <rect key="frame" x="240" y="170" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="免费注册>">
@@ -52,21 +52,21 @@
                         <action selector="onRegisterBtnClick:" destination="-1" eventType="touchUpInside" id="LcK-cu-u5e"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入邮箱或手机号" minimumFontSize="17" clearButtonMode="whileEditing" id="oE1-qR-puX" customClass="HTLoginTextField">
-                    <rect key="frame" x="10" y="20" width="300" height="45"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" minimumFontSize="17" clearButtonMode="whileEditing" id="oE1-qR-puX" customClass="HTLoginTextField">
+                    <rect key="frame" x="10" y="15" width="300" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" id="UcC-fO-h2e" customClass="HTLoginTextField">
-                    <rect key="frame" x="10" y="65" width="300" height="45"/>
+                    <rect key="frame" x="10" y="60" width="300" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>

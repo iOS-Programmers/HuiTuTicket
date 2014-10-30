@@ -8,12 +8,14 @@
 
 #import "HTBaseViewController.h"
 
-@interface HTBaseTableViewController : HTBaseViewController<UITableViewDelegate, UITableViewDataSource>
+#import "MJRefresh.h"
+#import "TouchTableView.h"
 
+@interface HTBaseTableViewController : HTBaseViewController<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate,TouchTableViewDelegate>
 /**
  *  显示大量数据的控件
  */
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) TouchTableView *tableView;
 /**
  *  初始化init的时候设置tableView的样式才有效
  */
@@ -23,6 +25,20 @@
  *  大量数据的数据源
  */
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+
+/**
+ *  下拉刷新
+ */
+@property (retain, nonatomic) MJRefreshHeaderView *header;
+
+/**
+ *  这个为YES的时候可以下拉刷新，默认为NO
+ */
+@property (nonatomic) BOOL canPullRefresh;
+
+//上拉加载
+@property (retain, nonatomic) MJRefreshFooterView *footer;
 
 /**
  *  去除iOS7新的功能api，tableView的分割线变成iOS6正常的样式
@@ -41,4 +57,10 @@
  */
 - (void)loadDataSource;
 
+/**
+ *  自定义导航栏左右按钮
+ */
+- (UIBarButtonItem *)createNavBtnItem:(UIViewController *)target normal:(NSString *)imgStr highlight:(NSString *)highStr selector:(SEL)selector;
+
 @end
+

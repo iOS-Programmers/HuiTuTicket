@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HTTicketBindingController">
             <connections>
+                <outlet property="lpCodeTF" destination="bfa-Wg-vLK" id="i1Y-ka-tNi"/>
+                <outlet property="userNameTf" destination="EL0-RV-xpt" id="hWG-7A-9hb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +35,7 @@
                     <rect key="frame" x="102" y="59" width="192" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的姓名" minimumFontSize="17" background="home001.png" id="EL0-RV-xpt">
                     <rect key="frame" x="102" y="110" width="192" height="30"/>
@@ -51,16 +53,18 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jSN-Qg-XL8">
                     <rect key="frame" x="77" y="172" width="166" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.44431734109999999" blue="0.24225105890000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="验证并绑定">
+                    <state key="normal" title="验证并绑定" backgroundImage="pub_OrangBtn.png">
                         <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onVerifyAndBindBtnClick:" destination="-1" eventType="touchUpInside" id="8n9-MM-6qh"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MaN-HS-uzK">
                     <rect key="frame" x="88" y="225" width="144" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="还没有注册？去注册>>">
+                    <state key="normal" title="还没有注册？去注册&gt;&gt;">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -75,6 +79,7 @@
         </view>
     </objects>
     <resources>
-        <image name="home001.png" width="24" height="25"/>
+        <image name="home001.png" width="18" height="18"/>
+        <image name="pub_OrangBtn.png" width="200" height="35"/>
     </resources>
 </document>

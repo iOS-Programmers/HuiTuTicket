@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -7,7 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HTTicketDetailController">
             <connections>
-                <outlet property="scrollView" destination="Yrh-XD-44Q" id="SmY-jn-VcY"/>
+                <outlet property="lpCodeImage" destination="HdL-eB-Rx8" id="lx8-eB-Ocx"/>
+                <outlet property="lpCodeLabel" destination="yYn-Xe-Q8l" id="gEi-ak-xjH"/>
+                <outlet property="scrollView" destination="Yrh-XD-44Q" id="Xcf-op-Avi"/>
+                <outlet property="tableView" destination="Or6-MX-Rkx" id="p8K-Wx-MIx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,60 +20,73 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Yrh-XD-44Q">
-                    <rect key="frame" x="0.0" y="72" width="640" height="496"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <rect key="frame" x="0.0" y="55" width="640" height="513"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WWF-kG-e3G">
-                            <rect key="frame" x="-2" y="0.0" width="320" height="299"/>
-                            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uf7-pB-Xsf">
-                            <rect key="frame" x="60" y="312" width="200" height="40"/>
+                            <rect key="frame" x="60" y="328" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="我要预约" backgroundImage="pub_OrangBtn.png">
                                 <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onYuYueBtnClick:" destination="-1" eventType="touchUpInside" id="gic-EG-Z7W"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cyZ-fg-FAj">
-                            <rect key="frame" x="60" y="360" width="200" height="40"/>
+                            <rect key="frame" x="60" y="374" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="预约记录" backgroundImage="pub_greenBtn.png">
                                 <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onYuYueRecordBtnClick:" destination="-1" eventType="touchUpInside" id="sWb-4f-ohV"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rHX-so-Zre">
-                            <rect key="frame" x="60" y="408" width="200" height="40"/>
+                            <rect key="frame" x="60" y="422" width="200" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" title="解除绑定" backgroundImage="pub_ziseBtn.png">
                                 <color key="titleShadowColor" red="0.99807098770000002" green="0.99881462519999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onUnbindBtnClick:" destination="-1" eventType="touchUpInside" id="9xO-uc-FSJ"/>
+                            </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_avatar.png" id="HdL-eB-Rx8">
-                            <rect key="frame" x="391" y="20" width="220" height="220"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HdL-eB-Rx8">
+                            <rect key="frame" x="370" y="20" width="220" height="220"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYn-Xe-Q8l">
-                            <rect key="frame" x="407" y="243" width="169" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联票号码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYn-Xe-Q8l">
+                            <rect key="frame" x="396" y="243" width="169" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="景区联票二维码凭证，请在景区验票设备扫描二维码验证后，即可入园浏览。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vj0-DN-esU">
-                            <rect key="frame" x="391" y="272" width="220" height="49"/>
+                            <rect key="frame" x="370" y="272" width="220" height="49"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="Or6-MX-Rkx">
+                            <rect key="frame" x="0.0" y="-34" width="320" height="354"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="E1v-hO-PvH"/>
+                                <outlet property="delegate" destination="-1" id="rw1-yY-cXk"/>
+                            </connections>
+                        </tableView>
                     </subviews>
                 </scrollView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="h7e-Zd-BeC">
-                    <rect key="frame" x="60" y="20" width="200" height="29"/>
+                    <rect key="frame" x="60" y="10" width="200" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <segments>
                         <segment title="详情"/>
@@ -87,7 +103,6 @@
         </view>
     </objects>
     <resources>
-        <image name="message_avatar.png" width="120" height="120"/>
         <image name="pub_OrangBtn.png" width="200" height="35"/>
         <image name="pub_greenBtn.png" width="200" height="35"/>
         <image name="pub_ziseBtn.png" width="200" height="35"/>

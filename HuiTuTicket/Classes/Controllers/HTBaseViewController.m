@@ -7,9 +7,13 @@
 //
 
 #import "HTBaseViewController.h"
+#import "ASIFormDataRequest.h"
 #import "MBProgressHUD.h"
 
+
 @interface HTBaseViewController () <MBProgressHUDDelegate>
+
+@property (nonatomic, strong) ASIFormDataRequest *baseRequest;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
 
@@ -88,6 +92,146 @@
     }
 }
 
+- (void)setOverlayPickerView:(ZBarReaderViewController *)reader
+{
+    //清除原有控件
+    
+    for (UIView *temp in [reader.view subviews]) {
+        
+        for (UIButton *button in [temp subviews]) {
+            
+            if ([button isKindOfClass:[UIButton class]]) {
+                
+                [button removeFromSuperview];
+                
+            }
+            
+        }
+        
+        for (UIToolbar *toolbar in [temp subviews]) {
+            
+            if ([toolbar isKindOfClass:[UIToolbar class]]) {
+                
+                [toolbar setHidden:YES];
+                
+                [toolbar removeFromSuperview];
+                
+            }
+            
+        }
+        
+    }
+    
+    //画中间的基准线
+    
+    UIView* line = [[UIView alloc] initWithFrame:CGRectMake(40, 220, 240, 1)];
+    
+    line.backgroundColor = [UIColor redColor];
+    
+    [reader.view addSubview:line];
+    
+    
+    //最上部view
+    
+    UIView* upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    
+    upView.alpha = 0.3;
+    
+    upView.backgroundColor = [UIColor blackColor];
+    
+    [reader.view addSubview:upView];
+    
+    //用于说明的label
+    
+    UILabel * labIntroudction= [[UILabel alloc] init];
+    
+    labIntroudction.backgroundColor = [UIColor clearColor];
+    
+    labIntroudction.frame=CGRectMake(15, 20, 290, 50);
+    
+    labIntroudction.numberOfLines=2;
+    
+    labIntroudction.textColor=[UIColor whiteColor];
+    
+    labIntroudction.text=@"将二维码或条码图像置于矩形方框内，离手机摄像头10CM左右，系统会自动识别。";
+    
+    [upView addSubview:labIntroudction];
+    
+    
+    //左侧的view
+    
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, 20, 280)];
+    
+    leftView.alpha = 0.3;
+    
+    leftView.backgroundColor = [UIColor blackColor];
+    
+    [reader.view addSubview:leftView];
+    
+    
+    //右侧的view
+    
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(300, 80, 20, 280)];
+    
+    rightView.alpha = 0.3;
+    
+    rightView.backgroundColor = [UIColor blackColor];
+    
+    [reader.view addSubview:rightView];
+    
+    
+    //底部view
+    
+    UIView * downView = [[UIView alloc] initWithFrame:CGRectMake(0, 360, 320, 250)];
+    
+    downView.alpha = 0.3;
+    
+    downView.backgroundColor = [UIColor blackColor];
+    
+    [reader.view addSubview:downView];
+    
+    
+}
+
+#pragma mark - Http Request
+/*
+ * 请求数据
+ */
+- (void)requestData:(NSArray *)parameterName parameterValue:(NSArray *)parameterValue Url:(NSString *)url tag:(int)tag {
+    NSURL *urls = [NSURL URLWithString:[NSString stringWithFormat:@"%@",url]];
+    _baseRequest = [[ASIFormDataRequest alloc] initWithURL:urls];
+	
+    [_baseRequest setRequestMethod:@"POST"];
+    [_baseRequest setDelegate:self];
+    //	[request addRequestHeader:@"User-Agent" value:@"application/x-www-form-urlencoded"];
+    
+	[_baseRequest setTimeOutSeconds:15];
+    for (int i = 0; i <[parameterName count]; i ++) {
+        [_baseRequest setPostValue:parameterValue[i] forKey:parameterName[i]];
+        
+        LXLog(@"value----- %@  name ---  %@",parameterValue[i],parameterName[i]);
+    }
+
+    _baseRequest.tag = tag;
+    [_baseRequest setDidFailSelector:@selector(postrequestDidFailed:)];
+    [_baseRequest setDidFinishSelector:@selector(postrequestDidSuccess:)];
+    [_baseRequest setDefaultResponseEncoding:NSUTF8StringEncoding];
+    [_baseRequest setResponseEncoding:NSUTF8StringEncoding];
+    [_baseRequest startAsynchronous];
+    
+}
+
+//子类重写
+- (void)postrequestDidSuccess:(ASIFormDataRequest *)request{
+    
+}
+
+- (void)postrequestDidFailed:(ASIFormDataRequest *)request
+{
+    
+}
+
+
 #pragma mark - ViewController presentModal
 
 - (void)lxPushViewController:(NSString *)className animated:(BOOL)animated {
@@ -123,6 +267,7 @@
     _hud = [[MBProgressHUD alloc] initWithView:view];
     [self.view addSubview:_hud];
     _hud.labelText = text;
+    _hud.yOffset = -10.f;
     
     [_hud show:YES];
 }
@@ -144,8 +289,21 @@
 	[_hud hide:YES afterDelay:2];
 
 }
-- (void)showError {
-    
+- (void)showErrorWithText:(NSString *)errorText {
+    _hud = [[MBProgressHUD alloc] initWithView:self.view];
+	[self.view addSubview:_hud];
+	
+	// Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
+	_hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn_adclose.png"]];
+	_hud.yOffset = -10.f;
+	// Set custom view mode
+	_hud.mode = MBProgressHUDModeCustomView;
+	
+	_hud.delegate = self;
+	_hud.labelText = errorText;
+	
+	[_hud show:YES];
+	[_hud hide:YES afterDelay:2];
 }
 
 - (void)showWithText:(NSString *)text
@@ -163,7 +321,7 @@
 }
 
 - (void)hideLoading {
-    [_hud hide:YES];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 #pragma mark -
@@ -205,6 +363,13 @@
     [super viewWillAppear:animated];
     
     [self setControlView:self.view];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.baseRequest clearDelegatesAndCancel];
 }
 
 - (void)didReceiveMemoryWarning {

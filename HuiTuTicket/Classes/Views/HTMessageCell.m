@@ -22,4 +22,13 @@
     // Configure the view for the selected state
 }
 
+- (void)configureUIWithData:(MessageDetail *)detail
+{
+    if (detail) {
+        self.titleLabel.text = detail.title;
+        self.subTitleLabel.text = detail.content;
+        self.timeLabel.text = [LXUtils secondChangToDate:detail.addtime];
+    }
+}
+
 @end

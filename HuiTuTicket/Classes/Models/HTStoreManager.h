@@ -33,5 +33,17 @@
  */
 - (NSMutableArray *)getOrderConfigureArray;
 
+/**
+ *  配置<关于我们>cell里的内容
+ *
+ *  @return 包含标题的数组
+ */
+- (NSMutableArray *)getAboutUsConfigureArray;
+
+/**
+ *  配置<景区联票首页>cell内容
+ *
+ */
+- (NSMutableArray *)getLPHomeConfigureArray;
 
 @end
