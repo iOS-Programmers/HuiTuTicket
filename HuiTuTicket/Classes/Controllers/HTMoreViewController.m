@@ -15,9 +15,10 @@
 #import "HTMoreAboutUsController.h"
 #import "HTMoreFeedBackController.h"
 #import "HTMoreHelpController.h"
+#import "CheckUpdate.h"
 
 
-@interface HTMoreViewController ()<ZBarReaderDelegate>
+@interface HTMoreViewController ()<ZBarReaderDelegate,UIAlertViewDelegate>
 
 @property (strong, nonatomic) ZBarReaderViewController *readerVC;
 
@@ -150,7 +151,10 @@
                 case 0: {
                     //检查更新
                     
-                    [self showWithText:@"当前是最新版本！"];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self checkVersionUpdate];
+                    });
+                
                 }
                     break;
                 case 1: {
@@ -174,6 +178,38 @@
         [self pushNewViewController:viewController];
     }
    
+}
+
+/**
+ *  检查版本更新
+ */
+- (void)checkVersionUpdate
+{
+    BOOL haveUpdate = [[CheckUpdate shareInstance] checkUp];
+    
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        if (haveUpdate) {
+            UIAlertView  *updateAlert = [[UIAlertView alloc] initWithTitle:@"更新提醒" message: @"有新版本了！" delegate:self cancelButtonTitle:@"立刻升级" otherButtonTitles: @"稍后提醒", nil];
+            
+            [updateAlert show];
+            
+        }
+        else {
+            [self showWithText:@"当前是最新版本!"];
+            
+        }
+    });
+    
+}
+
+#pragma mark - UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        NSString *iTunesLink = [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@?ls=1&mt=8",APP_ID];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+    }
 }
 
 #pragma mark - ZBar Delegate

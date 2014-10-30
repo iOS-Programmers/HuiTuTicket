@@ -199,6 +199,7 @@
 		C64517E51993A3A600DDD2D7 /* LPTicketList.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E41993A3A600DDD2D7 /* LPTicketList.m */; };
 		C64517E81993A3B300DDD2D7 /* LPTicketListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */; };
 		C64517EB1993A3C500DDD2D7 /* LPTicketListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */; };
+		C653FC231A01C9E700AC9879 /* CheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C653FC221A01C9E700AC9879 /* CheckUpdate.m */; };
 		C655B8E519C1F607007DD925 /* TicketYuyueScenicList.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8E419C1F607007DD925 /* TicketYuyueScenicList.m */; };
 		C655B8E819C1F616007DD925 /* TicketYuyueScenicListPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8E719C1F616007DD925 /* TicketYuyueScenicListPara.m */; };
 		C655B8EB19C1F623007DD925 /* TicketYuyueScenicListHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = C655B8EA19C1F623007DD925 /* TicketYuyueScenicListHttp.m */; };
@@ -813,6 +814,8 @@
 		C64517E71993A3B300DDD2D7 /* LPTicketListPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListPara.m; sourceTree = "<group>"; };
 		C64517E91993A3C500DDD2D7 /* LPTicketListHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTicketListHttp.h; sourceTree = "<group>"; };
 		C64517EA1993A3C500DDD2D7 /* LPTicketListHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTicketListHttp.m; sourceTree = "<group>"; };
+		C653FC211A01C9E700AC9879 /* CheckUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUpdate.h; sourceTree = "<group>"; };
+		C653FC221A01C9E700AC9879 /* CheckUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdate.m; sourceTree = "<group>"; };
 		C655B8E319C1F607007DD925 /* TicketYuyueScenicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueScenicList.h; sourceTree = "<group>"; };
 		C655B8E419C1F607007DD925 /* TicketYuyueScenicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketYuyueScenicList.m; sourceTree = "<group>"; };
 		C655B8E619C1F616007DD925 /* TicketYuyueScenicListPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketYuyueScenicListPara.h; sourceTree = "<group>"; };
@@ -2415,6 +2418,8 @@
 				C6BA258F19A7195300B03AD1 /* HTSaoMiaoLPTicketDetailVC.h */,
 				C6BA259019A7195300B03AD1 /* HTSaoMiaoLPTicketDetailVC.m */,
 				C6BA259119A7195300B03AD1 /* HTSaoMiaoLPTicketDetailVC.xib */,
+				C653FC211A01C9E700AC9879 /* CheckUpdate.h */,
+				C653FC221A01C9E700AC9879 /* CheckUpdate.m */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -3278,6 +3283,7 @@
 				076E012519928C7200FC63D1 /* TicketOrderDetailHttp.m in Sources */,
 				C6EC125019A2332300DFB74C /* FeedbackPara.m in Sources */,
 				C6912B6D1990A96A00584586 /* TicketUnbind.m in Sources */,
+				C653FC231A01C9E700AC9879 /* CheckUpdate.m in Sources */,
 				C5C9094A19C06E7B006E1BE4 /* AlixPayOrder.m in Sources */,
 				B17921F319F78496003E3AF0 /* PriceLable.m in Sources */,
 				C6ED770D19913D880075D6C4 /* TicketScenicSpotListHttp.m in Sources */,

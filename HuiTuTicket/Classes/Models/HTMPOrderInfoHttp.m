@@ -25,6 +25,10 @@
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock
 {
+    if (self.isTaoPiao) {
+        self.apiFuncName = @"tp.pay.order.get";
+    }
+    
     [self getDataWithParameters:self.parameter completionBlock:completionBlock failedBlock:failedBlock];
 }
 

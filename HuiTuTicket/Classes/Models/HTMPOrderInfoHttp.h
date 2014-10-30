@@ -17,6 +17,11 @@
 @property (nonatomic, strong) HTMPOrderInfoPara *parameter;
 @property (nonatomic, strong) HTMPOrderInfo *resultModel;
 
+/**
+ *  设置是套票或者是门票的接口
+ */
+@property (nonatomic) BOOL isTaoPiao;
+
 - (void)getDataWithCompletionBlock:(HttpModelCompletionBlock)completionBlock
                        failedBlock:(HttpModelFailedBlock)failedBlock;
 @end

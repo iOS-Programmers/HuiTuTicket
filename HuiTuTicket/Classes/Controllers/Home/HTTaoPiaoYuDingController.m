@@ -170,7 +170,7 @@
     
     [_datePicker setTimeZone:[NSTimeZone systemTimeZone]];
     [_datePicker setDate:[NSDate date] animated:YES];
-    [_datePicker setMinimumDate:[NSDate date]];
+    [_datePicker setMinimumDate:[NSDate dateWithTimeIntervalSinceNow:2*24*60*60]];
     [_datePicker setDatePickerMode:UIDatePickerModeDate];
     [_datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_datePicker];
@@ -182,7 +182,7 @@
     NSMutableArray *buttons = [[NSMutableArray alloc] init];
     UIBarButtonItem *myDoneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                   target:self
-                                                                                  action:@selector(dateFinished)];
+                                                                                  action:@selector(thedateFinished)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexibleSpace];
     [buttons addObject: myDoneButton];
@@ -211,11 +211,11 @@
     self.selDate =selectedDate;
 }
 
-- (void)dateFinished
+- (void)thedateFinished
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *selectedDate = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *selectedDate = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:2*24*60*60]];
     [self.dataDic setObject:FBIsEmpty(self.selDate)?selectedDate:self.selDate forKey:self.currID];
     [self hideDatePicker];
     [self.tableView reloadData];
@@ -261,7 +261,7 @@
                 vc.traveDate = [weak_self getOrderDateStr];
                 vc.totalMoney = weak_self.submitHttp.resultModel.totalamount;
                 vc.number = weak_self.ticketNumLabel.text;
-                
+                vc.isFromTaoPiao = YES;
                 [weak_self.navigationController pushViewController:vc animated:YES];
                 
             }

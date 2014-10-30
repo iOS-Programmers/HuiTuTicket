@@ -39,7 +39,9 @@
 //字符串处理
 #import "NSString+LT.h"
 
-#define APP_ID @"11111111"
+#define APP_ID @"932733269"
+
+#define HAS_NEW_VERSION @"newVersion"
 
 //客服电话
 #define SERVICE_NUMBER @"4000707200"

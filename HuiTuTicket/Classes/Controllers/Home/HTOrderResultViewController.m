@@ -68,6 +68,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if (self.isFromTaoPiao) {
+        self.hTMPOrderInfoHttp.isTaoPiao = YES;
+    }
+    
     [self refreshUIShow];
     
     /**
@@ -223,8 +227,26 @@
     order.partner = PartnerID;
     order.seller = SellerID;
     order.tradeNO = self.hTMPOrderInfoHttp.resultModel.trade_no; //订单ID（由商家自行制定）
-    order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
-    order.productDescription = [NSString stringWithFormat:@"%@",self.hTMPOrderInfoHttp.resultModel.subject]; //商品描述
+    if (FBIsEmpty(self.hTMPOrderInfoHttp.resultModel.subject)) {
+        if (!FBIsEmpty(self.produtName)) {
+            order.productName = self.produtName;
+        }
+        else {
+            order.productName = @"票务订单";
+        }
+    }
+    else {
+        order.productName = self.hTMPOrderInfoHttp.resultModel.subject; //商品标题
+    }
+    
+    if (FBIsEmpty(order.productName)) {
+        order.productDescription = @"订单";
+    }
+    else {
+        order.productDescription = order.productName;
+    }
+    
+    
 #warning 价格这里需要处理
     if (!FBIsEmpty(self.totalMoney)) {
         order.amount = self.totalMoney;

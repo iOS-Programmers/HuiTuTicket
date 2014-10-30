@@ -12,6 +12,11 @@
 
 
 /**
+ *  必传，设置从哪个订单页进来，默认是NO，默认显示从门票订单进来
+ */
+@property (nonatomic) BOOL isFromTaoPiao;
+
+/**
  *  上级传入的，用来请求支付所需要的参数，notify_url
  */
 @property (nonatomic, copy) NSString *orderId;
